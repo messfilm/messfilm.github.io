@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>연구 아카이브 — 아들을 위한 아카이브</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="아카이브의 출처·업데이트 이력·연구 노트. 모든 사실의 출처를 추적할 수 있도록 정리한 메타-기록.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="../assets/shared/styles-base.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="shared-body collection-research" data-page-id="research.main">
+
+<main class="research">
+  <section class="research-hero">
+    <div class="shared-container">
+      <span class="kicker">◇</span>
+      <h1>연구 아카이브</h1>
+      <p class="subtitle">Research Archive</p>
+      <p class="lead">
+        이 아카이브가 어떻게 만들어졌는지의 기록.
+        참고한 자료, 변경 이력, 작업 중 만난 어려운 질문들과 결정.
+        본문의 어떤 사실이 의심스러우면 이 페이지에서 추적할 수 있다.
+      </p>
+    </div>
+  </section>
+
+  <div class="shared-container">
+    <div class="research-stats" id="overall-stats">
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">출처</span></div>
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">업데이트</span></div>
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">연구 노트</span></div>
+    </div>
+
+    <section class="research-section">
+      <header>
+        <h2>프로젝트별 진입</h2>
+      </header>
+      <div class="project-cards">
+        <a class="project-card collection-religion" href="abrahamic.html">
+          <span class="num">§ I</span>
+          <h3>종교사</h3>
+          <p class="desc">아브라함 계통 종교의 출처와 결정 기록</p>
+          <span class="arrow">들어가기 →</span>
+        </a>
+        <a class="project-card collection-korean" href="korean.html">
+          <span class="num">§ II</span>
+          <h3>한국사</h3>
+          <p class="desc">9개 시대의 출처와 학설 갈래 기록</p>
+          <span class="arrow">들어가기 →</span>
+        </a>
+        <a class="project-card collection-science" href="science.html">
+          <span class="num">§ III</span>
+          <h3>자연과학사 <span class="badge-wip" style="margin-left:6px;padding:1px 6px;font-size:9.5px;letter-spacing:0.1em;color:var(--paper);background:var(--ink-mute);border-radius:2px;">작업중</span></h3>
+          <p class="desc">현재 자료를 정리하는 중</p>
+          <span class="arrow">진행 상황 →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="research-section">
+      <header>
+        <h2>최근 업데이트</h2>
+        <a class="count" href="updates.html">전체 보기 →</a>
+      </header>
+      <div id="recent-updates"></div>
+    </section>
+
+    <section class="research-philosophy">
+      <h2>왜 이 페이지가 있나</h2>
+      <p>
+        이 아카이브에 적힌 내용을 그대로 믿지 말고, 의심이 되면 이 페이지로 와서 출처를 확인해보아라.
+        모든 지식은 누군가가 어딘가에서 가져온 것이다.
+      </p>
+      <p>
+        학설은 갈리는 경우가 많다. "안다"는 것은 "어디서 어떻게 알게 되었는지" 추적할 수 있다는 뜻이다.
+        시간이 흐르면 사실도 갱신된다. 그래서 업데이트 이력이 있다.
+      </p>
+    </section>
+  </div>
+</main>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../assets/shared/nav.js" defer></script>
+<script src="../assets/shared/footer.js" defer></script>
+<script src="../assets/shared/research-loader.js" defer></script>
+<script>
+  window.addEventListener('load', function () {
+    ResearchLoader.load('all').then(function (data) {
+      ResearchLoader.renderStats(data, '#overall-stats');
+      // Show top 5 recent updates inline
+      ResearchLoader.renderUpdates(data.updates.slice(0, 5), '#recent-updates');
+    });
+  });
+</script>
+</body>
+</html>

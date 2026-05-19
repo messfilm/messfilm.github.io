@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-05-19",
+  "updates": [
+    {
+      "id": "upd-0001",
+      "date": "2026-05-19",
+      "project": "korean",
+      "page": "korean.main",
+      "type": "migration",
+      "description": "한국사 9개 시대 페이지를 통합 아카이브로 이식",
+      "by": "Father + Claude Code",
+      "details": "별도 저장소 /한국사/에서 /korean-history/로 이식. 본문 변경 없음. 공통 헤더·푸터·data-page-id 추가."
+    },
+    {
+      "id": "upd-0002",
+      "date": "2026-05-19",
+      "project": "religion",
+      "page": "religion.main",
+      "type": "migration",
+      "description": "아브라함 계통 종교 대시보드를 통합 아카이브로 이식",
+      "by": "Father + Claude Code",
+      "details": "별도 저장소 /종교역사/에서 /abrahamic-religions/로 이식. 본문 변경 없음. 공통 헤더·푸터·data-page-id 추가."
+    },
+    {
+      "id": "upd-0003",
+      "date": "2026-05-19",
+      "project": "science",
+      "page": "science.main",
+      "type": "creation",
+      "description": "자연과학사 placeholder 페이지 생성",
+      "by": "Claude Code",
+      "details": "6개 시대 구분과 안내문만 포함. 본문은 다음 단계에서 작성 예정."
+    }
+  ]
+}

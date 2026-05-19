@@ -1,0 +1,1560 @@
+[
+  {
+    "id": "home",
+    "title": "한국사 4,000년",
+    "era": "메인",
+    "url": "index.html",
+    "type": "page",
+    "content": "선사시대부터 대한민국까지 9개 시대 통사. 한지·먹·오방색의 학습 사이트."
+  },
+  {
+    "id": "goryeo",
+    "title": "고려",
+    "hanja": "高麗",
+    "era": "고려",
+    "url": "eras/04-goryeo.html",
+    "type": "era",
+    "content": "918~1392. 후삼국 통일, 문벌귀족, 무신정권, 몽골 간섭, 공민왕 반원개혁."
+  },
+  {
+    "id": "wanggeon",
+    "title": "왕건",
+    "hanja": "王建",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#왕건",
+    "type": "person",
+    "content": "고려 태조(재위 918~943). 후삼국을 통일하고 호족 통합·북진정책을 폈다."
+  },
+  {
+    "id": "gwangjong",
+    "title": "광종",
+    "hanja": "光宗",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#광종",
+    "type": "person",
+    "content": "고려 4대 왕(재위 949~975). 노비안검법·과거제로 호족 누르고 왕권 강화."
+  },
+  {
+    "id": "seongjong",
+    "title": "성종",
+    "hanja": "成宗",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#성종",
+    "type": "person",
+    "content": "고려 6대 왕(재위 981~997). 유교 통치 체제와 12목 등 지방제도를 정비."
+  },
+  {
+    "id": "seohui",
+    "title": "서희",
+    "hanja": "徐熙",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#서희",
+    "type": "person",
+    "content": "거란 1차 침입(993) 때 외교담판으로 강동 6주를 얻어낸 외교가."
+  },
+  {
+    "id": "ganggamchan",
+    "title": "강감찬",
+    "hanja": "姜邯贊",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#강감찬",
+    "type": "person",
+    "content": "1019년 귀주대첩에서 거란 10만 대군을 격파한 명장."
+  },
+  {
+    "id": "yungwan",
+    "title": "윤관",
+    "hanja": "尹瓘",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#윤관",
+    "type": "person",
+    "content": "별무반을 편성해 1107년 여진 정벌, 동북 9성을 쌓았다."
+  },
+  {
+    "id": "choechungheon",
+    "title": "최충헌",
+    "hanja": "崔忠獻",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#최충헌",
+    "type": "person",
+    "content": "1196년 정권을 잡고 최씨 무신정권을 연 인물."
+  },
+  {
+    "id": "kimbusik",
+    "title": "김부식",
+    "hanja": "金富軾",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#김부식",
+    "type": "person",
+    "content": "묘청의 난을 진압하고 1145년 《삼국사기》를 편찬한 문신·학자."
+  },
+  {
+    "id": "iryeon",
+    "title": "일연",
+    "hanja": "一然",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#일연",
+    "type": "person",
+    "content": "1281년경 《삼국유사》를 저술해 단군 신화와 향가를 전했다."
+  },
+  {
+    "id": "gongminwang",
+    "title": "공민왕",
+    "hanja": "恭愍王",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#공민왕",
+    "type": "person",
+    "content": "고려 31대 왕(재위 1351~1374). 원의 간섭을 끊고 개혁을 시도."
+  },
+  {
+    "id": "sindon",
+    "title": "신돈",
+    "hanja": "辛旽",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#people",
+    "type": "person",
+    "content": "공민왕이 등용한 승려 개혁가. 전민변정도감 운영."
+  },
+  {
+    "id": "jeongmongju",
+    "title": "정몽주",
+    "hanja": "鄭夢周",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#정몽주",
+    "type": "person",
+    "content": "고려 말 성리학자. 새 왕조 건국에 반대하다 선죽교에서 살해."
+  },
+  {
+    "id": "iseonggye",
+    "title": "이성계",
+    "hanja": "李成桂",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#people",
+    "type": "person",
+    "content": "고려 무장에서 조선을 세운 태조. 위화도 회군의 주역."
+  },
+  {
+    "id": "choeyeong",
+    "title": "최영",
+    "hanja": "崔瑩",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#people",
+    "type": "person",
+    "content": "고려 말 명장. 우왕대 권력자, 위화도 회군으로 실각·처형."
+  },
+  {
+    "id": "myocheong",
+    "title": "묘청",
+    "hanja": "妙淸",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#people",
+    "type": "person",
+    "content": "서경 천도와 칭제건원을 주장한 승려. 1135년 난을 일으켰다."
+  },
+  {
+    "id": "kimyunhu",
+    "title": "김윤후",
+    "hanja": "金允侯",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#people",
+    "type": "person",
+    "content": "처인성 전투(1232)에서 몽골 살리타를 사살한 승려·장수."
+  },
+  {
+    "id": "jeongdojeon",
+    "title": "정도전",
+    "hanja": "鄭道傳",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#정도전",
+    "type": "person",
+    "content": "조선 건국의 설계자. 성리학 통치 이념과 재상 중심 정치를 구상."
+  },
+  {
+    "id": "wihwado",
+    "title": "위화도 회군",
+    "hanja": "威化島回軍",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#chronology",
+    "type": "event",
+    "content": "1388년 이성계가 요동 정벌 중 군대를 돌려 개경을 장악한 사건."
+  },
+  {
+    "id": "musinjeongbyeon",
+    "title": "무신정변",
+    "hanja": "武臣政變",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#chronology",
+    "type": "event",
+    "content": "1170년 정중부·이의방 등이 일으킨 군사 정변. 문벌귀족 사회가 무너졌다."
+  },
+  {
+    "id": "myocheongnan",
+    "title": "묘청의 난",
+    "hanja": "妙淸의 亂",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#chronology",
+    "type": "event",
+    "content": "1135년 서경 천도를 명분으로 일어난 난. 김부식이 진압."
+  },
+  {
+    "id": "manjeoknan",
+    "title": "만적의 난",
+    "hanja": "萬積의 亂",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#chronology",
+    "type": "event",
+    "content": "1198년 최충헌의 사노 만적이 일으키려다 발각된 노비 봉기 모의."
+  },
+  {
+    "id": "gwijudaecheop",
+    "title": "귀주대첩",
+    "hanja": "龜州大捷",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#chronology",
+    "type": "event",
+    "content": "1019년 강감찬이 거란 소배압의 10만 군을 귀주에서 거의 전멸시킨 전투."
+  },
+  {
+    "id": "gangdong6",
+    "title": "강동 6주",
+    "hanja": "江東六州",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#wars",
+    "type": "place",
+    "content": "서희의 외교담판으로 993년 거란에서 얻은 압록강 동쪽 6개 주."
+  },
+  {
+    "id": "dongbuk9",
+    "title": "동북 9성",
+    "hanja": "東北九城",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#wars",
+    "type": "place",
+    "content": "1107년 윤관이 여진을 몰아내고 두만강 일대에 쌓은 9개 성."
+  },
+  {
+    "id": "monggolchimip",
+    "title": "몽골 침입",
+    "hanja": "蒙古侵入",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#wars",
+    "type": "event",
+    "content": "1231~1259년 일곱 차례에 걸친 몽골의 고려 침공."
+  },
+  {
+    "id": "sambyeolcho",
+    "title": "삼별초 항쟁",
+    "hanja": "三別抄抗爭",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#wars",
+    "type": "event",
+    "content": "1270~1273년 강화·진도·제주에서 몽골에 저항한 항쟁."
+  },
+  {
+    "id": "nobian",
+    "title": "노비안검법",
+    "hanja": "奴婢按檢法",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#culture",
+    "type": "institution",
+    "content": "956년 광종이 부당하게 노비가 된 양인을 본래 신분으로 돌려준 법."
+  },
+  {
+    "id": "gwageoje",
+    "title": "과거제",
+    "hanja": "科擧制",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#culture",
+    "type": "institution",
+    "content": "958년 광종이 도입한 관리 선발 시험. 후주 출신 쌍기의 건의."
+  },
+  {
+    "id": "jeonsigwa",
+    "title": "전시과",
+    "hanja": "田柴科",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#culture",
+    "type": "institution",
+    "content": "고려 관리에게 전지와 시지를 차등 지급한 토지 제도."
+  },
+  {
+    "id": "gongeumjeon",
+    "title": "공음전",
+    "hanja": "功蔭田",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#culture",
+    "type": "institution",
+    "content": "5품 이상 관리에게 세습이 허용된 토지. 문벌귀족 사회의 경제 기반."
+  },
+  {
+    "id": "eumseo",
+    "title": "음서",
+    "hanja": "蔭敍",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#culture",
+    "type": "institution",
+    "content": "공신·고위 관료의 자손을 시험 없이 관리로 채용하는 제도."
+  },
+  {
+    "id": "byeolmuban",
+    "title": "별무반",
+    "hanja": "別武班",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#polity",
+    "type": "institution",
+    "content": "1104년 윤관 건의로 편성된 여진 정벌용 특수 부대."
+  },
+  {
+    "id": "sambyeolcho-org",
+    "title": "삼별초",
+    "hanja": "三別抄",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#polity",
+    "type": "institution",
+    "content": "최씨 무신정권의 사병에서 출발한 야별초·좌우별초·신의군의 총칭."
+  },
+  {
+    "id": "dobang",
+    "title": "도방",
+    "hanja": "都房",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#polity",
+    "type": "institution",
+    "content": "무신집권자의 사병 집단. 경대승이 처음, 최충헌이 확대."
+  },
+  {
+    "id": "gyojeongdogam",
+    "title": "교정도감",
+    "hanja": "敎定都監",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#polity",
+    "type": "institution",
+    "content": "1209년 최충헌이 설치한 최씨 정권의 최고 통치기구."
+  },
+  {
+    "id": "jeonminbyeonjeong",
+    "title": "전민변정도감",
+    "hanja": "田民辨正都監",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#chronology",
+    "type": "institution",
+    "content": "공민왕대 신돈이 설치한 토지·노비 개혁 관청(1366)."
+  },
+  {
+    "id": "dopyeonguisasa",
+    "title": "도평의사사",
+    "hanja": "都評議使司",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#polity",
+    "type": "institution",
+    "content": "고려 후기 국정 최고 의결기관. 약칭 도당."
+  },
+  {
+    "id": "palman",
+    "title": "팔만대장경",
+    "hanja": "八萬大藏經",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#culture",
+    "type": "artifact",
+    "content": "1236~1251년 강화에서 조판한 대장경. 합천 해인사 장경판전에 보관."
+  },
+  {
+    "id": "jikji",
+    "title": "직지심체요절",
+    "hanja": "直指心體要節",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#culture",
+    "type": "artifact",
+    "content": "1377년 청주 흥덕사에서 인쇄한 현존 세계 최고 금속활자본."
+  },
+  {
+    "id": "goryeocheongja",
+    "title": "고려청자",
+    "hanja": "高麗靑磁",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#culture",
+    "type": "artifact",
+    "content": "고려를 대표하는 청록색 도자기. 12세기 상감기법으로 절정."
+  },
+  {
+    "id": "samguksagi",
+    "title": "삼국사기",
+    "hanja": "三國史記",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#culture",
+    "type": "artifact",
+    "content": "1145년 김부식 등이 편찬한 현존 최고의 한국사 정사."
+  },
+  {
+    "id": "samgukyusa",
+    "title": "삼국유사",
+    "hanja": "三國遺事",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#culture",
+    "type": "artifact",
+    "content": "1281년경 일연이 편찬한 야사·설화집. 단군 신화 수록."
+  },
+  {
+    "id": "gaegyeong",
+    "title": "개경",
+    "hanja": "開京",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#polity",
+    "type": "place",
+    "content": "고려의 수도(919~1392). 오늘날 북한 개성."
+  },
+  {
+    "id": "ganghwa",
+    "title": "강화도",
+    "hanja": "江華島",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#polity",
+    "type": "place",
+    "content": "고려 정부가 1232~1270년 몽골에 맞서 천도했던 섬."
+  },
+  {
+    "id": "seogyeong",
+    "title": "서경",
+    "hanja": "西京",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#polity",
+    "type": "place",
+    "content": "고려의 3경 중 하나. 오늘날 평양."
+  },
+  {
+    "id": "gwonmunsejok",
+    "title": "권문세족",
+    "hanja": "權門世族",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#next",
+    "type": "concept",
+    "content": "원 간섭기 친원 세력으로 부를 쌓은 고려 후기 지배층."
+  },
+  {
+    "id": "sinjinsadaebu",
+    "title": "신진사대부",
+    "hanja": "新進士大夫",
+    "era": "고려",
+    "url": "eras/04-goryeo.html#next",
+    "type": "concept",
+    "content": "고려 말 성리학으로 무장한 중소 지주 출신 관료층."
+  },
+  {
+    "id": "joseon-early",
+    "title": "조선 전기",
+    "hanja": "朝鮮 前期",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html",
+    "type": "era",
+    "content": "1392~1592. 새 왕조 정착, 세종 르네상스, 한글 창제, 4군 6진, 사화, 사림의 성장."
+  },
+  {
+    "id": "taejo-yi",
+    "title": "태조 이성계",
+    "hanja": "太祖 李成桂",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#태조",
+    "type": "person",
+    "content": "조선 1대 왕(재위 1392~1398). 위화도 회군 후 새 왕조를 열고 한양 천도."
+  },
+  {
+    "id": "jeongdojeon-je",
+    "title": "정도전",
+    "hanja": "鄭道傳",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#정도전",
+    "type": "person",
+    "content": "조선 건국의 설계자. 『조선경국전』·『경제문감』. 1398년 1차 왕자의 난에서 살해."
+  },
+  {
+    "id": "taejong",
+    "title": "태종 이방원",
+    "hanja": "太宗 李芳遠",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#태종",
+    "type": "person",
+    "content": "조선 3대 왕(재위 1400~1418). 호패법, 사병 혁파, 6조 직계제로 왕권 강화."
+  },
+  {
+    "id": "sejong",
+    "title": "세종",
+    "hanja": "世宗",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#세종",
+    "type": "person",
+    "content": "조선 4대 왕(재위 1418~1450). 훈민정음 창제, 4군 6진, 측우기·자격루의 르네상스 군주."
+  },
+  {
+    "id": "jangyeongsil",
+    "title": "장영실",
+    "hanja": "蔣英實",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#장영실",
+    "type": "person",
+    "content": "세종대 과학자. 동래 관노 출신. 자격루(1434), 측우기(1441) 등 제작."
+  },
+  {
+    "id": "sejo",
+    "title": "세조",
+    "hanja": "世祖",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#세조",
+    "type": "person",
+    "content": "조선 7대 왕(재위 1455~1468). 계유정난으로 권력 장악. 왕권 강화, 직전법, 『경국대전』 편찬 시작."
+  },
+  {
+    "id": "hanmyeonghoe",
+    "title": "한명회",
+    "hanja": "韓明澮",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#한명회",
+    "type": "person",
+    "content": "세조의 책사이자 훈구파의 우두머리. 계유정난의 핵심 모사. 1504년 부관참시."
+  },
+  {
+    "id": "seongjong-je",
+    "title": "성종",
+    "hanja": "成宗",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#성종",
+    "type": "person",
+    "content": "조선 9대 왕(재위 1469~1494). 1485년 『경국대전』 시행. 사림 등용 시도."
+  },
+  {
+    "id": "yeonsangun",
+    "title": "연산군",
+    "hanja": "燕山君",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#연산군",
+    "type": "person",
+    "content": "조선 10대 왕(재위 1494~1506). 무오·갑자사화. 1506년 중종반정으로 폐위."
+  },
+  {
+    "id": "jogwangjo",
+    "title": "조광조",
+    "hanja": "趙光祖",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#조광조",
+    "type": "person",
+    "content": "호 정암. 중종대 도학정치 시도. 1519년 기묘사화로 사사. 사림의 정신적 시조."
+  },
+  {
+    "id": "yihwang",
+    "title": "이황",
+    "hanja": "李滉",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#이황",
+    "type": "person",
+    "content": "호 퇴계(1501~1570). 조선 성리학의 큰 봉우리. 주리론, 영남학파의 종장."
+  },
+  {
+    "id": "yii",
+    "title": "이이",
+    "hanja": "李珥",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#이이",
+    "type": "person",
+    "content": "호 율곡(1536~1584). 주기론, 실천 성리학. 동호문답·성학집요."
+  },
+  {
+    "id": "wangjanan1",
+    "title": "왕자의 난",
+    "hanja": "王子의 亂",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "event",
+    "content": "1398년 1차, 1400년 2차. 이방원이 정도전·세자 방석을 살해하고 태종으로 즉위."
+  },
+  {
+    "id": "gyeyujeongnan",
+    "title": "계유정난",
+    "hanja": "癸酉靖難",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "event",
+    "content": "1453년 수양대군이 김종서·황보인을 살해하고 권력 장악. 1455년 세조 즉위."
+  },
+  {
+    "id": "sayuksin",
+    "title": "사육신",
+    "hanja": "死六臣",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "concept",
+    "content": "1456년 단종 복위를 도모하다 처형된 6명. 성삼문·박팽년·이개·하위지·유성원·유응부."
+  },
+  {
+    "id": "muosahwa",
+    "title": "무오사화",
+    "hanja": "戊午士禍",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "event",
+    "content": "1498년 김일손의 「조의제문」 사초가 빌미가 된 첫 사화. 사림이 큰 피해."
+  },
+  {
+    "id": "gapjasahwa",
+    "title": "갑자사화",
+    "hanja": "甲子士禍",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "event",
+    "content": "1504년 연산군이 어머니 폐비 윤씨를 빌미로 일으킨 사화."
+  },
+  {
+    "id": "gimyosahwa",
+    "title": "기묘사화",
+    "hanja": "己卯士禍",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "event",
+    "content": "1519년 조광조의 급진 개혁에 훈구파가 반격. 조광조 사사."
+  },
+  {
+    "id": "eulsasahwa",
+    "title": "을사사화",
+    "hanja": "乙巳士禍",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "event",
+    "content": "1545년 명종 즉위 직후 윤원형이 윤임 일파를 숙청한 사화. 네 사화 중 마지막."
+  },
+  {
+    "id": "jungjongbanjeong",
+    "title": "중종반정",
+    "hanja": "中宗反正",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "event",
+    "content": "1506년 박원종·성희안·유순정이 연산군을 폐위. 조선 최초의 반정."
+  },
+  {
+    "id": "daemadochongjeol",
+    "title": "대마도 정벌",
+    "hanja": "對馬島征伐",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "event",
+    "content": "1419년 이종무가 대마도를 정벌한 사건. 기해동정. 이후 계해약조."
+  },
+  {
+    "id": "sagun6jin",
+    "title": "4군 6진",
+    "hanja": "四郡六鎭",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "place",
+    "content": "세종대 압록강·두만강 유역에 설치한 군사 행정 구역. 최윤덕·김종서. 1433년~."
+  },
+  {
+    "id": "hunminjeongeum-art",
+    "title": "훈민정음",
+    "hanja": "訓民正音",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "artifact",
+    "content": "1443년 세종이 친히 창제, 1446년 반포한 한글. 해례본 유네스코 세계기록유산."
+  },
+  {
+    "id": "gyeonggukdaejeon",
+    "title": "경국대전",
+    "hanja": "經國大典",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "artifact",
+    "content": "조선의 근본 법전. 1485년 시행. 이·호·예·병·형·공 6전 체제."
+  },
+  {
+    "id": "jagyeokru",
+    "title": "자격루",
+    "hanja": "自擊漏",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#culture",
+    "type": "artifact",
+    "content": "1434년 장영실이 만든 자동 물시계."
+  },
+  {
+    "id": "chukugi",
+    "title": "측우기",
+    "hanja": "測雨器",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#culture",
+    "type": "artifact",
+    "content": "1441년 세계 최초의 정량 우량계."
+  },
+  {
+    "id": "jiphyunjeon",
+    "title": "집현전",
+    "hanja": "集賢殿",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "institution",
+    "content": "세종대 학문 연구·정책 자문 기관. 한글 창제와 편찬 사업의 거점."
+  },
+  {
+    "id": "uijeongbu",
+    "title": "의정부",
+    "hanja": "議政府",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#polity",
+    "type": "institution",
+    "content": "조선의 최고 의결기관. 영의정·좌의정·우의정의 3정승."
+  },
+  {
+    "id": "yukjo",
+    "title": "6조",
+    "hanja": "六曹",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#polity",
+    "type": "institution",
+    "content": "조선의 행정 실무 6부. 이·호·예·병·형·공조."
+  },
+  {
+    "id": "samsa",
+    "title": "3사",
+    "hanja": "三司",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#polity",
+    "type": "institution",
+    "content": "조선의 언론·감찰·문한 3기관. 사헌부·사간원·홍문관."
+  },
+  {
+    "id": "hopaebeop",
+    "title": "호패법",
+    "hanja": "號牌法",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "institution",
+    "content": "1413년 태종 시행. 16세 이상 양인 남자의 신분증."
+  },
+  {
+    "id": "seowon",
+    "title": "서원",
+    "hanja": "書院",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#culture",
+    "type": "institution",
+    "content": "조선의 사학 교육기관. 1543년 백운동 서원이 시초."
+  },
+  {
+    "id": "sarim",
+    "title": "사림",
+    "hanja": "士林",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#theories",
+    "type": "concept",
+    "content": "조선 중기 향촌의 성리학적 지식인 집단. 훈구에 맞서 정치 주도권 장악."
+  },
+  {
+    "id": "bungdang",
+    "title": "붕당",
+    "hanja": "朋黨",
+    "era": "조선 전기",
+    "url": "eras/05-joseon-early.html#chronology",
+    "type": "concept",
+    "content": "조선 후기 정치 집단. 1575년 동·서 분당으로 시작."
+  },
+  {
+    "id": "01_prehistoric",
+    "title": "선사·고조선",
+    "era": "선사",
+    "url": "eras/01-prehistoric.html",
+    "type": "era",
+    "content": "~ BC 108. BC 70만~BC 108. 구석기·신석기·청동기·철기, 단군 고조선, 위만조선, 한사군."
+  },
+  {
+    "id": "02_three_kingdoms",
+    "title": "삼국·가야",
+    "era": "삼국",
+    "url": "eras/02-three-kingdoms.html",
+    "type": "era",
+    "content": "BC 57 – AD 668. 고구려·백제·신라·가야. 광개토대왕·진흥왕·김유신·연개소문의 시대. 살수·안시성·황산벌."
+  },
+  {
+    "id": "03_north_south",
+    "title": "남북국",
+    "era": "남북국",
+    "url": "eras/03-north-south.html",
+    "type": "era",
+    "content": "668 – 935. 통일신라와 발해. 9주 5소경, 해동성국, 장보고와 청해진, 신라 말 호족."
+  },
+  {
+    "id": "06_joseon_late",
+    "title": "조선 후기",
+    "era": "조선 후기",
+    "url": "eras/06-joseon-late.html",
+    "type": "era",
+    "content": "1592 – 1876. 임진왜란·병자호란, 영·정조 중흥, 실학, 동학, 흥선대원군."
+  },
+  {
+    "id": "07_modern_opening",
+    "title": "개항기·대한제국",
+    "era": "개항기",
+    "url": "eras/07-modern-opening.html",
+    "type": "era",
+    "content": "1876 – 1910. 강화도조약, 갑신정변, 동학농민운동, 갑오개혁, 대한제국, 을사늑약, 안중근."
+  },
+  {
+    "id": "08_japanese_colonial",
+    "title": "일제강점기",
+    "era": "일제강점기",
+    "url": "eras/08-japanese-colonial.html",
+    "type": "era",
+    "content": "1910 – 1945. 무단·문화·민족말살 3단계, 3·1 운동, 임시정부, 봉오동·청산리, 윤봉길, 광복."
+  },
+  {
+    "id": "09_republic",
+    "title": "분단과 대한민국",
+    "era": "대한민국",
+    "url": "eras/09-republic.html",
+    "type": "era",
+    "content": "1945 – 현재. 광복·분단·전쟁, 산업화와 민주화. 4·19, 5·18, 6월 항쟁, 촛불."
+  },
+  {
+    "id": "01_단군",
+    "title": "단군왕검",
+    "hanja": "檀君王儉",
+    "era": "선사",
+    "url": "eras/01-prehistoric.html#단군",
+    "type": "person",
+    "content": "전승 BC 2333~. 고조선 건국 전승의 시조."
+  },
+  {
+    "id": "01_환웅",
+    "title": "환웅",
+    "hanja": "桓雄",
+    "era": "선사",
+    "url": "eras/01-prehistoric.html#환웅",
+    "type": "person",
+    "content": "전승. 단군의 아버지."
+  },
+  {
+    "id": "01_기자",
+    "title": "기자",
+    "hanja": "箕子",
+    "era": "선사",
+    "url": "eras/01-prehistoric.html#기자",
+    "type": "person",
+    "content": "전승 BC 11c. 기자조선(전승)의 시조."
+  },
+  {
+    "id": "01_위만",
+    "title": "위만",
+    "hanja": "衛滿",
+    "era": "선사",
+    "url": "eras/01-prehistoric.html#위만",
+    "type": "person",
+    "content": "? – ? · 재위 BC 194~?. 위만조선의 창업자."
+  },
+  {
+    "id": "01_우거왕",
+    "title": "우거왕",
+    "hanja": "右渠王",
+    "era": "선사",
+    "url": "eras/01-prehistoric.html#우거왕",
+    "type": "person",
+    "content": "? – BC 108. 위만조선의 마지막 왕."
+  },
+  {
+    "id": "01_고인돌",
+    "title": "고인돌",
+    "hanja": "支石墓",
+    "era": "선사",
+    "url": "eras/01-prehistoric.html#고인돌",
+    "type": "person",
+    "content": "청동기. 한반도의 거석문화."
+  },
+  {
+    "id": "01_비파형동검",
+    "title": "비파형 동검",
+    "hanja": "琵琶形銅劍",
+    "era": "선사",
+    "url": "eras/01-prehistoric.html#비파형동검",
+    "type": "person",
+    "content": "BC 10~5c. 고조선 문화권의 상징."
+  },
+  {
+    "id": "01_빗살무늬토기",
+    "title": "빗살무늬 토기",
+    "hanja": "櫛文土器",
+    "era": "선사",
+    "url": "eras/01-prehistoric.html#빗살무늬토기",
+    "type": "person",
+    "content": "BC 8000~2000. 신석기의 대표 토기."
+  },
+  {
+    "id": "01_반구대",
+    "title": "반구대 암각화",
+    "hanja": "盤龜臺岩刻畵",
+    "era": "선사",
+    "url": "eras/01-prehistoric.html#반구대",
+    "type": "person",
+    "content": "신석기~청동기. 선사 미술의 정점."
+  },
+  {
+    "id": "01_연천전곡리",
+    "title": "연천 전곡리",
+    "hanja": "漣川 全谷里",
+    "era": "선사",
+    "url": "eras/01-prehistoric.html#연천전곡리",
+    "type": "person",
+    "content": "구석기, 약 30만 년 전. 아슐리안 주먹도끼의 발견."
+  },
+  {
+    "id": "01_단양금굴",
+    "title": "단양 금굴",
+    "hanja": "丹陽 金窟",
+    "era": "선사",
+    "url": "eras/01-prehistoric.html#단양금굴",
+    "type": "person",
+    "content": "구석기, 약 70만 년 전. 한반도 가장 오래된 인류 유적."
+  },
+  {
+    "id": "01_공주석장리",
+    "title": "공주 석장리",
+    "hanja": "公州 石壯里",
+    "era": "선사",
+    "url": "eras/01-prehistoric.html#공주석장리",
+    "type": "person",
+    "content": "구석기, 약 30만 년 전~. 한국 구석기 연구의 출발점."
+  },
+  {
+    "id": "02_광개토대왕",
+    "title": "광개토대왕",
+    "hanja": "廣開土大王",
+    "era": "삼국",
+    "url": "eras/02-three-kingdoms.html#광개토대왕",
+    "type": "person",
+    "content": "374 – 413 · 재위 391–413. 고구려 19대, 정복 군주."
+  },
+  {
+    "id": "02_장수왕",
+    "title": "장수왕",
+    "hanja": "長壽王",
+    "era": "삼국",
+    "url": "eras/02-three-kingdoms.html#장수왕",
+    "type": "person",
+    "content": "394 – 491 · 재위 413–491. 평양 천도의 장수 군주."
+  },
+  {
+    "id": "02_근초고왕",
+    "title": "근초고왕",
+    "hanja": "近肖古王",
+    "era": "삼국",
+    "url": "eras/02-three-kingdoms.html#근초고왕",
+    "type": "person",
+    "content": "? – 375 · 재위 346–375. 백제의 전성기 군주."
+  },
+  {
+    "id": "02_성왕",
+    "title": "성왕",
+    "hanja": "聖王",
+    "era": "삼국",
+    "url": "eras/02-three-kingdoms.html#성왕",
+    "type": "person",
+    "content": "? – 554 · 재위 523–554. 사비 천도의 군주."
+  },
+  {
+    "id": "02_진흥왕",
+    "title": "진흥왕",
+    "hanja": "眞興王",
+    "era": "삼국",
+    "url": "eras/02-three-kingdoms.html#진흥왕",
+    "type": "person",
+    "content": "534 – 576 · 재위 540–576. 신라의 영토 확장 군주."
+  },
+  {
+    "id": "02_이차돈",
+    "title": "이차돈",
+    "hanja": "異次頓",
+    "era": "삼국",
+    "url": "eras/02-three-kingdoms.html#이차돈",
+    "type": "person",
+    "content": "506 – 527. 신라 불교 공인의 순교자."
+  },
+  {
+    "id": "02_을지문덕",
+    "title": "을지문덕",
+    "hanja": "乙支文德",
+    "era": "삼국",
+    "url": "eras/02-three-kingdoms.html#을지문덕",
+    "type": "person",
+    "content": "생몰 미상 · 7세기 초. 살수대첩의 명장."
+  },
+  {
+    "id": "02_연개소문",
+    "title": "연개소문",
+    "hanja": "淵蓋蘇文",
+    "era": "삼국",
+    "url": "eras/02-three-kingdoms.html#연개소문",
+    "type": "person",
+    "content": "? – 666. 고구려의 마지막 강자."
+  },
+  {
+    "id": "02_김춘추",
+    "title": "김춘추 (태종 무열왕)",
+    "hanja": "金春秋 太宗武烈王",
+    "era": "삼국",
+    "url": "eras/02-three-kingdoms.html#김춘추",
+    "type": "person",
+    "content": "604 – 661 · 재위 654–661. 통일의 외교가."
+  },
+  {
+    "id": "02_김유신",
+    "title": "김유신",
+    "hanja": "金庾信",
+    "era": "삼국",
+    "url": "eras/02-three-kingdoms.html#김유신",
+    "type": "person",
+    "content": "595 – 673. 통일의 명장."
+  },
+  {
+    "id": "02_계백",
+    "title": "계백",
+    "hanja": "階伯",
+    "era": "삼국",
+    "url": "eras/02-three-kingdoms.html#계백",
+    "type": "person",
+    "content": "? – 660. 황산벌의 백제 장군."
+  },
+  {
+    "id": "02_문무왕",
+    "title": "문무왕",
+    "hanja": "文武王",
+    "era": "삼국",
+    "url": "eras/02-three-kingdoms.html#문무왕",
+    "type": "person",
+    "content": "626 – 681 · 재위 661–681. 통일을 완수한 군주."
+  },
+  {
+    "id": "03_문무왕",
+    "title": "문무왕",
+    "hanja": "文武王",
+    "era": "남북국",
+    "url": "eras/03-north-south.html#문무왕",
+    "type": "person",
+    "content": "626 – 681 · 재위 661–681. 통일의 완성자."
+  },
+  {
+    "id": "03_신문왕",
+    "title": "신문왕",
+    "hanja": "神文王",
+    "era": "남북국",
+    "url": "eras/03-north-south.html#신문왕",
+    "type": "person",
+    "content": "? – 692 · 재위 681–692. 통일 체제의 설계자."
+  },
+  {
+    "id": "03_원효",
+    "title": "원효",
+    "hanja": "元曉",
+    "era": "남북국",
+    "url": "eras/03-north-south.html#원효",
+    "type": "person",
+    "content": "617 – 686. 불교 대중화의 승려."
+  },
+  {
+    "id": "03_의상",
+    "title": "의상",
+    "hanja": "義湘",
+    "era": "남북국",
+    "url": "eras/03-north-south.html#의상",
+    "type": "person",
+    "content": "625 – 702. 화엄종의 개창자."
+  },
+  {
+    "id": "03_혜초",
+    "title": "혜초",
+    "hanja": "慧超",
+    "era": "남북국",
+    "url": "eras/03-north-south.html#혜초",
+    "type": "person",
+    "content": "704 – 787. 『왕오천축국전』의 구도자."
+  },
+  {
+    "id": "03_김대성",
+    "title": "김대성",
+    "hanja": "金大城",
+    "era": "남북국",
+    "url": "eras/03-north-south.html#김대성",
+    "type": "person",
+    "content": "700 – 774. 불국사·석굴암의 발원자."
+  },
+  {
+    "id": "03_장보고",
+    "title": "장보고",
+    "hanja": "張保皐",
+    "era": "남북국",
+    "url": "eras/03-north-south.html#장보고",
+    "type": "person",
+    "content": "? – 846. 청해진의 해상왕."
+  },
+  {
+    "id": "03_최치원",
+    "title": "최치원",
+    "hanja": "崔致遠",
+    "era": "남북국",
+    "url": "eras/03-north-south.html#최치원",
+    "type": "person",
+    "content": "857 – ?. 6두품의 유학자·문장가."
+  },
+  {
+    "id": "03_대조영",
+    "title": "대조영",
+    "hanja": "大祚榮",
+    "era": "남북국",
+    "url": "eras/03-north-south.html#대조영",
+    "type": "person",
+    "content": "? – 719 · 재위 698–719. 발해 건국자, 고왕."
+  },
+  {
+    "id": "03_대무예",
+    "title": "무왕 대무예",
+    "hanja": "武王 大武藝",
+    "era": "남북국",
+    "url": "eras/03-north-south.html#대무예",
+    "type": "person",
+    "content": "? – 737 · 재위 719–737. 발해의 무력 군주."
+  },
+  {
+    "id": "03_대흠무",
+    "title": "문왕 대흠무",
+    "hanja": "文王 大欽茂",
+    "era": "남북국",
+    "url": "eras/03-north-south.html#대흠무",
+    "type": "person",
+    "content": "? – 793 · 재위 737–793. 발해의 문치 군주."
+  },
+  {
+    "id": "03_견훤",
+    "title": "견훤",
+    "hanja": "甄萱",
+    "era": "남북국",
+    "url": "eras/03-north-south.html#견훤",
+    "type": "person",
+    "content": "867 – 936. 후백제의 창업자."
+  },
+  {
+    "id": "06_이순신",
+    "title": "이순신",
+    "hanja": "李舜臣",
+    "era": "조선 후기",
+    "url": "eras/06-joseon-late.html#이순신",
+    "type": "person",
+    "content": "1545 – 1598. 불패의 수군장."
+  },
+  {
+    "id": "06_류성룡",
+    "title": "류성룡",
+    "hanja": "柳成龍",
+    "era": "조선 후기",
+    "url": "eras/06-joseon-late.html#류성룡",
+    "type": "person",
+    "content": "1542 – 1607. 전란을 기록한 영의정."
+  },
+  {
+    "id": "06_권율",
+    "title": "권율",
+    "hanja": "權慄",
+    "era": "조선 후기",
+    "url": "eras/06-joseon-late.html#권율",
+    "type": "person",
+    "content": "1537 – 1599. 행주대첩의 영웅."
+  },
+  {
+    "id": "06_광해군",
+    "title": "광해군",
+    "hanja": "光海君",
+    "era": "조선 후기",
+    "url": "eras/06-joseon-late.html#광해군",
+    "type": "person",
+    "content": "1575 – 1641 · 재위 1608–1623. 실리외교의 군주, 폐위된 왕."
+  },
+  {
+    "id": "06_허준",
+    "title": "허준",
+    "hanja": "許浚",
+    "era": "조선 후기",
+    "url": "eras/06-joseon-late.html#허준",
+    "type": "person",
+    "content": "1539 – 1615. 『동의보감』의 의관."
+  },
+  {
+    "id": "06_송시열",
+    "title": "송시열",
+    "hanja": "宋時烈",
+    "era": "조선 후기",
+    "url": "eras/06-joseon-late.html#송시열",
+    "type": "person",
+    "content": "1607 – 1689. 노론의 영수."
+  },
+  {
+    "id": "06_영조",
+    "title": "영조",
+    "hanja": "英祖",
+    "era": "조선 후기",
+    "url": "eras/06-joseon-late.html#영조",
+    "type": "person",
+    "content": "1694 – 1776 · 재위 1724–1776. 탕평·균역의 군주."
+  },
+  {
+    "id": "06_정조",
+    "title": "정조",
+    "hanja": "正祖",
+    "era": "조선 후기",
+    "url": "eras/06-joseon-late.html#정조",
+    "type": "person",
+    "content": "1752 – 1800 · 재위 1776–1800. 18세기 르네상스 군주."
+  },
+  {
+    "id": "06_정약용",
+    "title": "정약용",
+    "hanja": "丁若鏞",
+    "era": "조선 후기",
+    "url": "eras/06-joseon-late.html#정약용",
+    "type": "person",
+    "content": "1762 – 1836. 실학의 정점."
+  },
+  {
+    "id": "06_박지원",
+    "title": "박지원",
+    "hanja": "朴趾源",
+    "era": "조선 후기",
+    "url": "eras/06-joseon-late.html#박지원",
+    "type": "person",
+    "content": "1737 – 1805. 『열하일기』의 실학자."
+  },
+  {
+    "id": "06_최제우",
+    "title": "최제우",
+    "hanja": "崔濟愚",
+    "era": "조선 후기",
+    "url": "eras/06-joseon-late.html#최제우",
+    "type": "person",
+    "content": "1824 – 1864. 동학의 창시자."
+  },
+  {
+    "id": "06_흥선대원군",
+    "title": "흥선대원군",
+    "hanja": "興宣大院君",
+    "era": "조선 후기",
+    "url": "eras/06-joseon-late.html#흥선대원군",
+    "type": "person",
+    "content": "1820 – 1898. 19세기 마지막 개혁가."
+  },
+  {
+    "id": "07_고종",
+    "title": "고종",
+    "hanja": "高宗",
+    "era": "개항기",
+    "url": "eras/07-modern-opening.html#고종",
+    "type": "person",
+    "content": "1852 – 1919 · 재위 1863–1907. 대한제국 황제."
+  },
+  {
+    "id": "07_명성황후",
+    "title": "명성황후",
+    "hanja": "明成皇后",
+    "era": "개항기",
+    "url": "eras/07-modern-opening.html#명성황후",
+    "type": "person",
+    "content": "1851 – 1895. 시해된 황후."
+  },
+  {
+    "id": "07_김옥균",
+    "title": "김옥균",
+    "hanja": "金玉均",
+    "era": "개항기",
+    "url": "eras/07-modern-opening.html#김옥균",
+    "type": "person",
+    "content": "1851 – 1894. 갑신정변의 주역."
+  },
+  {
+    "id": "07_서재필",
+    "title": "서재필",
+    "hanja": "徐載弼",
+    "era": "개항기",
+    "url": "eras/07-modern-opening.html#서재필",
+    "type": "person",
+    "content": "1864 – 1951. 독립신문·독립협회 창설자."
+  },
+  {
+    "id": "07_전봉준",
+    "title": "전봉준",
+    "hanja": "全琫準",
+    "era": "개항기",
+    "url": "eras/07-modern-opening.html#전봉준",
+    "type": "person",
+    "content": "1855 – 1895. 동학농민운동의 지도자."
+  },
+  {
+    "id": "07_유길준",
+    "title": "유길준",
+    "hanja": "兪吉濬",
+    "era": "개항기",
+    "url": "eras/07-modern-opening.html#유길준",
+    "type": "person",
+    "content": "1856 – 1914. 『서유견문』의 개화 지식인."
+  },
+  {
+    "id": "07_안창호",
+    "title": "안창호",
+    "hanja": "安昌浩",
+    "era": "개항기",
+    "url": "eras/07-modern-opening.html#안창호",
+    "type": "person",
+    "content": "1878 – 1938. 실력양성의 지도자."
+  },
+  {
+    "id": "07_신채호",
+    "title": "신채호",
+    "hanja": "申采浩",
+    "era": "개항기",
+    "url": "eras/07-modern-opening.html#신채호",
+    "type": "person",
+    "content": "1880 – 1936. 민족사학의 비조."
+  },
+  {
+    "id": "07_이상설",
+    "title": "이상설",
+    "hanja": "李相卨",
+    "era": "개항기",
+    "url": "eras/07-modern-opening.html#이상설",
+    "type": "person",
+    "content": "1870 – 1917. 헤이그 특사·연해주 독립운동."
+  },
+  {
+    "id": "07_안중근",
+    "title": "안중근",
+    "hanja": "安重根",
+    "era": "개항기",
+    "url": "eras/07-modern-opening.html#안중근",
+    "type": "person",
+    "content": "1879 – 1910. 하얼빈의 의사."
+  },
+  {
+    "id": "07_이완용",
+    "title": "이완용",
+    "hanja": "李完用",
+    "era": "개항기",
+    "url": "eras/07-modern-opening.html#이완용",
+    "type": "person",
+    "content": "1858 – 1926. 을사·정미·경술의 매국."
+  },
+  {
+    "id": "07_최익현",
+    "title": "최익현",
+    "hanja": "崔益鉉",
+    "era": "개항기",
+    "url": "eras/07-modern-opening.html#최익현",
+    "type": "person",
+    "content": "1833 – 1906. 위정척사·의병의 노유."
+  },
+  {
+    "id": "08_안창호",
+    "title": "안창호",
+    "hanja": "安昌浩",
+    "era": "일제강점기",
+    "url": "eras/08-japanese-colonial.html#안창호",
+    "type": "person",
+    "content": "1878 – 1938. 실력양성의 도산."
+  },
+  {
+    "id": "08_이승만",
+    "title": "이승만",
+    "hanja": "李承晩",
+    "era": "일제강점기",
+    "url": "eras/08-japanese-colonial.html#이승만",
+    "type": "person",
+    "content": "1875 – 1965. 외교 노선의 임시 대통령."
+  },
+  {
+    "id": "08_김구",
+    "title": "김구",
+    "hanja": "金九",
+    "era": "일제강점기",
+    "url": "eras/08-japanese-colonial.html#김구",
+    "type": "person",
+    "content": "1876 – 1949. 임시정부의 영혼."
+  },
+  {
+    "id": "08_홍범도",
+    "title": "홍범도",
+    "hanja": "洪範圖",
+    "era": "일제강점기",
+    "url": "eras/08-japanese-colonial.html#홍범도",
+    "type": "person",
+    "content": "1868 – 1943. 봉오동 전투의 명장."
+  },
+  {
+    "id": "08_김좌진",
+    "title": "김좌진",
+    "hanja": "金佐鎭",
+    "era": "일제강점기",
+    "url": "eras/08-japanese-colonial.html#김좌진",
+    "type": "person",
+    "content": "1889 – 1930. 청산리 대첩의 총사령관."
+  },
+  {
+    "id": "08_신채호",
+    "title": "신채호",
+    "hanja": "申采浩",
+    "era": "일제강점기",
+    "url": "eras/08-japanese-colonial.html#신채호",
+    "type": "person",
+    "content": "1880 – 1936. 단재, 민족사학의 비조."
+  },
+  {
+    "id": "08_이봉창",
+    "title": "이봉창",
+    "hanja": "李奉昌",
+    "era": "일제강점기",
+    "url": "eras/08-japanese-colonial.html#이봉창",
+    "type": "person",
+    "content": "1900 – 1932. 사쿠라다몬의 의사."
+  },
+  {
+    "id": "08_윤봉길",
+    "title": "윤봉길",
+    "hanja": "尹奉吉",
+    "era": "일제강점기",
+    "url": "eras/08-japanese-colonial.html#윤봉길",
+    "type": "person",
+    "content": "1908 – 1932. 훙커우의 의사."
+  },
+  {
+    "id": "08_유관순",
+    "title": "유관순",
+    "hanja": "柳寬順",
+    "era": "일제강점기",
+    "url": "eras/08-japanese-colonial.html#유관순",
+    "type": "person",
+    "content": "1902 – 1920. 3·1 운동의 어린 영웅."
+  },
+  {
+    "id": "08_한용운",
+    "title": "한용운",
+    "hanja": "韓龍雲",
+    "era": "일제강점기",
+    "url": "eras/08-japanese-colonial.html#한용운",
+    "type": "person",
+    "content": "1879 – 1944. 만해, 민족 시인·승려."
+  },
+  {
+    "id": "08_여운형",
+    "title": "여운형",
+    "hanja": "呂運亨",
+    "era": "일제강점기",
+    "url": "eras/08-japanese-colonial.html#여운형",
+    "type": "person",
+    "content": "1886 – 1947. 건국준비위원회의 지도자."
+  },
+  {
+    "id": "09_이승만2",
+    "title": "이승만",
+    "hanja": "李承晩",
+    "era": "대한민국",
+    "url": "eras/09-republic.html#이승만2",
+    "type": "person",
+    "content": "1875 – 1965 · 재임 1948–1960. 제1·2·3대 대통령."
+  },
+  {
+    "id": "09_김구2",
+    "title": "김구",
+    "hanja": "金九",
+    "era": "대한민국",
+    "url": "eras/09-republic.html#김구2",
+    "type": "person",
+    "content": "1876 – 1949. 통일 정부의 신념."
+  },
+  {
+    "id": "09_박정희",
+    "title": "박정희",
+    "hanja": "朴正熙",
+    "era": "대한민국",
+    "url": "eras/09-republic.html#박정희",
+    "type": "person",
+    "content": "1917 – 1979 · 재임 1963–1979. 산업화와 유신의 군주."
+  },
+  {
+    "id": "09_전태일",
+    "title": "전태일",
+    "hanja": "全泰壹",
+    "era": "대한민국",
+    "url": "eras/09-republic.html#전태일",
+    "type": "person",
+    "content": "1948 – 1970. \"근로기준법을 준수하라\"."
+  },
+  {
+    "id": "09_박종철",
+    "title": "박종철",
+    "hanja": "朴鍾哲",
+    "era": "대한민국",
+    "url": "eras/09-republic.html#박종철",
+    "type": "person",
+    "content": "1965 – 1987. \"탁 치니 억\"."
+  },
+  {
+    "id": "09_이한열",
+    "title": "이한열",
+    "hanja": "李韓烈",
+    "era": "대한민국",
+    "url": "eras/09-republic.html#이한열",
+    "type": "person",
+    "content": "1966 – 1987. \"한열이를 살려내라\"."
+  },
+  {
+    "id": "09_김영삼",
+    "title": "김영삼",
+    "hanja": "金泳三",
+    "era": "대한민국",
+    "url": "eras/09-republic.html#김영삼",
+    "type": "person",
+    "content": "1927 – 2015 · 재임 1993–1998. 제14대 대통령 · YS."
+  },
+  {
+    "id": "09_김대중",
+    "title": "김대중",
+    "hanja": "金大中",
+    "era": "대한민국",
+    "url": "eras/09-republic.html#김대중",
+    "type": "person",
+    "content": "1924 – 2009 · 재임 1998–2003. 제15대 대통령 · DJ."
+  },
+  {
+    "id": "09_노무현",
+    "title": "노무현",
+    "hanja": "盧武鉉",
+    "era": "대한민국",
+    "url": "eras/09-republic.html#노무현",
+    "type": "person",
+    "content": "1946 – 2009 · 재임 2003–2008. 제16대 대통령."
+  },
+  {
+    "id": "09_문재인",
+    "title": "문재인",
+    "hanja": "文在寅",
+    "era": "대한민국",
+    "url": "eras/09-republic.html#문재인",
+    "type": "person",
+    "content": "1953 – · 재임 2017–2022. 제19대 대통령."
+  },
+  {
+    "id": "09_박근혜",
+    "title": "박근혜",
+    "hanja": "朴槿惠",
+    "era": "대한민국",
+    "url": "eras/09-republic.html#박근혜",
+    "type": "person",
+    "content": "1952 – · 재임 2013–2017.3. 제18대 대통령 · 첫 여성 대통령 · 첫 탄핵."
+  },
+  {
+    "id": "09_윤석열",
+    "title": "윤석열",
+    "hanja": "尹錫悅",
+    "era": "대한민국",
+    "url": "eras/09-republic.html#윤석열",
+    "type": "person",
+    "content": "1960 – · 재임 2022–2025. 제20대 대통령 · 두 번째 탄핵."
+  }
+]

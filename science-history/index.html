@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>자연과학사 — 작업중 | 아들을 위한 아카이브</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="탈레스부터 양자컴퓨터까지, 자연과학의 발견사. 현재 자료를 정리 중입니다.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="../assets/shared/styles-base.css">
+
+<style>
+  .wip-hero {
+    padding: 80px 0 40px;
+    text-align: center;
+  }
+  .wip-hero .latin {
+    color: var(--accent);
+    font-size: 22px;
+    letter-spacing: 0.04em;
+  }
+  .wip-hero h1 {
+    font-family: var(--serif-ko);
+    font-size: 52px;
+    font-weight: 700;
+    margin: 14px 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .wip-hero .subtitle {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink-mute);
+    margin-bottom: 28px;
+  }
+  .wip-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    font-family: var(--sans-ko);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--accent);
+    border-radius: 2px;
+  }
+  .wip-prose {
+    max-width: 640px;
+    margin: 48px auto 0;
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--ink-soft);
+  }
+  .wip-prose p { margin-bottom: 1.2em; }
+  .wip-prose em {
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--accent);
+  }
+  .wip-eras {
+    max-width: 760px;
+    margin: 48px auto 0;
+    padding: 28px 32px;
+    border: 1px solid var(--rule);
+    background: var(--paper-light);
+    font-family: var(--sans-ko);
+    font-size: 13px;
+  }
+  .wip-eras h2 {
+    font-family: var(--serif-ko);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 18px;
+    color: var(--ink);
+  }
+  .wip-eras ol {
+    counter-reset: era;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 28px;
+  }
+  .wip-eras li {
+    counter-increment: era;
+    padding-left: 36px;
+    position: relative;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  .wip-eras li::before {
+    content: counter(era, upper-roman);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .wip-eras li .era-years {
+    display: block;
+    font-family: var(--serif-en);
+    color: var(--ink-mute);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+  }
+  .wip-cta {
+    margin: 48px auto 0;
+    max-width: 640px;
+    text-align: center;
+    font-family: var(--sans-ko);
+    font-size: 13px;
+  }
+  .wip-cta a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+  }
+  @media (max-width: 640px) {
+    .wip-hero h1 { font-size: 38px; }
+    .wip-eras ol { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body class="shared-body collection-science" data-page-id="science.main">
+
+<main>
+  <section class="wip-hero">
+    <div class="shared-container">
+      <span class="latin shared-latin">§ III</span>
+      <h1>자연과학사</h1>
+      <p class="subtitle">Natural Science History</p>
+      <span class="wip-badge">작업중</span>
+    </div>
+  </section>
+
+  <div class="shared-container">
+    <div class="wip-prose">
+      <p>
+        탈레스의 <em>만물의 근원은 무엇인가</em>에서 시작해,
+        아리스타르코스의 태양 중심 가설, 알하이삼의 광학,
+        코페르니쿠스의 천체 회전, 케플러의 행성 운동, 뉴턴의 만유인력,
+        다윈의 진화, 멘델의 유전, 맥스웰의 전자기,
+        아인슈타인의 상대성, 양자역학, DNA 이중나선,
+        그리고 오늘의 양자컴퓨터와 인공지능까지.
+      </p>
+      <p>
+        인간이 <em>자연을 어떻게 알아왔는지</em>의 기록을 6개 시대로 정리합니다.
+        현재 기획서를 작성하고 자료를 모으는 중입니다.
+      </p>
+    </div>
+
+    <div class="wip-eras">
+      <h2>예정된 6개 시대</h2>
+      <ol>
+        <li>고대 — 자연철학의 시작
+          <span class="era-years">BC 600 — AD 500</span></li>
+        <li>중세 — 빛과 균형의 학문
+          <span class="era-years">AD 500 — 1500</span></li>
+        <li>과학혁명 — 우주의 재배치
+          <span class="era-years">1500 — 1700</span></li>
+        <li>고전과학 — 법칙의 시대
+          <span class="era-years">1700 — 1900</span></li>
+        <li>현대물리 — 원자와 시공
+          <span class="era-years">1900 — 1970</span></li>
+        <li>동시대 — 정보와 생명
+          <span class="era-years">1970 — 현재</span></li>
+      </ol>
+    </div>
+
+    <p class="wip-cta">
+      현재 진행 상황을 보려면 →
+      <a href="../research/science.html">/research/science.html</a>
+    </p>
+  </div>
+</main>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../assets/shared/nav.js" defer></script>
+<script src="../assets/shared/footer.js" defer></script>
+</body>
+</html>

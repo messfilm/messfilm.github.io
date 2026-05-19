@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>아브라함 계통 종교사 — 연구 자료 | 아들을 위한 아카이브</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="../assets/shared/styles-base.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="shared-body collection-religion" data-page-id="research.religion">
+
+<main class="research">
+  <section class="research-hero">
+    <div class="shared-container">
+      <span class="kicker">§ I</span>
+      <h1>아브라함 계통 종교사 — 연구 자료</h1>
+      <p class="subtitle">Abrahamic Religions Research</p>
+      <p class="lead">
+        유대교·기독교·이슬람교 4,000년 정리에 사용된 출처와 변경 이력.
+        초기 시드는 명시 출처만 등록되어 있으며, 점진적으로 보강될 예정.
+      </p>
+    </div>
+  </section>
+
+  <div class="shared-container">
+    <div class="research-stats" id="re-stats">
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">출처</span></div>
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">업데이트</span></div>
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">노트</span></div>
+    </div>
+
+    <section class="research-section">
+      <header>
+        <h2>출처</h2>
+        <span class="count">신뢰도 순</span>
+      </header>
+      <div id="re-sources"></div>
+    </section>
+
+    <section class="research-section">
+      <header>
+        <h2>업데이트 이력</h2>
+        <span class="count">시간 역순</span>
+      </header>
+      <div id="re-updates"></div>
+    </section>
+
+    <section class="research-section">
+      <header>
+        <h2>연구 노트</h2>
+        <span class="count">결정 기록</span>
+      </header>
+      <div id="re-notes"></div>
+    </section>
+  </div>
+</main>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../assets/shared/nav.js" defer></script>
+<script src="../assets/shared/footer.js" defer></script>
+<script src="../assets/shared/research-loader.js" defer></script>
+<script>
+  window.addEventListener('load', function () {
+    ResearchLoader.load('religion').then(function (data) {
+      ResearchLoader.renderStats(data, '#re-stats');
+      ResearchLoader.renderSources(data.sources, '#re-sources');
+      ResearchLoader.renderUpdates(data.updates, '#re-updates');
+      ResearchLoader.renderNotes(data.notes, '#re-notes');
+    });
+  });
+</script>
+</body>
+</html>

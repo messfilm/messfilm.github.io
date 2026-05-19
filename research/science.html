@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>자연과학사 — 연구 자료 (작업중) | 아들을 위한 아카이브</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="../assets/shared/styles-base.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="shared-body collection-science" data-page-id="research.science">
+
+<main class="research">
+  <section class="research-hero">
+    <div class="shared-container">
+      <span class="kicker">§ III</span>
+      <h1>자연과학사 — 연구 자료</h1>
+      <p class="subtitle">Natural Science History Research</p>
+      <p class="lead">
+        탈레스부터 양자컴퓨터까지. 자료 정리와 시뮬레이션 설계를 진행하고 있다.
+        본 페이지는 작업이 시작되면 출처·이력·노트로 채워진다.
+      </p>
+    </div>
+  </section>
+
+  <div class="shared-container">
+    <div class="wip-banner">
+      <span class="badge">작업중</span>
+      <p>자연과학사 프로젝트는 현재 기획서 단계입니다.</p>
+      <p>작업이 시작되면 이 페이지에 출처·업데이트 이력·연구 노트가 등록됩니다.</p>
+    </div>
+
+    <section class="research-section">
+      <header>
+        <h2>업데이트 이력</h2>
+        <span class="count">시간 역순</span>
+      </header>
+      <div id="sc-updates"></div>
+    </section>
+  </div>
+</main>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../assets/shared/nav.js" defer></script>
+<script src="../assets/shared/footer.js" defer></script>
+<script src="../assets/shared/research-loader.js" defer></script>
+<script>
+  window.addEventListener('load', function () {
+    ResearchLoader.load('science').then(function (data) {
+      ResearchLoader.renderUpdates(data.updates, '#sc-updates');
+    });
+  });
+</script>
+</body>
+</html>

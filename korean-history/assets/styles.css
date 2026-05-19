@@ -1,0 +1,858 @@
+/* =====================================================================
+   한국사 4,000년 — Design System
+   한지·먹·오방색 (Hanji · Meok · Obangsaek)
+   ===================================================================== */
+
+/* --- Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* --- Reset (minimal) --- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; padding: 0; }
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+/* =====================================================================
+   Design Tokens — 한지·먹·오방색
+   ===================================================================== */
+:root {
+  /* 한지 (베이지) — 본문 배경 */
+  --hanji:        #f5efe0;
+  --hanji-light:  #faf6eb;
+  --hanji-dark:   #ebe3cf;
+
+  /* 먹 (짙은 갈색 검정) */
+  --meok:         #1f1a14;
+  --meok-soft:    #3a3328;
+  --meok-mute:    #6b6253;
+
+  /* 구분선 */
+  --rule:         #c8bea4;
+  --rule-soft:    #d8d0b8;
+
+  /* 오방색 (五方色) */
+  --cheong:       #1e5594;   /* 청 — 東·春·木 */
+  --cheong-soft:  #d6e2ef;
+  --jeok:         #b5252e;   /* 적 — 南·夏·火 */
+  --jeok-soft:    #f1d8da;
+  --hwang:        #c89932;   /* 황 — 中央·土 */
+  --hwang-soft:   #ede0c1;
+  --baek:         #fafafa;   /* 백 — 西·秋·金 */
+  --heuk:         var(--meok); /* 흑 — 北·冬·水 */
+
+  /* 액센트 */
+  --geumbak:      #b08d4d;   /* 금박 */
+  --cheongja:     #4a7a6e;   /* 청자색 (고려) */
+  --danchong-r:   #8a3838;   /* 단청 적 */
+  --danchong-g:   #3a5a40;   /* 단청 녹 */
+
+  /* 기본 액센트 (페이지에서 [data-era]로 override) */
+  --accent:       var(--meok);
+  --accent-soft:  var(--rule-soft);
+  --accent-2:     var(--hwang);
+
+  /* 카테고리 색 (연표·용어집 배지) */
+  --cat-politics:  var(--meok);
+  --cat-war:       var(--jeok);
+  --cat-culture:   var(--hwang);
+  --cat-foreign:   var(--cheong);
+  --cat-society:   var(--danchong-g);
+
+  /* Layout */
+  --maxw:         1120px;
+  --maxw-text:    760px;
+  --nav-h:        56px;
+}
+
+/* --- 시대별 액센트 매핑 (지시서 §3.2) --- */
+[data-era="prehistoric"]      { --accent: var(--meok);      --accent-2: var(--hwang); }
+[data-era="three-kingdoms"]   { --accent: var(--cheong);    --accent-2: var(--jeok); }
+[data-era="north-south"]      { --accent: var(--cheong);    --accent-2: var(--hwang); }
+[data-era="goryeo"]           { --accent: var(--cheongja);  --accent-2: var(--hwang); --accent-soft: #d8e3df; }
+[data-era="joseon-early"]     { --accent: var(--meok);      --accent-2: var(--cheong); }
+[data-era="joseon-late"]      { --accent: var(--meok-soft); --accent-2: var(--jeok); }
+[data-era="modern-opening"]   { --accent: var(--jeok);      --accent-2: var(--hwang); }
+[data-era="japanese-colonial"]{ --accent: var(--meok);      --accent-2: var(--jeok); }
+[data-era="republic"]         { --accent: var(--jeok);      --accent-2: var(--cheong); }
+
+/* =====================================================================
+   Base typography
+   ===================================================================== */
+body {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400;
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--meok);
+  background: var(--hanji);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 700;
+  color: var(--meok);
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-weight: 900; font-size: clamp(40px, 6vw, 76px); letter-spacing: -0.03em; }
+h2 { font-size: clamp(26px, 3vw, 34px); }
+h3 { font-size: clamp(20px, 2vw, 24px); font-weight: 600; }
+h4 { font-size: 17px; font-weight: 600; }
+
+p { margin: 0 0 1em; }
+p:last-child { margin-bottom: 0; }
+
+strong { font-weight: 700; color: var(--meok); }
+em { font-style: italic; }
+
+/* --- Inline utility classes --- */
+.meta {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--meok-mute);
+}
+.latin {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+}
+.year {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.num {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.92em;
+}
+.hanja {
+  font-size: 0.78em;
+  color: var(--meok-mute);
+  margin-left: 0.18em;
+  font-weight: inherit;
+}
+.section-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--geumbak);
+  letter-spacing: 0.04em;
+}
+
+/* =====================================================================
+   Layout
+   ===================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.container--narrow {
+  max-width: var(--maxw-text);
+}
+
+section {
+  padding: 72px 0;
+  border-top: 1px solid var(--rule);
+}
+section:first-of-type { border-top: none; }
+section > .container > header { margin-bottom: 32px; }
+section > .container > header h2 {
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--geumbak);
+}
+section > .container > header .meta { display: block; margin-bottom: 8px; }
+section > .container > header .lead {
+  color: var(--meok-soft);
+  margin-top: 14px;
+  max-width: 640px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--rule);
+  margin: 32px 0;
+}
+.hr-thin { background: var(--rule-soft); }
+
+/* =====================================================================
+   Top Navigation (sticky)
+   ===================================================================== */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--nav-h);
+  background: var(--hanji);
+  border-bottom: 1px solid var(--rule);
+}
+.site-nav__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 32px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+.site-nav__brand {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.005em;
+  color: var(--meok);
+  white-space: nowrap;
+}
+.site-nav__brand .latin { color: var(--meok-mute); font-size: 13px; margin-left: 8px; }
+.site-nav__links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+.site-nav__links a {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12.5px;
+  color: var(--meok-soft);
+  padding: 4px 2px;
+  border-bottom: 1px solid transparent;
+  white-space: nowrap;
+}
+.site-nav__links a:hover { border-bottom-color: var(--geumbak); color: var(--meok); }
+.site-nav__links a.is-current { color: var(--meok); border-bottom-color: var(--geumbak); font-weight: 500; }
+
+/* Search box */
+.search {
+  position: relative;
+  width: 220px;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.search__input {
+  width: 100%;
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--rule);
+  background: var(--hanji-light);
+  color: var(--meok);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.search__input::placeholder { color: var(--meok-mute); }
+.search__input:focus { border-color: var(--meok); background: var(--baek); }
+.search__results {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--baek);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  max-height: 360px;
+  overflow-y: auto;
+  display: none;
+  z-index: 60;
+}
+.search.is-open .search__results { display: block; }
+.search__item {
+  display: block;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--rule-soft);
+  font-size: 13px;
+  cursor: pointer;
+}
+.search__item:last-child { border-bottom: none; }
+.search__item:hover, .search__item.is-active { background: var(--hanji); }
+.search__item-title { font-weight: 600; font-family: 'Noto Serif KR'; }
+.search__item-meta { font-size: 11px; color: var(--meok-mute); font-family: 'Noto Sans KR'; margin-top: 2px; letter-spacing: 0.08em; }
+.search__item-snippet { font-size: 12px; color: var(--meok-soft); margin-top: 4px; line-height: 1.5; }
+.search__empty { padding: 14px; font-size: 12px; color: var(--meok-mute); text-align: center; font-family: 'Noto Sans KR'; }
+
+/* =====================================================================
+   Hero
+   ===================================================================== */
+.hero {
+  padding: 88px 0 64px;
+  border-top: none;
+}
+.hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.hero__meta-line {
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+  max-width: 200px;
+}
+.hero h1 { margin-bottom: 18px; }
+.hero__sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(20px, 2.4vw, 28px);
+  color: var(--meok-soft);
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+.hero__lead {
+  max-width: var(--maxw-text);
+  font-size: 16.5px;
+  line-height: 1.85;
+  color: var(--meok-soft);
+}
+.hero__period {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  margin-bottom: 18px;
+}
+
+/* Hero stats row */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+}
+.hero-stat__label { font-family: 'Noto Sans KR'; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--meok-mute); margin-bottom: 8px; }
+.hero-stat__value { font-family: 'Cormorant Garamond'; font-weight: 600; font-size: 30px; color: var(--accent); line-height: 1.1; }
+.hero-stat__sub { font-size: 12px; color: var(--meok-mute); margin-top: 6px; font-family: 'Noto Sans KR'; }
+
+/* =====================================================================
+   Cards
+   ===================================================================== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+.cards-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.cards-grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--hanji-light);
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: background 0.15s;
+}
+a.card:hover { background: var(--baek); }
+a.card.is-disabled { background: var(--hanji-dark); color: var(--meok-mute); cursor: not-allowed; }
+
+.card__num {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--geumbak);
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+.card__title {
+  font-family: 'Noto Serif KR';
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--meok);
+  margin-bottom: 4px;
+}
+a.card.is-disabled .card__title { color: var(--meok-mute); }
+.card__period {
+  font-family: 'Cormorant Garamond';
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+.card__summary {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--meok-soft);
+  flex: 1;
+}
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule-soft);
+  font-family: 'Noto Sans KR';
+  font-size: 11.5px;
+  color: var(--meok-mute);
+  letter-spacing: 0.02em;
+}
+.card__status {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-family: 'Noto Sans KR';
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  color: var(--meok-mute);
+  text-transform: uppercase;
+  border: 1px solid var(--rule);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+/* --- Person/Place card variant --- */
+.fig-card {
+  background: var(--hanji-light);
+  padding: 22px 24px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+.fig-card__name {
+  font-family: 'Noto Serif KR';
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+.fig-card__years {
+  font-family: 'Cormorant Garamond';
+  font-size: 13px;
+  color: var(--meok-mute);
+  margin-bottom: 10px;
+}
+.fig-card__epithet {
+  font-size: 13.5px;
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.fig-card__body { font-size: 14px; line-height: 1.65; color: var(--meok-soft); }
+
+.fig-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* =====================================================================
+   Dynasty / State Cards (시대 내 정치체)
+   ===================================================================== */
+.dynasty-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.dynasty-card {
+  border: 1px solid var(--rule);
+  background: var(--hanji-light);
+  padding: 26px;
+  border-radius: 2px;
+}
+.dynasty-card__header { border-bottom: 1px solid var(--rule-soft); padding-bottom: 14px; margin-bottom: 14px; }
+.dynasty-card__name { font-size: 22px; font-weight: 700; }
+.dynasty-card__period { font-family: 'Cormorant Garamond'; font-size: 14px; color: var(--accent); margin-top: 4px; }
+.dynasty-card dl { display: grid; grid-template-columns: 96px 1fr; gap: 8px 16px; margin: 0; font-size: 14px; }
+.dynasty-card dt { font-family: 'Noto Sans KR'; font-size: 11.5px; letter-spacing: 0.1em; color: var(--meok-mute); text-transform: uppercase; padding-top: 3px; }
+.dynasty-card dd { margin: 0; color: var(--meok-soft); line-height: 1.65; }
+
+/* =====================================================================
+   Timeline (vertical)
+   ===================================================================== */
+.timeline {
+  position: relative;
+  margin-left: 8px;
+  padding-left: 32px;
+  border-left: 1px solid var(--rule);
+}
+.timeline__phase {
+  position: relative;
+  margin: 28px 0 18px -32px;
+  padding: 8px 0 8px 32px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--hanji-dark);
+}
+.timeline__phase-title {
+  font-family: 'Noto Sans KR';
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--meok);
+}
+.timeline__phase-period {
+  font-family: 'Cormorant Garamond';
+  font-size: 13px;
+  color: var(--meok-mute);
+  margin-left: 12px;
+}
+
+.tl-event {
+  position: relative;
+  padding: 10px 0 10px 0;
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 22px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.tl-event:last-child { border-bottom: none; }
+.tl-event::before {
+  content: '';
+  position: absolute;
+  left: -38px;
+  top: 18px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--meok);
+  border: 2px solid var(--hanji);
+  box-sizing: content-box;
+}
+.tl-event[data-cat="war"]::before     { background: var(--jeok); }
+.tl-event[data-cat="culture"]::before { background: var(--hwang); }
+.tl-event[data-cat="foreign"]::before { background: var(--cheong); }
+.tl-event[data-cat="society"]::before { background: var(--danchong-g); }
+.tl-event[data-cat="politics"]::before{ background: var(--meok); }
+
+.tl-event__year {
+  font-family: 'Cormorant Garamond';
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--accent);
+  padding-top: 2px;
+  font-variant-numeric: tabular-nums;
+}
+.tl-event__title { font-weight: 600; font-size: 15.5px; margin-bottom: 2px; }
+.tl-event__body { font-size: 14px; color: var(--meok-soft); line-height: 1.7; }
+.tl-event__tag {
+  display: inline-block;
+  font-family: 'Noto Sans KR';
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--meok-mute);
+  border: 1px solid var(--rule);
+  padding: 1px 7px;
+  border-radius: 2px;
+  margin-left: 8px;
+  vertical-align: 2px;
+}
+
+/* =====================================================================
+   Era badge / numbering
+   ===================================================================== */
+.era-number {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--geumbak);
+  letter-spacing: 0.06em;
+}
+
+/* =====================================================================
+   Theory / 학설 갈래 박스
+   ===================================================================== */
+.theories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+.theory {
+  background: var(--hanji-light);
+  padding: 24px 26px;
+}
+.theory__label {
+  font-family: 'Noto Sans KR';
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--meok-mute);
+  margin-bottom: 8px;
+}
+.theory__title { font-size: 17px; font-weight: 700; margin-bottom: 10px; color: var(--meok); }
+.theory__body { font-size: 14px; line-height: 1.7; color: var(--meok-soft); }
+.theory--a { border-left: 3px solid var(--cheong); }
+.theory--b { border-left: 3px solid var(--jeok); }
+
+/* =====================================================================
+   Tables (제도·신분 등)
+   ===================================================================== */
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  border-top: 1px solid var(--meok);
+  border-bottom: 1px solid var(--meok);
+}
+.tbl th, .tbl td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--rule-soft);
+  vertical-align: top;
+  text-align: left;
+}
+.tbl thead th {
+  font-family: 'Noto Sans KR';
+  font-weight: 500;
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--meok-mute);
+  border-bottom: 1px solid var(--meok);
+}
+.tbl tbody tr:last-child td { border-bottom: none; }
+.tbl td.num { font-family: 'Cormorant Garamond'; font-weight: 600; }
+
+/* =====================================================================
+   Term hover (용어집)
+   ===================================================================== */
+.term {
+  background-image: linear-gradient(transparent 60%, var(--accent-soft) 60%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor: help;
+  padding: 0 1px;
+  transition: background-image 0.15s;
+}
+.term:hover { background-image: linear-gradient(transparent 0%, var(--accent-soft) 0%); }
+
+.glossary-pop {
+  position: absolute;
+  z-index: 100;
+  width: 280px;
+  background: var(--baek);
+  border: 1px solid var(--meok);
+  border-radius: 2px;
+  padding: 14px 16px;
+  font-family: 'Noto Serif KR';
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--meok);
+  box-shadow: 1px 1px 0 var(--meok);
+}
+.glossary-pop__title { font-weight: 700; font-size: 15px; }
+.glossary-pop__hanja { color: var(--meok-mute); font-size: 11px; margin-left: 4px; }
+.glossary-pop__cat {
+  display: inline-block;
+  font-family: 'Noto Sans KR';
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--meok-mute);
+  border: 1px solid var(--rule);
+  padding: 1px 7px;
+  border-radius: 2px;
+  margin-left: 8px;
+  vertical-align: 2px;
+}
+.glossary-pop__body { margin-top: 8px; color: var(--meok-soft); font-size: 13px; }
+
+/* =====================================================================
+   Quotes / references
+   ===================================================================== */
+.q {
+  border-left: 3px solid var(--geumbak);
+  padding: 6px 16px;
+  font-style: italic;
+  color: var(--meok-soft);
+  font-size: 15px;
+}
+.q cite { font-style: normal; font-family: 'Noto Sans KR'; font-size: 12px; color: var(--meok-mute); display: block; margin-top: 6px; letter-spacing: 0.08em; }
+
+/* =====================================================================
+   References list (참고자료)
+   ===================================================================== */
+.refs { font-size: 14px; color: var(--meok-soft); }
+.refs li { padding: 6px 0; border-bottom: 1px dotted var(--rule); }
+.refs li:last-child { border-bottom: none; }
+.refs a { color: var(--meok); border-bottom: 1px solid var(--rule); }
+.refs a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* =====================================================================
+   Two-column prose
+   ===================================================================== */
+.prose-cols { columns: 2; column-gap: 40px; column-rule: 1px solid var(--rule-soft); font-size: 15px; line-height: 1.85; }
+.prose-cols p { break-inside: avoid; }
+
+/* =====================================================================
+   Footer
+   ===================================================================== */
+.site-footer {
+  padding: 56px 0 64px;
+  border-top: 2px solid var(--meok);
+  background: var(--hanji-dark);
+  font-size: 13px;
+  color: var(--meok-soft);
+  margin-top: 64px;
+}
+.site-footer h4 {
+  font-size: 12px;
+  font-family: 'Noto Sans KR';
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--meok-mute);
+  margin-bottom: 10px;
+}
+.site-footer__cols {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 36px;
+}
+.site-footer__brand { font-family: 'Noto Serif KR'; font-weight: 700; font-size: 18px; color: var(--meok); margin-bottom: 8px; }
+.site-footer p { font-size: 13px; line-height: 1.7; }
+.site-footer ul li { padding: 3px 0; }
+.site-footer a { color: var(--meok); border-bottom: 1px solid transparent; }
+.site-footer a:hover { border-bottom-color: var(--geumbak); }
+.site-footer__bottom { padding-top: 22px; border-top: 1px solid var(--rule); font-size: 11.5px; color: var(--meok-mute); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-family: 'Noto Sans KR'; letter-spacing: 0.04em; }
+
+.site-footer__contact {
+  margin-top: 14px !important;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.site-footer__contact .meta { display: block; margin-bottom: 4px; font-size: 10.5px; }
+.site-footer__contact a {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--meok) !important;
+  border-bottom: 1px solid var(--geumbak) !important;
+}
+.site-footer__contact a:hover { color: var(--accent) !important; }
+
+/* =====================================================================
+   SVG visual conventions
+   ===================================================================== */
+.svg-figure {
+  background: var(--hanji-light);
+  border: 1px solid var(--rule);
+  padding: 24px;
+  margin: 16px 0;
+  border-radius: 2px;
+}
+.svg-figure__scroll {
+  margin: 0 -8px;
+  padding: 0 8px;
+}
+.svg-figure svg { width: 100%; height: auto; display: block; }
+.svg-figure__caption {
+  font-family: 'Noto Sans KR';
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  color: var(--meok-mute);
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule-soft);
+}
+
+/* =====================================================================
+   Prev/Next navigation (시대 페이지 하단)
+   ===================================================================== */
+.era-pn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-top: 48px;
+}
+.era-pn a {
+  display: block;
+  background: var(--hanji-light);
+  padding: 22px 26px;
+}
+.era-pn a:hover { background: var(--baek); }
+.era-pn__dir { font-family: 'Noto Sans KR'; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--meok-mute); margin-bottom: 6px; }
+.era-pn__title { font-size: 17px; font-weight: 700; }
+.era-pn__period { font-family: 'Cormorant Garamond'; font-size: 13px; color: var(--accent); margin-top: 2px; }
+.era-pn--next { text-align: right; }
+
+/* =====================================================================
+   Responsive
+   ===================================================================== */
+@media (max-width: 920px) {
+  .cards-grid, .cards-grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .fig-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .dynasty-grid { grid-template-columns: 1fr; }
+  .theories { grid-template-columns: 1fr; }
+  .prose-cols { columns: 1; }
+  .site-footer__cols { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 760px) {
+  /* SVG figures: keep readable by horizontal scroll instead of shrinking */
+  .svg-figure { padding: 16px 0 16px; }
+  .svg-figure > svg {
+    min-width: 880px;
+    width: 880px;
+  }
+  .svg-figure {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .svg-figure__caption { padding-left: 16px; padding-right: 16px; }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 15px; }
+  .container { padding: 0 20px; }
+  section { padding: 48px 0; }
+  .hero { padding: 56px 0 40px; }
+  .cards-grid, .cards-grid--4 { grid-template-columns: 1fr; }
+  .fig-grid { grid-template-columns: 1fr; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  .site-nav { height: auto; }
+  .site-nav__inner { flex-wrap: wrap; padding: 10px 20px; gap: 12px; }
+  .site-nav__links { order: 3; flex-basis: 100%; gap: 14px; overflow-x: auto; }
+  .search { width: 100%; order: 2; }
+
+  .timeline { padding-left: 24px; }
+  .timeline__phase { margin-left: -24px; padding-left: 24px; }
+  .tl-event { grid-template-columns: 64px 1fr; gap: 14px; }
+  .tl-event::before { left: -29px; }
+  .tl-event__year { font-size: 15px; }
+
+  .era-pn { grid-template-columns: 1fr; }
+}
+
+/* =====================================================================
+   Print
+   ===================================================================== */
+@media print {
+  body { background: white; color: black; font-size: 11pt; }
+  .site-nav, .search, .site-footer__bottom { display: none; }
+  section { page-break-inside: avoid; }
+  .term { background: none; }
+}

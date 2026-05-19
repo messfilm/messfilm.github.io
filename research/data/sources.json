@@ -1,0 +1,159 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-05-19",
+  "sources": [
+    {
+      "id": "src-0001",
+      "project": "korean",
+      "type": "primary-database",
+      "title": "국사편찬위원회 한국사데이터베이스",
+      "title_en": "Korean History Database",
+      "publisher": "국사편찬위원회",
+      "url": "https://db.history.go.kr/",
+      "accessed": "2026-05-19",
+      "reliability": "high",
+      "language": "ko",
+      "usedFor": [
+        { "page": "korean.main", "section": "전반" }
+      ],
+      "notes": "한국사 표준 1차 자료. 연도·인명·관직 권위."
+    },
+    {
+      "id": "src-0002",
+      "project": "korean",
+      "type": "encyclopedia",
+      "title": "한국민족문화대백과사전",
+      "title_en": "Encyclopedia of Korean Culture",
+      "publisher": "한국학중앙연구원",
+      "url": "https://encykorea.aks.ac.kr/",
+      "accessed": "2026-05-19",
+      "reliability": "high",
+      "language": "ko",
+      "usedFor": [
+        { "page": "korean.main", "section": "전반" }
+      ],
+      "notes": "인물·사건·제도·문화 항목의 학술 기준 정리."
+    },
+    {
+      "id": "src-0003",
+      "project": "korean",
+      "type": "primary-database",
+      "title": "우리역사넷",
+      "title_en": "Korean History for Public",
+      "publisher": "국사편찬위원회",
+      "url": "https://contents.history.go.kr/",
+      "accessed": "2026-05-19",
+      "reliability": "high",
+      "language": "ko",
+      "usedFor": [
+        { "page": "korean.main", "section": "전반" }
+      ],
+      "notes": "국편위의 대중 교육용 콘텐츠. 한국사데이터베이스 보완."
+    },
+    {
+      "id": "src-0004",
+      "project": "korean",
+      "type": "academic-archive",
+      "title": "동북아역사재단",
+      "title_en": "Northeast Asian History Foundation",
+      "publisher": "동북아역사재단",
+      "url": "https://www.nahf.or.kr/",
+      "accessed": "2026-05-19",
+      "reliability": "high",
+      "language": "ko",
+      "usedFor": [
+        { "page": "korean.main", "section": "주변국 관계" }
+      ],
+      "notes": "고대사·국경·간도·독도 관련 학술 자료."
+    },
+    {
+      "id": "src-0101",
+      "project": "religion",
+      "type": "encyclopedia",
+      "title": "Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica, Inc.",
+      "url": "https://www.britannica.com/",
+      "accessed": "2026-05-19",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "religion.main", "section": "전반 — 분파·교리·역사 사실 교차 확인" }
+      ],
+      "notes": "본문 푸터에 '교차 확인 출처'로 명시됨."
+    },
+    {
+      "id": "src-0102",
+      "project": "religion",
+      "type": "academic-archive",
+      "title": "Pew Research Center — Religion & Public Life",
+      "publisher": "Pew Research Center",
+      "url": "https://www.pewresearch.org/religion/",
+      "accessed": "2026-05-19",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "religion.main", "section": "신도 분포·분파 비중" }
+      ],
+      "notes": "분파별 신도 수와 지역 분포 통계. 본문에서 'Pew Research Center, 2025'로 인용."
+    },
+    {
+      "id": "src-0103",
+      "project": "religion",
+      "type": "news",
+      "title": "BBC News",
+      "publisher": "British Broadcasting Corporation",
+      "url": "https://www.bbc.com/news",
+      "accessed": "2026-05-19",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "religion.main", "section": "현대 종교 분쟁 — 이란-이스라엘 전쟁 등" }
+      ],
+      "notes": "최근 사건의 다중 소스 교차 확인."
+    },
+    {
+      "id": "src-0104",
+      "project": "religion",
+      "type": "news",
+      "title": "Reuters",
+      "publisher": "Reuters",
+      "url": "https://www.reuters.com/",
+      "accessed": "2026-05-19",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "religion.main", "section": "현대 종교 분쟁" }
+      ]
+    },
+    {
+      "id": "src-0105",
+      "project": "religion",
+      "type": "news",
+      "title": "Al Jazeera",
+      "publisher": "Al Jazeera Media Network",
+      "url": "https://www.aljazeera.com/",
+      "accessed": "2026-05-19",
+      "reliability": "medium",
+      "language": "en",
+      "usedFor": [
+        { "page": "religion.main", "section": "현대 종교 분쟁 — 중동 시각 균형" }
+      ],
+      "notes": "서구 매체와 균형을 위한 중동권 보도. 신뢰도는 사안별 다중 확인 권장."
+    },
+    {
+      "id": "src-0106",
+      "project": "religion",
+      "type": "website-other",
+      "title": "Wikipedia",
+      "publisher": "Wikimedia Foundation",
+      "url": "https://en.wikipedia.org/",
+      "accessed": "2026-05-19",
+      "reliability": "medium",
+      "language": "en",
+      "usedFor": [
+        { "page": "religion.main", "section": "전반 — 사실·연도 교차 확인" }
+      ],
+      "notes": "본문에서 'Britannica·Wikipedia 등을 교차 확인하여 작성'으로 명시. 권위 출처와 함께 검증용으로만 사용."
+    }
+  ]
+}

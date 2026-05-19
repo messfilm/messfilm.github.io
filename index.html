@@ -2,409 +2,443 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>4,000년의 두 이야기 — messfilm</title>
+<title>아들을 위한 아카이브 — Archive for My Son</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="자녀에게 물려주려는 두 개의 역사 학습 자료. 아브라함 계통 종교의 4,000년, 그리고 한국사 4,000년.">
+<meta name="description" content="한 아버지가 자녀에게 정리해 물려주는 세 권의 학습 노트. 아브라함 계통 종교의 4,000년, 한국사 4,000년, 자연과학사. 그리고 모든 출처를 추적할 수 있는 연구 아카이브.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="assets/shared/styles-base.css">
 
 <style>
-/* ---------- Tokens ---------- */
-:root {
-  --hanji:        #f5efe0;
-  --hanji-light:  #faf6eb;
-  --hanji-dark:   #ebe3cf;
-  --meok:         #1f1a14;
-  --meok-soft:    #3a3328;
-  --meok-mute:    #6b6253;
-  --rule:         #c8bea4;
-  --rule-soft:    #d8d0b8;
-  --geumbak:      #b08d4d;
+  /* ============================================================
+     Main archive landing — sized for a clean print-feel
+     ============================================================ */
 
-  /* Project accents */
-  --abrahamic:    #a37e2c;   /* gold from abrahamic site */
-  --abrahamic-bg: #ede8db;
-  --korean:       #4a7a6e;   /* cheongja from korean site */
-  --korean-bg:    #e0e8e4;
+  .home-hero {
+    padding: 84px 0 36px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .home-hero .kicker {
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--gold);
+    font-size: 18px;
+    letter-spacing: 0.04em;
+  }
+  .home-hero h1 {
+    font-family: var(--serif-ko);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.05;
+    margin: 12px 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .home-hero h1 .latin {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--ink-mute);
+    font-size: 0.42em;
+    margin-left: 14px;
+    letter-spacing: 0.02em;
+    vertical-align: middle;
+  }
+  .home-hero .lead {
+    max-width: 720px;
+    margin-top: 26px;
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--ink-soft);
+  }
+  .home-hero .lead em {
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--gold);
+  }
 
-  --maxw:         1080px;
-}
+  /* Mini timeline SVG */
+  .home-timeline {
+    margin: 56px 0 24px;
+    padding: 28px 30px;
+    background: var(--paper-light);
+    border: 1px solid var(--rule);
+  }
+  .home-timeline .timeline-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .home-timeline h2 {
+    font-family: var(--serif-ko);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.01em;
+  }
+  .home-timeline .timeline-head .meta {
+    font-family: var(--sans-ko);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .home-timeline svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-/* ---------- Reset (minimal) ---------- */
-*, *::before, *::after { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-a { color: inherit; text-decoration: none; }
+  /* Card grid */
+  .home-cards {
+    margin: 56px 0 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 26px;
+    background: var(--paper-light);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    text-decoration: none;
+    color: inherit;
+    min-height: 230px;
+    position: relative;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    border-color: var(--ink-soft);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -10px rgba(31, 26, 20, 0.18);
+  }
+  .card.collection-religion { --accent: #7c2030; }
+  .card.collection-korean   { --accent: #4a7a6e; }
+  .card.collection-science  { --accent: #2a5680; }
+  .card.collection-research { --accent: var(--gold); }
+  .card-num {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--accent);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .card-title {
+    font-family: var(--serif-ko);
+    font-weight: 700;
+    font-size: 26px;
+    margin: 4px 0 4px;
+    letter-spacing: -0.005em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .card-title .latin {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--ink-mute);
+    font-size: 14px;
+    margin-left: 2px;
+  }
+  .card-status {
+    display: inline-block;
+    padding: 2px 9px;
+    font-family: var(--sans-ko);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--accent);
+    color: var(--paper);
+    border-radius: 2px;
+    vertical-align: middle;
+  }
+  .card-desc {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 8px 0 14px;
+  }
+  .card-meta {
+    margin-top: auto;
+    display: flex;
+    gap: 22px;
+    font-family: var(--sans-ko);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--ink-mute);
+  }
+  .card-meta strong {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-weight: 500;
+    margin-bottom: 1px;
+  }
+  .card-meta span {
+    color: var(--ink-soft);
+    font-family: var(--serif-en);
+    font-size: 14px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .card-cta {
+    margin-top: 14px;
+    font-family: var(--sans-ko);
+    font-size: 11.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .card.collection-research {
+    background: linear-gradient(180deg, var(--paper-light) 0%, #f7f1df 100%);
+  }
 
-body {
-  font-family: 'Noto Serif KR', serif;
-  font-weight: 400;
-  font-size: 15.5px;
-  line-height: 1.75;
-  color: var(--meok);
-  background: var(--hanji);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+  /* Guide section */
+  .home-guide {
+    margin: 64px 0 0;
+    padding: 32px 36px;
+    background: var(--paper-light);
+    border: 1px solid var(--rule);
+  }
+  .home-guide h2 {
+    font-family: var(--serif-ko);
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0 0 16px;
+  }
+  .home-guide p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--ink-soft);
+    margin: 0 0 1em;
+    max-width: 760px;
+  }
+  .home-guide p:last-child { margin-bottom: 0; }
+  .home-guide em {
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--gold);
+  }
 
-/* ---------- Utility ---------- */
-.latin { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; }
-.year  { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-variant-numeric: tabular-nums; }
-.meta  {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--meok-mute);
-}
-.hanja { font-size: 0.78em; color: var(--meok-mute); margin-left: 0.18em; }
-
-.container {
-  width: 100%;
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
-/* ---------- Top brand bar ---------- */
-.brandbar {
-  border-bottom: 1px solid var(--rule);
-  background: var(--hanji);
-  padding: 18px 0;
-}
-.brandbar__inner {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 0 32px;
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-}
-.brandbar__name {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-weight: 600;
-  font-size: 22px;
-  color: var(--meok);
-  letter-spacing: 0.01em;
-}
-.brandbar__name b { font-style: normal; color: var(--geumbak); font-weight: 700; }
-.brandbar__sub {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 12px;
-  color: var(--meok-mute);
-  letter-spacing: 0.06em;
-}
-
-/* ---------- Hero ---------- */
-.hero {
-  padding: 88px 0 56px;
-}
-.hero__eyebrow {
-  display: flex; align-items: center; gap: 14px;
-  margin-bottom: 28px;
-}
-.hero__line { flex: 1; height: 1px; background: var(--rule); max-width: 200px; }
-.hero h1 {
-  font-family: 'Noto Serif KR', serif;
-  font-weight: 900;
-  font-size: clamp(40px, 6vw, 76px);
-  letter-spacing: -0.03em;
-  margin: 0 0 18px;
-  line-height: 1.15;
-}
-.hero h1 .num {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: normal;
-  font-weight: 600;
-  color: var(--geumbak);
-  letter-spacing: -0.01em;
-}
-.hero__sub {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: clamp(20px, 2.4vw, 28px);
-  color: var(--meok-soft);
-  font-weight: 400;
-  margin: 0 0 32px;
-}
-.hero__lead {
-  max-width: 720px;
-  font-size: 16.5px;
-  line-height: 1.85;
-  color: var(--meok-soft);
-}
-.hero__lead strong { color: var(--meok); font-weight: 600; }
-
-/* ---------- Project cards ---------- */
-.projects {
-  padding: 36px 0 48px;
-}
-.projects__intro {
-  margin-bottom: 28px;
-  font-size: 14px;
-  color: var(--meok-mute);
-  font-family: 'Noto Sans KR', sans-serif;
-  letter-spacing: 0.02em;
-}
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  background: var(--rule);
-  border: 1px solid var(--rule);
-}
-.card {
-  display: flex;
-  flex-direction: column;
-  padding: 36px 32px 32px;
-  background: var(--hanji-light);
-  position: relative;
-  transition: background 0.15s;
-  min-height: 360px;
-}
-.card:hover { background: var(--hanji-light); filter: brightness(1.02); }
-.card--abrahamic { background: var(--abrahamic-bg); }
-.card--korean { background: var(--korean-bg); }
-
-.card__num {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 16px;
-  color: var(--geumbak);
-  letter-spacing: 0.04em;
-  margin-bottom: 18px;
-}
-.card--abrahamic .card__num { color: var(--abrahamic); }
-.card--korean .card__num { color: var(--korean); }
-
-.card__title {
-  font-family: 'Noto Serif KR', serif;
-  font-weight: 700;
-  font-size: 30px;
-  color: var(--meok);
-  margin: 0 0 6px;
-  line-height: 1.2;
-}
-.card__title-en {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 18px;
-  color: var(--meok-mute);
-  margin-bottom: 14px;
-}
-.card__period {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--meok-soft);
-  letter-spacing: 0.05em;
-  margin-bottom: 18px;
-}
-.card__summary {
-  font-size: 14.5px;
-  line-height: 1.75;
-  color: var(--meok-soft);
-  flex: 1;
-  margin-bottom: 20px;
-}
-.card__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 10px;
-  padding: 14px 0 0;
-  border-top: 1px solid var(--rule-soft);
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 11.5px;
-  color: var(--meok-mute);
-  letter-spacing: 0.02em;
-}
-.card__cta {
-  margin-top: 16px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--meok);
-  border-bottom: 1px solid var(--geumbak);
-  display: inline-block;
-  padding-bottom: 2px;
-  align-self: flex-start;
-}
-
-/* ---------- About / Footer ---------- */
-.about {
-  padding: 56px 0 36px;
-  border-top: 1px solid var(--rule);
-  margin-top: 32px;
-}
-.about h2 {
-  font-size: 22px;
-  font-weight: 600;
-  margin: 0 0 14px;
-  padding-bottom: 6px;
-  display: inline-block;
-  border-bottom: 2px solid var(--geumbak);
-}
-.about p {
-  max-width: 720px;
-  font-size: 15px;
-  color: var(--meok-soft);
-  margin: 0 0 12px;
-}
-
-.contact {
-  margin-top: 28px;
-  padding-top: 24px;
-  border-top: 1px solid var(--rule-soft);
-}
-.contact__label {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--meok-mute);
-  display: block;
-  margin-bottom: 6px;
-}
-.contact__email {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 22px;
-  color: var(--meok);
-  border-bottom: 1px solid var(--geumbak);
-}
-.contact__email:hover { color: var(--geumbak); }
-
-footer.foot {
-  margin-top: auto;
-  padding: 32px 0;
-  border-top: 2px solid var(--meok);
-  background: var(--hanji-dark);
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 11.5px;
-  color: var(--meok-mute);
-  letter-spacing: 0.04em;
-}
-.foot__inner {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 0 32px;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* ---------- Responsive ---------- */
-@media (max-width: 760px) {
-  .container, .brandbar__inner, .foot__inner { padding: 0 20px; }
-  .hero { padding: 48px 0 32px; }
-  .cards { grid-template-columns: 1fr; }
-  .card { min-height: auto; padding: 30px 26px 26px; }
-  .card__title { font-size: 26px; }
-  .about { padding: 40px 0 32px; }
-}
+  @media (max-width: 760px) {
+    .home-hero h1 { font-size: 44px; }
+    .home-hero h1 .latin { display: block; margin-left: 0; }
+    .home-cards { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
-<body>
+<body class="shared-body" data-page-id="home.main">
 
-<!-- Top brand bar -->
-<div class="brandbar">
-  <div class="brandbar__inner">
-    <span class="brandbar__name"><b>messfilm</b>'s history projects</span>
-    <span class="brandbar__sub">자녀에게 물려주려는 역사 학습 자료</span>
-  </div>
-</div>
-
-<!-- Hero -->
-<header class="hero">
-  <div class="container">
-    <div class="hero__eyebrow">
-      <span class="meta">Two Threads of History</span>
-      <span class="hero__line"></span>
-      <span class="latin">2026</span>
+<main>
+  <section class="home-hero">
+    <div class="shared-container">
+      <span class="kicker">est. 2026 · Seoul</span>
+      <h1>아들을 위한 아카이브<span class="latin">Archive for My Son</span></h1>
+      <p class="lead">
+        한 아버지가 자녀를 위해 정리한 세 권의 학습 노트.
+        인류가 <em>신을 어떻게 이해해왔는지</em>, 한반도가 <em>어떻게 지금이 되었는지</em>,
+        그리고 인간이 <em>자연을 어떻게 알아왔는지</em>의 기록.
+        모든 사실은 출처에서 검증할 수 있도록 정리되어 있다.
+      </p>
     </div>
-    <h1><span class="num">4,000</span>년의 두 이야기</h1>
-    <p class="hero__sub">한 시간 깊이 위에 놓인 두 개의 역사 — 종교와 한국사</p>
-    <p class="hero__lead">
-      이 사이트는 한 아버지가 자녀에게 물려주려는 두 개의 역사 학습 자료를 모아 두는 곳입니다.
-      하나는 인류의 정신을 다듬어 온 <strong>아브라함 계통 종교의 4,000년</strong>이고,
-      다른 하나는 한반도에서 살아온 사람들이 만든 <strong>한국사 4,000년</strong>입니다.
-      두 길은 멀리서 보면 다른 풍경이지만, 같은 길이의 시간을 통과해 오늘에 닿아 있습니다.
-    </p>
-  </div>
-</header>
+  </section>
 
-<!-- Project cards -->
-<section class="projects">
-  <div class="container">
-    <p class="projects__intro">현재 공개된 두 프로젝트 · 카드를 누르면 사이트로 이동합니다.</p>
-    <div class="cards">
+  <div class="shared-container">
 
-      <a class="card card--abrahamic" href="https://messfilm.github.io/abrahamic-history/">
-        <div class="card__num">§ I</div>
-        <div class="card__title">아브라함 계통 종교<span class="hanja">亞·猶·基·伊</span></div>
-        <div class="card__title-en">Abrahamic Religions · 4,000 years</div>
-        <div class="card__period">BC 2000경 — 현재</div>
-        <div class="card__summary">
-          유대교·기독교·이슬람교 — 한 뿌리에서 갈라진 세 종교의 4,000년 흐름을 한눈에 보는 단일 HTML 대시보드. 아브라함의 부르심에서 오늘날의 분열과 대화까지, 인물·사건·교리·갈등을 시각화한 학습용 자료.
+    <!-- ===== Mini timeline SVG ===== -->
+    <section class="home-timeline" aria-label="세 컬렉션의 시간 범위">
+      <div class="timeline-head">
+        <h2>세 컬렉션의 시간 범위</h2>
+        <span class="meta">BC 2333 — AD 2026</span>
+      </div>
+
+      <svg viewBox="0 0 1080 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="종교·한국·과학사 시간 범위 비교">
+        <defs>
+          <style>
+            .ax       { stroke: #c8bea4; stroke-width: 1; fill: none; }
+            .axTick   { stroke: #c8bea4; stroke-width: 1; }
+            .axLabel  { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 11px; fill: #6b6253; }
+            .seriesLb { font-family: 'Noto Serif KR', serif; font-weight: 700; font-size: 13px; fill: #1f1a14; }
+            .seriesEn { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 11px; fill: #6b6253; }
+            .marker   { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 10.5px; fill: #1f1a14; }
+            .markerLb { font-family: 'Noto Sans KR', sans-serif; font-size: 9.5px; fill: #3a3328; }
+            .tick     { stroke: #1f1a14; stroke-width: 1; }
+            .band-religion { fill: #7c2030; opacity: 0.78; }
+            .band-korean   { fill: #4a7a6e; opacity: 0.82; }
+            .band-science  { fill: none; stroke: #2a5680; stroke-width: 1.5; stroke-dasharray: 5 4; }
+          </style>
+        </defs>
+
+        <!-- x = (year + 2400) / 4500 * 980 + 60   (svg width 1080, padding 60 left, 40 right)
+             y=-2333 → 74.59
+             y=-2000 → 147.11
+             y=-1000 → 364.89
+             y=-600  → 452.00
+             y=0     → 582.67
+             y=1000  → 800.44
+             y=2000  → 1018.22
+             y=2026  → 1023.86 -->
+
+        <!-- Axis -->
+        <line class="ax" x1="60" y1="180" x2="1040" y2="180" />
+        <g>
+          <line class="axTick" x1="147.11"  y1="178" x2="147.11"  y2="186" />
+          <line class="axTick" x1="364.89"  y1="178" x2="364.89"  y2="186" />
+          <line class="axTick" x1="582.67"  y1="178" x2="582.67"  y2="186" />
+          <line class="axTick" x1="800.44"  y1="178" x2="800.44"  y2="186" />
+          <line class="axTick" x1="1018.22" y1="178" x2="1018.22" y2="186" />
+          <text class="axLabel" x="147.11"  y="200" text-anchor="middle">BC 2000</text>
+          <text class="axLabel" x="364.89"  y="200" text-anchor="middle">BC 1000</text>
+          <text class="axLabel" x="582.67"  y="200" text-anchor="middle">0</text>
+          <text class="axLabel" x="800.44"  y="200" text-anchor="middle">AD 1000</text>
+          <text class="axLabel" x="1018.22" y="200" text-anchor="middle">AD 2000</text>
+        </g>
+
+        <!-- § I Religion — BC 2000 → AD 2026 -->
+        <g>
+          <rect class="band-religion" x="147.11" y="46" width="876.75" height="22" rx="2" />
+          <text class="seriesLb" x="8" y="55" text-anchor="start">§ I 종교사</text>
+          <text class="seriesEn" x="8" y="68" text-anchor="start">Abrahamic</text>
+          <text class="marker"   x="147.11" y="40" text-anchor="middle">BC 2000</text>
+          <text class="markerLb" x="147.11" y="30" text-anchor="middle">아브라함</text>
+          <text class="marker"   x="1023.86" y="40" text-anchor="end">2026</text>
+        </g>
+
+        <!-- § II Korean — BC 2333 → AD 2026 -->
+        <g>
+          <rect class="band-korean" x="74.59" y="90" width="949.27" height="22" rx="2" />
+          <text class="seriesLb" x="8" y="99" text-anchor="start">§ II 한국사</text>
+          <text class="seriesEn" x="8" y="112" text-anchor="start">Korea</text>
+          <text class="marker"   x="74.59" y="84" text-anchor="middle">BC 2333</text>
+          <text class="markerLb" x="74.59" y="74" text-anchor="middle">단군 전승</text>
+          <text class="marker"   x="1023.86" y="84" text-anchor="end">2026</text>
+        </g>
+
+        <!-- § III Science (작업중) — BC 600 → AD 2026, dashed -->
+        <g>
+          <rect class="band-science" x="452" y="134" width="571.86" height="22" rx="2" />
+          <text class="seriesLb" x="8" y="143" text-anchor="start">§ III 자연과학사</text>
+          <text class="seriesEn" x="8" y="156" text-anchor="start">Science · 작업중</text>
+          <text class="marker"   x="452" y="128" text-anchor="middle">BC 600</text>
+          <text class="markerLb" x="452" y="118" text-anchor="middle">탈레스</text>
+          <text class="marker"   x="1023.86" y="128" text-anchor="end">2026</text>
+        </g>
+
+        <!-- "Now" vertical guide -->
+        <line class="tick" x1="1023.86" y1="46" x2="1023.86" y2="180" stroke-dasharray="2 3" opacity="0.4" />
+      </svg>
+    </section>
+
+    <!-- ===== 4-card grid ===== -->
+    <div class="home-cards">
+
+      <a class="card collection-religion" href="abrahamic-religions/">
+        <span class="card-num">§ I</span>
+        <h2 class="card-title">아브라함의 세 자녀 <span class="latin">Abrahamic Three</span></h2>
+        <p class="card-desc">
+          유대교·기독교·이슬람교 4,000년사. 공통의 뿌리, 결정적 교리 차이,
+          40여 개 분파 지도, 주요 종교 전쟁과 현대 분쟁까지.
+        </p>
+        <div class="card-meta">
+          <div><strong>구성</strong><span>단일 페이지</span></div>
+          <div><strong>범위</strong><span>BC 2000 — 2026</span></div>
         </div>
-        <div class="card__tags">유대교 · 기독교 · 이슬람교 · 십자군 · 종교개혁 · 분열과 대화</div>
-        <span class="card__cta">사이트 열기 →</span>
+        <span class="card-cta">들어가기 →</span>
       </a>
 
-      <a class="card card--korean" href="https://messfilm.github.io/korean-history/">
-        <div class="card__num">§ II</div>
-        <div class="card__title">한국사<span class="hanja">韓國史</span></div>
-        <div class="card__title-en">Korean History · 4,000 years</div>
-        <div class="card__period">BC 2333 (전승) — 현재</div>
-        <div class="card__summary">
-          선사 시대의 빗살무늬 토기에서 오늘날의 촛불에 이르기까지, 한반도 4,000년을 9개 시대로 정리한 학습 사이트. 통합 연표, 시대별 13개 표준 섹션, 사이트 내 검색·용어집을 갖춘 중학생용 통사.
+      <a class="card collection-korean" href="korean-history/">
+        <span class="card-num">§ II</span>
+        <h2 class="card-title">한국사 4,000년 <span class="latin">Korean History</span></h2>
+        <p class="card-desc">
+          단군 고조선 전승부터 대한민국까지. 9개 시대로 나눈 통사.
+          사이트 내 검색·용어집·SVG 통합 연표. 학설 갈래는 양립 서술.
+        </p>
+        <div class="card-meta">
+          <div><strong>구성</strong><span>9개 시대</span></div>
+          <div><strong>범위</strong><span>BC 2333 — 2026</span></div>
         </div>
-        <div class="card__tags">선사 · 삼국 · 고려 · 조선 · 일제강점기 · 대한민국 · 9개 시대</div>
-        <span class="card__cta">사이트 열기 →</span>
+        <span class="card-cta">들어가기 →</span>
+      </a>
+
+      <a class="card collection-science" href="science-history/">
+        <span class="card-num">§ III</span>
+        <h2 class="card-title">
+          자연과학사 <span class="latin">Science</span>
+          <span class="card-status">작업중</span>
+        </h2>
+        <p class="card-desc">
+          탈레스의 만물 근원에 대한 물음부터, 케플러·뉴턴·다윈을 거쳐
+          양자역학과 양자컴퓨터까지. 인터랙티브 시뮬레이션 포함 예정.
+        </p>
+        <div class="card-meta">
+          <div><strong>구성</strong><span>6개 시대 예정</span></div>
+          <div><strong>범위</strong><span>BC 600 — 2026</span></div>
+        </div>
+        <span class="card-cta">진행 상황 →</span>
+      </a>
+
+      <a class="card collection-research" href="research/">
+        <span class="card-num">◇</span>
+        <h2 class="card-title">연구 아카이브 <span class="latin">Research</span></h2>
+        <p class="card-desc">
+          이 아카이브가 어떻게 만들어졌는지의 메타-기록.
+          출처, 업데이트 이력, 작업 중 만난 어려운 결정들.
+          본문의 모든 사실은 여기서 추적 가능.
+        </p>
+        <div class="card-meta">
+          <div><strong>출처</strong><span id="home-src-count">…</span></div>
+          <div><strong>업데이트</strong><span id="home-upd-count">…</span></div>
+        </div>
+        <span class="card-cta">들어가기 →</span>
       </a>
 
     </div>
+
+    <!-- ===== Guide ===== -->
+    <section class="home-guide">
+      <h2>읽는 법</h2>
+      <p>
+        어떤 컬렉션을 먼저 펴봐도 좋다. 시대를 시간 순으로 읽어도 좋고,
+        궁금한 단어로 검색해 들어가도 좋다.
+        <em>각 페이지 하단의 "출처 보기"</em> 링크를 따라가면 그 페이지의 내용이 어디서 왔는지 확인할 수 있다.
+      </p>
+      <p>
+        모든 지식은 출처가 있다. 학설은 갈리는 경우가 많다.
+        "안다"는 것은 "어디서 어떻게 알게 되었는지" 추적할 수 있다는 뜻이다.
+        시간이 흐르면 사실도 갱신된다. 그래서 업데이트 이력이 있다.
+      </p>
+    </section>
+
   </div>
-</section>
+</main>
 
-<!-- About / Contact -->
-<section class="about">
-  <div class="container">
-    <h2>왜 만들었나</h2>
-    <p>
-      교과서는 한 시대의 한 측면을 잘 다루지만, 시대 전체의 흐름과 학설의 갈래까지 보여주기에는 분량이 부족합니다.
-      자녀에게 한 호흡으로 큰 그림을 보여주고, 호기심이 향하는 대목에서 깊이 들어갈 수 있는 자료를 만들고 싶었습니다.
-    </p>
-    <p>
-      두 사이트 모두 <em>객관적 사실</em>을 우선하고, 논쟁점은 학설의 갈래를 병기합니다.
-      한쪽으로 단정하지 않고 자녀가 스스로 판단할 여지를 남기는 것을 원칙으로 합니다.
-    </p>
-
-    <div class="contact">
-      <span class="contact__label">만든이 · 문의</span>
-      <a class="contact__email" href="mailto:messfilm@gmail.com">messfilm@gmail.com</a>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="foot">
-  <div class="foot__inner">
-    <span>© 2026 · 가정 학습용 / Personal Educational Use</span>
-    <span>콘텐츠 CC BY-NC-SA 4.0 · 코드 MIT</span>
-    <span class="latin">v1.0.0 · Last updated 2026-05-19</span>
-  </div>
-</footer>
-
+<script>window.SITE_ROOT = '/';</script>
+<script src="assets/shared/nav.js" defer></script>
+<script src="assets/shared/footer.js" defer></script>
+<script src="assets/shared/research-loader.js" defer></script>
+<script>
+  window.addEventListener('load', function () {
+    if (window.ResearchLoader) {
+      ResearchLoader.load('all').then(function (data) {
+        var s = document.getElementById('home-src-count');
+        var u = document.getElementById('home-upd-count');
+        if (s) s.textContent = String(data.sources.length);
+        if (u) u.textContent = String(data.updates.length);
+      });
+    }
+  });
+</script>
 </body>
 </html>

@@ -1,0 +1,2995 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>아브라함 계통 종교 · 4,000년의 형제 — Abrahamic Religions Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#f5f1e8;--bg-alt:#ede8db;--bg-card:#fbf8f1;
+  --ink:#1a1e2e;--ink-soft:#3d4151;--ink-muted:#6b6557;
+  --rule:#c9c1ad;--rule-soft:#ddd5be;
+  --gold:#a37e2c;--gold-soft:#c7a55b;
+  --jud:#1b3a6b;--jud-bg:#e8edf5;--jud-soft:#4a6896;
+  --chr:#7c2030;--chr-bg:#f5e6e8;--chr-soft:#a45260;
+  --isl:#1f5b3d;--isl-bg:#e5eee8;--isl-soft:#4d8568;
+  --war:#8a2a1f;--war-bg:#f3e4e1;
+  --fs-display:"Cormorant Garamond",serif;
+  --fs-serif:"Noto Serif KR",serif;
+  --fs-sans:"Noto Sans KR",sans-serif;
+  --fs-mono:"JetBrains Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:var(--fs-serif);font-weight:400;
+  font-size:15px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+a{color:inherit;text-decoration:none}
+
+/* ===== Top Nav ===== */
+.topnav{
+  position:sticky;top:0;z-index:50;
+  background:var(--bg);
+  border-bottom:1px solid var(--rule);
+}
+.topnav-inner{
+  max-width:1700px;margin:0 auto;
+  padding:14px 60px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:24px;
+}
+.topnav-brand{
+  font-family:var(--fs-display);font-style:italic;
+  font-size:20px;color:var(--ink);letter-spacing:0.01em;
+}
+.topnav-brand b{font-style:normal;font-weight:700;color:var(--gold)}
+.topnav-list{
+  display:flex;gap:22px;flex-wrap:wrap;
+  font-family:var(--fs-sans);font-size:11.5px;
+  text-transform:uppercase;letter-spacing:0.14em;
+  color:var(--ink-soft);
+}
+.topnav-list a{
+  padding:4px 0;border-bottom:1px solid transparent;
+  transition:border-color .2s,color .2s;
+}
+.topnav-list a:hover{color:var(--ink);border-bottom-color:var(--gold)}
+.topnav-list a .num{
+  font-family:var(--fs-display);font-style:italic;
+  color:var(--gold);font-size:13px;margin-right:4px;
+}
+
+/* ===== Container ===== */
+.container{max-width:1700px;margin:0 auto;padding:0 60px}
+
+/* ===== Section header ===== */
+.section{padding:80px 0 60px}
+.section-head{
+  display:grid;grid-template-columns:90px 1fr auto;
+  align-items:end;gap:24px;
+  padding-bottom:14px;margin-bottom:48px;
+  border-bottom:1px solid var(--ink);
+}
+.section-num{
+  font-family:var(--fs-display);font-style:italic;
+  font-size:24px;color:var(--gold);font-weight:500;
+  letter-spacing:0.04em;
+}
+.section-title{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:38px;color:var(--ink);letter-spacing:-0.01em;
+  line-height:1.1;
+}
+.section-sub{
+  font-family:var(--fs-display);font-style:italic;
+  font-size:18px;color:var(--ink-muted);
+  text-align:right;letter-spacing:0.02em;
+}
+
+/* ===== Hero ===== */
+.hero{padding:120px 0 90px;border-bottom:1px solid var(--rule)}
+.hero-kicker{
+  font-family:var(--fs-display);font-style:italic;
+  font-size:22px;color:var(--gold);
+  margin-bottom:24px;letter-spacing:0.02em;
+}
+.hero-title{
+  font-family:var(--fs-serif);font-weight:900;
+  font-size:88px;line-height:1.02;letter-spacing:-0.04em;
+  color:var(--ink);
+  margin-bottom:28px;
+}
+.hero-title em{
+  font-family:var(--fs-display);font-style:italic;
+  font-weight:500;color:var(--gold-soft);
+}
+.hero-lede{
+  font-family:var(--fs-serif);font-size:19px;
+  color:var(--ink-soft);font-weight:400;
+  max-width:920px;line-height:1.7;
+  margin-bottom:60px;
+}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+.hero-stat{
+  padding:28px 30px;
+  border-right:1px solid var(--rule);
+}
+.hero-stat:last-child{border-right:none}
+.stat-label{
+  font-family:var(--fs-sans);font-size:10.5px;
+  text-transform:uppercase;letter-spacing:0.18em;
+  color:var(--ink-muted);margin-bottom:14px;
+}
+.stat-value{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:42px;color:var(--ink);
+  letter-spacing:-0.02em;line-height:1;
+  margin-bottom:8px;
+}
+.stat-value em{
+  font-family:var(--fs-display);font-style:italic;
+  font-weight:500;font-size:28px;color:var(--gold);
+}
+.stat-note{
+  font-family:var(--fs-sans);font-size:12px;
+  color:var(--ink-muted);font-weight:300;
+}
+
+/* ===== Generic typography ===== */
+.eyebrow{
+  font-family:var(--fs-sans);font-size:10.5px;
+  text-transform:uppercase;letter-spacing:0.18em;
+  color:var(--gold);font-weight:500;
+}
+.muted{color:var(--ink-muted)}
+.rule{
+  height:1px;background:var(--rule);
+  margin:32px 0;
+}
+
+/* ===== Card primitives ===== */
+.card{
+  background:var(--bg-card);
+  border:1px solid var(--rule);
+  padding:32px;
+}
+.card.j{border-top:3px solid var(--jud)}
+.card.c{border-top:3px solid var(--chr)}
+.card.i{border-top:3px solid var(--isl)}
+.card.w{border-top:3px solid var(--war)}
+.card-title{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:24px;color:var(--ink);
+  letter-spacing:-0.01em;line-height:1.2;
+  margin-bottom:4px;
+}
+.card-sub{
+  font-family:var(--fs-display);font-style:italic;
+  font-size:16px;color:var(--ink-muted);
+  margin-bottom:20px;
+}
+.card-meta{
+  border-top:1px solid var(--rule-soft);
+  border-bottom:1px solid var(--rule-soft);
+  margin:18px 0;
+}
+.card-meta dl{display:grid;grid-template-columns:130px 1fr}
+.card-meta dt{
+  font-family:var(--fs-sans);font-size:10.5px;
+  text-transform:uppercase;letter-spacing:0.16em;
+  color:var(--ink-muted);font-weight:500;
+  padding:9px 12px 9px 0;
+  border-bottom:1px solid var(--rule-soft);
+}
+.card-meta dd{
+  font-family:var(--fs-serif);font-size:13.5px;
+  color:var(--ink);
+  padding:9px 0;
+  border-bottom:1px solid var(--rule-soft);
+}
+.card-meta dt:last-of-type,.card-meta dd:last-of-type{border-bottom:none}
+
+/* ===== Grid helpers ===== */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+
+/* ===== § I Roots ===== */
+.roots-grid{
+  display:grid;grid-template-columns:1.2fr 1fr;
+  gap:48px;align-items:start;
+}
+.lineage{
+  background:var(--bg-card);
+  border:1px solid var(--rule);
+  padding:38px 36px;
+  position:relative;
+}
+.lineage h3{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:22px;margin-bottom:6px;
+}
+.lineage .lineage-sub{
+  font-family:var(--fs-display);font-style:italic;
+  color:var(--ink-muted);font-size:15px;margin-bottom:24px;
+}
+.tree{
+  font-family:var(--fs-mono);font-size:12px;
+  color:var(--ink-soft);
+  line-height:1.9;
+  background:var(--bg-alt);
+  padding:22px 26px;
+  border-left:3px solid var(--gold);
+  white-space:pre;
+  overflow-x:auto;
+}
+.share-list{
+  list-style:none;font-size:14px;
+}
+.share-list li{
+  padding:10px 0;border-bottom:1px dotted var(--rule);
+  display:grid;grid-template-columns:120px 1fr;gap:16px;
+}
+.share-list li:last-child{border-bottom:none}
+.share-list .who{
+  font-family:var(--fs-serif);font-weight:600;color:var(--ink);
+}
+.share-list .what{color:var(--ink-soft);font-size:13.5px}
+
+.diff-table{
+  width:100%;border-collapse:collapse;
+  font-size:13.5px;
+  margin-top:14px;
+}
+.diff-table th,.diff-table td{
+  text-align:left;padding:14px 16px;
+  border-bottom:1px solid var(--rule-soft);
+  vertical-align:top;
+}
+.diff-table th{
+  font-family:var(--fs-sans);font-size:10.5px;
+  text-transform:uppercase;letter-spacing:0.16em;
+  color:var(--ink-muted);font-weight:500;
+  background:var(--bg-alt);
+}
+.diff-table tr td:first-child{
+  font-family:var(--fs-serif);font-weight:600;
+  width:140px;
+}
+.diff-table .tag-j{color:var(--jud);font-weight:600}
+.diff-table .tag-c{color:var(--chr);font-weight:600}
+.diff-table .tag-i{color:var(--isl);font-weight:600}
+
+/* ===== § II Three Religions ===== */
+.relig-figures{
+  display:flex;gap:0;
+  border-top:1px solid var(--rule-soft);
+  border-bottom:1px solid var(--rule-soft);
+  margin-top:18px;
+}
+.relig-figures .fig{
+  flex:1;padding:14px 12px;
+  border-right:1px solid var(--rule-soft);
+  text-align:center;
+}
+.relig-figures .fig:last-child{border-right:none}
+.relig-figures .fig-num{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:22px;letter-spacing:-0.02em;
+}
+.relig-figures .fig-lab{
+  font-family:var(--fs-sans);font-size:10px;
+  text-transform:uppercase;letter-spacing:0.16em;
+  color:var(--ink-muted);margin-top:4px;
+}
+.pillar-list{
+  list-style:none;margin-top:14px;
+  font-size:13.5px;color:var(--ink-soft);
+}
+.pillar-list li{
+  padding:8px 0;
+  border-bottom:1px dotted var(--rule-soft);
+  display:grid;grid-template-columns:36px 1fr;gap:10px;
+}
+.pillar-list li:last-child{border-bottom:none}
+.pillar-list .n{
+  font-family:var(--fs-display);font-style:italic;
+  color:var(--gold);font-size:15px;font-weight:500;
+}
+.fig-key{
+  font-family:var(--fs-serif);font-size:12.5px;
+  color:var(--ink-muted);margin-top:14px;line-height:1.6;
+}
+.fig-key b{color:var(--ink-soft);font-weight:600}
+
+/* ===== § III Sects ===== */
+.sect-col h3{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:22px;margin-bottom:4px;
+}
+.sect-col .sub{
+  font-family:var(--fs-display);font-style:italic;
+  color:var(--ink-muted);font-size:15px;margin-bottom:24px;
+}
+.sect-col.j h3{color:var(--jud)}
+.sect-col.c h3{color:var(--chr)}
+.sect-col.i h3{color:var(--isl)}
+
+.sect-tree{font-size:13.5px}
+.sect-node{
+  padding:14px 0;
+  border-bottom:1px dotted var(--rule-soft);
+}
+.sect-node:last-child{border-bottom:none}
+.sect-node.indent{
+  padding-left:22px;
+  border-left:1px solid var(--rule-soft);
+  margin-left:6px;
+}
+.sect-node .name{
+  font-family:var(--fs-serif);font-weight:600;
+  font-size:14.5px;color:var(--ink);
+}
+.sect-node .meta{
+  font-family:var(--fs-sans);font-size:10.5px;
+  text-transform:uppercase;letter-spacing:0.14em;
+  color:var(--ink-muted);margin:3px 0;
+}
+.sect-node .desc{
+  color:var(--ink-soft);font-size:13px;
+  margin-top:4px;line-height:1.55;
+}
+.sect-node .pop{
+  font-family:var(--fs-mono);font-size:11.5px;
+  color:var(--gold);font-weight:500;
+}
+
+/* ===== § IV Timeline ===== */
+.tl-wrap{
+  display:grid;grid-template-columns:200px 1fr;
+  gap:0;
+  border-top:1px solid var(--rule);
+}
+.tl-era{
+  grid-column:1 / -1;
+  display:grid;grid-template-columns:200px 1fr;
+  border-bottom:1px solid var(--rule);
+}
+.tl-era-label{
+  padding:28px 22px 28px 0;
+  border-right:1px solid var(--rule);
+  background:var(--bg-alt);
+  position:relative;
+}
+.tl-era-label::before{
+  content:"";position:absolute;left:0;top:28px;bottom:28px;
+  width:3px;background:var(--gold);
+}
+.tl-era-label .era-name{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:20px;text-align:right;
+  letter-spacing:-0.01em;
+}
+.tl-era-label .era-range{
+  font-family:var(--fs-mono);font-size:11px;
+  color:var(--ink-muted);text-align:right;
+  margin-top:4px;letter-spacing:0.04em;
+}
+.tl-era-events{padding:0}
+
+.tl-event{
+  display:grid;grid-template-columns:200px 1fr;
+  border-bottom:1px solid var(--rule-soft);
+  position:relative;
+}
+.tl-event:last-child{border-bottom:none}
+.tl-year{
+  text-align:right;
+  padding:18px 22px 18px 0;
+  border-right:1px solid var(--rule);
+  font-family:var(--fs-mono);font-size:13px;
+  color:var(--ink-soft);font-weight:500;
+  letter-spacing:0.02em;
+  position:relative;
+}
+.tl-body{
+  padding:18px 0 18px 36px;
+  position:relative;
+}
+.tl-body::before{
+  content:"";position:absolute;left:-7px;top:24px;
+  width:11px;height:11px;border-radius:50%;
+  background:var(--ink-muted);
+  border:2px solid var(--bg);
+}
+.tl-body.j::before{background:var(--jud)}
+.tl-body.c::before{background:var(--chr)}
+.tl-body.i::before{background:var(--isl)}
+.tl-body.w::before{background:var(--war)}
+.tl-body.p::before{background:var(--gold)}
+.tl-title{
+  font-family:var(--fs-serif);font-weight:600;
+  font-size:15.5px;color:var(--ink);
+  letter-spacing:-0.005em;line-height:1.35;
+  margin-bottom:4px;
+}
+.tl-tags{
+  display:inline-flex;gap:6px;margin-left:8px;
+  font-family:var(--fs-sans);font-size:9.5px;
+  text-transform:uppercase;letter-spacing:0.14em;
+  vertical-align:middle;
+}
+.tl-tags .t{padding:2px 8px;border:1px solid currentColor;color:var(--ink-muted)}
+.tl-tags .t.j{color:var(--jud);border-color:var(--jud-soft)}
+.tl-tags .t.c{color:var(--chr);border-color:var(--chr-soft)}
+.tl-tags .t.i{color:var(--isl);border-color:var(--isl-soft)}
+.tl-tags .t.w{color:var(--war);border-color:var(--war)}
+.tl-tags .t.p{color:var(--gold);border-color:var(--gold)}
+.tl-desc{
+  font-size:13px;color:var(--ink-soft);
+  line-height:1.6;margin-top:2px;
+}
+.tl-actors{
+  font-family:var(--fs-display);font-style:italic;
+  font-size:12.5px;color:var(--ink-muted);
+  margin-top:4px;
+}
+
+/* ===== § V Wars ===== */
+.war-card{
+  background:var(--bg-card);
+  border:1px solid var(--rule);
+  border-top:3px solid var(--war);
+  padding:32px;
+}
+.war-card .war-period{
+  font-family:var(--fs-mono);font-size:11.5px;
+  color:var(--war);letter-spacing:0.04em;
+  font-weight:500;margin-bottom:8px;
+  text-transform:uppercase;
+}
+.war-card .war-title{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:24px;letter-spacing:-0.01em;
+  margin-bottom:6px;
+}
+.war-card .war-lede{
+  font-family:var(--fs-display);font-style:italic;
+  color:var(--ink-muted);font-size:15px;
+  margin-bottom:20px;
+}
+.war-card .war-stats{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-top:1px solid var(--rule-soft);
+  border-bottom:1px solid var(--rule-soft);
+  margin-bottom:18px;
+}
+.war-card .war-stats > div{
+  padding:12px 14px 12px 0;
+  border-right:1px solid var(--rule-soft);
+}
+.war-card .war-stats > div:last-child{border-right:none;padding-left:14px;padding-right:0}
+.war-card .war-stats .lab{
+  font-family:var(--fs-sans);font-size:9.5px;
+  text-transform:uppercase;letter-spacing:0.16em;
+  color:var(--ink-muted);
+}
+.war-card .war-stats .val{
+  font-family:var(--fs-serif);font-size:14px;color:var(--ink);
+  margin-top:4px;font-weight:500;
+}
+.war-events{
+  font-size:13px;
+  list-style:none;
+}
+.war-events li{
+  padding:7px 0;
+  border-bottom:1px dotted var(--rule-soft);
+  display:grid;grid-template-columns:80px 1fr;gap:10px;
+}
+.war-events li:last-child{border-bottom:none}
+.war-events .y{
+  font-family:var(--fs-mono);font-size:11.5px;
+  color:var(--war);letter-spacing:0.04em;
+}
+.war-events .e{color:var(--ink-soft)}
+
+/* ===== § VI Iran-Israel ===== */
+.ii-pair{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:48px}
+.ii-side{
+  padding:32px 36px;
+  background:var(--bg-card);
+  border:1px solid var(--rule);
+}
+.ii-side.l{border-top:3px solid var(--jud);border-right:none}
+.ii-side.r{border-top:3px solid var(--isl)}
+.ii-side h3{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:28px;letter-spacing:-0.02em;
+}
+.ii-side.l h3{color:var(--jud)}
+.ii-side.r h3{color:var(--isl)}
+.ii-side .ii-sub{
+  font-family:var(--fs-display);font-style:italic;
+  font-size:16px;color:var(--ink-muted);margin-bottom:18px;
+}
+.ii-meta{font-size:13.5px}
+.ii-meta dl{display:grid;grid-template-columns:130px 1fr}
+.ii-meta dt{
+  font-family:var(--fs-sans);font-size:10px;
+  text-transform:uppercase;letter-spacing:0.16em;
+  color:var(--ink-muted);
+  padding:9px 0;border-bottom:1px dotted var(--rule-soft);
+}
+.ii-meta dd{padding:9px 0;color:var(--ink);border-bottom:1px dotted var(--rule-soft)}
+
+.ii-stage{
+  margin-bottom:42px;
+  padding-bottom:32px;
+  border-bottom:1px solid var(--rule);
+}
+.ii-stage:last-child{border-bottom:none}
+.ii-stage .stage-head{
+  display:grid;grid-template-columns:auto 1fr auto;
+  gap:24px;align-items:end;
+  margin-bottom:26px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--ink);
+}
+.ii-stage .stage-num{
+  font-family:var(--fs-display);font-style:italic;
+  color:var(--gold);font-size:22px;font-weight:500;
+}
+.ii-stage .stage-title{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:26px;letter-spacing:-0.01em;
+}
+.ii-stage .stage-period{
+  font-family:var(--fs-mono);font-size:12px;
+  color:var(--ink-muted);
+}
+.ii-events{
+  list-style:none;
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:0 36px;
+}
+.ii-events li{
+  padding:11px 0;
+  border-bottom:1px dotted var(--rule-soft);
+  display:grid;grid-template-columns:84px 1fr;gap:14px;
+  font-size:13px;color:var(--ink-soft);
+}
+.ii-events .y{
+  font-family:var(--fs-mono);font-size:11.5px;
+  color:var(--gold);letter-spacing:0.02em;
+}
+.ii-events b{color:var(--ink);font-weight:600;font-family:var(--fs-serif)}
+
+/* ===== § VII Actors ===== */
+.actor-group{margin-bottom:42px}
+.actor-group h3{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:22px;margin-bottom:6px;
+  letter-spacing:-0.01em;
+}
+.actor-group .group-sub{
+  font-family:var(--fs-display);font-style:italic;
+  color:var(--ink-muted);font-size:15px;margin-bottom:22px;
+}
+.actor-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.actor{
+  background:var(--bg-card);
+  border:1px solid var(--rule);
+  border-left:3px solid var(--ink-muted);
+  padding:20px 22px;
+}
+.actor.j{border-left-color:var(--jud)}
+.actor.c{border-left-color:var(--chr)}
+.actor.i{border-left-color:var(--isl)}
+.actor.w{border-left-color:var(--war)}
+.actor .nm{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:16px;letter-spacing:-0.01em;
+  margin-bottom:2px;
+}
+.actor .yr{
+  font-family:var(--fs-mono);font-size:11px;
+  color:var(--gold);letter-spacing:0.02em;
+  margin-bottom:8px;
+}
+.actor .ds{font-size:12.5px;color:var(--ink-soft);line-height:1.55}
+
+/* ===== § VIII Territories ===== */
+.terr-card{
+  background:var(--bg-card);
+  border:1px solid var(--rule);
+  padding:28px 30px;
+}
+.terr-card .nm{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:24px;letter-spacing:-0.01em;margin-bottom:4px;
+}
+.terr-card .sub{
+  font-family:var(--fs-display);font-style:italic;
+  color:var(--ink-muted);font-size:15px;margin-bottom:18px;
+}
+.terr-card .claim{
+  padding:12px 16px;margin-bottom:8px;
+  border-left:3px solid var(--ink-muted);
+  background:var(--bg-alt);
+  font-size:13px;
+}
+.terr-card .claim.j{border-left-color:var(--jud)}
+.terr-card .claim.c{border-left-color:var(--chr)}
+.terr-card .claim.i{border-left-color:var(--isl)}
+.terr-card .claim .by{
+  font-family:var(--fs-sans);font-size:10px;
+  text-transform:uppercase;letter-spacing:0.16em;
+  color:var(--ink-muted);margin-bottom:4px;
+}
+.terr-card .claim .by.j{color:var(--jud)}
+.terr-card .claim .by.c{color:var(--chr)}
+.terr-card .claim .by.i{color:var(--isl)}
+.terr-card .status{
+  margin-top:12px;font-size:12.5px;
+  color:var(--ink-soft);
+  padding-top:12px;border-top:1px solid var(--rule-soft);
+}
+
+/* ===== § IX Current Impact ===== */
+.impact-wrap{
+  display:grid;grid-template-columns:1.5fr 1fr;gap:48px;
+  align-items:start;
+}
+.impact-text p{
+  font-size:15px;color:var(--ink-soft);
+  margin-bottom:18px;line-height:1.75;
+}
+.impact-text p:first-child::first-letter{
+  font-family:var(--fs-display);font-style:italic;
+  font-size:56px;float:left;
+  line-height:0.9;padding:8px 12px 0 0;
+  color:var(--gold);
+}
+.impact-stats .impact-stat{
+  padding:24px 0;border-bottom:1px solid var(--rule);
+}
+.impact-stats .impact-stat:first-child{border-top:1px solid var(--rule)}
+.impact-stats .num{
+  font-family:var(--fs-serif);font-weight:700;
+  font-size:48px;color:var(--ink);
+  letter-spacing:-0.02em;line-height:1;
+}
+.impact-stats .lab{
+  font-family:var(--fs-sans);font-size:11px;
+  text-transform:uppercase;letter-spacing:0.16em;
+  color:var(--ink-muted);margin:8px 0;
+}
+.impact-stats .nt{font-size:13px;color:var(--ink-soft)}
+
+/* ===== Footer ===== */
+.footer{
+  background:var(--bg-alt);
+  border-top:1px solid var(--rule);
+  padding:60px 0 50px;margin-top:80px;
+}
+.footer-inner{
+  max-width:1700px;margin:0 auto;padding:0 60px;
+  display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;
+}
+.footer h4{
+  font-family:var(--fs-sans);font-size:11px;
+  text-transform:uppercase;letter-spacing:0.18em;
+  color:var(--gold);font-weight:500;margin-bottom:14px;
+}
+.footer p{font-size:13px;color:var(--ink-soft);line-height:1.7}
+.footer ul{list-style:none;font-size:13px;color:var(--ink-soft)}
+.footer li{padding:5px 0}
+.footer .copyright{
+  max-width:1700px;margin:48px auto 0;padding:24px 60px 0;
+  border-top:1px solid var(--rule);
+  font-family:var(--fs-display);font-style:italic;
+  color:var(--ink-muted);font-size:13px;
+  display:flex;justify-content:space-between;
+}
+
+/* ===== Inline SVG Maps ===== */
+.map{
+  margin:18px 0 22px;
+  background:var(--bg-alt);
+  border:1px solid var(--rule-soft);
+  padding:14px 14px 10px;
+}
+.map svg{width:100%;height:auto;display:block}
+.map .map-cap{
+  font-family:var(--fs-sans);font-size:9.5px;
+  text-transform:uppercase;letter-spacing:0.16em;
+  color:var(--ink-muted);
+  margin-top:8px;text-align:center;
+}
+.map svg .sea{fill:var(--bg-alt)}
+.map svg .land{fill:var(--bg-card);stroke:var(--rule);stroke-width:0.7}
+.map svg .land-j{fill:var(--jud-bg);stroke:var(--jud-soft);stroke-width:0.7}
+.map svg .land-c{fill:var(--chr-bg);stroke:var(--chr-soft);stroke-width:0.7}
+.map svg .land-i{fill:var(--isl-bg);stroke:var(--isl-soft);stroke-width:0.7}
+.map svg .land-w{fill:var(--war-bg);stroke:var(--war);stroke-width:0.7}
+.map svg .dot-j{fill:var(--jud)}
+.map svg .dot-c{fill:var(--chr)}
+.map svg .dot-i{fill:var(--isl)}
+.map svg .dot-w{fill:var(--war)}
+.map svg .dot-g{fill:var(--gold)}
+.map svg .dot-k{fill:var(--ink)}
+.map svg .lbl{
+  font-family:'Noto Sans KR',sans-serif;font-size:7.2px;
+  fill:var(--ink-soft);font-weight:500;
+  letter-spacing:0.02em;
+}
+.map svg .lbl-c{
+  font-family:'Noto Serif KR',serif;font-size:7.5px;
+  fill:var(--ink);font-weight:600;
+}
+.map svg .lbl-r{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:9.5px;fill:var(--gold);font-weight:500;
+}
+.map svg .lbl-t{
+  font-family:'Noto Serif KR',serif;font-weight:700;
+  font-size:9px;fill:var(--ink);letter-spacing:0.04em;
+}
+.map svg .lbl-w{font-family:'Noto Sans KR',sans-serif;font-size:7px;fill:var(--war);font-weight:600}
+.map svg .lbl-i{font-family:'Noto Sans KR',sans-serif;font-size:7px;fill:var(--isl);font-weight:600}
+.map svg .lbl-j{font-family:'Noto Sans KR',sans-serif;font-size:7px;fill:var(--jud);font-weight:600}
+.map svg .lbl-cr{font-family:'Noto Sans KR',sans-serif;font-size:7px;fill:var(--chr);font-weight:600}
+.map svg .arrow-w{fill:none;stroke:var(--war);stroke-width:1.3;stroke-linecap:round;marker-end:url(#arrowhead-w)}
+.map svg .arrow-i{fill:none;stroke:var(--isl);stroke-width:1.3;stroke-linecap:round;marker-end:url(#arrowhead-i)}
+.map svg .arrow-c{fill:none;stroke:var(--chr);stroke-width:1.3;stroke-linecap:round;marker-end:url(#arrowhead-c)}
+.map svg .axis{stroke:var(--war);stroke-width:0.9;stroke-dasharray:3 2;fill:none}
+.map svg .grid{stroke:var(--rule-soft);stroke-width:0.4}
+.map svg .border{stroke:var(--ink-soft);stroke-width:0.5;fill:none;stroke-dasharray:2 1.5}
+.map.large{padding:22px 22px 16px}
+.map.large svg .lbl{font-size:9px}
+.map.large svg .lbl-c{font-size:9.5px}
+.map.large svg .lbl-r{font-size:11.5px}
+.map.large svg .lbl-w,.map.large svg .lbl-i,.map.large svg .lbl-j,.map.large svg .lbl-cr{font-size:8.5px}
+
+/* ===== Responsive ===== */
+@media (max-width:1280px){
+  .actor-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-title{font-size:72px}
+}
+@media (max-width:1024px){
+  .grid-3,.sect-grid{grid-template-columns:repeat(2,1fr)}
+  .actor-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .hero-stat:nth-child(2){border-right:none}
+  .hero-stat:nth-child(1),.hero-stat:nth-child(2){border-bottom:1px solid var(--rule)}
+  .roots-grid,.impact-wrap{grid-template-columns:1fr}
+  .ii-pair{grid-template-columns:1fr}
+  .ii-side.l{border-right:1px solid var(--rule);border-bottom:none}
+  .ii-events{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media (max-width:768px){
+  .container,.topnav-inner,.footer-inner,.footer .copyright{padding-left:24px;padding-right:24px}
+  .grid-3,.grid-2,.grid-4,.sect-grid,.actor-grid,.hero-stats{grid-template-columns:1fr}
+  .hero-stat{border-right:none;border-bottom:1px solid var(--rule)}
+  .hero-stat:last-child{border-bottom:none}
+  .hero{padding:60px 0 50px}
+  .hero-title{font-size:42px;letter-spacing:-0.03em}
+  .hero-kicker{font-size:16px}
+  .hero-lede{font-size:16px}
+  .stat-value{font-size:32px}
+  .section{padding:50px 0 40px}
+  .section-head{grid-template-columns:60px 1fr;gap:14px}
+  .section-num{font-size:18px}
+  .section-title{font-size:24px}
+  .section-sub{display:none}
+  .topnav-list{display:none}
+  .tl-wrap,.tl-era,.tl-event{grid-template-columns:90px 1fr}
+  .tl-year{padding:14px 12px 14px 0;font-size:11.5px}
+  .tl-era-label{padding:18px 12px 18px 0}
+  .tl-era-label .era-name{font-size:16px}
+  .tl-body{padding:14px 0 14px 22px}
+  .ii-meta dl,.card-meta dl{grid-template-columns:100px 1fr}
+  .impact-stats .num{font-size:36px}
+}
+</style>
+<link rel="stylesheet" href="../assets/shared/styles-base.css">
+</head>
+<body class="collection-religion" data-page-id="religion.main">
+
+<!-- Global SVG defs for map arrowhead markers -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <marker id="arrowhead-w" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 L2,4 Z" fill="#8a2a1f"/></marker>
+    <marker id="arrowhead-i" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 L2,4 Z" fill="#1f5b3d"/></marker>
+    <marker id="arrowhead-c" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 L2,4 Z" fill="#7c2030"/></marker>
+    <marker id="arrowhead-j" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 L2,4 Z" fill="#1b3a6b"/></marker>
+  </defs>
+</svg>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <div class="topnav-brand"><b>§</b> Abrahamic <em>·</em> 종교 · 역사 · 분파</div>
+    <ul class="topnav-list">
+      <li><a href="#origins"><span class="num">I</span>뿌리</a></li>
+      <li><a href="#three"><span class="num">II</span>세 종교</a></li>
+      <li><a href="#sects"><span class="num">III</span>분파</a></li>
+      <li><a href="#timeline"><span class="num">IV</span>연대기</a></li>
+      <li><a href="#wars"><span class="num">V</span>전쟁</a></li>
+      <li><a href="#iran-israel"><span class="num">VI</span>이란·이스라엘</a></li>
+      <li><a href="#actors"><span class="num">VII</span>행위자</a></li>
+      <li><a href="#territory"><span class="num">VIII</span>영토</a></li>
+      <li><a href="#impact"><span class="num">IX</span>현재</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-kicker">Four Millennia of an Abrahamic Brotherhood &nbsp;·&nbsp; <em>aut concordia aut gladius</em></div>
+    <h1 class="hero-title">한 아버지에게서 <em>갈라진</em><br>세 형제의 <em>4,000년</em></h1>
+    <p class="hero-lede">아브라함이라는 한 사람으로부터 유대교·기독교·이슬람교가 갈라져 나왔고, 이 세 종교는 인류의 절반 이상을 신앙적 형제이자 정치적 적대자로 묶어 왔다. 본 대시보드는 BC 2000년 가나안의 한 유목민 가장으로부터 2026년 페르시아만의 미사일에 이르기까지, 약속의 땅을 공유한 세 종교의 신학·분파·전쟁·현재를 한 화면에 모은다.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="stat-label">총 신자 수</div>
+        <div class="stat-value">42<em>억+</em></div>
+        <div class="stat-note">세계 인구의 약 55% &nbsp;·&nbsp; 기독교·이슬람·유대교 합산</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-label">기록된 역사</div>
+        <div class="stat-value">4,000<em>년</em></div>
+        <div class="stat-note">아브라함의 가나안 이주 BC 2000경 — 현재</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-label">공유된 성지</div>
+        <div class="stat-value">1<em>곳</em></div>
+        <div class="stat-note">예루살렘 — 세 종교 모두의 거룩한 도시</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-label">주요 분파</div>
+        <div class="stat-value">40<em>+</em></div>
+        <div class="stat-note">교파·학파·종단을 합산한 보수적 추정</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="origins" class="section">
+  <div class="container">
+    <header class="section-head">
+      <div class="section-num">§ I</div>
+      <h2 class="section-title">공통의 뿌리</h2>
+      <div class="section-sub">Common Origins &nbsp;·&nbsp; BC 2000 — </div>
+    </header>
+
+    <div class="roots-grid">
+      <div class="lineage">
+        <h3>아브라함의 가계 — 두 아들, 세 종교</h3>
+        <div class="lineage-sub">Lineage of Abraham · 우르(메소포타미아) 출신 유목민, 가나안 이주, 야훼와 영원한 언약</div>
+        <div class="tree">아브라함 (BC 2000경, 우르 → 가나안)
+│ — 사라 · 정실
+│   └─ 이삭
+│       └─ 야곱 (= 이스라엘)
+│           └─ 12지파
+│               ├─ 유다 · 베냐민 · 레위 · …
+│               └─ ▶ 유대교 · 기독교 (이삭의 계보를 따라)
+│
+└ — 하갈 · 사라의 시녀
+    └─ 이스마엘
+        └─ 12 아랍 부족
+            └─ 쿠라이쉬 · 하심
+                └─ 무함마드 (AD 570)
+                    └─ ▶ 이슬람교 (이스마엘의 계보를 따라)</div>
+        <div class="rule"></div>
+        <p class="muted" style="font-size:13.5px">유대교·기독교는 이삭을 아브라함의 약속의 아들로 본다. 이슬람교는 이스마엘이 카바를 함께 세웠다고 기록하며, 무함마드를 그 후손으로 본다. 같은 한 사람으로부터 세 종교가 갈라진 셈이다.</p>
+        <div class="map">
+          <svg viewBox="0 0 320 170">
+            <rect width="320" height="170" class="sea"/>
+            <path class="land" d="M5,18 L90,15 L98,40 L130,38 L155,60 L130,82 L82,85 L60,110 L20,118 L5,90 Z"/>
+            <text x="50" y="42" class="lbl">아나톨리아</text>
+            <path class="land land-c" d="M155,60 L195,55 L225,75 L210,108 L165,108 L130,82 Z"/>
+            <text x="180" y="82" class="lbl-c" text-anchor="middle">가나안</text>
+            <path class="land" d="M195,55 L260,40 L295,60 L290,95 L260,105 L225,98 Z"/>
+            <text x="248" y="78" class="lbl">메소포타미아</text>
+            <path class="land" d="M5,118 L210,108 L295,95 L320,108 L320,170 L5,170 Z"/>
+            <text x="70" y="155" class="lbl">아라비아</text>
+            <text x="220" y="145" class="lbl">바빌론</text>
+            <path class="land" d="M0,50 L20,55 L25,90 L0,95 Z"/>
+            <text x="2" y="78" class="lbl">이집트</text>
+            <circle cx="282" cy="76" r="4" class="dot-g"/><text x="252" y="58" class="lbl-r">우르 (Ur)</text>
+            <text x="252" y="50" class="lbl">BC 2000경 출발지</text>
+            <circle cx="245" cy="62" r="2.5" class="dot-k"/><text x="248" y="60" class="lbl">하란</text>
+            <circle cx="180" cy="88" r="4" class="dot-c"/><text x="158" y="125" class="lbl-c">가나안 도착지</text>
+            <text x="158" y="135" class="lbl">세겜·헤브론·브엘세바</text>
+            <circle cx="15" cy="75" r="2" class="dot-k"/><text x="18" y="70" class="lbl">기근의 이집트 잠시 체류</text>
+            <path class="arrow-c" d="M278,72 Q260,55 245,60"/>
+            <path class="arrow-c" d="M240,65 Q220,58 195,75"/>
+            <path class="arrow-c" d="M190,82 Q180,84 178,88"/>
+            <text x="160" y="20" text-anchor="middle" class="lbl-t">ABRAHAM'S JOURNEY · BC 2000경</text>
+            <text x="300" y="22" text-anchor="end" class="lbl-r">Fertile Crescent</text>
+          </svg>
+          <div class="map-cap">우르(메소포타미아) → 하란 → 가나안 · 약 1,500 km 이주</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="eyebrow">Shared Patriarchs &nbsp;·&nbsp; 공유된 인물</div>
+        <h3 style="font-family:var(--fs-serif);font-weight:700;font-size:22px;margin:10px 0 18px">세 종교가 모두 인정하는 16인</h3>
+        <ul class="share-list">
+          <li><span class="who">아담 · 하와</span><span class="what">최초의 인간, 에덴동산, 원죄(기독교 강조)</span></li>
+          <li><span class="who">노아 · 방주</span><span class="what">대홍수 의인, 새 언약, 무지개의 약속</span></li>
+          <li><span class="who">아브라함</span><span class="what">유일신 신앙의 시조 · BC 2000경</span></li>
+          <li><span class="who">이삭 · 이스마엘</span><span class="what">유대·기독 / 이슬람 두 계보의 갈림점</span></li>
+          <li><span class="who">야곱(이스라엘)</span><span class="what">12지파의 아버지, 천사와 씨름</span></li>
+          <li><span class="who">요셉</span><span class="what">이집트 총리, 꿈의 해석자</span></li>
+          <li><span class="who">모세</span><span class="what">출애굽, 시나이 십계명 · BC 1300경</span></li>
+          <li><span class="who">다윗 · 솔로몬</span><span class="what">통일 왕국, 제1성전 · BC 970경</span></li>
+          <li><span class="who">엘리야 · 이사야</span><span class="what">예언자 전통의 정점</span></li>
+          <li><span class="who">마리아 (마르얌)</span><span class="what">기독교 성모 · 꾸란에 19장 별도 헌정</span></li>
+          <li><span class="who">예수 (이사)</span><span class="what">기독교 메시아 / 이슬람 예언자 / 유대교 예언자 아님</span></li>
+          <li><span class="who">세례 요한 (야흐야)</span><span class="what">예수의 길을 예비한 예언자</span></li>
+          <li><span class="who">천사 가브리엘</span><span class="what">수태고지 · 무함마드 첫 계시 전달</span></li>
+          <li><span class="who">사탄 · 이블리스</span><span class="what">타락한 천사 · 인간의 적</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rule" style="margin:60px 0 40px"></div>
+
+    <div>
+      <div class="eyebrow">Decisive Differences &nbsp;·&nbsp; 결정적 차이</div>
+      <h3 style="font-family:var(--fs-serif);font-weight:700;font-size:26px;margin:10px 0 18px;letter-spacing:-0.01em">같은 신, 다른 결론</h3>
+      <table class="diff-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="tag-j">유대교 · Judaism</th>
+            <th class="tag-c">기독교 · Christianity</th>
+            <th class="tag-i">이슬람교 · Islam</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>유일신</td><td>야훼 (YHWH)</td><td>하나님 — 성부·성자·성령의 삼위일체</td><td>알라 — 절대 단일성(타우히드)</td></tr>
+          <tr><td>예수의 위치</td><td>메시아 아님 · 평범한 유대인</td><td>신의 아들 · 메시아 · 십자가 대속 · 부활</td><td>위대한 예언자(이사) · 신 아님 · 십자가 미신앙</td></tr>
+          <tr><td>메시아 도래</td><td>아직 오지 않았다</td><td>예수가 메시아 · 재림 예정</td><td>예수가 마지막 날 재림하여 다잘을 멸함</td></tr>
+          <tr><td>최후의 예언자</td><td>모세 (또는 말라기)</td><td>예수 그리스도 · 그 이후 사도들</td><td>무함마드 — "예언자의 인장(Khatam)"</td></tr>
+          <tr><td>경전의 권위</td><td>타나크 + 탈무드 · 구전 율법</td><td>구약 + 신약 · 정경 66~73권</td><td>꾸란 = 알라의 직접 말씀(번역 불가)</td></tr>
+          <tr><td>구원의 방식</td><td>토라 준수 · 613 미츠보트</td><td>믿음과 은혜에 의한 칭의 (개신교) / 믿음 + 행위 (가톨릭)</td><td>5대 의무 + 알라의 자비</td></tr>
+          <tr><td>원죄</td><td>인정하지 않음</td><td>핵심 교리 · 세례로 씻음</td><td>인정하지 않음 · 각자의 책임</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section id="three" class="section" style="background:var(--bg-alt)">
+  <div class="container">
+    <header class="section-head">
+      <div class="section-num">§ II</div>
+      <h2 class="section-title">세 종교 본체</h2>
+      <div class="section-sub">The Three Religions &nbsp;·&nbsp; Doctrine, Origins, Figures</div>
+    </header>
+
+    <div class="grid-3">
+
+      <article class="card j">
+        <div class="eyebrow" style="color:var(--jud)">JUDAISM &nbsp;·&nbsp; 유대교</div>
+        <h3 class="card-title" style="margin-top:8px">야훼와 선택된 백성</h3>
+        <p class="card-sub">The Covenant of the Chosen People</p>
+
+        <div class="relig-figures">
+          <div class="fig"><div class="fig-num">15.2M</div><div class="fig-lab">인구 (2024)</div></div>
+          <div class="fig"><div class="fig-num">0.2%</div><div class="fig-lab">세계 비중</div></div>
+          <div class="fig"><div class="fig-num">BC 2000</div><div class="fig-lab">기원</div></div>
+        </div>
+
+        <div class="card-meta">
+          <dl>
+            <dt>시조</dt><dd>아브라함 → 모세</dd>
+            <dt>발생</dt><dd>BC 2000경 (아브라함) · BC 1300경 (모세, 토라)</dd>
+            <dt>발생지</dt><dd>가나안 (오늘날의 이스라엘·팔레스타인)</dd>
+            <dt>경전</dt><dd>타나크(구약), 토라(모세오경 5권), 탈무드</dd>
+            <dt>언어</dt><dd>히브리어 · 아람어 · 이디시어(동유럽)</dd>
+            <dt>중심지</dt><dd>예루살렘 (제1·제2 성전 자리)</dd>
+            <dt>주요 분포</dt><dd>이스라엘 700만 · 미국 600만 · 그 외 200만</dd>
+          </dl>
+        </div>
+
+        <div class="eyebrow" style="margin-top:18px">핵심 신앙</div>
+        <ul class="pillar-list">
+          <li><span class="n">i</span><span>유일신 야훼 (YHWH) — "이름을 부를 수 없는 하나님"</span></li>
+          <li><span class="n">ii</span><span>아브라함과의 영원한 언약 · 선민사상</span></li>
+          <li><span class="n">iii</span><span>613 미츠보트(계명)의 준수 — 안식일, 코셔, 할례</span></li>
+          <li><span class="n">iv</span><span>메시아는 아직 오지 않았다 · 예수는 메시아 아님</span></li>
+          <li><span class="n">v</span><span>제3 성전의 재건 — 메시아 시대의 징표</span></li>
+        </ul>
+
+        <div class="fig-key">
+          <b>주요 인물:</b> 아브라함 (BC 2000), 모세 (BC 1300), 다윗 (BC 1010), 솔로몬 (BC 970), 마이모니데스 (12c), 바알 셈 토브 (18c, 하시드), 헤르츨 (1897, 시오니즘), 벤구리온 (1948, 건국).
+        </div>
+      </article>
+
+      <article class="card c">
+        <div class="eyebrow" style="color:var(--chr)">CHRISTIANITY &nbsp;·&nbsp; 기독교</div>
+        <h3 class="card-title" style="margin-top:8px">하나님의 아들, 메시아 예수</h3>
+        <p class="card-sub">The Son of God, Crucified and Risen</p>
+
+        <div class="relig-figures">
+          <div class="fig"><div class="fig-num">24억</div><div class="fig-lab">인구 (2024)</div></div>
+          <div class="fig"><div class="fig-num">28.8%</div><div class="fig-lab">세계 비중</div></div>
+          <div class="fig"><div class="fig-num">AD 30</div><div class="fig-lab">기원</div></div>
+        </div>
+
+        <div class="card-meta">
+          <dl>
+            <dt>시조</dt><dd>예수 그리스도 · 사도 바울 (이방인 선교)</dd>
+            <dt>발생</dt><dd>AD 30경 (십자가·부활) · AD 49 (예루살렘 공의회)</dd>
+            <dt>발생지</dt><dd>유대 (로마령 팔레스타인)</dd>
+            <dt>경전</dt><dd>구약 + 신약 · 정경 66권(개신교) / 73권(가톨릭)</dd>
+            <dt>언어</dt><dd>아람어 → 헬라어 → 라틴어 → 자국어</dd>
+            <dt>중심지</dt><dd>바티칸 · 콘스탄티노플 · 예루살렘</dd>
+            <dt>주요 분포</dt><dd>유럽·아메리카·사하라 이남 아프리카, 한국 25%+</dd>
+          </dl>
+        </div>
+
+        <div class="eyebrow" style="margin-top:18px">핵심 신앙</div>
+        <ul class="pillar-list">
+          <li><span class="n">i</span><span>삼위일체 — 성부·성자·성령은 한 하나님</span></li>
+          <li><span class="n">ii</span><span>예수의 신성과 인성 · 동정녀 탄생 · 부활</span></li>
+          <li><span class="n">iii</span><span>원죄 · 십자가 대속 · 믿음으로 의롭게 됨</span></li>
+          <li><span class="n">iv</span><span>성령의 임재와 교회의 거룩성</span></li>
+          <li><span class="n">v</span><span>예수의 재림과 최후의 심판</span></li>
+        </ul>
+
+        <div class="fig-key">
+          <b>주요 인물:</b> 예수 그리스도, 사도 바울, 콘스탄티누스 (313 합법화), 아우구스티누스 (4c), 토마스 아퀴나스 (13c), 마르틴 루터 (1517 종교개혁), 장 칼뱅 (1536), 교황 프란치스코 (2013~ 현 교황).
+        </div>
+      </article>
+
+      <article class="card i">
+        <div class="eyebrow" style="color:var(--isl)">ISLAM &nbsp;·&nbsp; 이슬람교</div>
+        <h3 class="card-title" style="margin-top:8px">알라의 마지막 예언자</h3>
+        <p class="card-sub">The Final Revelation through Muhammad</p>
+
+        <div class="relig-figures">
+          <div class="fig"><div class="fig-num">19억</div><div class="fig-lab">인구 (2024)</div></div>
+          <div class="fig"><div class="fig-num">25.6%</div><div class="fig-lab">세계 비중</div></div>
+          <div class="fig"><div class="fig-num">AD 610</div><div class="fig-lab">기원</div></div>
+        </div>
+
+        <div class="card-meta">
+          <dl>
+            <dt>시조</dt><dd>예언자 무함마드 (570~632)</dd>
+            <dt>발생</dt><dd>AD 610 (첫 계시) · AD 622 (헤지라, 이슬람력 원년)</dd>
+            <dt>발생지</dt><dd>메카 · 메디나 (아라비아 반도 헤자즈)</dd>
+            <dt>경전</dt><dd>꾸란 (114장) · 하디스 (전승) · 샤리아 (율법)</dd>
+            <dt>언어</dt><dd>아랍어 — 꾸란은 번역 불가 원칙</dd>
+            <dt>중심지</dt><dd>메카 · 메디나 · 예루살렘 (3대 성지)</dd>
+            <dt>주요 분포</dt><dd>인니 2.4억 · 파키스탄 · 인도 · 중동 · 북아프리카</dd>
+          </dl>
+        </div>
+
+        <div class="eyebrow" style="margin-top:18px">5대 의무 (이슬람의 다섯 기둥)</div>
+        <ul class="pillar-list">
+          <li><span class="n">1</span><span><b>샤하다</b> — "알라 외에 신은 없고 무함마드는 알라의 사도"</span></li>
+          <li><span class="n">2</span><span><b>살라트</b> — 하루 다섯 번 메카를 향한 예배</span></li>
+          <li><span class="n">3</span><span><b>자카트</b> — 재산의 2.5% 의무 자선</span></li>
+          <li><span class="n">4</span><span><b>사움</b> — 라마단의 일출에서 일몰까지 단식</span></li>
+          <li><span class="n">5</span><span><b>하지</b> — 일생에 한 번 메카 순례 (능력자)</span></li>
+        </ul>
+
+        <div class="fig-key">
+          <b>주요 인물:</b> 무함마드 (570~632), 아부 바크르 (1대 칼리프), 알리 (시아 시조), 후세인 (680 카르발라 순교), 살라딘 (1187 예루살렘 수복), 술레이만 대제 (16c 오스만 절정), 압드 알-와하브 (18c 와하비즘), 호메이니 (1979 이란 혁명).
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<section id="sects" class="section">
+  <div class="container">
+    <header class="section-head">
+      <div class="section-num">§ III</div>
+      <h2 class="section-title">분파 지도</h2>
+      <div class="section-sub">Map of Denominations &nbsp;·&nbsp; 40+ Branches</div>
+    </header>
+
+    <div class="grid-3">
+
+      <!-- 유대교 분파 -->
+      <div class="sect-col j">
+        <h3>유대교</h3>
+        <div class="sub">Judaism · 15.2M · 작지만 다층적</div>
+        <div class="sect-tree">
+
+          <div class="sect-node">
+            <div class="name">정통파 Orthodox Judaism</div>
+            <div class="meta">발생 — · 인구 약 350만</div>
+            <div class="desc">토라와 탈무드를 절대 권위로 인정. 율법(할라카) 엄격 준수. 이스라엘 정치에서 비중 절대적.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">하레디 (초정통파, Ultra-Orthodox)</div>
+            <div class="meta">16~17c 동유럽</div>
+            <div class="desc">검은 옷·중절모, 세속 거부, 군 면제 논쟁. 출산율 7명 이상, 이스라엘 내 정치적 비중 급상승.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">하시드파 Hasidism</div>
+            <div class="meta">1740s 우크라이나 · 바알 셈 토브</div>
+            <div class="desc">신비주의·기쁨의 신앙. 차바드(Lubavitch), 사트마르 등 다수 분파. 레비(랍비 가문) 중심.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">현대 정통파 Modern Orthodox</div>
+            <div class="meta">19c 독일 · 삼손 라파엘 히르쉬</div>
+            <div class="desc">"토라와 세속(Derech Eretz)의 조화" — 율법 준수 + 세속 학문·직업 수용.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">보수파 Conservative</div>
+            <div class="meta">1850s 독일·미국 · 약 100만</div>
+            <div class="desc">전통은 유지하되 점진적 개정. 미국 유대인의 중간 다수, 여성 랍비 일부 인정.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">개혁파 Reform</div>
+            <div class="meta">1810s 독일 · 약 180만</div>
+            <div class="desc">합리주의·계몽주의 기반. 의식 간소화, 모국어 예배, 여성 랍비, 동성결혼 허용. 미국 최대 분파.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">재건파 Reconstructionist</div>
+            <div class="meta">1922 미국 · 모데카이 카플란</div>
+            <div class="desc">유대교를 "신앙"이 아닌 "문명(civilization)"으로 재정의. 신학적으로 가장 자유로움.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">카라이파 Karaite</div>
+            <div class="meta">8c 바그다드 · 약 5만</div>
+            <div class="desc">탈무드와 구전 율법 거부, "오직 토라(sola scriptura)". 주류 유대교와 결혼·인정 단절.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">사마리아인 Samaritans</div>
+            <div class="meta">고대 그리심산 · 약 850명</div>
+            <div class="desc">예루살렘 성전을 거부하고 그리심산을 성소로 본다. 세계 최소 종교 집단 중 하나.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">베타 이스라엘 (에티오피아 유대인)</div>
+            <div class="meta">솔로몬 전승 · 약 15만</div>
+            <div class="desc">1984 모세 작전, 1991 솔로몬 작전으로 이스라엘 항공 수송. 흑인 유대인 공동체.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">메시아닉 유대교</div>
+            <div class="meta">1960s 미국</div>
+            <div class="desc">예수를 메시아로 인정하면서 유대 율법·정체성 유지. 주류 유대교는 "기독교"로 분류, 학계도 동의.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 기독교 분파 -->
+      <div class="sect-col c">
+        <h3>기독교</h3>
+        <div class="sub">Christianity · 24억 · 세계 최대 분파 종교</div>
+        <div class="sect-tree">
+
+          <div class="sect-node">
+            <div class="name">로마 가톨릭 Roman Catholic</div>
+            <div class="meta">1c · 베드로 · <span class="pop">13.9억</span></div>
+            <div class="desc">교황을 영적 수장으로. 7대 성례, 마리아 공경, 연옥 교리. 1054 동방과 분리.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">동방 가톨릭 교회 Eastern Catholic</div>
+            <div class="meta">16c 재일치 · 약 1,800만</div>
+            <div class="desc">동방 전례를 유지하면서 교황을 인정. 마론파(레바논), 우크라이나 그리스 가톨릭 등 23개 자치 교회.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">정교회 (동방) Eastern Orthodox</div>
+            <div class="meta">1054 동서 분열 · <span class="pop">2.6억</span></div>
+            <div class="desc">콘스탄티노플 총대주교를 "동등한 자들 중 첫째"로 인정. 각 국가별 자치 교회.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">러시아 정교회</div>
+            <div class="meta">988 키예프 루스 세례 · 약 1억</div>
+            <div class="desc">정교회 최대 규모. "제3 로마" 자처. 키릴 총대주교는 푸틴 정권과 결탁, 우크라이나 침공 옹호로 비판.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">오리엔트 정교회 Oriental Orthodox</div>
+            <div class="meta">451 칼케돈 거부 · 약 6,000만</div>
+            <div class="desc">콥트(이집트), 에티오피아, 아르메니아, 시리아, 인도 마르 토마 등. 단성론(miaphysite) 그리스도론.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">앗시리아 동방교회 Assyrian</div>
+            <div class="meta">431 에페소 공의회 이후</div>
+            <div class="desc">네스토리우스파 후예. 당나라 시대 "경교(景敎)"로 중국 전래. 현재 이라크·시리아에 약 50만.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">개신교 Protestantism</div>
+            <div class="meta">1517 비텐베르크 · <span class="pop">9억</span></div>
+            <div class="desc">"오직 성경·오직 믿음·오직 은혜·오직 그리스도·오직 하나님께 영광"의 다섯 솔라.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">루터교 Lutheranism</div>
+            <div class="meta">1517 · 마르틴 루터</div>
+            <div class="desc">독일·북유럽 국교. 칭의론·만인사제설. 현재 약 7,500만.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">개혁·장로교 Reformed</div>
+            <div class="meta">1536 제네바 · 장 칼뱅</div>
+            <div class="desc">예정론·하나님 주권. 스코틀랜드(녹스), 네덜란드, 한국 개신교의 절대 다수.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">성공회 Anglican</div>
+            <div class="meta">1534 · 헨리 8세</div>
+            <div class="desc">가톨릭과 개신교의 중도(via media). 영연방 국교, 약 8,500만.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">침례교 Baptist</div>
+            <div class="meta">17c 영국 · 분리주의</div>
+            <div class="desc">성인 침례만 인정, 회중정치. 미국 남부 강세 — 남침례회(SBC)는 미국 최대 개신교 교단.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">감리교 Methodist</div>
+            <div class="meta">18c 영국 · 존 웨슬리</div>
+            <div class="desc">"체계적인(method) 거룩"·사회 복음 강조. 영국·미국·한국에서 강세.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">오순절교 Pentecostal</div>
+            <div class="meta">1906 LA 아주사 거리</div>
+            <div class="desc">방언·신유·예언 등 성령의 은사 강조. 글로벌 사우스에서 폭발적 성장, 현재 약 6억.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">복음주의 Evangelicalism</div>
+            <div class="meta">18~20c 초교파</div>
+            <div class="desc">개인적 회심·성경 권위·전도. 미국 정치 보수의 중심, "기독교 시오니즘"의 진원지.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">모르몬교 LDS</div>
+            <div class="meta">1830 미국 · 조셉 스미스</div>
+            <div class="desc">모르몬경 추가, 다신·신격 상승 교리. 주류 학계는 별개 종교로 분류. 현재 약 1,700만.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 이슬람교 분파 -->
+      <div class="sect-col i">
+        <h3>이슬람교</h3>
+        <div class="sub">Islam · 19억 · 수니·시아 두 대분류</div>
+        <div class="sect-tree">
+
+          <div class="sect-node">
+            <div class="name">수니파 Sunni</div>
+            <div class="meta">632 무함마드 사후 · <span class="pop">16.5억 (85~90%)</span></div>
+            <div class="desc">"순나(예언자의 길)"를 따르는 자들. 첫 4 칼리프(아부 바크르~알리)를 정통으로 인정.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">4대 법학파 Madhhabs</div>
+            <div class="meta">8~9c · 하나피·말리키·샤피이·한발리</div>
+            <div class="desc">하나피(터키·중앙아시아), 말리키(북아프리카), 샤피이(동남아·예멘), 한발리(사우디).</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">와하비즘 / 살라피즘</div>
+            <div class="meta">18c · 압드 알-와하브</div>
+            <div class="desc">"선조의 길로 돌아가자" — 엄격한 단일신앙, 성묘·중재 금지. 사우디 국가 이념, ISIS·알카에다의 사상적 토대.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">데오반디 Deobandi</div>
+            <div class="meta">1867 인도 데오반드</div>
+            <div class="desc">샤리아 엄격, 영국 식민에 저항. 파키스탄·아프간 마드라사 네트워크, 탈레반의 사상적 모태.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">바렐위 Barelvi</div>
+            <div class="meta">19c 인도 바렐리</div>
+            <div class="desc">수피적 전통, 무함마드의 광채(누르) 강조. 파키스탄 다수파, 데오반디와 적대.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">시아파 Shia</div>
+            <div class="meta">632 알리 후계 주장 · <span class="pop">2.4억 (10~15%)</span></div>
+            <div class="desc">무함마드의 사촌·사위 알리만이 정통 후계자. 이맘은 무오한 영적 지도자. 카르발라(680) 비극이 정체성의 핵.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">12이맘파 Twelver Shi'a</div>
+            <div class="meta">시아 ~85%</div>
+            <div class="desc">12번째 이맘(마흐디)이 874년 은폐, 종말에 재림. 이란 국교, 이라크 다수, 헤즈볼라·바레인.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">이스마일파 Ismaili</div>
+            <div class="meta">765 분리 · 약 1,500만</div>
+            <div class="desc">7번째 이맘에서 분기. 아가 칸(Aga Khan)을 살아있는 이맘으로. 909~1171 파티마 왕조 건국.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">자이드파 Zaydi</div>
+            <div class="meta">740 분리</div>
+            <div class="desc">5번째 이맘 자이드. 예멘 다수, 후티/안사르 알라의 사상적 기반.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">알라위파 Alawi</div>
+            <div class="meta">9~10c 시리아 · 시아 ~12%</div>
+            <div class="desc">알리를 신성에 가깝게 봄. 시리아 아사드 가문이 속한 분파, 2024.12 정권 붕괴.</div>
+          </div>
+          <div class="sect-node indent">
+            <div class="name">알레비파 Alevi</div>
+            <div class="meta">13c 아나톨리아</div>
+            <div class="desc">터키 인구의 15~20%. 자유주의적, 술·남녀합석 허용. 시아와 수피의 혼합으로 분류.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">이바드파 Ibadi</div>
+            <div class="meta">7c 카와리지의 후예</div>
+            <div class="desc">오만의 국교(인구 75%). 수니도 시아도 아닌 제3의 분파.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">수피즘 Sufism</div>
+            <div class="meta">8c~ · 영성 운동</div>
+            <div class="desc">신비주의·내면의 길. 수니·시아 양쪽에 존재. 메블레비(회전 무도), 낙슈반디 등 따리카(교단). 와하비가 가장 적대.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">아흐마디야 Ahmadiyya</div>
+            <div class="meta">1889 인도 · 미르자 굴람 아흐마드</div>
+            <div class="desc">미르자가 메시아·마흐디 자처. 파키스탄에서 법적으로 "비무슬림"으로 규정, 박해 대상.</div>
+          </div>
+
+          <div class="sect-node">
+            <div class="name">네이션 오브 이슬람 NOI</div>
+            <div class="meta">1930 미국 디트로이트</div>
+            <div class="desc">미국 흑인 인권 운동의 한 줄기. 말콤 X, 무하마드 알리. 주류 이슬람은 신학적으로 인정하지 않음.</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="timeline" class="section" style="background:var(--bg-alt)">
+  <div class="container">
+    <header class="section-head">
+      <div class="section-num">§ IV</div>
+      <h2 class="section-title">통합 연대기</h2>
+      <div class="section-sub">A Unified Chronology &nbsp;·&nbsp; BC 2000 — AD 2026</div>
+    </header>
+
+    <div class="tl-wrap">
+
+      <!-- 고대 -->
+      <div class="tl-era">
+        <div class="tl-era-label">
+          <div class="era-name">고대</div>
+          <div class="era-range">Antiquity · BC 2000—1</div>
+        </div>
+        <div class="tl-era-events">
+          <div class="tl-event">
+            <div class="tl-year">BC 2000경</div>
+            <div class="tl-body j">
+              <div class="tl-title">아브라함의 가나안 이주<span class="tl-tags"><span class="t j">유</span></span></div>
+              <div class="tl-desc">우르(메소포타미아)에서 가나안으로. 야훼와의 영원한 언약, "큰 민족이 되리라"의 약속.</div>
+              <div class="tl-actors">— 아브라함, 사라, 하갈, 이삭, 이스마엘</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">BC 1300경</div>
+            <div class="tl-body j">
+              <div class="tl-title">출애굽과 시나이의 토라 수여<span class="tl-tags"><span class="t j">유</span></span></div>
+              <div class="tl-desc">이집트 노예에서 해방, 시나이 산에서 십계명과 율법 수여. 광야 40년.</div>
+              <div class="tl-actors">— 모세, 아론, 미리암, 여호수아</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">BC 1010~970</div>
+            <div class="tl-body j">
+              <div class="tl-title">통일 왕국 — 다윗과 솔로몬<span class="tl-tags"><span class="t j">유</span></span></div>
+              <div class="tl-desc">다윗이 예루살렘을 수도로, 솔로몬이 제1성전 건축 (BC 957경). 이스라엘 황금기.</div>
+              <div class="tl-actors">— 다윗, 밧세바, 솔로몬, 시바의 여왕</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">BC 928</div>
+            <div class="tl-body j">
+              <div class="tl-title">왕국 분열 — 남유다 · 북이스라엘<span class="tl-tags"><span class="t j">유</span></span></div>
+              <div class="tl-desc">솔로몬 사후 르호보암(남)과 여로보암(북)으로 분열. 남유다 2지파, 북이스라엘 10지파.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">BC 722</div>
+            <div class="tl-body w">
+              <div class="tl-title">북이스라엘 멸망 — 앗시리아<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">사르곤 2세에 의해 사마리아 함락. 10지파의 행방은 역사에서 사라짐("잃어버린 10지파").</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">BC 586</div>
+            <div class="tl-body w">
+              <div class="tl-title">바빌론 유수 — 제1성전 파괴<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">느부갓네살 2세가 예루살렘 파괴, 유대인 강제 이주. 디아스포라의 첫 단계.</div>
+              <div class="tl-actors">— 느부갓네살 2세, 예레미야, 다니엘, 에스겔</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">BC 538</div>
+            <div class="tl-body j">
+              <div class="tl-title">키루스 칙령 — 귀환 허가<span class="tl-tags"><span class="t j">유</span></span></div>
+              <div class="tl-desc">페르시아 키루스 대왕이 유대인 귀환·성전 재건 허가. 이사야가 그를 "메시아"라 칭함.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">BC 516</div>
+            <div class="tl-body j">
+              <div class="tl-title">제2성전 완공<span class="tl-tags"><span class="t j">유</span></span></div>
+              <div class="tl-desc">스룹바벨이 재건. 제1성전보다 소박. AD 70년 로마 파괴까지 약 6세기 존속.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">BC 167~160</div>
+            <div class="tl-body w">
+              <div class="tl-title">마카비 반란 — 셀레우코스에 대항<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">안티오쿠스 4세의 헬레니즘화 강요에 저항. 하스모니아 왕조 수립, 하누카 축제의 기원.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">BC 63</div>
+            <div class="tl-body w">
+              <div class="tl-title">로마 폼페이우스의 예루살렘 정복<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">로마의 유대 지배 시작. 헤롯 왕조와 산헤드린이 공존하는 복잡한 통치 구조.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 고대 후기 -->
+      <div class="tl-era">
+        <div class="tl-era-label">
+          <div class="era-name">고대 후기</div>
+          <div class="era-range">Late Antiquity · AD 1—600</div>
+        </div>
+        <div class="tl-era-events">
+          <div class="tl-event">
+            <div class="tl-year">AD 30경</div>
+            <div class="tl-body c">
+              <div class="tl-title">예수의 십자가 처형과 부활<span class="tl-tags"><span class="t c">기</span></span></div>
+              <div class="tl-desc">본디오 빌라도 치하 예루살렘. 기독교의 출발점. 사흘 만의 부활이 핵심 신앙이 됨.</div>
+              <div class="tl-actors">— 예수, 베드로, 야고보, 요한, 막달라 마리아</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 49</div>
+            <div class="tl-body c">
+              <div class="tl-title">예루살렘 공의회 — 이방인 선교 결정<span class="tl-tags"><span class="t c">기</span></span></div>
+              <div class="tl-desc">바울이 이방인에게 할례·율법 부담 면제를 관철. 기독교가 유대교의 한 분파에서 보편 종교로 전환.</div>
+              <div class="tl-actors">— 바울, 베드로, 야고보 (예수의 형제)</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 66~73</div>
+            <div class="tl-body w">
+              <div class="tl-title">1차 유대-로마 전쟁<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">유대 봉기 → 로마 진압. 73년 마사다 함락, 970명 집단 자결의 전설.</div>
+              <div class="tl-actors">— 베스파시아누스, 티투스, 요세푸스, 엘르아살 벤 야이르</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 70</div>
+            <div class="tl-body w">
+              <div class="tl-title">티투스의 제2성전 파괴<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">예루살렘 함락, 성전 전소. 통곡의 벽(서쪽 벽)만 남음. 유대교는 성전 종교에서 회당·랍비 종교로 전환.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 132~135</div>
+            <div class="tl-body w">
+              <div class="tl-title">바르 코크바 반란<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">2차 유대 봉기. 약 58만 사망, 유대인 명칭이 "팔레스타이나"로 개명. 디아스포라 본격화.</div>
+              <div class="tl-actors">— 시몬 바르 코크바, 랍비 아키바, 하드리아누스 황제</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 313</div>
+            <div class="tl-body c">
+              <div class="tl-title">밀라노 칙령 — 기독교 합법화<span class="tl-tags"><span class="t c">기</span></span></div>
+              <div class="tl-desc">콘스탄티누스 1세와 리키니우스. 300년 박해의 종지부. 기독교가 제국의 종교로.</div>
+              <div class="tl-actors">— 콘스탄티누스 1세, 헬레나(어머니, 성지 발굴)</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 325</div>
+            <div class="tl-body c">
+              <div class="tl-title">1차 니케아 공의회 — 삼위일체<span class="tl-tags"><span class="t c">기</span></span></div>
+              <div class="tl-desc">아리우스파를 이단으로 규정, 예수의 신성(homoousios) 확정. 니케아 신경 채택.</div>
+              <div class="tl-actors">— 콘스탄티누스, 아타나시우스, 아리우스</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 380</div>
+            <div class="tl-body c">
+              <div class="tl-title">테살로니카 칙령 — 로마 국교화<span class="tl-tags"><span class="t c">기</span></span></div>
+              <div class="tl-desc">테오도시우스 1세. 니케아 정통 신앙만 합법, 다른 신앙은 박해 대상으로 전환.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 431</div>
+            <div class="tl-body c">
+              <div class="tl-title">에페소 공의회 — 네스토리우스 정죄<span class="tl-tags"><span class="t c">기</span></span></div>
+              <div class="tl-desc">마리아를 "테오토코스(하나님의 어머니)"로 확정. 네스토리우스파는 동방으로 — 후일 경교(景敎).</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 451</div>
+            <div class="tl-body c">
+              <div class="tl-title">칼케돈 공의회 — 오리엔트 정교회 분리<span class="tl-tags"><span class="t c">기</span></span></div>
+              <div class="tl-desc">예수의 두 본성(divine·human) 확정. 단성론(miaphysite)을 따른 콥트·시리아·아르메니아·에티오피아가 갈라짐.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 중세 -->
+      <div class="tl-era">
+        <div class="tl-era-label">
+          <div class="era-name">중세</div>
+          <div class="era-range">Middle Ages · AD 600—1500</div>
+        </div>
+        <div class="tl-era-events">
+          <div class="tl-event">
+            <div class="tl-year">AD 610</div>
+            <div class="tl-body i">
+              <div class="tl-title">무함마드의 첫 계시 — 히라 동굴<span class="tl-tags"><span class="t i">이</span></span></div>
+              <div class="tl-desc">메카 인근 히라 동굴에서 천사 가브리엘(지브릴)이 "읽으라!" 명령. 이슬람의 출발점.</div>
+              <div class="tl-actors">— 무함마드, 카디자(첫 부인·첫 신자), 가브리엘</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 622</div>
+            <div class="tl-body i">
+              <div class="tl-title">헤지라 — 이슬람력 원년<span class="tl-tags"><span class="t i">이</span></span></div>
+              <div class="tl-desc">메카에서 메디나로 이주. 정치적·종교적 공동체 움마(ummah)의 시작. 이슬람력 1년.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 630</div>
+            <div class="tl-body i">
+              <div class="tl-title">메카 정복 — 카바 정화<span class="tl-tags"><span class="t i">이</span></span></div>
+              <div class="tl-desc">무함마드가 거의 무혈로 메카 입성. 카바의 360 우상을 제거하고 알라의 집으로 봉헌.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 632</div>
+            <div class="tl-body i">
+              <div class="tl-title">무함마드 사망 — 수니·시아 분열의 씨앗<span class="tl-tags"><span class="t i">이</span><span class="t p">분파</span></span></div>
+              <div class="tl-desc">후계 문제로 갈라짐. 다수는 아부 바크르를 칼리프로(수니), 소수는 사위 알리를 주장(시아).</div>
+              <div class="tl-actors">— 아부 바크르, 우마르, 우스만, 알리, 아이샤(무함마드의 부인)</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 634~644</div>
+            <div class="tl-body i">
+              <div class="tl-title">아랍 대정복 — 사산조·비잔틴 시리아·이집트<span class="tl-tags"><span class="t i">이</span><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">한 세대 만에 페르시아 제국 정복, 비잔틴의 시리아·이집트 점령. 종교사에서 가장 빠른 영토 확장.</div>
+              <div class="tl-actors">— 우마르(2대 칼리프), 칼리드 이븐 알-왈리드</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 680</div>
+            <div class="tl-body w">
+              <div class="tl-title">카르발라 전투 — 후세인의 순교<span class="tl-tags"><span class="t i">이</span><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">알리의 차남 후세인이 우마이야 야지드에게 살해됨. 시아파 정체성의 정점, 아슈라(애도일)의 기원.</div>
+              <div class="tl-actors">— 후세인 이븐 알리, 야지드 1세</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 711</div>
+            <div class="tl-body i">
+              <div class="tl-title">이베리아 정복 시작<span class="tl-tags"><span class="t i">이</span></span></div>
+              <div class="tl-desc">우마이야의 장군 타리크가 지브롤터 해협 도하. 약 7년 만에 이베리아 대부분 정복.</div>
+              <div class="tl-actors">— 타리크 이븐 지야드</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 732</div>
+            <div class="tl-body w">
+              <div class="tl-title">투르-푸아티에 전투 — 카를 마르텔의 격퇴<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">프랑크 왕국이 우마이야의 서유럽 진출을 저지. 서유럽 기독교 세계의 분수령.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 750</div>
+            <div class="tl-body i">
+              <div class="tl-title">압바스 혁명 — 황금기 시작<span class="tl-tags"><span class="t i">이</span></span></div>
+              <div class="tl-desc">우마이야를 무너뜨리고 바그다드 천도(762). "지혜의 집" 번역 운동, 그리스 철학·인도 수학의 통합.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1054</div>
+            <div class="tl-body c">
+              <div class="tl-title">동서 교회 대분열<span class="tl-tags"><span class="t c">기</span><span class="t p">분파</span></span></div>
+              <div class="tl-desc">로마 가톨릭과 콘스탄티노플 정교회의 상호 파문. 필리오케 조항·교황 수위권이 쟁점.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1095~1099</div>
+            <div class="tl-body w">
+              <div class="tl-title">1차 십자군 — 예루살렘 함락<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">우르바누스 2세의 호소. 1099.7.15 예루살렘 함락 시 약 7만 학살. 라인란트에서도 유대인 대량 학살.</div>
+              <div class="tl-actors">— 우르바누스 2세, 고드프루아 드 부용, 보에몽</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1187</div>
+            <div class="tl-body i">
+              <div class="tl-title">살라딘의 예루살렘 수복 — 하틴 전투<span class="tl-tags"><span class="t i">이</span><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">아이유브 술탄 살라딘이 십자군 왕국 격파. 1차 정복과 달리 학살 없이 입성, 기독교 성지 보호.</div>
+              <div class="tl-actors">— 살라딘, 사자심왕 리처드(3차 십자군)</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1204</div>
+            <div class="tl-body w">
+              <div class="tl-title">4차 십자군의 콘스탄티노플 약탈<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">기독교 십자군이 같은 기독교의 동로마 수도를 파괴. 동서 교회 분열의 결정적 봉인.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1209~1229</div>
+            <div class="tl-body w">
+              <div class="tl-title">알비 십자군 — 카타리파 학살<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">인노첸시오 3세가 남프랑스 이단(카타리파)에 대해 십자군 선포. 약 100만 학살, 종교재판소 창설로 이어짐.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1258</div>
+            <div class="tl-body w">
+              <div class="tl-title">몽골 훌라구의 바그다드 함락<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">압바스 칼리프 처형, 도서관 파괴, 약 20만 학살. 이슬람 황금기의 종말.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1290 · 1306</div>
+            <div class="tl-body w">
+              <div class="tl-title">영국·프랑스의 유대인 추방<span class="tl-tags"><span class="t w">박해</span></span></div>
+              <div class="tl-desc">에드워드 1세(1290) · 필립 4세(1306). 중세 후기 박해의 시작.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1378~1417</div>
+            <div class="tl-body c">
+              <div class="tl-title">서방 교회 대분열 — 복수 교황<span class="tl-tags"><span class="t c">기</span></span></div>
+              <div class="tl-desc">로마·아비뇽·피사 세 곳에 교황이 동시에. 콘스탄츠 공의회(1414~18)로 통일.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1453</div>
+            <div class="tl-body w">
+              <div class="tl-title">콘스탄티노플 함락 — 동로마 멸망<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">오스만의 메흐메드 2세, 21세에 1,000년 도시 점령. 하기아 소피아가 모스크로 전환.</div>
+              <div class="tl-actors">— 메흐메드 2세, 콘스탄티누스 11세(전사)</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1492</div>
+            <div class="tl-body w">
+              <div class="tl-title">그라나다 함락 + 알함브라 칙령 + 콜럼버스<span class="tl-tags"><span class="t j">유</span><span class="t c">기</span><span class="t i">이</span></span></div>
+              <div class="tl-desc">1.2 그라나다 함락(레콘키스타 완성), 3.31 유대인 추방령, 8.3 콜럼버스 출항. 세 종교 모두에 격변의 해.</div>
+              <div class="tl-actors">— 이사벨라, 페르난도, 보압딜, 콜럼버스</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 근세 -->
+      <div class="tl-era">
+        <div class="tl-era-label">
+          <div class="era-name">근세</div>
+          <div class="era-range">Early Modern · AD 1500—1900</div>
+        </div>
+        <div class="tl-era-events">
+          <div class="tl-event">
+            <div class="tl-year">AD 1501</div>
+            <div class="tl-body i">
+              <div class="tl-title">사파비 왕조 — 시아파 이란 확립<span class="tl-tags"><span class="t i">이</span></span></div>
+              <div class="tl-desc">이스마일 1세가 12이맘파 시아를 국교화. 수니파 오스만과의 항구적 대립 구도 시작.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1517</div>
+            <div class="tl-body c">
+              <div class="tl-title">루터의 95개 조항 — 종교개혁<span class="tl-tags"><span class="t c">기</span><span class="t p">분파</span></span></div>
+              <div class="tl-desc">10.31 비텐베르크 교회 문에 게시. 면죄부 비판 → 개신교 탄생, 가톨릭과 결정적 분열.</div>
+              <div class="tl-actors">— 마르틴 루터, 교황 레오 10세, 카를 5세</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1517</div>
+            <div class="tl-body i">
+              <div class="tl-title">오스만의 맘루크 정복 — 칼리프 칭호 획득<span class="tl-tags"><span class="t i">이</span></span></div>
+              <div class="tl-desc">셀림 1세가 카이로 정복, 칼리프 칭호 인수. 이슬람 세계의 정치적 중심이 콘스탄티노플로.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1529 · 1683</div>
+            <div class="tl-body w">
+              <div class="tl-title">빈 공방전 — 오스만의 두 번 실패<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">술레이만(1529) · 메흐메드 4세(1683). 1683년 9월 12일 폴란드 얀 3세 소비에스키의 구원으로 오스만 쇠퇴 본격화.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1534</div>
+            <div class="tl-body c">
+              <div class="tl-title">영국 수장령 — 성공회 분리<span class="tl-tags"><span class="t c">기</span></span></div>
+              <div class="tl-desc">헨리 8세가 캐서린과의 이혼 무효를 위해 로마와 결별. 자신을 영국 교회의 수장으로 선언.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1545~1563</div>
+            <div class="tl-body c">
+              <div class="tl-title">트리엔트 공의회 — 반종교개혁<span class="tl-tags"><span class="t c">기</span></span></div>
+              <div class="tl-desc">가톨릭의 자기 개혁과 개신교에 대한 단호한 응전. 예수회·교리문답·전례 표준화.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1571</div>
+            <div class="tl-body w">
+              <div class="tl-title">레판토 해전 — 오스만의 해상 패배<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">교황 비오 5세가 결성한 신성 동맹의 함대가 오스만 함대 격파. 지중해 패권 이동.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1572</div>
+            <div class="tl-body w">
+              <div class="tl-title">성 바르톨로메오 축일 학살<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">8.24 파리에서 시작된 위그노(개신교) 학살, 최대 3만. 카트린 드 메디시스의 명령으로 추정.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1618~1648</div>
+            <div class="tl-body w">
+              <div class="tl-title">30년 전쟁 — 약 800만 사망<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">유럽 종교전쟁의 결정판. 가톨릭·개신교 + 국가 간 패권 경쟁. 베스트팔렌 조약(1648)으로 근대 국가 체제 성립.</div>
+              <div class="tl-actors">— 페르디난트 2세, 구스타프 2세 아돌프, 리슐리외</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1648~1649</div>
+            <div class="tl-body w">
+              <div class="tl-title">흐멜니츠키 봉기 — 유대인 약 10만 학살<span class="tl-tags"><span class="t w">박해</span></span></div>
+              <div class="tl-desc">우크라이나 코사크 봉기. 폴란드 귀족의 대리인으로 여겨진 유대인 공동체 대거 학살.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1744</div>
+            <div class="tl-body i">
+              <div class="tl-title">와하비-사우드 동맹<span class="tl-tags"><span class="t i">이</span></span></div>
+              <div class="tl-desc">압드 알-와하브와 무함마드 이븐 사우드의 종교·정치 동맹. 사우디아라비아 왕가의 기원이자 와하비즘의 정치 권력화.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1798~1801</div>
+            <div class="tl-body w">
+              <div class="tl-title">나폴레옹의 이집트 원정<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">서구의 중동 직접 개입의 시작. 로제타석 발견, 이집트학의 출발.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1869~1870</div>
+            <div class="tl-body c">
+              <div class="tl-title">1차 바티칸 공의회 — 교황 무류성<span class="tl-tags"><span class="t c">기</span></span></div>
+              <div class="tl-desc">교황이 "ex cathedra"로 신앙·도덕을 선언할 때 오류 없다는 교리 확정. 가톨릭 내부 비판도 큼.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1881~1884</div>
+            <div class="tl-body w">
+              <div class="tl-title">러시아 포그롬 시작<span class="tl-tags"><span class="t w">박해</span></span></div>
+              <div class="tl-desc">알렉산드르 2세 암살 후 유대인 대규모 학살. 대서양으로의 유대인 대이주(1881~1924) 촉발.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1894~1906</div>
+            <div class="tl-body j">
+              <div class="tl-title">드레퓌스 사건<span class="tl-tags"><span class="t j">유</span></span></div>
+              <div class="tl-desc">프랑스에서 유대인 장교가 누명. 헤르츨이 이 사건을 보고 시오니즘 운동의 결심 굳힘.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1897</div>
+            <div class="tl-body j">
+              <div class="tl-title">1차 시온주의 회의 — 바젤<span class="tl-tags"><span class="t j">유</span></span></div>
+              <div class="tl-desc">테오도르 헤르츨 주도. "유대인의 민족적 고향" 강령 채택. 50년 뒤 이스라엘 건국으로 결실.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 현대 -->
+      <div class="tl-era">
+        <div class="tl-era-label">
+          <div class="era-name">현대</div>
+          <div class="era-range">Modern Era · AD 1900—2026</div>
+        </div>
+        <div class="tl-era-events">
+          <div class="tl-event">
+            <div class="tl-year">AD 1915</div>
+            <div class="tl-body w">
+              <div class="tl-title">아르메니아 대학살 — 약 150만<span class="tl-tags"><span class="t w">박해</span></span></div>
+              <div class="tl-desc">청년 튀르크 정권이 기독교 아르메니아인 조직적 절멸. 20세기 첫 제노사이드, 터키는 여전히 부인.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1916</div>
+            <div class="tl-body p">
+              <div class="tl-title">사이크스-피코 협정<span class="tl-tags"><span class="t p">정치</span></span></div>
+              <div class="tl-desc">영국·프랑스의 비밀 협정으로 오스만 영토 분할. 오늘날 중동 국경의 인공적 기원.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1917</div>
+            <div class="tl-body p">
+              <div class="tl-title">밸푸어 선언<span class="tl-tags"><span class="t p">정치</span></span></div>
+              <div class="tl-desc">영국 외무장관 밸푸어가 로스차일드에게 보낸 편지. "팔레스타인에 유대인의 민족적 고향 수립을 지지".</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1924</div>
+            <div class="tl-body i">
+              <div class="tl-title">칼리프 제도 폐지 — 아타튀르크<span class="tl-tags"><span class="t i">이</span></span></div>
+              <div class="tl-desc">3.3 무스타파 케말이 1,300년 칼리프 제도 폐지. 이슬람 세계의 공식적 영적 수장이 사라짐.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1929</div>
+            <div class="tl-body c">
+              <div class="tl-title">라테란 조약 — 바티칸 시국 건국<span class="tl-tags"><span class="t c">기</span></span></div>
+              <div class="tl-desc">무솔리니와 비오 11세. 1870년 이래 가톨릭 교회의 영토 문제 해결, 0.44km²의 독립 국가.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1932</div>
+            <div class="tl-body i">
+              <div class="tl-title">사우디아라비아 왕국 건국<span class="tl-tags"><span class="t i">이</span></span></div>
+              <div class="tl-desc">이븐 사우드가 부족·왕국들을 통일. 메카·메디나 수호자. 와하비즘이 국가 이념으로 제도화.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1933~1945</div>
+            <div class="tl-body w">
+              <div class="tl-title">홀로코스트 — 약 600만 유대인<span class="tl-tags"><span class="t w">학살</span></span></div>
+              <div class="tl-desc">나치 독일의 조직적 절멸. 유럽 유대인의 약 2/3 살해. 이스라엘 건국의 결정적 도덕적 명분이 됨.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1947.11.29</div>
+            <div class="tl-body p">
+              <div class="tl-title">UN 팔레스타인 분할안<span class="tl-tags"><span class="t p">정치</span></span></div>
+              <div class="tl-desc">총회 결의 181호. 유대 국가·아랍 국가·예루살렘 국제 관리. 아랍 측 거부, 즉시 내전 시작.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1948.5.14</div>
+            <div class="tl-body w">
+              <div class="tl-title">이스라엘 건국 — 1차 중동전쟁<span class="tl-tags"><span class="t j">유</span><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">벤구리온의 독립 선언, 다음날부터 5개 아랍국 침공. 70만 팔레스타인 난민 발생(나크바·재앙).</div>
+              <div class="tl-actors">— 다비드 벤구리온, 골다 메이어, 모셰 다얀</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1956</div>
+            <div class="tl-body w">
+              <div class="tl-title">수에즈 위기 — 2차 중동전쟁<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">나세르의 수에즈 국유화 → 영·프·이스라엘 동맹 침공. 미·소 압력으로 철수, 영국 제국의 종말.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1962~1965</div>
+            <div class="tl-body c">
+              <div class="tl-title">2차 바티칸 공의회<span class="tl-tags"><span class="t c">기</span></span></div>
+              <div class="tl-desc">교황 요한 23세 소집. 라틴어 → 자국어 미사, 유대교와 화해(Nostra Aetate), 종교 자유 인정.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1967.6.5~10</div>
+            <div class="tl-body w">
+              <div class="tl-title">6일 전쟁 — 영토 3배 확장<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">이스라엘이 6일 만에 시나이·골란·서안·동예루살렘 점령. 오늘날까지 이어지는 점령 구도의 시작.</div>
+              <div class="tl-actors">— 모셰 다얀, 이츠하크 라빈, 나세르</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1973.10.6~25</div>
+            <div class="tl-body w">
+              <div class="tl-title">욤키푸르 전쟁 — 1차 오일쇼크<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">속죄일 기습. OPEC의 원유 무기화로 글로벌 경제 충격.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1979</div>
+            <div class="tl-body p">
+              <div class="tl-title">이집트-이스라엘 평화 협정<span class="tl-tags"><span class="t p">평화</span></span></div>
+              <div class="tl-desc">사다트와 베긴, 카터의 캠프 데이비드 중재. 시나이 반환, 첫 아랍-이스라엘 평화.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1979.2.11</div>
+            <div class="tl-body i">
+              <div class="tl-title">이란 이슬람 혁명 — 호메이니<span class="tl-tags"><span class="t i">이</span></span></div>
+              <div class="tl-desc">팔레비 왕조 붕괴, 시아 신정 국가 수립. "큰 사탄(미국)·작은 사탄(이스라엘)" 구도 시작.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1979.11~1981.1</div>
+            <div class="tl-body w">
+              <div class="tl-title">테헤란 미 대사관 인질 사건<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">52명을 444일간 억류. 미-이란 외교 단절. 카터 낙선, 레이건 취임일에 석방.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1980~1988</div>
+            <div class="tl-body w">
+              <div class="tl-title">이란-이라크 전쟁 — 약 100만 사망<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">수니 후세인 vs 시아 호메이니. 미국·소련 모두 이라크 지원, 화학무기 사용, 어린 병사 동원.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1982</div>
+            <div class="tl-body w">
+              <div class="tl-title">이스라엘 1차 레바논 침공 — 헤즈볼라 창설<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">PLO 축출이 목적이었으나, 이란 IRGC의 후원으로 헤즈볼라가 탄생. 1983 베이루트 미군 막사 폭탄.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1987~1993</div>
+            <div class="tl-body w">
+              <div class="tl-title">1차 인티파다 + 하마스 창설(1987)<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">팔레스타인 민중 봉기. 무슬림 형제단 계열에서 하마스 분리·창설.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1993</div>
+            <div class="tl-body p">
+              <div class="tl-title">오슬로 협정 — 라빈·아라파트<span class="tl-tags"><span class="t p">평화</span></span></div>
+              <div class="tl-desc">상호 인정과 팔레스타인 자치정부 수립. 1995 라빈이 극우 유대인 청년에게 암살됨.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 1996~2001</div>
+            <div class="tl-body i">
+              <div class="tl-title">1차 탈레반 통치 — 아프가니스탄<span class="tl-tags"><span class="t i">이</span></span></div>
+              <div class="tl-desc">데오반디 마드라사 출신 청년들. 2001 바미얀 대불 파괴. 9/11 후 미군 침공으로 퇴각.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2001.9.11</div>
+            <div class="tl-body w">
+              <div class="tl-title">9/11 — 알카에다의 미국 본토 공격<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">2,977명 사망. "테러와의 전쟁" 선포, 20년 글로벌 충돌의 출발점.</div>
+              <div class="tl-actors">— 오사마 빈 라덴, 칼리드 셰이크 모하메드</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2001~2021</div>
+            <div class="tl-body w">
+              <div class="tl-title">미국 아프간 전쟁 — 20년<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">미국 역사상 최장기 전쟁. 17만 사망. 2021.8 카불 함락, 탈레반 재집권으로 종결.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2003~2011</div>
+            <div class="tl-body w">
+              <div class="tl-title">이라크 전쟁 — 후세인 처형<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">"대량살상무기"는 발견되지 않음. 후세인(수니) 제거 → 시아 정권 → 수니 반발 → ISIS의 토양.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2010</div>
+            <div class="tl-body w">
+              <div class="tl-title">스턱스넷 — 사상 첫 국가급 사이버 무기<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">미·이스라엘 합작 추정 악성코드. 이란 나탄즈 원심분리기 약 1,000대 파괴. 사이버전 시대 개막.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2010~</div>
+            <div class="tl-body p">
+              <div class="tl-title">아랍의 봄<span class="tl-tags"><span class="t p">혁명</span></span></div>
+              <div class="tl-desc">튀니지·이집트·리비아·예멘·시리아·바레인. 결과: 이집트 군부 복귀, 리비아·예멘·시리아 내전화.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2014~2017</div>
+            <div class="tl-body w">
+              <div class="tl-title">ISIS 칼리프 부상과 몰락<span class="tl-tags"><span class="t i">이</span><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">바그다디가 모술 함락 후 칼리프 선포. 시리아·이라크 30% 점령. 2017 모술·라카 탈환으로 영토 상실, 2019 바그다디 사망.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2015</div>
+            <div class="tl-body p">
+              <div class="tl-title">JCPOA 핵협정 — 오바마·로하니<span class="tl-tags"><span class="t p">평화</span></span></div>
+              <div class="tl-desc">P5+1과 이란. 우라늄 농축 3.67% 제한, 제재 해제. 2018 트럼프 탈퇴로 사실상 붕괴.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2020.1.3</div>
+            <div class="tl-body w">
+              <div class="tl-title">솔레이마니 암살 — 바그다드 공항<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">트럼프 명령으로 드론 공격. 이란 쿠드스군 사령관(IRGC 2인자) 사망. 이란의 직접 보복 시대를 예고.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2020.8</div>
+            <div class="tl-body p">
+              <div class="tl-title">아브라함 협정 — UAE·바레인<span class="tl-tags"><span class="t p">평화</span></span></div>
+              <div class="tl-desc">이스라엘이 두 걸프국과 국교 정상화. 후일 수단·모로코도 합류. 사우디는 협상 진행 중.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2021.8</div>
+            <div class="tl-body i">
+              <div class="tl-title">미군 아프간 철수 — 2차 탈레반<span class="tl-tags"><span class="t i">이</span></span></div>
+              <div class="tl-desc">8.30 마지막 미군 철수. 가니 정권 11일 만에 붕괴, 탈레반 재집권.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2023.10.7</div>
+            <div class="tl-body w">
+              <div class="tl-title">하마스의 이스라엘 공격 — 가자 전쟁 발발<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">"알 아크사 홍수 작전" — 약 1,200 이스라엘인 사망, 251명 인질. 이스라엘의 가자 침공으로 응징, 사망 4만+.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2024.4.13</div>
+            <div class="tl-body w">
+              <div class="tl-title">이란의 사상 첫 이스라엘 직접 공격<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">4.1 다마스쿠스 영사관 폭격(이 → 이스)에 대한 보복. 300+ 미사일·드론, 99% 격추.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2024.9.27</div>
+            <div class="tl-body w">
+              <div class="tl-title">헤즈볼라 나스랄라 사살 — 베이루트<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">이스라엘 공습으로 32년 헤즈볼라를 이끈 하산 나스랄라 사망. 9.17 호출기 폭발 이후 연쇄 타격의 정점.</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2024.12.8</div>
+            <div class="tl-body p">
+              <div class="tl-title">시리아 아사드 정권 붕괴 — 50년 통치 종식<span class="tl-tags"><span class="t p">정치</span></span></div>
+              <div class="tl-desc">HTS(하야트 타흐리르 알-샴) 주도 공세 12일 만에 다마스쿠스 함락. 바샤르는 러시아로 망명, 알-샤라가 임시 대통령으로.</div>
+              <div class="tl-actors">— 아흐마드 알-샤라(전 알 졸라니), 바샤르 알-아사드</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2025.6.13~24</div>
+            <div class="tl-body w">
+              <div class="tl-title">12일 전쟁 (Twelve-Day War)<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">6.13 이스라엘 Operation Rising Lion으로 IRGC 사령부 일제 타격(살라미·바게리·하지자데 사망). 6.22 미국 Operation Midnight Hammer로 B-2가 Fordow·Natanz·Esfahan 폭격. 6.23 이란이 카타르 알우데이드 미 기지 공격. 6.24 트럼프 중재 휴전.</div>
+              <div class="tl-actors">— 네타냐후, 트럼프, 하메네이, 페제시키안</div>
+            </div>
+          </div>
+          <div class="tl-event">
+            <div class="tl-year">AD 2026.2.28</div>
+            <div class="tl-body w">
+              <div class="tl-title">Operation Epic Fury — 미·이스라엘 합동 이란 공격<span class="tl-tags"><span class="t w">전쟁</span></span></div>
+              <div class="tl-desc">미군 작전명 Epic Fury, 이스라엘 작전명 Roaring Lion. 첫 12시간 약 900회 타격. 첫 일제 공격으로 최고지도자 알리 하메네이 사망. 이란은 호르무즈 해협 봉쇄로 응수, 미사일·드론으로 미·이스라엘·동맹국 타격. 진행 중.</div>
+              <div class="tl-actors">— 트럼프, 네타냐후, 하메네이(사망), 모하메드 무크베르(권한대행)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="wars" class="section">
+  <div class="container">
+    <header class="section-head">
+      <div class="section-num">§ V</div>
+      <h2 class="section-title">주요 종교 전쟁</h2>
+      <div class="section-sub">Six Wars Spanning Two Millennia</div>
+    </header>
+
+    <div class="grid-3" style="gap:32px">
+
+      <article class="war-card">
+        <div class="war-period">1095—1291 &nbsp;·&nbsp; 196년</div>
+        <h3 class="war-title">십자군 전쟁</h3>
+        <p class="war-lede">The Crusades · 유럽 가톨릭의 성지 탈환</p>
+        <div class="map">
+          <svg viewBox="0 0 320 170">
+            <rect width="320" height="170" class="sea"/>
+            <path class="land" d="M5,40 L70,30 L82,55 L78,80 L40,92 L8,80 Z"/>
+            <path class="land" d="M5,95 L42,92 L58,118 L40,135 L5,130 Z"/>
+            <path class="land" d="M88,60 L118,55 L128,82 L122,118 L112,138 L102,128 L92,98 Z"/>
+            <path class="land" d="M138,55 L178,55 L188,90 L178,118 L155,118 L140,95 Z"/>
+            <path class="land" d="M192,58 L282,52 L292,85 L262,98 L200,92 Z"/>
+            <path class="land land-w" d="M262,98 L288,102 L294,150 L272,162 L264,140 Z"/>
+            <path class="land" d="M70,142 L262,148 L262,170 L5,170 L5,140 Z"/>
+            <circle cx="40" cy="62" r="2" class="dot-k"/><text x="44" y="65" class="lbl">파리</text>
+            <circle cx="22" cy="55" r="1.7" class="dot-k"/><text x="0" y="50" class="lbl">런던</text>
+            <circle cx="115" cy="98" r="2" class="dot-k"/><text x="100" y="110" class="lbl">로마</text>
+            <circle cx="198" cy="72" r="2.6" class="dot-c"/><text x="160" y="65" class="lbl-cr">콘스탄티노플</text>
+            <circle cx="280" cy="138" r="3" class="dot-w"/><text x="245" y="160" class="lbl-w">예루살렘</text>
+            <circle cx="285" cy="118" r="1.8" class="dot-w"/><text x="288" y="121" class="lbl-w">아크레</text>
+            <path class="arrow-w" d="M50,78 Q142,30 200,80 T270,132"/>
+            <text x="160" y="18" text-anchor="middle" class="lbl-t">CRUSADER ROUTES · 1095—1291</text>
+            <text x="42" y="38" class="lbl-r">Europa</text>
+            <text x="298" y="32" text-anchor="end" class="lbl-r">Outremer</text>
+          </svg>
+          <div class="map-cap">9차례 원정 · 유럽 → 레반트 진군로</div>
+        </div>
+        <div class="war-stats">
+          <div>
+            <div class="lab">참여 진영</div>
+            <div class="val">가톨릭 유럽 vs 셀주크·아이유브·맘루크</div>
+          </div>
+          <div>
+            <div class="lab">총 사상자</div>
+            <div class="val">170만 ~ 300만 추정</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:var(--ink-soft);margin-bottom:16px">
+          1095 클레르몽에서 우르바누스 2세가 "신께서 원하신다(Deus vult)"를 외친 이후, 약 2세기에 걸쳐 9차례의 원정. 라인란트 학살, 콘스탄티노플 약탈 등 기독교 세계 내부도 균열.
+        </div>
+        <ul class="war-events">
+          <li><span class="y">1095</span><span class="e">클레르몽 공의회 — 십자군 호소</span></li>
+          <li><span class="y">1096</span><span class="e">라인란트 유대인 학살</span></li>
+          <li><span class="y">1099</span><span class="e">예루살렘 함락, 약 7만 학살</span></li>
+          <li><span class="y">1187</span><span class="e">하틴 — 살라딘의 수복</span></li>
+          <li><span class="y">1204</span><span class="e">4차 십자군이 콘스탄티노플 약탈</span></li>
+          <li><span class="y">1291</span><span class="e">아크레 함락 — 십자군 시대 종결</span></li>
+        </ul>
+      </article>
+
+      <article class="war-card">
+        <div class="war-period">711—1492 &nbsp;·&nbsp; 781년</div>
+        <h3 class="war-title">레콘키스타</h3>
+        <p class="war-lede">Reconquista · 이베리아 기독 왕국의 재정복</p>
+        <div class="map">
+          <svg viewBox="0 0 320 170">
+            <rect width="320" height="170" class="sea"/>
+            <path class="land land-c" d="M55,30 L268,30 L280,55 L272,82 L60,82 L48,60 L52,42 Z"/>
+            <path class="land land-i" d="M60,82 L272,82 L268,98 L258,118 L100,140 L60,118 Z"/>
+            <path class="land land-w" d="M165,108 L228,108 L235,135 L188,142 L160,135 Z"/>
+            <path class="land" d="M285,32 L320,32 L320,150 L290,140 L282,90 Z"/>
+            <circle cx="155" cy="50" r="2" class="dot-c"/><text x="160" y="53" class="lbl-cr">톨레도</text>
+            <circle cx="248" cy="48" r="1.8" class="dot-c"/><text x="252" y="51" class="lbl-cr">바르셀로나</text>
+            <circle cx="78" cy="48" r="1.8" class="dot-c"/><text x="82" y="51" class="lbl-cr">레온</text>
+            <circle cx="125" cy="115" r="2" class="dot-i"/><text x="100" y="125" class="lbl-i">코르도바</text>
+            <circle cx="132" cy="98" r="1.8" class="dot-i"/><text x="100" y="95" class="lbl-i">세비야</text>
+            <circle cx="195" cy="125" r="3.2" class="dot-w"/><text x="200" y="130" class="lbl-w">그라나다 1492</text>
+            <path class="arrow-c" d="M160,45 L186,118"/>
+            <text x="160" y="20" text-anchor="middle" class="lbl-t">RECONQUISTA · 711—1492</text>
+            <text x="62" y="60" class="lbl-cr">기독 왕국</text>
+            <text x="118" y="135" class="lbl-i">알 안달루스</text>
+            <text x="298" y="50" text-anchor="end" class="lbl-r">프랑크</text>
+            <text x="305" y="160" text-anchor="end" class="lbl-r">Mediterranean</text>
+          </svg>
+          <div class="map-cap">781년에 걸친 남진 · 1492 그라나다 함락</div>
+        </div>
+        <div class="war-stats">
+          <div>
+            <div class="lab">참여 진영</div>
+            <div class="val">카스티야·아라곤·포르투갈 vs 알 안달루스</div>
+          </div>
+          <div>
+            <div class="lab">결과</div>
+            <div class="val">근대 스페인·유대인 추방·종교재판소</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:var(--ink-soft);margin-bottom:16px">
+          7세기 우마이야의 이베리아 정복 직후부터 800년에 걸친 점진적 탈환. 코르도바·세비야·톨레도의 이슬람-유대-기독 공존 문화가 가장 풍요로웠던 시대이기도 함.
+        </div>
+        <ul class="war-events">
+          <li><span class="y">711</span><span class="e">타리크의 지브롤터 도하</span></li>
+          <li><span class="y">1085</span><span class="e">톨레도 함락 — 분기점</span></li>
+          <li><span class="y">1212</span><span class="e">나바스 데 톨로사 결정적 승리</span></li>
+          <li><span class="y">1469</span><span class="e">이사벨라·페르난도 결혼</span></li>
+          <li><span class="y">1492.1</span><span class="e">그라나다 함락</span></li>
+          <li><span class="y">1492.3</span><span class="e">알함브라 칙령 — 유대인 추방</span></li>
+        </ul>
+      </article>
+
+      <article class="war-card">
+        <div class="war-period">1517—1648 &nbsp;·&nbsp; 131년</div>
+        <h3 class="war-title">유럽 종교전쟁의 세기</h3>
+        <p class="war-lede">Wars of Religion · 가톨릭 vs 개신교</p>
+        <div class="map">
+          <svg viewBox="0 0 320 170">
+            <rect width="320" height="170" class="sea"/>
+            <path class="land land-j" d="M15,42 L52,40 L58,72 L40,92 L22,82 Z"/>
+            <path class="land land-j" d="M148,18 L240,15 L248,32 L200,38 L155,35 Z"/>
+            <path class="land land-j" d="M68,38 L210,38 L218,68 L75,72 Z"/>
+            <path class="land land-c" d="M75,72 L218,72 L222,100 L80,102 Z"/>
+            <path class="land land-c" d="M38,82 L78,75 L86,118 L48,122 Z"/>
+            <path class="land land-c" d="M15,118 L100,118 L102,142 L20,140 Z"/>
+            <path class="land land-c" d="M108,100 L142,100 L155,138 L138,142 L112,118 Z"/>
+            <path class="land land-c" d="M158,98 L260,98 L262,132 L162,132 Z"/>
+            <circle cx="148" cy="60" r="2.8" class="dot-w"/><text x="153" y="63" class="lbl-c">비텐베르크 1517</text>
+            <circle cx="125" cy="120" r="2" class="dot-c"/><text x="100" y="130" class="lbl-cr">로마</text>
+            <circle cx="62" cy="92" r="2" class="dot-c"/><text x="66" y="95" class="lbl-cr">파리</text>
+            <circle cx="65" cy="78" r="1.8" class="dot-w"/><text x="32" y="72" class="lbl-j">제네바</text>
+            <circle cx="35" cy="56" r="1.8" class="dot-j"/><text x="13" y="52" class="lbl-j">런던</text>
+            <circle cx="190" cy="50" r="1.6" class="dot-j"/><text x="170" y="50" class="lbl-j">코펜하겐</text>
+            <circle cx="178" cy="84" r="2" class="dot-w"/><text x="182" y="93" class="lbl-c">뮌스터 1648</text>
+            <text x="160" y="18" text-anchor="middle" class="lbl-t">WARS OF RELIGION · 1517—1648</text>
+            <text x="195" y="32" text-anchor="middle" class="lbl-j">개신교 Protestant</text>
+            <text x="195" y="92" text-anchor="middle" class="lbl-cr">가톨릭 Catholic</text>
+            <text x="160" y="160" text-anchor="middle" class="lbl-r">Mediterranean</text>
+          </svg>
+          <div class="map-cap">청색=개신교 · 적색=가톨릭 · 30년 전쟁 약 800만 사망</div>
+        </div>
+        <div class="war-stats">
+          <div>
+            <div class="lab">참여 진영</div>
+            <div class="val">가톨릭 합스부르크·스페인 vs 개신교 독일·스웨덴·잉글랜드·네덜란드</div>
+          </div>
+          <div>
+            <div class="lab">30년 전쟁 사상자</div>
+            <div class="val">약 800만</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:var(--ink-soft);margin-bottom:16px">
+          루터의 95개 조항(1517)에서 시작된 신앙 분열이 한 세기 반 동안의 전쟁이 됨. 베스트팔렌 조약(1648)으로 종결, 근대 주권 국가 체제와 종교의 영토적 분리(cuius regio, eius religio)의 원형 형성.
+        </div>
+        <ul class="war-events">
+          <li><span class="y">1524~25</span><span class="e">독일 농민 전쟁</span></li>
+          <li><span class="y">1562~98</span><span class="e">프랑스 위그노 전쟁</span></li>
+          <li><span class="y">1568~1648</span><span class="e">네덜란드 80년 전쟁</span></li>
+          <li><span class="y">1572</span><span class="e">성 바르톨로메오 학살</span></li>
+          <li><span class="y">1618~48</span><span class="e">30년 전쟁</span></li>
+          <li><span class="y">1648</span><span class="e">베스트팔렌 조약</span></li>
+        </ul>
+      </article>
+
+      <article class="war-card">
+        <div class="war-period">1299—1923 &nbsp;·&nbsp; 624년</div>
+        <h3 class="war-title">오스만 정복 전쟁</h3>
+        <p class="war-lede">Ottoman Wars · 칼리프 제국의 확장과 쇠퇴</p>
+        <div class="map">
+          <svg viewBox="0 0 320 170">
+            <rect width="320" height="170" class="sea"/>
+            <path class="land" d="M5,30 L130,28 L135,55 L130,82 L80,90 L8,85 Z"/>
+            <path class="land" d="M85,80 L120,75 L130,105 L120,132 L105,130 L92,100 Z"/>
+            <path class="land land-i" d="M135,55 L290,50 L308,75 L308,100 L290,118 L228,132 L185,130 L150,118 L135,90 Z"/>
+            <path class="land land-i" d="M5,128 L298,128 L305,150 L5,160 Z"/>
+            <path class="land land-i" d="M252,135 L298,135 L302,162 L266,162 Z"/>
+            <path class="land land-w" d="M305,80 L320,80 L320,128 L302,120 Z"/>
+            <circle cx="178" cy="68" r="3.2" class="dot-i"/><text x="148" y="62" class="lbl-i">이스탄불 1453</text>
+            <circle cx="245" cy="115" r="2" class="dot-i"/><text x="222" y="125" class="lbl-i">예루살렘</text>
+            <circle cx="200" cy="140" r="2" class="dot-i"/><text x="205" y="148" class="lbl-i">카이로</text>
+            <circle cx="262" cy="98" r="2" class="dot-i"/><text x="266" y="102" class="lbl-i">바그다드</text>
+            <circle cx="222" cy="105" r="2" class="dot-i"/><text x="195" y="100" class="lbl-i">다마스쿠스</text>
+            <circle cx="115" cy="52" r="2.4" class="dot-w"/><text x="100" y="44" class="lbl-w">빈 1529·1683</text>
+            <path class="arrow-i" d="M195,72 Q150,42 122,52"/>
+            <text x="160" y="18" text-anchor="middle" class="lbl-t">OTTOMAN EMPIRE · 1299—1923</text>
+            <text x="58" y="50" class="lbl-r">Europa Christiana</text>
+            <text x="200" y="86" text-anchor="middle" class="lbl-i">오스만 · 최대 560만 km²</text>
+            <text x="318" y="155" text-anchor="end" class="lbl-w">사파비 페르시아</text>
+          </svg>
+          <div class="map-cap">3대륙에 걸친 칼리프 제국 · 두 번의 빈 공방전 실패로 쇠퇴</div>
+        </div>
+        <div class="war-stats">
+          <div>
+            <div class="lab">참여 진영</div>
+            <div class="val">오스만 vs 비잔틴·헝가리·합스부르크·러시아·사파비</div>
+          </div>
+          <div>
+            <div class="lab">최대 영토</div>
+            <div class="val">약 560만 km² (3대륙)</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:var(--ink-soft);margin-bottom:16px">
+          이슬람 마지막 거대 제국의 6세기. 동로마 멸망과 발칸·중동·북아프리카의 이슬람화를 주도. 두 차례 빈 공방전 패배(1529·1683) 이후 점진 쇠퇴.
+        </div>
+        <ul class="war-events">
+          <li><span class="y">1389</span><span class="e">코소보 — 세르비아 패배</span></li>
+          <li><span class="y">1453</span><span class="e">콘스탄티노플 함락</span></li>
+          <li><span class="y">1517</span><span class="e">맘루크 정복·칼리프 칭호</span></li>
+          <li><span class="y">1571</span><span class="e">레판토 — 해상 패배</span></li>
+          <li><span class="y">1683</span><span class="e">2차 빈 공방전 실패</span></li>
+          <li><span class="y">1923</span><span class="e">터키 공화국 — 오스만 종말</span></li>
+        </ul>
+      </article>
+
+      <article class="war-card">
+        <div class="war-period">1948—현재 &nbsp;·&nbsp; 78년+</div>
+        <h3 class="war-title">아랍-이스라엘 전쟁</h3>
+        <p class="war-lede">Arab–Israeli Wars · 현대 중동 분쟁의 중심축</p>
+        <div class="map">
+          <svg viewBox="0 0 320 170">
+            <rect width="320" height="170" class="sea"/>
+            <rect x="0" y="0" width="100" height="170" class="sea"/>
+            <path class="land land-i" d="M0,98 L138,95 L150,110 L155,140 L0,160 Z"/>
+            <path class="land land-i" d="M138,95 L172,82 L188,108 L172,135 L155,125 Z"/>
+            <path class="land land-j" d="M122,40 L150,42 L160,75 L155,100 L142,100 L128,80 Z"/>
+            <path class="land land-w" d="M138,55 L154,55 L156,80 L142,78 Z"/>
+            <path class="land land-w" d="M115,72 L128,72 L128,88 L118,92 Z"/>
+            <path class="land land-w" d="M125,12 L168,12 L172,38 L138,40 L128,28 Z"/>
+            <path class="land land-w" d="M172,12 L260,10 L268,52 L195,55 L168,42 Z"/>
+            <path class="land land-i" d="M165,55 L240,55 L248,108 L188,115 L160,80 Z"/>
+            <path class="land" d="M265,12 L320,12 L320,75 L255,72 L242,52 Z"/>
+            <path class="land land-i" d="M195,115 L250,108 L298,90 L320,98 L320,170 L195,165 L185,128 Z"/>
+            <circle cx="132" cy="65" r="2.6" class="dot-j"/><text x="98" y="60" class="lbl-j">텔아비브</text>
+            <circle cx="146" cy="68" r="2.6" class="dot-w"/><text x="148" y="78" class="lbl-w">예루살렘</text>
+            <circle cx="145" cy="28" r="2" class="dot-w"/><text x="105" y="30" class="lbl-w">베이루트</text>
+            <circle cx="188" cy="38" r="2" class="dot-w"/><text x="192" y="41" class="lbl-w">다마스쿠스</text>
+            <circle cx="195" cy="80" r="2" class="dot-i"/><text x="200" y="83" class="lbl-i">암만</text>
+            <circle cx="60" cy="138" r="2" class="dot-i"/><text x="65" y="141" class="lbl-i">카이로</text>
+            <circle cx="285" cy="40" r="1.8" class="dot-k"/><text x="265" y="32" class="lbl">바그다드</text>
+            <text x="160" y="18" text-anchor="middle" class="lbl-t">ARAB–ISRAELI WARS · 1948—</text>
+            <text x="32" y="145" class="lbl-r">Egypt</text>
+            <text x="265" y="125" text-anchor="middle" class="lbl-r">Saudi Arabia</text>
+            <text x="40" y="40" class="lbl-r">Mediterranean</text>
+          </svg>
+          <div class="map-cap">청색=이스라엘 · 적색=시리아·레바논 · 녹색=이집트·요르단·사우디</div>
+        </div>
+        <div class="war-stats">
+          <div>
+            <div class="lab">참여 진영</div>
+            <div class="val">이스라엘 vs 이집트·요르단·시리아·레바논·이라크·팔레스타인</div>
+          </div>
+          <div>
+            <div class="lab">난민</div>
+            <div class="val">1948 70만 → 등록 난민 570만+</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:var(--ink-soft);margin-bottom:16px">
+          1948 건국과 동시에 시작된 다섯 차례의 전면전과 무수한 국지전. 이집트(1979)·요르단(1994)과는 평화, 2020 아브라함 협정으로 UAE·바레인·수단·모로코 수교.
+        </div>
+        <ul class="war-events">
+          <li><span class="y">1948</span><span class="e">1차 — 독립·나크바</span></li>
+          <li><span class="y">1956</span><span class="e">2차 — 수에즈 위기</span></li>
+          <li><span class="y">1967</span><span class="e">3차 — 6일 전쟁</span></li>
+          <li><span class="y">1973</span><span class="e">4차 — 욤키푸르</span></li>
+          <li><span class="y">1982 · 2006</span><span class="e">레바논 전쟁</span></li>
+          <li><span class="y">2008·14·23~</span><span class="e">가자 전쟁</span></li>
+        </ul>
+      </article>
+
+      <article class="war-card">
+        <div class="war-period">1979—현재 &nbsp;·&nbsp; 47년+</div>
+        <h3 class="war-title">이란-이스라엘 그림자/직접전쟁</h3>
+        <p class="war-lede">The Iran–Israel War · 신정 국가의 충돌</p>
+        <div class="map">
+          <svg viewBox="0 0 320 170">
+            <rect width="320" height="170" class="sea"/>
+            <rect x="0" y="0" width="55" height="170" class="sea"/>
+            <path class="land" d="M0,95 L55,90 L62,160 L0,160 Z"/>
+            <path class="land" d="M55,90 L78,82 L88,115 L62,118 Z"/>
+            <path class="land land-j" d="M55,55 L72,55 L78,90 L70,102 L60,92 Z"/>
+            <circle cx="58" cy="80" r="4" fill="var(--war-bg)" stroke="var(--war)" stroke-width="0.9"/>
+            <path class="land land-w" d="M70,32 L98,30 L102,50 L78,55 Z"/>
+            <path class="land" d="M102,30 L165,28 L170,75 L120,75 L102,55 Z"/>
+            <path class="land" d="M85,75 L165,75 L168,118 L102,120 Z"/>
+            <path class="land land-w" d="M165,28 L228,25 L232,92 L168,92 Z"/>
+            <path class="land land-i" d="M232,25 L320,25 L320,118 L255,128 L230,95 Z"/>
+            <path class="land" d="M118,120 L232,118 L262,140 L262,170 L122,168 Z"/>
+            <path class="land land-w" d="M210,160 L262,155 L275,170 L210,170 Z"/>
+            <circle cx="68" cy="72" r="2.6" class="dot-j"/><text x="42" y="65" class="lbl-j">텔아비브</text>
+            <circle cx="278" cy="62" r="3.2" class="dot-i"/><text x="282" y="65" class="lbl-i">테헤란</text>
+            <circle cx="85" cy="40" r="2" class="dot-w"/><text x="92" y="42" class="lbl-w">헤즈볼라</text>
+            <circle cx="58" cy="80" r="2" class="dot-w"/><text x="20" y="98" class="lbl-w">하마스</text>
+            <circle cx="195" cy="55" r="2" class="dot-w"/><text x="170" y="50" class="lbl-w">시아 민병</text>
+            <circle cx="240" cy="168" r="2.5" class="dot-w"/><text x="208" y="166" class="lbl-w">후티</text>
+            <path class="axis" d="M270,68 Q200,32 100,40"/>
+            <path class="axis" d="M268,72 Q200,68 198,55"/>
+            <path class="axis" d="M268,90 Q200,140 245,168"/>
+            <path class="axis" d="M268,72 Q180,55 62,82"/>
+            <text x="160" y="18" text-anchor="middle" class="lbl-t">IRAN ↔ ISRAEL · AXIS OF RESISTANCE</text>
+            <text x="278" y="135" text-anchor="middle" class="lbl-i">이란</text>
+            <text x="68" y="118" text-anchor="middle" class="lbl-j">이스라엘</text>
+            <text x="160" y="105" text-anchor="middle" class="lbl">사우디아라비아</text>
+          </svg>
+          <div class="map-cap">점선=이란의 "저항의 축" 네트워크 · 헤즈볼라·하마스·시아민병·후티</div>
+        </div>
+        <div class="war-stats">
+          <div>
+            <div class="lab">대리 세력</div>
+            <div class="val">헤즈볼라·하마스·후티·시리아 알라위·이라크 시아 민병대</div>
+          </div>
+          <div>
+            <div class="lab">전선</div>
+            <div class="val">사이버전·암살·미사일·핵 시설</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:var(--ink-soft);margin-bottom:16px">
+          1979 호메이니 혁명 이후 양국은 형식적으로는 단절, 실질적으로는 끝없는 충돌. 2024년부터 직접 미사일·드론 교전으로 전환, 2025·2026 미국이 직접 참전하는 단계로 비화.
+        </div>
+        <ul class="war-events">
+          <li><span class="y">1979</span><span class="e">이슬람 혁명 — "작은 사탄"</span></li>
+          <li><span class="y">1982</span><span class="e">IRGC, 헤즈볼라 창설</span></li>
+          <li><span class="y">2010</span><span class="e">스턱스넷 — 사이버 공격</span></li>
+          <li><span class="y">2020.1</span><span class="e">솔레이마니 암살</span></li>
+          <li><span class="y">2024.4·10</span><span class="e">이란의 직접 미사일 공격</span></li>
+          <li><span class="y">2025.6</span><span class="e">12일 전쟁 — 미국 참전</span></li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+<section id="iran-israel" class="section" style="background:var(--bg-alt)">
+  <div class="container">
+    <header class="section-head">
+      <div class="section-num">§ VI</div>
+      <h2 class="section-title">이란 · 이스라엘 포커스</h2>
+      <div class="section-sub">From Allies to Direct War &nbsp;·&nbsp; 1948 — 2026</div>
+    </header>
+
+    <p class="muted" style="font-size:16px;max-width:1100px;margin-bottom:38px;line-height:1.75">
+      <em style="font-family:var(--fs-display);font-style:italic;color:var(--gold);font-size:20px">동맹에서 직접전쟁까지.</em> 두 국가는 1948년부터 1979년까지 사실상 동맹이었다. 호메이니의 이슬람 혁명이 모든 것을 바꾸었고, 이후 약 45년간의 그림자 전쟁이 2024~2026년 사상 최초의 양국 간 직접 미사일 교전으로, 결국 미국까지 끌어들이는 본격 전쟁으로 비화했다.
+    </p>
+
+    <div class="map large">
+      <svg viewBox="0 0 800 280">
+        <rect width="800" height="280" class="sea"/>
+        <rect x="0" y="0" width="120" height="280" class="sea"/>
+        <path class="land" d="M0,135 L120,128 L138,210 L60,250 L0,250 Z"/>
+        <text x="50" y="195" class="lbl">이집트</text>
+        <path class="land" d="M120,128 L155,118 L172,165 L138,178 Z"/>
+        <path class="land land-j" d="M120,75 L168,75 L180,148 L155,165 L130,148 Z"/>
+        <circle cx="138" cy="125" r="5.5" fill="var(--war-bg)" stroke="var(--war)" stroke-width="1.2"/>
+        <text x="98" y="155" class="lbl-w">가자</text>
+        <line x1="115" y1="142" x2="135" y2="130" stroke="var(--war)" stroke-width="0.6"/>
+        <path class="land land-w" d="M158,38 L210,32 L218,72 L180,80 L160,55 Z"/>
+        <text x="178" y="58" class="lbl-w" text-anchor="middle">레바논</text>
+        <path class="land" d="M218,32 L342,28 L348,128 L255,128 L218,90 Z"/>
+        <text x="290" y="78" class="lbl">시리아 (2024 신정권)</text>
+        <path class="land" d="M178,128 L342,128 L355,200 L210,210 L180,178 Z"/>
+        <text x="270" y="178" class="lbl">요르단</text>
+        <path class="land land-w" d="M345,28 L495,22 L508,158 L355,158 L348,92 Z"/>
+        <text x="430" y="92" class="lbl-w" text-anchor="middle">이라크</text>
+        <text x="430" y="105" class="lbl">시아 민병</text>
+        <path class="land land-i" d="M510,22 L780,22 L780,212 L555,225 L508,165 Z"/>
+        <text x="640" y="120" class="lbl-i" text-anchor="middle" style="font-size:14px;font-weight:700;letter-spacing:0.05em">IRAN · 이란</text>
+        <text x="640" y="135" class="lbl">인구 8,900만 · 핵 60% 농축</text>
+        <path class="land" d="M215,212 L508,200 L600,242 L600,280 L220,278 Z"/>
+        <text x="420" y="248" class="lbl">사우디아라비아</text>
+        <path class="land land-w" d="M460,265 L600,255 L640,280 L460,280 Z"/>
+        <text x="540" y="275" class="lbl-w" text-anchor="middle">예멘 · 후티</text>
+        <circle cx="148" cy="115" r="4" class="dot-j"/><text x="65" y="105" class="lbl-j" style="font-size:11px;font-weight:700">텔아비브 · 예루살렘</text>
+        <circle cx="680" cy="105" r="5" class="dot-i"/><text x="690" y="100" class="lbl-i" style="font-size:11px;font-weight:700">테헤란</text>
+        <circle cx="175" cy="58" r="3" class="dot-w"/><text x="218" y="42" class="lbl-w">베이루트 (헤즈볼라)</text>
+        <circle cx="265" cy="55" r="2.5" class="dot-k"/><text x="270" y="50" class="lbl">다마스쿠스</text>
+        <circle cx="420" cy="68" r="3" class="dot-w"/><text x="425" y="65" class="lbl-w">바그다드</text>
+        <circle cx="540" cy="265" r="3" class="dot-w"/><text x="455" y="262" class="lbl-w">사나</text>
+        <circle cx="138" cy="125" r="3" class="dot-w"/><text x="160" y="140" class="lbl-w">하마스</text>
+        <path class="axis" d="M675,108 Q500,40 200,55"/>
+        <path class="axis" d="M670,118 Q540,110 425,72"/>
+        <path class="axis" d="M670,135 Q450,235 545,260"/>
+        <path class="axis" d="M675,115 Q420,85 145,125"/>
+        <path class="arrow-w" d="M150,115 Q420,180 665,108"/>
+        <path class="arrow-i" d="M670,108 Q420,165 158,118"/>
+        <text x="400" y="28" text-anchor="middle" class="lbl-t" style="font-size:14px">IRAN ↔ ISRAEL · 직접 미사일 교전 + "저항의 축"</text>
+        <text x="60" y="40" class="lbl-r" style="font-size:13px">Mediterranean</text>
+        <text x="710" y="225" class="lbl-r" style="font-size:13px">Persian Gulf</text>
+        <text x="710" y="270" class="lbl-r" style="font-size:11px">Strait of Hormuz</text>
+        <text x="240" y="270" class="lbl-r" style="font-size:11px">Red Sea</text>
+      </svg>
+      <div class="map-cap">청색 화살표 = 이스라엘 직접 공격 / 녹색 화살표 = 이란 직접 공격 (2024~) · 점선 = 이란의 대리 네트워크</div>
+    </div>
+
+    <div class="ii-pair">
+      <div class="ii-side l">
+        <h3>이스라엘 State of Israel</h3>
+        <div class="ii-sub">מְדִינַת יִשְׂרָאֵל · 1948.5.14 건국</div>
+        <dl>
+          <dt>건국</dt><dd>1948.5.14 — 벤구리온 독립 선언</dd>
+          <dt>인구</dt><dd>990만 (2024) · 유대 75% · 무슬림 18% · 기독교 2%</dd>
+          <dt>면적</dt><dd>22,072 km² (남한의 약 1/4) + 점령지</dd>
+          <dt>핵 능력</dt><dd>비공식 보유 — 80~400기 추정 (디모나)</dd>
+          <dt>군사력</dt><dd>현역 17만 + 예비역 47만 · 머카바·아이언돔·F-35</dd>
+          <dt>주요 동맹</dt><dd>미국(절대적)·EU 다수·사우디(비공식)·인도·아브라함 협정 4개국</dd>
+          <dt>현 지도자</dt><dd>벤야민 네타냐후 (총리 · 리쿠드)</dd>
+        </dl>
+      </div>
+      <div class="ii-side r">
+        <h3>이란 Islamic Republic of Iran</h3>
+        <div class="ii-sub">جمهوری اسلامی ایران · 1979.4.1 건국</div>
+        <dl>
+          <dt>건국</dt><dd>1979.4.1 — 호메이니의 이슬람 공화국 선포</dd>
+          <dt>인구</dt><dd>8,900만 (2024) · 시아 12이맘파 90~95%</dd>
+          <dt>면적</dt><dd>1,648,195 km² (한반도의 약 7.5배)</dd>
+          <dt>핵 능력</dt><dd>2026.2 현재 60% 농축 단계 — 폭탄 1~2주 거리로 평가</dd>
+          <dt>군사력</dt><dd>정규군 약 35만 + IRGC 19만 + 바시즈 민병 수십만</dd>
+          <dt>주요 동맹</dt><dd>러시아·중국·헤즈볼라(약화)·하마스·후티·이라크 시아 민병</dd>
+          <dt>최고지도자</dt><dd>(2026.2.28 사망) 알리 하메네이 · 현재 권한대행 체제</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- Stage 1 동맹기 -->
+    <div class="ii-stage">
+      <div class="stage-head">
+        <div class="stage-num">§ 1</div>
+        <div class="stage-title">동맹기 — Tehran &amp; Tel Aviv as Partners</div>
+        <div class="stage-period">1948 — 1979 · 31년</div>
+      </div>
+      <p class="muted" style="font-size:14px;margin-bottom:18px;max-width:1100px">
+        팔레비 왕조 치하의 친미·세속 이란은 무슬림권에서 두 번째로 이스라엘을 사실상 인정한 국가였다. 모사드와 사바크(SAVAK)는 정보를 교환했고, 이란산 석유는 욤키푸르 전쟁 중에도 이스라엘로 흘렀다.
+      </p>
+      <ul class="ii-events">
+        <li><span class="y">1948</span><span><b>이란, 이스라엘 사실상 인정</b> — 무슬림권 두 번째 (튀르키예에 이어)</span></li>
+        <li><span class="y">1953</span><span><b>모사데크 쿠데타</b> — CIA·MI6 작전, 친미 팔레비 복원, 친이스라엘 노선 본격화</span></li>
+        <li><span class="y">1960s</span><span><b>모사드-사바크 정보 협력</b> — 대 아랍 정보 공유, 군사 훈련, 핵 협력설</span></li>
+        <li><span class="y">1973</span><span><b>욤키푸르 전쟁 중 이란이 이스라엘에 석유 공급</b> — 아랍 OPEC 금수에도 불구</span></li>
+      </ul>
+    </div>
+
+    <!-- Stage 2 그림자전쟁 -->
+    <div class="ii-stage">
+      <div class="stage-head">
+        <div class="stage-num">§ 2</div>
+        <div class="stage-title">그림자 전쟁 — Proxy War &amp; Cyber War</div>
+        <div class="stage-period">1979 — 2023 · 44년</div>
+      </div>
+      <p class="muted" style="font-size:14px;margin-bottom:18px;max-width:1100px">
+        호메이니의 등장으로 모든 것이 뒤집혔다. 이란은 헤즈볼라를 창설하고 하마스·후티를 후원하는 "저항의 축"을 구축했고, 이스라엘은 사이버 공격·표적 암살로 응수했다. 양국이 직접 만나는 일은 없는, 그러나 매일같이 충돌하는 45년이었다.
+      </p>
+      <ul class="ii-events">
+        <li><span class="y">1979.2</span><span><b>호메이니 혁명</b> — "큰 사탄(미국)·작은 사탄(이스라엘)" 구호 등장</span></li>
+        <li><span class="y">1982</span><span><b>IRGC, 레바논에 헤즈볼라 창설</b> — 가장 강력한 비국가 무장단체로 성장</span></li>
+        <li><span class="y">1983</span><span><b>베이루트 미군·프군 막사 폭탄</b> — 305명 사망, 이란 후원 추정</span></li>
+        <li><span class="y">1992·1994</span><span><b>부에노스아이레스 이스라엘·유대 회관 폭탄</b> — 헤즈볼라·이란 정보부 추정</span></li>
+        <li><span class="y">2002</span><span><b>이스라엘이 이란 핵 개발 폭로</b> — 비밀 시설 나탄즈·아라크 공개</span></li>
+        <li><span class="y">2006</span><span><b>2차 레바논 전쟁</b> — 34일 교전, 헤즈볼라가 "승리" 선언하며 위상 정립</span></li>
+        <li><span class="y">2010</span><span><b>스턱스넷</b> — 미·이스라엘 합작 사이버 무기, 이란 원심분리기 ~1,000대 파괴</span></li>
+        <li><span class="y">2010~20</span><span><b>이란 핵 과학자 5명 암살</b> — 모사드 작전 추정 (파흐리자데 등)</span></li>
+        <li><span class="y">2015.7</span><span><b>JCPOA 핵협정</b> — 오바마·로하니, P5+1 + 이란, 우라늄 농축 3.67% 제한</span></li>
+        <li><span class="y">2018.5</span><span><b>트럼프, JCPOA 탈퇴</b> — "역사상 최악의 협정", 제재 부활</span></li>
+        <li><span class="y">2020.1.3</span><span><b>솔레이마니 암살</b> — 바그다드 공항 드론 공격, 쿠드스군 사령관 사망</span></li>
+        <li><span class="y">2020.8</span><span><b>아브라함 협정</b> — UAE·바레인 수교, 사실상 반이란 동맹화</span></li>
+        <li><span class="y">2023.10.7</span><span><b>하마스 공격 → 가자 전쟁</b> — 이란 축의 다단계 동시 전선 개시 (헤즈볼라·후티·이라크·예멘)</span></li>
+      </ul>
+    </div>
+
+    <!-- Stage 3 직접전쟁 -->
+    <div class="ii-stage">
+      <div class="stage-head">
+        <div class="stage-num">§ 3</div>
+        <div class="stage-title">직접 전쟁 — The Open War</div>
+        <div class="stage-period">2024 — 현재 · 진행 중</div>
+      </div>
+      <p class="muted" style="font-size:14px;margin-bottom:18px;max-width:1100px">
+        45년의 금기가 무너졌다. 2024년 4월 다마스쿠스 영사관 폭격이 도화선이 되어 양국이 미사일과 드론으로 서로의 영토를 직접 타격하는 시대로 진입. 2025년 6월의 12일 전쟁에서 미국이 사상 처음 이란 핵 시설을 직접 폭격했고, 2026년 2월에는 양 정상이 마주 보는 본격 전쟁으로 비화했다.
+      </p>
+      <ul class="ii-events">
+        <li><span class="y">24.4.1</span><span><b>이스라엘, 다마스쿠스 이란 영사관 폭격</b> — IRGC 장군 7명 사망, 이란의 "레드라인" 침범</span></li>
+        <li><span class="y">24.4.13</span><span><b>이란의 사상 첫 이스라엘 직접 공격</b> — 300+ 미사일·드론, 99% 격추 (이·미·요·영·프 협공 방어)</span></li>
+        <li><span class="y">24.7.31</span><span><b>테헤란에서 하마스 정치국장 하니예 암살</b> — 이란 영토 내에서 발생, 굴욕</span></li>
+        <li><span class="y">24.9.17~18</span><span><b>레바논 호출기·무전기 동시 폭발</b> — 헤즈볼라 통신망 마비, 약 40명 사망</span></li>
+        <li><span class="y">24.9.27</span><span><b>나스랄라 사살 — 베이루트 공습</b> — 32년 헤즈볼라 지도자, 후임 사프 알딘도 곧 사망</span></li>
+        <li><span class="y">24.10.1</span><span><b>이란 2차 보복</b> — ~200기 탄도미사일, 일부 명중</span></li>
+        <li><span class="y">24.12.8</span><span><b>시리아 아사드 정권 붕괴</b> — 이란-시리아 회랑 단절, 이란 축 최대 타격</span></li>
+        <li><span class="y">25.6.13</span><span><b>Operation Rising Lion 개시</b> — 200대 이스라엘 전투기, 100여 표적 일제 타격. 살라미(IRGC 총사령관)·바게리(참모총장)·하지자데(IRGC 공군)와 핵 과학자 다수 사망</span></li>
+        <li><span class="y">25.6.13~</span><span><b>이란 응징 공격</b> — 550+ 미사일과 1,000+ 드론, 텔아비브·하이파에 일부 명중</span></li>
+        <li><span class="y">25.6.22</span><span><b>미국 Operation Midnight Hammer</b> — B-2 스피릿 폭격기가 GBU-57 MOP 14기 투하, Fordow·Natanz·Esfahan 폭격 + 잠수함 토마호크</span></li>
+        <li><span class="y">25.6.23</span><span><b>이란, 카타르 알우데이드 미 공군기지 공격</b> — 사전 경고된 상징적 공격, 인명 피해 없음</span></li>
+        <li><span class="y">25.6.24</span><span><b>트럼프 중재 휴전</b> — "12일 전쟁" 공식 종결</span></li>
+        <li><span class="y">26.2.28</span><span><b>Operation Epic Fury 개시</b> — 미·이스라엘 합동 공격, 12시간 내 ~900회 타격. 첫 일제 공격으로 알리 하메네이 사망. 미군 작전명 Epic Fury, 이스라엘 작전명 Roaring Lion. 핵·미사일·해군·지도부 동시 표적</span></li>
+        <li><span class="y">26.2.28~</span><span><b>이란 호르무즈 해협 봉쇄 + 미사일 보복</b> — 글로벌 유가 충격, 미·이스라엘과 동맹국에 미사일·드론 응사. 진행 중</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="actors" class="section">
+  <div class="container">
+    <header class="section-head">
+      <div class="section-num">§ VII</div>
+      <h2 class="section-title">주요 행위자</h2>
+      <div class="section-sub">Key Actors &nbsp;·&nbsp; States · Movements · Militants</div>
+    </header>
+
+    <div class="actor-group">
+      <h3>유대교 · 기독교 진영</h3>
+      <div class="group-sub">Jewish &amp; Christian Powers</div>
+      <div class="actor-grid">
+        <div class="actor j"><div class="nm">이스라엘</div><div class="yr">1948~ · 핵 추정 보유</div><div class="ds">유일한 유대 국가. 미국의 최우선 동맹. 가자·서안·골란 점령, 2026 이란전 핵심 당사자.</div></div>
+        <div class="actor j"><div class="nm">세계시오니스트기구 WZO</div><div class="yr">1897 · 헤르츨</div><div class="ds">시오니즘의 모태 조직. 바젤 강령으로 50년 만의 건국을 견인.</div></div>
+        <div class="actor j"><div class="nm">AIPAC</div><div class="yr">1963 · 워싱턴</div><div class="ds">미국 친이스라엘 로비의 정점. 의회·대선 양당에 막대한 영향력.</div></div>
+        <div class="actor j"><div class="nm">모사드 · Mossad</div><div class="yr">1949 · 해외 정보</div><div class="ds">아이히만 납치(1960), 핵 과학자·하니예 등 표적 암살로 유명. 세계적 평판.</div></div>
+        <div class="actor c"><div class="nm">바티칸 시국</div><div class="yr">1929 · 라테란 조약</div><div class="ds">13.9억 가톨릭의 영적 수장. 0.44km²의 세계 최소 주권국. 프란치스코 교황(2013~).</div></div>
+        <div class="actor c"><div class="nm">미국 복음주의</div><div class="yr">18~20c · 인구 ~25%</div><div class="ds">트럼프 지지 기반. "기독교 시오니즘" — 이스라엘을 종말론적 신학으로 지지.</div></div>
+        <div class="actor c"><div class="nm">러시아 정교회</div><div class="yr">988~ · 약 1억</div><div class="ds">키릴 총대주교는 푸틴과 결탁, 우크라이나 전쟁을 "성스러운 전쟁"으로 옹호.</div></div>
+        <div class="actor c"><div class="nm">콥트 정교회</div><div class="yr">451~ · 이집트 10%</div><div class="ds">최대 중동 기독교 공동체. ISIS·이슬람주의의 박해 대상.</div></div>
+        <div class="actor c"><div class="nm">팔레스타인 기독교인</div><div class="yr">1c~ · 약 5만</div><div class="ds">예수의 직계 공동체. 이주로 급감, 베들레헴 인구의 10% 미만.</div></div>
+        <div class="actor c"><div class="nm">아르메니아 사도교회</div><div class="yr">301 · 최초 국교</div><div class="ds">세계 최초 기독 국교 국가. 1915 대학살 트라우마, 2020 나고르노카라바흐 패배.</div></div>
+      </div>
+    </div>
+
+    <div class="actor-group">
+      <h3>이슬람 국가</h3>
+      <div class="group-sub">Muslim-Majority States</div>
+      <div class="actor-grid">
+        <div class="actor i"><div class="nm">사우디아라비아</div><div class="yr">1932 · 와하비</div><div class="ds">메카·메디나 수호자. 사우드 왕가 + 와하비 종교 동맹. MBS 주도 개혁, 대 이란 견제 + 이스라엘 수교 진행.</div></div>
+        <div class="actor i"><div class="nm">이란</div><div class="yr">1979 · 시아 신정</div><div class="ds">12이맘 시아의 거점. 핵 능력 임박, 2026.2 미·이스라엘 직접 공격 대상이자 응전 중.</div></div>
+        <div class="actor i"><div class="nm">터키</div><div class="yr">1923 · 옛 오스만</div><div class="ds">에르도안 이래 이슬람 부활. NATO 회원이지만 친 하마스, 시리아 알-샤라 정권 후원.</div></div>
+        <div class="actor i"><div class="nm">이집트</div><div class="yr">알 아즈하르 · 콥트 10%</div><div class="ds">수니 신학의 최고 권위(알 아즈하르 대학). 무슬림 형제단 발원지, 시시 정권은 강경 탄압.</div></div>
+        <div class="actor i"><div class="nm">인도네시아</div><div class="yr">2.4억 · 세계 최대 무슬림 국가</div><div class="ds">팡카실라 5원칙의 다원주의. 나흐들라툴 울라마(전통 수피)와 무함마디야가 양대 조직.</div></div>
+        <div class="actor i"><div class="nm">파키스탄</div><div class="yr">1947 · 유일 핵 이슬람국</div><div class="ds">데오반디·바렐위 분열. 아흐마디야를 1974년부터 비무슬림으로 법적 규정·박해.</div></div>
+        <div class="actor i"><div class="nm">시리아 (신정권)</div><div class="yr">2024.12~ · 알-샤라</div><div class="ds">53년 알라위 지배 종식. HTS 출신 알-샤라 정권, 종교·종파 화합과 서구 인정 도전 중.</div></div>
+        <div class="actor i"><div class="nm">UAE · 바레인</div><div class="yr">2020 · 아브라함 협정</div><div class="ds">이스라엘과 수교한 첫 아랍권 국가 그룹. 친미·반이란 노선의 모델.</div></div>
+      </div>
+    </div>
+
+    <div class="actor-group">
+      <h3>비국가 무장단체 · 운동</h3>
+      <div class="group-sub">Non-State Armed Groups &amp; Movements</div>
+      <div class="actor-grid">
+        <div class="actor w"><div class="nm">하마스 Hamas</div><div class="yr">1987 · 가자 · 수니</div><div class="ds">무슬림 형제단 계열, 이란 후원. 2023.10.7 공격으로 가자 전쟁 촉발. 정치국장 하니예(2024.7), 군사 지도자 신와르(2024.10) 사망.</div></div>
+        <div class="actor w"><div class="nm">헤즈볼라 Hizbullah</div><div class="yr">1982 · 레바논 · 시아</div><div class="ds">IRGC 직속 창설, 가장 정교한 비국가 무장단체. 2024.9 나스랄라 사살 후 약체화.</div></div>
+        <div class="actor w"><div class="nm">후티 Houthis</div><div class="yr">예멘 · 자이드 시아</div><div class="ds">공식명 안사르 알라. 2023~ 홍해 봉쇄, 글로벌 무역 차질 야기. 이란 무기 의존.</div></div>
+        <div class="actor w"><div class="nm">IRGC · 혁명수비대</div><div class="yr">1979 · 19만</div><div class="ds">이란 정규군과 별개, 신정 수호 임무. 쿠드스군이 해외 작전. 2020 솔레이마니, 2025.6 살라미 사망.</div></div>
+        <div class="actor w"><div class="nm">ISIS · 다에쉬</div><div class="yr">2014~17 · 수니 살라피</div><div class="ds">바그다디가 모술서 칼리프 선포(2014). 시리아·이라크 30% 점령했다가 2019 영토 상실, 바그다디 사망.</div></div>
+        <div class="actor w"><div class="nm">알카에다 Al-Qaeda</div><div class="yr">1988 · 빈 라덴</div><div class="ds">9/11(2001)로 글로벌 지하드의 대명사. 빈 라덴 2011 사살 후 분권화, 마그레브·예멘 등에서 잔존.</div></div>
+        <div class="actor w"><div class="nm">탈레반 Taliban</div><div class="yr">1994 · 데오반디</div><div class="ds">아프간 1996~2001 / 2021~ 두 차례 집권. 여성 교육·노동 금지로 국제 고립.</div></div>
+        <div class="actor w"><div class="nm">무슬림 형제단</div><div class="yr">1928 · 이집트</div><div class="ds">현대 이슬람주의의 모체. 합법 정당으로 이집트(2012 무르시)·튀니지 집권 경험. 사우디·UAE는 테러 단체 지정.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="territory" class="section" style="background:var(--bg-alt)">
+  <div class="container">
+    <header class="section-head">
+      <div class="section-num">§ VIII</div>
+      <h2 class="section-title">영토 분쟁</h2>
+      <div class="section-sub">Contested Holy Lands</div>
+    </header>
+
+    <div class="grid-3" style="gap:28px">
+
+      <article class="terr-card">
+        <div class="nm">예루살렘</div>
+        <div class="sub">Jerusalem · 31°47′N 35°13′E</div>
+        <div class="map">
+          <svg viewBox="0 0 320 170">
+            <rect width="320" height="170" class="sea"/>
+            <polygon class="land" points="80,30 240,30 270,55 270,125 240,150 80,150 50,125 50,55" stroke="var(--ink-soft)" stroke-width="1"/>
+            <line x1="160" y1="30" x2="160" y2="150" class="grid" stroke-width="0.9"/>
+            <line x1="50" y1="90" x2="270" y2="90" class="grid" stroke-width="0.9"/>
+            <text x="105" y="65" class="lbl-cr">기독교 지구</text>
+            <text x="205" y="65" class="lbl-i">무슬림 지구</text>
+            <text x="92" y="125" class="lbl-r">아르메니아</text>
+            <text x="208" y="125" class="lbl-j">유대인 지구</text>
+            <circle cx="113" cy="76" r="4.5" fill="var(--chr-bg)" stroke="var(--chr)" stroke-width="1.8"/>
+            <text x="78" y="50" class="lbl-cr">성묘 교회</text>
+            <line x1="103" y1="55" x2="110" y2="72" stroke="var(--chr)" stroke-width="0.6"/>
+            <circle cx="220" cy="105" r="5" fill="var(--isl-bg)" stroke="var(--isl)" stroke-width="1.8"/>
+            <text x="222" y="100" class="lbl-i">알아크사·바위돔</text>
+            <line x1="212" y1="118" x2="212" y2="138" stroke="var(--jud)" stroke-width="3.2"/>
+            <text x="148" y="142" class="lbl-j">통곡의 벽 (서벽)</text>
+            <text x="160" y="20" text-anchor="middle" class="lbl-t">JERUSALEM · OLD CITY · 0.9 km²</text>
+          </svg>
+          <div class="map-cap">옛 도시 4개 지구 · 세 종교의 성지가 한 성벽 안에</div>
+        </div>
+        <div class="claim j">
+          <div class="by j">유대교 — Judaism</div>
+          다윗과 솔로몬의 도시. 제1·제2 성전 자리, 통곡의 벽(서쪽 벽)이 제2성전의 유일한 잔존부. 메시아가 도래할 때 제3 성전이 재건될 곳.
+        </div>
+        <div class="claim c">
+          <div class="by c">기독교 — Christianity</div>
+          예수의 십자가 처형과 부활의 도시. 골고다와 빈 무덤 위에 성묘교회. 4세기 콘스탄티누스의 어머니 헬레나가 성지를 발굴.
+        </div>
+        <div class="claim i">
+          <div class="by i">이슬람교 — Islam</div>
+          알 쿠드스(거룩한 도시). 알아크사 모스크 + 바위돔 — 무함마드가 야간 승천(미라지)을 행한 자리. 메카·메디나에 이은 3대 성지.
+        </div>
+        <div class="status">
+          1948~67 동예루살렘 요르단 통치 → 1967 6일전쟁 이래 이스라엘 점령. 1980 이스라엘 "통일된 영원한 수도" 선언. 2017 트럼프 미국 수도 인정, 2018 미 대사관 이전. 국제 사회 다수는 미승인.
+        </div>
+      </article>
+
+      <article class="terr-card">
+        <div class="nm">서안 지구 · 가자</div>
+        <div class="sub">West Bank &amp; Gaza · 1967 점령</div>
+        <div class="map">
+          <svg viewBox="0 0 320 170">
+            <rect width="320" height="170" class="sea"/>
+            <rect x="0" y="0" width="78" height="170" class="sea"/>
+            <path class="land" d="M0,135 L78,135 L78,170 L0,170 Z"/>
+            <path class="land" d="M78,128 L122,118 L130,160 L82,168 Z"/>
+            <path class="land" d="M100,8 L160,8 L172,30 L120,32 Z"/>
+            <path class="land" d="M172,8 L260,8 L268,55 L195,55 L170,38 Z"/>
+            <path class="land" d="M165,55 L260,55 L270,150 L195,150 L160,100 Z"/>
+            <path class="land land-j" d="M82,32 L130,28 L155,60 L165,105 L160,125 L130,145 L88,142 L75,80 L78,40 Z"/>
+            <path class="land land-w" d="M120,58 L155,58 L162,98 L130,110 L118,98 L120,78 Z" stroke="var(--war)" stroke-width="1.2"/>
+            <text x="135" y="82" class="lbl-w" text-anchor="middle">서안</text>
+            <text x="135" y="92" class="lbl" text-anchor="middle">5,655 km²</text>
+            <path class="land land-w" d="M80,100 L98,98 L102,122 L88,128 L80,118 Z" stroke="var(--war)" stroke-width="1.2"/>
+            <text x="42" y="115" class="lbl-w">가자</text>
+            <text x="38" y="125" class="lbl">365 km²</text>
+            <line x1="55" y1="118" x2="80" y2="112" stroke="var(--war)" stroke-width="0.5"/>
+            <circle cx="95" cy="78" r="2" class="dot-j"/><text x="68" y="75" class="lbl-j">텔아비브</text>
+            <circle cx="142" cy="88" r="2.4" class="dot-w"/><text x="160" y="92" class="lbl-w">예루살렘</text>
+            <circle cx="128" cy="63" r="1.6" class="dot-w"/><text x="132" y="61" class="lbl-w">라말라</text>
+            <circle cx="143" cy="98" r="1.6" class="dot-w"/><text x="146" y="100" class="lbl-w">베들레헴</text>
+            <circle cx="240" cy="80" r="2" class="dot-k"/><text x="218" y="78" class="lbl">암만</text>
+            <text x="160" y="18" text-anchor="middle" class="lbl-t">WEST BANK &amp; GAZA · 정착촌 70만+</text>
+            <text x="20" y="30" class="lbl-r">Mediterranean</text>
+            <text x="230" y="120" class="lbl-r">Jordan</text>
+            <text x="135" y="22" class="lbl-r" text-anchor="middle">Lebanon</text>
+          </svg>
+          <div class="map-cap">청색=이스라엘(1948 경계) · 적색=1967 점령지</div>
+        </div>
+        <div class="claim j">
+          <div class="by j">유대교 — Judaism</div>
+          성경의 "유대와 사마리아". 아브라함의 매장지 헤브론 막벨라, 야곱이 천사와 씨름한 펜네엘, 베들레헴 등 성지 밀집.
+        </div>
+        <div class="claim i">
+          <div class="by i">팔레스타인 — Palestinian</div>
+          1948 이전 다수가 무슬림 거주. 가자는 1948 난민 이주로 형성. 알아크사·예루살렘과 연결된 통합 영토 요구.
+        </div>
+        <div class="status">
+          서안 — 1967 점령, 정착촌 70만+ (국제법상 위법). 가자 — 2005 이스라엘 철수, 2007 하마스 통치, 2023.10 이후 전쟁으로 인프라 70%+ 파괴, 4만+ 사망 보도.
+        </div>
+      </article>
+
+      <article class="terr-card">
+        <div class="nm">골란 고원</div>
+        <div class="sub">Golan Heights · 1,800km²</div>
+        <div class="map">
+          <svg viewBox="0 0 320 170">
+            <rect width="320" height="170" class="sea"/>
+            <path class="land" d="M30,28 L195,28 L200,48 L60,55 L30,52 Z"/>
+            <text x="100" y="42" class="lbl">레바논</text>
+            <path class="land land-j" d="M30,58 L130,58 L130,95 L115,118 L82,138 L30,143 Z"/>
+            <text x="58" y="115" class="lbl-j">이스라엘</text>
+            <path class="land land-w" d="M130,58 L200,58 L208,90 L188,108 L135,98 Z" stroke="var(--war)" stroke-width="1.2"/>
+            <text x="168" y="82" class="lbl-w" text-anchor="middle">골란 고원</text>
+            <text x="168" y="93" class="lbl" text-anchor="middle">1,800 km²</text>
+            <path class="land" d="M208,58 L300,52 L310,140 L200,140 L200,90 Z"/>
+            <text x="258" y="98" class="lbl">시리아</text>
+            <path class="land" d="M130,143 L200,140 L310,140 L310,170 L130,170 L115,160 Z"/>
+            <text x="200" y="160" class="lbl">요르단</text>
+            <ellipse cx="120" cy="100" rx="10" ry="14" fill="#7a9bb8" opacity="0.55"/>
+            <text x="138" y="110" class="lbl">갈릴리 호</text>
+            <circle cx="155" cy="78" r="2" class="dot-w"/><text x="158" y="76" class="lbl-w">카츠린</text>
+            <circle cx="240" cy="92" r="2" class="dot-k"/><text x="244" y="95" class="lbl">다마스쿠스</text>
+            <text x="160" y="18" text-anchor="middle" class="lbl-t">GOLAN HEIGHTS · 1967 점령 · 1981 합병</text>
+            <text x="20" y="148" class="lbl-r">Israel</text>
+          </svg>
+          <div class="map-cap">시리아 영토였으나 1981 이스라엘 합병 (국제 미승인 · 2019 미국 인정)</div>
+        </div>
+        <div class="claim j">
+          <div class="by j">이스라엘</div>
+          시리아·레바논 감제의 전략적 요충. 1967 점령, 1981 합병. 수자원과 와이너리·정착촌 약 3만 유대인.
+        </div>
+        <div class="claim i">
+          <div class="by i">시리아 · 드루즈</div>
+          1967 이전 시리아 영토. 현지 드루즈 약 2만이 시리아 정체성 유지. 2024.12 아사드 붕괴로 정치 환경 급변.
+        </div>
+        <div class="status">
+          1981 이스라엘 합병 — 국제 미승인. 2019.3 트럼프가 미국으로서 이스라엘 주권을 처음 공식 인정. 아사드 정권 붕괴 후 이스라엘이 완충지대 추가 진입.
+        </div>
+      </article>
+
+      <article class="terr-card">
+        <div class="nm">시나이 반도</div>
+        <div class="sub">Sinai Peninsula · 61,000km²</div>
+        <div class="map">
+          <svg viewBox="0 0 320 170">
+            <rect width="320" height="170" class="sea"/>
+            <rect x="0" y="0" width="320" height="32" class="sea"/>
+            <text x="160" y="22" class="lbl-r" text-anchor="middle">Mediterranean Sea</text>
+            <path class="land" d="M0,32 L138,32 L148,75 L130,118 L70,150 L0,150 Z"/>
+            <text x="70" y="100" class="lbl" text-anchor="middle">이집트</text>
+            <path class="land land-i" d="M148,32 L218,32 L210,80 L185,115 L155,115 L132,95 L138,60 Z" stroke="var(--isl)" stroke-width="1.3"/>
+            <text x="180" y="65" class="lbl-i" text-anchor="middle">시나이 반도</text>
+            <text x="180" y="78" class="lbl" text-anchor="middle">61,000 km²</text>
+            <path class="land land-j" d="M218,32 L240,32 L252,68 L235,80 L218,55 Z"/>
+            <text x="232" y="52" class="lbl-j">이스라엘</text>
+            <path class="land" d="M252,32 L320,32 L320,90 L262,88 L245,62 Z"/>
+            <text x="285" y="58" class="lbl">요르단</text>
+            <path class="land" d="M210,115 L320,90 L320,170 L210,170 Z"/>
+            <text x="270" y="138" class="lbl">사우디</text>
+            <text x="198" y="135" class="lbl-r">Red Sea</text>
+            <circle cx="175" cy="98" r="2.5" class="dot-g"/><text x="138" y="102" class="lbl">시나이 산 (자발 무사)</text>
+            <line x1="148" y1="32" x2="148" y2="78" stroke="#7a9bb8" stroke-width="1.4" stroke-dasharray="2 1"/>
+            <text x="105" y="55" class="lbl">수에즈 운하</text>
+            <text x="160" y="155" class="lbl-r" text-anchor="middle">아카바만</text>
+            <text x="160" y="22" text-anchor="middle" class="lbl-t">SINAI · 1967 점령 → 1979 평화 → 1982 반환</text>
+          </svg>
+          <div class="map-cap">현대사에서 평화로 영토를 반환한 거의 유일한 사례</div>
+        </div>
+        <div class="claim j">
+          <div class="by j">유대교</div>
+          모세가 십계명을 받은 시나이 산이 위치(전통적 비정 — 자발 무사). 출애굽 광야 40년의 무대.
+        </div>
+        <div class="claim i">
+          <div class="by i">이집트</div>
+          이집트 영토. 베두인 부족 거주, ISIS 시나이 지부의 거점이 되기도.
+        </div>
+        <div class="status">
+          1967 이스라엘이 점령 → 1979 캠프 데이비드 평화 협정으로 이집트에 단계적 반환 (1982 완료). <b>현대사에서 평화로 영토를 반환한 거의 유일한 사례</b>. 사다트는 이 협정으로 1981 암살.
+        </div>
+      </article>
+
+      <article class="terr-card">
+        <div class="nm">메카 · 메디나</div>
+        <div class="sub">Mecca &amp; Medina · Hejaz</div>
+        <div class="map">
+          <svg viewBox="0 0 320 170">
+            <rect width="320" height="170" class="sea"/>
+            <rect x="0" y="0" width="320" height="25" class="sea"/>
+            <path class="land" d="M0,25 L52,25 L58,75 L0,80 Z"/>
+            <text x="22" y="55" class="lbl">이집트</text>
+            <path class="land" d="M58,25 L130,25 L140,55 L100,70 L62,65 Z"/>
+            <text x="92" y="48" class="lbl">레반트</text>
+            <path class="land" d="M142,25 L235,25 L235,80 L150,75 Z"/>
+            <text x="195" y="55" class="lbl">이라크·시리아</text>
+            <path class="land" d="M240,25 L320,25 L320,90 L268,98 L240,80 Z"/>
+            <text x="285" y="60" class="lbl">이란</text>
+            <path class="sea" d="M205,80 L240,80 L260,100 L240,125 L200,120 L195,95 Z"/>
+            <text x="225" y="108" class="lbl-r">Persian Gulf</text>
+            <path class="land land-i" d="M58,75 L100,70 L150,75 L195,95 L240,125 L260,150 L228,170 L100,170 L58,135 Z" stroke="var(--isl)" stroke-width="1.1"/>
+            <text x="155" y="155" class="lbl-r">사우디아라비아</text>
+            <circle cx="108" cy="135" r="5" class="dot-i"/>
+            <text x="58" y="155" class="lbl-i">메카 · Mecca</text>
+            <text x="58" y="165" class="lbl">카바·하지 순례지</text>
+            <circle cx="105" cy="108" r="4" class="dot-i"/>
+            <text x="58" y="108" class="lbl-i">메디나 · Medina</text>
+            <text x="58" y="100" class="lbl">예언자의 모스크</text>
+            <circle cx="170" cy="125" r="2" class="dot-k"/>
+            <text x="174" y="128" class="lbl">리야드</text>
+            <circle cx="90" cy="42" r="2" class="dot-g"/>
+            <text x="94" y="40" class="lbl-r">예루살렘</text>
+            <text x="94" y="50" class="lbl">3rd holy</text>
+            <text x="290" y="18" text-anchor="end" class="lbl-r">Red Sea</text>
+            <text x="290" y="160" text-anchor="end" class="lbl-r">Arabian Sea</text>
+            <text x="160" y="20" text-anchor="middle" class="lbl-t">MECCA &amp; MEDINA · HEJAZ HOLY CITIES</text>
+          </svg>
+          <div class="map-cap">이슬람 1·2대 성지 · 사우디 왕가가 "두 성소의 수호자"</div>
+        </div>
+        <div class="claim i">
+          <div class="by i">이슬람교 — 최고 성지</div>
+          메카 — 카바, 무함마드 출생지, 하지 순례지. 메디나 — 무함마드의 무덤(예언자 모스크). 두 도시는 사우디 왕가가 "두 성소의 수호자(Khadim al-Haramayn)"로서 관리.
+        </div>
+        <div class="status">
+          비무슬림 출입 금지(메카) / 제한 출입(메디나). 1979 메카 점령 사건(주하이만 봉기) 이후 사우디는 보안과 와하비 통제 강화. 매년 200만+ 순례.
+        </div>
+      </article>
+
+      <article class="terr-card">
+        <div class="nm">콘스탄티노플 / 이스탄불</div>
+        <div class="sub">Constantinople / Istanbul · 동서의 문턱</div>
+        <div class="map">
+          <svg viewBox="0 0 320 170">
+            <rect width="320" height="170" class="sea"/>
+            <path class="land land-c" d="M5,30 L140,30 L150,90 L132,120 L5,130 Z"/>
+            <text x="60" y="68" class="lbl-cr">유럽 · Thrace</text>
+            <text x="60" y="80" class="lbl">트라키아</text>
+            <path class="land land-i" d="M170,40 L320,30 L320,140 L182,140 L172,100 Z"/>
+            <text x="248" y="100" class="lbl-i">아나톨리아 · Anatolia</text>
+            <path class="sea" d="M150,90 L160,80 L172,100 L180,140 L150,138 Z"/>
+            <text x="160" y="110" class="lbl-r" text-anchor="middle">Bosphorus</text>
+            <text x="160" y="120" class="lbl-r" text-anchor="middle">해협</text>
+            <text x="60" y="22" class="lbl-r">Black Sea</text>
+            <text x="100" y="158" class="lbl-r">Sea of Marmara</text>
+            <circle cx="155" cy="85" r="6" fill="var(--bg-card)" stroke="var(--ink)" stroke-width="1.5"/>
+            <circle cx="155" cy="85" r="2.4" class="dot-g"/>
+            <text x="30" y="108" class="lbl-c">콘스탄티노플 / 이스탄불</text>
+            <text x="30" y="120" class="lbl">330—1453 동로마 · 1453— 오스만</text>
+            <text x="165" y="78" class="lbl-c">⊕ 하기아 소피아</text>
+            <path class="arrow-i" d="M260,55 Q200,68 168,80"/>
+            <text x="225" y="48" class="lbl-i">1453 메흐메드 2세</text>
+            <text x="160" y="20" text-anchor="middle" class="lbl-t">CONSTANTINOPLE · 1,123년 동로마 → 오스만</text>
+          </svg>
+          <div class="map-cap">동서 교회의 분기점이자 이슬람-기독 교차로</div>
+        </div>
+        <div class="claim c">
+          <div class="by c">정교회</div>
+          330~1453 동로마 수도, "두 번째 로마". 콘스탄티노플 총대주교는 정교회의 명목상 수장. 하기아 소피아는 1,000년 동안 정교회 대성당.
+        </div>
+        <div class="claim i">
+          <div class="by i">이슬람교 — 오스만</div>
+          1453 메흐메드 2세의 정복. 칼리프 제국의 새 수도, 하기아 소피아를 모스크로 전환. 1924 칼리프 폐지로 정치적 중심성은 종료.
+        </div>
+        <div class="status">
+          1934 아타튀르크가 하기아 소피아를 박물관화 → 2020 에르도안이 다시 모스크로 환원. 정교회·바티칸·서구 반발.
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<section id="impact" class="section">
+  <div class="container">
+    <header class="section-head">
+      <div class="section-num">§ IX</div>
+      <h2 class="section-title">현재의 영향</h2>
+      <div class="section-sub">The World as We Stand &nbsp;·&nbsp; 2026</div>
+    </header>
+
+    <div class="impact-wrap">
+      <div class="impact-text">
+        <p>아브라함의 자손이라는 이름으로 묶인 세 종교는 2026년 현재 세계 인구의 55%를 차지한다. 그러나 이 단순한 수치는 권력의 균형을 정확히 보여주지 못한다. 가장 작은 유대교(약 1,600만)가 가장 큰 정치적 영향력을 행사하고, 가장 빠르게 성장하는 이슬람교(19억, 2050년 24억 예상)가 가장 강한 외부 압력을 받으며, 가장 큰 기독교(24억)는 신앙적 활력의 중심이 글로벌 사우스로 옮겨가는 변환기를 통과하고 있다.</p>
+
+        <p>21세기 지정학의 가장 강력한 종교적 동맹은 <b>유대 시오니즘과 미국 복음주의 기독교의 결합</b>이다. 미국 복음주의자들은 종말론적 신학에서 이스라엘의 회복을 예수 재림의 전제 조건으로 본다. 이 신학적 확신이 AIPAC의 정치 자금과 결합하여, 미국의 중동 정책을 정초한다. 트럼프 행정부의 예루살렘 수도 인정(2017), 골란 인정(2019), 아브라함 협정(2020), 그리고 2025·2026년 이란 직접 공격이 모두 이 축 위에 있다.</p>
+
+        <p>이슬람권에서는 <b>수니-시아 분쟁이 사우디-이란의 지정학적 패권 다툼</b>으로 외화되어 왔다. 1979 호메이니 혁명 이후 시아 부활은 2003 이라크전 후 시아 정권 수립, 2006 헤즈볼라의 위상 강화, 2014 시아 민병 PMF의 ISIS 격퇴로 정점을 찍는 듯했다. 그러나 2024.12 아사드 정권 붕괴, 2025.6 12일 전쟁, 2026.2 Epic Fury에서 IRGC 사령부와 하메네이 사망까지, 이란 주도 "저항의 축"은 2년 만에 사상 최대 위기를 맞고 있다. 사우디·UAE는 그 빈자리를 이스라엘과의 사실상 동맹으로 메우는 중이다.</p>
+
+        <p>한편 <b>서구의 세속화와 글로벌 사우스의 종교 부활</b>이 동시에 진행 중이다. 서유럽 기독교 인구 비중은 30년간 매 10년 5%p씩 하락했고, 미국조차도 무종교(nones)가 28%로 가톨릭(19%)을 추월했다. 반대로 사하라 이남 아프리카 기독교는 6.7억(2010) → 8.8억(2020), 동남아·서아프리카 이슬람도 폭발적이다. 신앙의 무게 중심이 백인 서구에서 글로벌 사우스로 이동하고 있다.</p>
+
+        <p>핵 비확산과 종교 갈등의 교차는 21세기 가장 위험한 변수다. 이스라엘은 비공식 핵 보유국이고, 파키스탄은 유일한 핵 이슬람 국가, 이란은 2026년 현재 농축 60% 단계로 사실상 문턱에 도달했다. Operation Epic Fury가 이란 핵 시설을 얼마나 후퇴시켰는지는 평가 중이지만, 이란의 후계 체제가 핵 무장을 가속화할 가능성은 높다. 종교적 적대를 가진 국가가 핵을 보유하는 세계는 냉전 시기의 두 초강대국 구도보다 훨씬 더 불안정하다.</p>
+
+        <p>한국 사회와의 연결도 무시할 수 없다. 한국 개신교(인구 ~17%)와 가톨릭(~11%)을 합치면 인구의 28%가 기독교인이며, 보수 개신교는 미국 복음주의를 모델 삼아 친이스라엘·반이슬람 정서를 학습해 왔다. 동시에 한국은 중동산 원유의 70%+를 의존하므로, 호르무즈 해협 봉쇄(2026.2~)는 단순한 외신 헤드라인이 아니라 직접적인 에너지·물가 충격이다. <em style="font-style:italic;color:var(--gold)">아브라함의 형제들이 싸우면, 한반도의 가계도 흔들린다.</em></p>
+      </div>
+
+      <aside class="impact-stats">
+        <div class="impact-stat">
+          <div class="num">24<em style="font-family:var(--fs-display);font-style:italic;color:var(--gold);font-size:32px">억</em></div>
+          <div class="lab">Christianity 2024</div>
+          <div class="nt">세계 1위 종교 · 비중 28.8%. 신앙의 무게 중심은 서구에서 사하라 이남 아프리카·아시아로 이동 중. 오순절 교파가 가장 빠르게 성장.</div>
+        </div>
+        <div class="impact-stat">
+          <div class="num">19<em style="font-family:var(--fs-display);font-style:italic;color:var(--gold);font-size:32px">억</em></div>
+          <div class="lab">Islam 2024</div>
+          <div class="nt">세계 2위. 2010~20 사이 +3.47억 — 모든 종교 합산 증가보다 큼. Pew 추정 2050년 24억으로 기독교에 거의 근접.</div>
+        </div>
+        <div class="impact-stat">
+          <div class="num">1,600<em style="font-family:var(--fs-display);font-style:italic;color:var(--gold);font-size:32px">만</em></div>
+          <div class="lab">Judaism 2024</div>
+          <div class="nt">가장 작은 아브라함 종교(0.2%). 그러나 핵 보유국 이스라엘과 미국 의회 로비를 통해 세계 정치 비중은 압도적.</div>
+        </div>
+        <div class="impact-stat">
+          <div class="num">55<em style="font-family:var(--fs-display);font-style:italic;color:var(--gold);font-size:32px">%</em></div>
+          <div class="lab">아브라함 종교 합계</div>
+          <div class="nt">세 종교가 차지하는 세계 인구 비중. 힌두교(15%)·불교(7%)·민속종교(5.6%)·무종교(23%)를 모두 더한 것보다 큼.</div>
+        </div>
+        <div class="impact-stat">
+          <div class="num">40<em style="font-family:var(--fs-display);font-style:italic;color:var(--gold);font-size:32px">+</em></div>
+          <div class="lab">주요 분파 수</div>
+          <div class="nt">유대 10 · 기독 16 · 이슬람 14. 같은 신을 믿는 형제들이 가장 자주 가장 잔혹하게 서로 싸운다는 역사의 역설.</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <h4>본 문서에 대하여</h4>
+      <p>본 대시보드는 세계사·종교사 학습을 돕기 위한 정리물이며, 어느 특정 종교·종파의 신학적 정당성을 옹호하거나 부정하지 않는다. 인용한 사건과 통계는 공개된 학술 문헌·언론 보도·Pew Research Center·Britannica·Wikipedia 등을 교차 확인하여 작성되었으나, 종교 인구 추정치는 출처와 시점에 따라 차이가 있을 수 있다.</p>
+    </div>
+    <div>
+      <h4>주요 참고 자료</h4>
+      <ul>
+        <li>Pew Research Center, 2025</li>
+        <li>Encyclopædia Britannica</li>
+        <li>Al Jazeera · BBC · Reuters</li>
+        <li>U.S. Dept. of State 공식 자료</li>
+      </ul>
+    </div>
+    <div>
+      <h4>면책</h4>
+      <p>최근 사건(2024 — 2026)의 사상자·피해 수치는 추후 수정될 수 있다. "보도에 따르면" 표기된 항목은 1차 자료 검증이 진행 중인 정보임을 뜻한다.</p>
+    </div>
+  </div>
+  <div class="copyright">
+    <span>§ &nbsp; Abrahamic Religions · Edited Dashboard &nbsp;·&nbsp; Seoul, 2026</span>
+    <span>한 아버지에게서 갈라진 세 형제 · <em>finis</em></span>
+  </div>
+</footer>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../assets/shared/nav.js" defer></script>
+<script src="../assets/shared/footer.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+/* ============================================================
+   Archive for My Son — Shared Base Styles
+   세 컬렉션 + 연구 아카이브가 공유하는 디자인 토큰
+   ============================================================ */
+
+:root {
+  /* Paper & Ink — 한지·먹 */
+  --paper:        #f5efe0;
+  --paper-light:  #faf6eb;
+  --paper-dark:   #ebe3cf;
+  --ink:          #1f1a14;
+  --ink-soft:     #3a3328;
+  --ink-mute:     #6b6253;
+  --rule:         #c8bea4;
+  --rule-soft:    #d8d0b8;
+  --gold:         #a37e2c;
+  --gold-soft:    #c7a55b;
+
+  /* Fonts */
+  --serif-ko:     'Noto Serif KR', serif;
+  --sans-ko:      'Noto Sans KR', sans-serif;
+  --serif-en:     'Cormorant Garamond', 'EB Garamond', serif;
+  --mono:         'JetBrains Mono', monospace;
+
+  /* Project accents — overridable per collection */
+  --accent:       var(--gold);
+
+  --maxw:         1080px;
+}
+
+/* Collection-scoped accents */
+.collection-religion { --accent: #7c2030; }
+.collection-korean   { --accent: #4a7a6e; }
+.collection-science  { --accent: #2a5680; }
+.collection-research { --accent: var(--gold); }
+
+/* ============================================================
+   Site header (injected by nav.js)
+   ============================================================ */
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  padding: 14px 0;
+  font-family: var(--sans-ko);
+}
+.site-header__inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.site-brand {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+.site-brand .latin {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink-mute);
+  font-size: 13px;
+  margin-left: 8px;
+}
+.site-header__nav {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: var(--sans-ko);
+}
+.site-header__nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.18s, color 0.18s;
+  white-space: nowrap;
+}
+.site-header__nav a:hover { color: var(--ink); border-bottom-color: var(--gold); }
+.site-header__nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+.site-header__nav .badge-wip {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 6px;
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  color: var(--paper);
+  background: var(--ink-mute);
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+/* ============================================================
+   Site footer (injected by footer.js)
+   ============================================================ */
+
+.page-footer {
+  margin-top: 80px;
+  padding: 28px 0 36px;
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+  font-family: var(--sans-ko);
+  font-size: 12px;
+  color: var(--ink-mute);
+}
+.page-footer__inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.page-footer .meta-item { margin-right: 18px; }
+.page-footer .meta-label {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-right: 6px;
+}
+.page-footer time { font-family: var(--serif-en); font-weight: 500; }
+.page-footer a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rule);
+}
+.page-footer a:hover { color: var(--ink); border-bottom-color: var(--gold); }
+.page-footer .copyright {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--ink-mute);
+}
+
+/* ============================================================
+   Generic layout primitives
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+.shared-body {
+  font-family: var(--serif-ko);
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--ink);
+  background: var(--paper);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.shared-body > main { flex: 1; }
+
+.shared-container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.shared-latin {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+}
+.shared-year {
+  font-family: var(--serif-en);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.shared-meta {
+  font-family: var(--sans-ko);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .site-header__inner { gap: 12px; }
+  .site-header__nav { gap: 14px; font-size: 11px; overflow-x: auto; }
+  .site-brand .latin { display: none; }
+}
