@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>4,000년의 두 이야기 — messfilm</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="자녀에게 물려주려는 두 개의 역사 학습 자료. 아브라함 계통 종교의 4,000년, 그리고 한국사 4,000년.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+
+<style>
+/* ---------- Tokens ---------- */
+:root {
+  --hanji:        #f5efe0;
+  --hanji-light:  #faf6eb;
+  --hanji-dark:   #ebe3cf;
+  --meok:         #1f1a14;
+  --meok-soft:    #3a3328;
+  --meok-mute:    #6b6253;
+  --rule:         #c8bea4;
+  --rule-soft:    #d8d0b8;
+  --geumbak:      #b08d4d;
+
+  /* Project accents */
+  --abrahamic:    #a37e2c;   /* gold from abrahamic site */
+  --abrahamic-bg: #ede8db;
+  --korean:       #4a7a6e;   /* cheongja from korean site */
+  --korean-bg:    #e0e8e4;
+
+  --maxw:         1080px;
+}
+
+/* ---------- Reset (minimal) ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+a { color: inherit; text-decoration: none; }
+
+body {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400;
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--meok);
+  background: var(--hanji);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Utility ---------- */
+.latin { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; }
+.year  { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-variant-numeric: tabular-nums; }
+.meta  {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--meok-mute);
+}
+.hanja { font-size: 0.78em; color: var(--meok-mute); margin-left: 0.18em; }
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ---------- Top brand bar ---------- */
+.brandbar {
+  border-bottom: 1px solid var(--rule);
+  background: var(--hanji);
+  padding: 18px 0;
+}
+.brandbar__inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.brandbar__name {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--meok);
+  letter-spacing: 0.01em;
+}
+.brandbar__name b { font-style: normal; color: var(--geumbak); font-weight: 700; }
+.brandbar__sub {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  color: var(--meok-mute);
+  letter-spacing: 0.06em;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 88px 0 56px;
+}
+.hero__eyebrow {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 28px;
+}
+.hero__line { flex: 1; height: 1px; background: var(--rule); max-width: 200px; }
+.hero h1 {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 900;
+  font-size: clamp(40px, 6vw, 76px);
+  letter-spacing: -0.03em;
+  margin: 0 0 18px;
+  line-height: 1.15;
+}
+.hero h1 .num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--geumbak);
+  letter-spacing: -0.01em;
+}
+.hero__sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(20px, 2.4vw, 28px);
+  color: var(--meok-soft);
+  font-weight: 400;
+  margin: 0 0 32px;
+}
+.hero__lead {
+  max-width: 720px;
+  font-size: 16.5px;
+  line-height: 1.85;
+  color: var(--meok-soft);
+}
+.hero__lead strong { color: var(--meok); font-weight: 600; }
+
+/* ---------- Project cards ---------- */
+.projects {
+  padding: 36px 0 48px;
+}
+.projects__intro {
+  margin-bottom: 28px;
+  font-size: 14px;
+  color: var(--meok-mute);
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: 0.02em;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 32px 32px;
+  background: var(--hanji-light);
+  position: relative;
+  transition: background 0.15s;
+  min-height: 360px;
+}
+.card:hover { background: var(--hanji-light); filter: brightness(1.02); }
+.card--abrahamic { background: var(--abrahamic-bg); }
+.card--korean { background: var(--korean-bg); }
+
+.card__num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--geumbak);
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+}
+.card--abrahamic .card__num { color: var(--abrahamic); }
+.card--korean .card__num { color: var(--korean); }
+
+.card__title {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--meok);
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+.card__title-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--meok-mute);
+  margin-bottom: 14px;
+}
+.card__period {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--meok-soft);
+  letter-spacing: 0.05em;
+  margin-bottom: 18px;
+}
+.card__summary {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--meok-soft);
+  flex: 1;
+  margin-bottom: 20px;
+}
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--rule-soft);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 11.5px;
+  color: var(--meok-mute);
+  letter-spacing: 0.02em;
+}
+.card__cta {
+  margin-top: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--meok);
+  border-bottom: 1px solid var(--geumbak);
+  display: inline-block;
+  padding-bottom: 2px;
+  align-self: flex-start;
+}
+
+/* ---------- About / Footer ---------- */
+.about {
+  padding: 56px 0 36px;
+  border-top: 1px solid var(--rule);
+  margin-top: 32px;
+}
+.about h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 14px;
+  padding-bottom: 6px;
+  display: inline-block;
+  border-bottom: 2px solid var(--geumbak);
+}
+.about p {
+  max-width: 720px;
+  font-size: 15px;
+  color: var(--meok-soft);
+  margin: 0 0 12px;
+}
+
+.contact {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule-soft);
+}
+.contact__label {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--meok-mute);
+  display: block;
+  margin-bottom: 6px;
+}
+.contact__email {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--meok);
+  border-bottom: 1px solid var(--geumbak);
+}
+.contact__email:hover { color: var(--geumbak); }
+
+footer.foot {
+  margin-top: auto;
+  padding: 32px 0;
+  border-top: 2px solid var(--meok);
+  background: var(--hanji-dark);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 11.5px;
+  color: var(--meok-mute);
+  letter-spacing: 0.04em;
+}
+.foot__inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .container, .brandbar__inner, .foot__inner { padding: 0 20px; }
+  .hero { padding: 48px 0 32px; }
+  .cards { grid-template-columns: 1fr; }
+  .card { min-height: auto; padding: 30px 26px 26px; }
+  .card__title { font-size: 26px; }
+  .about { padding: 40px 0 32px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Top brand bar -->
+<div class="brandbar">
+  <div class="brandbar__inner">
+    <span class="brandbar__name"><b>messfilm</b>'s history projects</span>
+    <span class="brandbar__sub">자녀에게 물려주려는 역사 학습 자료</span>
+  </div>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container">
+    <div class="hero__eyebrow">
+      <span class="meta">Two Threads of History</span>
+      <span class="hero__line"></span>
+      <span class="latin">2026</span>
+    </div>
+    <h1><span class="num">4,000</span>년의 두 이야기</h1>
+    <p class="hero__sub">한 시간 깊이 위에 놓인 두 개의 역사 — 종교와 한국사</p>
+    <p class="hero__lead">
+      이 사이트는 한 아버지가 자녀에게 물려주려는 두 개의 역사 학습 자료를 모아 두는 곳입니다.
+      하나는 인류의 정신을 다듬어 온 <strong>아브라함 계통 종교의 4,000년</strong>이고,
+      다른 하나는 한반도에서 살아온 사람들이 만든 <strong>한국사 4,000년</strong>입니다.
+      두 길은 멀리서 보면 다른 풍경이지만, 같은 길이의 시간을 통과해 오늘에 닿아 있습니다.
+    </p>
+  </div>
+</header>
+
+<!-- Project cards -->
+<section class="projects">
+  <div class="container">
+    <p class="projects__intro">현재 공개된 두 프로젝트 · 카드를 누르면 사이트로 이동합니다.</p>
+    <div class="cards">
+
+      <a class="card card--abrahamic" href="https://messfilm.github.io/abrahamic-history/">
+        <div class="card__num">§ I</div>
+        <div class="card__title">아브라함 계통 종교<span class="hanja">亞·猶·基·伊</span></div>
+        <div class="card__title-en">Abrahamic Religions · 4,000 years</div>
+        <div class="card__period">BC 2000경 — 현재</div>
+        <div class="card__summary">
+          유대교·기독교·이슬람교 — 한 뿌리에서 갈라진 세 종교의 4,000년 흐름을 한눈에 보는 단일 HTML 대시보드. 아브라함의 부르심에서 오늘날의 분열과 대화까지, 인물·사건·교리·갈등을 시각화한 학습용 자료.
+        </div>
+        <div class="card__tags">유대교 · 기독교 · 이슬람교 · 십자군 · 종교개혁 · 분열과 대화</div>
+        <span class="card__cta">사이트 열기 →</span>
+      </a>
+
+      <a class="card card--korean" href="https://messfilm.github.io/korean-history/">
+        <div class="card__num">§ II</div>
+        <div class="card__title">한국사<span class="hanja">韓國史</span></div>
+        <div class="card__title-en">Korean History · 4,000 years</div>
+        <div class="card__period">BC 2333 (전승) — 현재</div>
+        <div class="card__summary">
+          선사 시대의 빗살무늬 토기에서 오늘날의 촛불에 이르기까지, 한반도 4,000년을 9개 시대로 정리한 학습 사이트. 통합 연표, 시대별 13개 표준 섹션, 사이트 내 검색·용어집을 갖춘 중학생용 통사.
+        </div>
+        <div class="card__tags">선사 · 삼국 · 고려 · 조선 · 일제강점기 · 대한민국 · 9개 시대</div>
+        <span class="card__cta">사이트 열기 →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- About / Contact -->
+<section class="about">
+  <div class="container">
+    <h2>왜 만들었나</h2>
+    <p>
+      교과서는 한 시대의 한 측면을 잘 다루지만, 시대 전체의 흐름과 학설의 갈래까지 보여주기에는 분량이 부족합니다.
+      자녀에게 한 호흡으로 큰 그림을 보여주고, 호기심이 향하는 대목에서 깊이 들어갈 수 있는 자료를 만들고 싶었습니다.
+    </p>
+    <p>
+      두 사이트 모두 <em>객관적 사실</em>을 우선하고, 논쟁점은 학설의 갈래를 병기합니다.
+      한쪽으로 단정하지 않고 자녀가 스스로 판단할 여지를 남기는 것을 원칙으로 합니다.
+    </p>
+
+    <div class="contact">
+      <span class="contact__label">만든이 · 문의</span>
+      <a class="contact__email" href="mailto:messfilm@gmail.com">messfilm@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="foot">
+  <div class="foot__inner">
+    <span>© 2026 · 가정 학습용 / Personal Educational Use</span>
+    <span>콘텐츠 CC BY-NC-SA 4.0 · 코드 MIT</span>
+    <span class="latin">v1.0.0 · Last updated 2026-05-19</span>
+  </div>
+</footer>
+
+</body>
+</html>
