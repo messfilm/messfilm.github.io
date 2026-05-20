@@ -111,6 +111,26 @@
       "description": "기획서 §6 시대 페이지 표준 구조 — 챕터 내러티브 형식으로 갱신",
       "by": "Claude Code",
       "details": "섹션 분류 나열 대신 4~5개 챕터 흐름. inline-figure / inline-scene / inline-sim / aside-parallel CSS 컴포넌트 정의. 작성 규칙 추가 — 추상 명사 나열 금지, 인물·장면을 본문 *지점*에 배치."
+    },
+    {
+      "id": "upd-0012",
+      "date": "2026-05-20",
+      "project": "science",
+      "page": "science.era.03-revolution",
+      "type": "addition",
+      "description": "head UX 표준 컴포넌트 적용 — breadcrumb, 챕터 목차, 이전/다음 시대 페이지네이션",
+      "by": "Father + Claude Code",
+      "details": "시대 페이지의 head/foot UX 표준 확정. 모든 시대 페이지에 동일 적용 예정."
+    },
+    {
+      "id": "upd-0013",
+      "date": "2026-05-20",
+      "project": "science",
+      "page": "science.era.01-ancient",
+      "type": "creation",
+      "description": "§ I 고대 — 자연철학의 시작 (BC 600 — AD 500) 페이지 작성",
+      "by": "Father + Claude Code",
+      "details": "6 챕터 내러티브: 1) 물 또는 불 또는 수 / 2) 수와 형태의 학파 / 3) 아리스토텔레스라는 백과사전 / 4) 알렉산드리아 — 측정의 도시 / 5) 권위의 시작과 도서관의 끝 / 6) Coda. 인물 카메오 7개(탈레스·피타고라스·아리스토텔레스·에라토스테네스·아르키메데스·프톨레마이오스·갈레노스), 인라인 장면 11개, 인터랙티브 3개(피타고라스 정리·에라토스테네스 지구 둘레·아르키메데스 π 근사), 평행 박스 4개. 메인의 § I 카드 활성화. 03-revolution 페이지네이션 이전 시대 링크 활성화."
     }
   ]
 }

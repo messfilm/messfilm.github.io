@@ -244,6 +244,50 @@
       "usedFor": [
         { "page": "science.era.03-revolution", "section": "전반 — 사실·연도 교차 확인" }
       ]
+    },
+    {
+      "id": "src-0207",
+      "project": "science",
+      "type": "primary-database",
+      "title": "NASA Eclipse Web Site",
+      "publisher": "NASA Goddard Space Flight Center",
+      "url": "https://eclipse.gsfc.nasa.gov/",
+      "accessed": "2026-05-20",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "science.era.01-ancient", "section": "탈레스 BC 585 일식 검증" }
+      ],
+      "notes": "역사적 일식의 정확한 날짜·경로 데이터."
+    },
+    {
+      "id": "src-0208",
+      "project": "science",
+      "type": "book",
+      "title": "City and School in Late Antique Athens and Alexandria",
+      "publisher": "University of California Press",
+      "url": "https://www.ucpress.edu/books/city-and-school-in-late-antique-athens-and-alexandria",
+      "accessed": "2026-05-20",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "science.era.01-ancient", "section": "알렉산드리아 도서관 소실 학설" }
+      ],
+      "notes": "Edward Watts (2008). 도서관·아카데미아 종말의 점진적 과정 학술 정리."
+    },
+    {
+      "id": "src-0209",
+      "project": "science",
+      "type": "primary-database",
+      "title": "Plutarch's Lives — Marcellus",
+      "publisher": "Perseus Digital Library / Tufts",
+      "url": "http://www.perseus.tufts.edu/hopper/text?doc=Plut.+Marc.",
+      "accessed": "2026-05-20",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "science.era.01-ancient", "section": "아르키메데스 죽음의 가장 오래된 기록" }
+      ]
     }
   ]
 }
