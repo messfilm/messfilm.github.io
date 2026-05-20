@@ -20,7 +20,7 @@
   var links = [
     { href: 'abrahamic-religions/', label: '종교사',     collection: 'religion' },
     { href: 'korean-history/',      label: '한국사',     collection: 'korean'   },
-    { href: 'science-history/',     label: '자연과학사', collection: 'science', wip: true },
+    { href: 'science-history/',     label: '자연과학사', collection: 'science' },
     { href: 'research/',            label: '연구 아카이브', collection: 'research' }
   ];
 
