@@ -39,18 +39,18 @@
       num: '§ II',
       name: '한국사 4,000년',
       latin: 'Korean History',
-      base: 'korean-history/',
+      base: 'korean-history-v2/',
       sections: [
-        { href: 'korean-history/index.html',                       label: '개관', overviewFor: 'main' },
-        { href: 'korean-history/eras/01-prehistoric.html',         label: '선사',  eraKey: '01-prehistoric' },
-        { href: 'korean-history/eras/02-three-kingdoms.html',      label: '삼국',  eraKey: '02-three-kingdoms' },
-        { href: 'korean-history/eras/03-north-south.html',         label: '남북국', eraKey: '03-north-south' },
-        { href: 'korean-history/eras/04-goryeo.html',              label: '고려',  eraKey: '04-goryeo' },
-        { href: 'korean-history/eras/05-joseon-early.html',        label: '조선전기', eraKey: '05-joseon-early' },
-        { href: 'korean-history/eras/06-joseon-late.html',         label: '조선후기', eraKey: '06-joseon-late' },
-        { href: 'korean-history/eras/07-modern-opening.html',      label: '개항기', eraKey: '07-modern-opening' },
-        { href: 'korean-history/eras/08-japanese-colonial.html',   label: '일제',  eraKey: '08-japanese-colonial' },
-        { href: 'korean-history/eras/09-republic.html',            label: '대한민국', eraKey: '09-republic' }
+        { href: 'korean-history-v2/index.html',                       label: '개관', overviewFor: 'main' },
+        { href: 'korean-history-v2/eras/01-prehistoric.html',         label: '선사',  eraKey: '01-prehistoric' },
+        { href: 'korean-history-v2/eras/02-three-kingdoms.html',      label: '삼국',  eraKey: '02-three-kingdoms' },
+        { href: 'korean-history-v2/eras/03-north-south.html',         label: '남북국', eraKey: '03-north-south' },
+        { href: 'korean-history-v2/eras/04-goryeo.html',              label: '고려',  eraKey: '04-goryeo' },
+        { href: 'korean-history-v2/eras/05-joseon-early.html',        label: '조선전기', eraKey: '05-joseon-early' },
+        { href: 'korean-history-v2/eras/06-joseon-late.html',         label: '조선후기', eraKey: '06-joseon-late' },
+        { href: 'korean-history-v2/eras/07-modern-opening.html',      label: '개항기', eraKey: '07-modern-opening' },
+        { href: 'korean-history-v2/eras/08-japanese-colonial.html',   label: '일제',  eraKey: '08-japanese-colonial' },
+        { href: 'korean-history-v2/eras/09-republic.html',            label: '대한민국', eraKey: '09-republic' }
       ]
     },
     science: {
