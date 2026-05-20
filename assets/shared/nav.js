@@ -58,7 +58,6 @@
       name: '자연과학사',
       latin: 'Science',
       base: 'science-history/',
-      wip: true,
       sections: [
         { href: 'science-history/index.html',              label: '개관',     overviewFor: 'main' },
         { href: 'science-history/eras/01-ancient.html',    label: '고대',     eraKey: '01-ancient' },
