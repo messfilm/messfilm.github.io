@@ -228,27 +228,26 @@ main.science { padding-bottom: 80px; }
   border-left: 3px solid var(--accent);
   display: grid;
   grid-template-columns: 88px 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-    "portrait header"
-    "portrait body";
   column-gap: 18px;
   row-gap: 6px;
+  align-items: start;
 }
 .scholar header {
-  grid-area: header;
+  grid-column: 2;
   display: flex;
   align-items: baseline;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 4px;
+  margin: 0 0 4px;
 }
 .scholar > p {
-  grid-area: body;
+  grid-column: 2;
+  margin: 0;
 }
 .scholar > p + p { margin-top: 8px; }
 .scholar__portrait {
-  grid-area: portrait;
+  grid-column: 1;
+  grid-row: 1 / -1;
   width: 88px;
   height: 96px;
   display: block;
