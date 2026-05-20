@@ -336,6 +336,359 @@ main.science { padding-bottom: 80px; }
   color: var(--accent);
 }
 
+/* ============================================================
+   Chapter narrative (시대 페이지의 흐름형 서술)
+   본문이 흘러가는 가운데 인물·에피소드·인터랙티브가 자연스럽게 등장.
+   ============================================================ */
+
+.chapter {
+  margin: 56px 0 8px;
+}
+.chapter__head {
+  border-top: 1px solid var(--ink);
+  padding-top: 22px;
+  margin-bottom: 28px;
+}
+.chapter__num {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--accent);
+  font-size: 16px;
+  letter-spacing: 0.06em;
+}
+.chapter__title {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: 28px;
+  margin: 6px 0 4px;
+  letter-spacing: -0.01em;
+}
+.chapter__title .latin {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink-mute);
+  font-size: 0.55em;
+  margin-left: 10px;
+}
+.chapter__years {
+  font-family: var(--serif-en);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-mute);
+  font-size: 14.5px;
+  letter-spacing: 0.04em;
+}
+
+/* 본문 단락 흐름 */
+.narrative {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.narrative > p,
+.narrative > blockquote {
+  font-size: 16px;
+  line-height: 1.95;
+  color: var(--ink);
+  margin: 0 0 1.2em;
+}
+.narrative > p .work {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--ink);
+}
+.narrative > p em {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--accent);
+}
+.narrative > p strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+.narrative > h3 {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: 18px;
+  margin: 32px 0 14px;
+  color: var(--ink);
+}
+.narrative > h3 .latin {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--accent);
+  font-size: 14px;
+  margin-left: 8px;
+}
+.narrative > blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 4px 0 4px 20px;
+  margin-left: 8px;
+  font-family: var(--serif-ko);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+.narrative > blockquote cite {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  font-family: var(--sans-ko);
+  font-size: 12px;
+  color: var(--ink-mute);
+  letter-spacing: 0.04em;
+}
+
+/* 본문 안 인물 카메오 — 단락 옆 작은 카드 */
+.inline-figure {
+  float: right;
+  clear: right;
+  width: 220px;
+  margin: 6px -180px 18px 24px;
+  padding: 14px 16px 12px;
+  background: var(--paper-light);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  font-family: var(--sans-ko);
+}
+.inline-figure--left {
+  float: left;
+  clear: left;
+  margin: 6px 24px 18px -180px;
+}
+.inline-figure__portrait {
+  width: 80px;
+  height: 88px;
+  display: block;
+  margin: 0 auto 8px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 50% 50% 4px 4px / 56% 56% 4px 4px;
+  overflow: hidden;
+}
+.inline-figure__portrait svg { display: block; width: 100%; height: 100%; }
+.inline-figure__caption {
+  text-align: center;
+}
+.inline-figure__name {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--ink);
+  display: block;
+}
+.inline-figure__name-en {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--ink-mute);
+  font-size: 11.5px;
+  display: block;
+}
+.inline-figure__life {
+  font-family: var(--serif-en);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  font-size: 11.5px;
+  display: block;
+  margin-top: 2px;
+}
+
+/* 본문 안 에피소드 박스 — 인라인 장면 */
+.inline-scene {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  margin: 22px 0 22px;
+  padding: 16px 18px;
+  background: var(--paper-light);
+  border-left: 3px solid var(--accent);
+  border-top: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+}
+.inline-scene__pictogram {
+  width: 56px;
+  height: 56px;
+  align-self: start;
+}
+.inline-scene__pictogram svg { width: 100%; height: 100%; display: block; }
+.inline-scene__meta {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+.inline-scene time {
+  font-family: var(--serif-en);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  font-size: 14px;
+}
+.inline-scene .place {
+  font-family: var(--sans-ko);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.inline-scene__body {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+.inline-scene__body strong {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 15.5px;
+}
+.inline-scene__body em,
+.inline-scene__body .work {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--accent);
+}
+.inline-scene__body .source {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--sans-ko);
+  font-size: 10.5px;
+  font-style: italic;
+  color: var(--ink-mute);
+  letter-spacing: 0.04em;
+}
+
+/* 인라인 인터랙티브 — 본문 중간에 들어가는 시뮬 */
+.inline-sim {
+  margin: 28px -40px;
+  padding: 20px 26px 24px;
+  background: var(--paper-light);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+}
+.inline-sim__head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.inline-sim__head .num {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--accent);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+.inline-sim__head h4 {
+  font-family: var(--serif-ko);
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+}
+.inline-sim__head .latin {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--ink-mute);
+  font-size: 13px;
+}
+.inline-sim__lead {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+/* 측면 보조 박스 (동양·이슬람, 학설 갈래 같은 평행 서술) */
+.aside-parallel {
+  margin: 28px 0;
+  padding: 20px 24px;
+  background: var(--paper-light);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+}
+.aside-parallel header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.aside-parallel header h4 {
+  font-family: var(--serif-ko);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+}
+.aside-parallel header .latin {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--gold);
+  font-size: 12px;
+}
+.aside-parallel p {
+  margin: 0 0 0.7em;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+.aside-parallel p:last-child { margin-bottom: 0; }
+.aside-parallel strong { color: var(--ink); font-weight: 700; }
+.aside-parallel em {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--gold);
+}
+
+/* 챕터간 단락 구분자 */
+.chapter-divider {
+  display: block;
+  margin: 56px auto;
+  text-align: center;
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--gold);
+  font-size: 18px;
+  letter-spacing: 0.4em;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .narrative { max-width: 100%; }
+  .inline-figure,
+  .inline-figure--left {
+    float: none;
+    width: 100%;
+    margin: 16px 0;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 14px;
+    align-items: center;
+    padding: 12px 14px;
+  }
+  .inline-figure__portrait { width: 80px; height: 88px; margin: 0; }
+  .inline-figure__caption { text-align: left; }
+  .inline-sim {
+    margin: 22px 0;
+    padding: 16px 18px;
+  }
+}
+@media (max-width: 600px) {
+  .inline-scene {
+    grid-template-columns: 48px 1fr;
+    padding: 14px 14px;
+    gap: 12px;
+  }
+  .inline-scene__pictogram { width: 48px; height: 48px; }
+  .narrative > p,
+  .narrative > blockquote { font-size: 15px; line-height: 1.85; }
+}
+
 /* ===== Episodes (시대 안의 짧은 장면들) ===== */
 .episodes {
   display: grid;
