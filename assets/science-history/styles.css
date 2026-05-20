@@ -1220,6 +1220,74 @@ main.science { padding-bottom: 80px; }
   line-height: 1.75;
 }
 
+/* ============================================================
+   Glossary — 본문 점선 단어 + hover 팝업
+   ============================================================ */
+
+.term {
+  background-image: linear-gradient(transparent 60%, rgba(42, 86, 128, 0.18) 60%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor: help;
+  border-bottom: 1px dotted var(--accent);
+  padding-bottom: 0;
+  transition: background 0.18s;
+}
+.term:hover {
+  background-image: linear-gradient(transparent 0%, rgba(42, 86, 128, 0.18) 0%);
+}
+
+.glossary-pop {
+  position: absolute;
+  z-index: 100;
+  max-width: 320px;
+  padding: 14px 16px;
+  background: var(--paper-light);
+  border: 1px solid var(--ink);
+  box-shadow: 0 6px 16px -4px rgba(31, 26, 20, 0.32);
+  font-family: var(--serif-ko);
+  color: var(--ink);
+}
+.glossary-pop__title {
+  font-weight: 700;
+  font-size: 15px;
+}
+.glossary-pop__hanja {
+  color: var(--ink-mute);
+  font-size: 11px;
+  margin-left: 4px;
+  font-family: var(--serif-ko);
+  font-weight: 500;
+}
+.glossary-pop__cat {
+  display: inline-block;
+  font-family: var(--sans-ko);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: var(--paper);
+  padding: 1px 7px;
+  margin-left: 8px;
+  border-radius: 2px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+.glossary-pop__body {
+  margin-top: 8px;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.glossary-pop__body em {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--accent);
+}
+@media (max-width: 600px) {
+  .glossary-pop { max-width: 90vw; }
+}
+
 /* ===== Sources note ===== */
 .sources-note {
   margin: 32px 0 0;
