@@ -40,10 +40,15 @@
    ============================================================ */
 
 .site-header {
-  border-bottom: 1px solid var(--rule);
   background: var(--paper);
   padding: 14px 0;
   font-family: var(--sans-ko);
+  border-bottom: 1px solid var(--rule);
+}
+/* When a collection sub-header is injected right after, drop the header's
+   bottom border so the two bars read as one continuous nav band. */
+.site-header:has(+ .site-subheader) {
+  border-bottom: none;
 }
 .site-header__inner {
   width: 100%;
@@ -115,8 +120,8 @@
    ============================================================ */
 
 .site-subheader {
-  background: var(--paper-light);
-  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  border-bottom: 1px solid var(--ink);
   position: sticky;
   top: 0;
   z-index: 40;
