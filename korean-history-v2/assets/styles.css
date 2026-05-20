@@ -103,6 +103,10 @@ h2 { font-size: clamp(26px, 3vw, 34px); }
 h3 { font-size: clamp(20px, 2vw, 24px); font-weight: 600; }
 h4 { font-size: 17px; font-weight: 600; }
 
+/* 섹션 본문 안의 h3는 위 콘텐츠와 적절한 간격 (개별 인라인 margin-top 의존 없이) */
+section > .container > h3 { margin-top: 36px; margin-bottom: 14px; }
+section > .container > header + h3 { margin-top: 8px; }
+
 p { margin: 0 0 1em; }
 p:last-child { margin-bottom: 0; }
 

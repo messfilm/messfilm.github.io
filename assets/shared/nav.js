@@ -120,12 +120,6 @@
   ].join('');
   inner.appendChild(brand);
 
-  var hint = document.createElement('span');
-  hint.className = 'site-header__hint';
-  hint.textContent = '↑ 대문으로';
-  hint.setAttribute('aria-hidden', 'true');
-  inner.appendChild(hint);
-
   header.appendChild(inner);
 
   // ---------- Build collection sub-header (if applicable) ----------

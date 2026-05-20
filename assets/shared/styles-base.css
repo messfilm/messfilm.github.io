@@ -105,15 +105,6 @@
   color: var(--gold);
 }
 
-/* Right-side hint (no chapter nav) */
-.site-header__hint {
-  font-family: var(--serif-en);
-  font-style: italic;
-  font-size: 12px;
-  color: var(--ink-mute);
-  letter-spacing: 0.04em;
-}
-
 /* ============================================================
    Collection sub-header (injected by nav.js when on a chapter page)
    전역 헤더 바로 아래에 컬렉션 정체성 + 섹션 nav
@@ -343,5 +334,4 @@ html, body { margin: 0; padding: 0; }
   .site-brand .brand-logo { width: 62px; height: 35px; }
   .site-brand .brand-prefix { font-size: 10px; letter-spacing: 0.14em; margin-bottom: 2px; }
   .site-brand .brand-names { font-size: 21px; }
-  .site-header__hint { display: none; }
 }
