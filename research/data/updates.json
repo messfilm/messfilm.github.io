@@ -171,6 +171,16 @@
       "description": "glossary 인물 19명 추가 (§ V 현대물리) + 팝업 마크다운 별표 → <em> 렌더링",
       "by": "Claude Code",
       "details": "플랑크·아인슈타인·보어·하이젠베르크·슈뢰딩거·러더포드·드 브로이·허블·왓슨·크릭·프랭클린·윌킨스·에이버리·톰슨·켈빈·마이클슨·펜지어스·윌슨·디랙. glossary.js의 popup body에서 textContent → 안전한 innerHTML로 변경 + *xxx* → <em> 변환. JSON 데이터의 *xxx*도 일괄 변환."
+    },
+    {
+      "id": "upd-0018",
+      "date": "2026-05-21",
+      "project": "science",
+      "page": "science.era.06-contemporary",
+      "type": "creation",
+      "description": "§ VI 동시대 — 정보와 생명 (1970 — 현재) 페이지 작성. 자연과학사 6편 모두 완성",
+      "by": "Father + Claude Code",
+      "details": "6 챕터 내러티브: 1) 표준모형과 인터넷의 씨앗 / 2) WWW와 정보 시대 / 3) 게놈을 읽다 / 4) 유전자 가위와 mRNA / 5) 새 우주·AI·살아 있는 시대 / 6) Coda — 닫지 않는 마무리. 인물 카메오 6명(버너스리·벤터·다우드나·샤르팡티에·카리코·힌턴). 인라인 장면 10개. 인터랙티브 3개(CRISPR·중력파·신경망). 마지막 챕터에서 2,600년 큰 줄기 회고. 자연과학사 1~6 모두 완결."
     }
   ]
 }
