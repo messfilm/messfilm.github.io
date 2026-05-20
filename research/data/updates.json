@@ -31,6 +31,36 @@
       "description": "자연과학사 placeholder 페이지 생성",
       "by": "Claude Code",
       "details": "6개 시대 구분과 안내문만 포함. 본문은 다음 단계에서 작성 예정."
+    },
+    {
+      "id": "upd-0004",
+      "date": "2026-05-20",
+      "project": "science",
+      "page": "science.main",
+      "type": "update",
+      "description": "자연과학사 메인을 본격 페이지로 전환",
+      "by": "Father + Claude Code",
+      "details": "Hero·통합 연표 SVG·6시대 카드·톤 안내 추가. 03만 활성, 나머지 5개는 작업중 배지."
+    },
+    {
+      "id": "upd-0005",
+      "date": "2026-05-20",
+      "project": "science",
+      "page": "science.era.03-revolution",
+      "type": "creation",
+      "description": "표본 시대 — 과학혁명 (1500~1700) 작성",
+      "by": "Father + Claude Code",
+      "details": "8명 핵심 인물, 시기 도식 SVG, 결정적 전환 4편, 인터랙티브 3개(태양 중심 모형 토글·케플러 제2법칙·뉴턴 만유인력), 동양·이슬람 박스 3개, 학설 갈래 3건."
+    },
+    {
+      "id": "upd-0006",
+      "date": "2026-05-20",
+      "project": "science",
+      "page": "science.foundation",
+      "type": "creation",
+      "description": "자연과학사 기획서 추가",
+      "by": "Claude Code",
+      "details": "docs/projects/science_history_dashboard_prompt.md. 시대 페이지의 표준 구조, 톤, 문화 범위, 인터랙티브 사양 정의."
     }
   ]
 }

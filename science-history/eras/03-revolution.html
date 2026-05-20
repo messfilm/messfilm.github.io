@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>§ III 과학혁명 (1500~1700) | 자연과학사 | 아들을 위한 아카이브</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="코페르니쿠스에서 뉴턴까지 200년. 천체·운동·인체·방법이 모두 다시 묻혀진 시대. 인물·결정적 전환·인터랙티브 시뮬레이션 3종.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="../../assets/shared/styles-base.css">
+<link rel="stylesheet" href="../../assets/science-history/styles.css">
+</head>
+<body class="shared-body collection-science" data-page-id="science.era.03-revolution">
+
+<main class="science">
+  <section class="sci-hero">
+    <div class="shared-container">
+      <span class="kicker">§ III · 03</span>
+      <h1>과학혁명<span class="latin">Scientific Revolution</span></h1>
+      <p class="subtitle">우주의 재배치 · 1500 — 1700</p>
+      <p class="lead">
+        200년 사이에 <em>천체</em>가 다시 배치되고, <em>운동</em>이 정량화되며,
+        <em>인체</em>가 새로 그려지고, 무엇보다 <em>방법</em>이 새로 묻힌다.
+        코페르니쿠스의 1543년 책 한 권에서 시작해 뉴턴의 1687년 *Principia*로 닫히는,
+        자연과학 역사의 가장 결정적인 한 호흡.
+      </p>
+      <div class="sci-stats">
+        <div class="sci-stat">
+          <span class="sci-stat__label">시간 범위</span>
+          <span class="sci-stat__value">200<span class="latin" style="font-size:0.5em;margin-left:4px;">yrs</span></span>
+          <span class="sci-stat__sub">1500 — 1700</span>
+        </div>
+        <div class="sci-stat">
+          <span class="sci-stat__label">핵심 인물</span>
+          <span class="sci-stat__value">8</span>
+          <span class="sci-stat__sub">코페르니쿠스 → 뉴턴</span>
+        </div>
+        <div class="sci-stat">
+          <span class="sci-stat__label">인터랙티브</span>
+          <span class="sci-stat__value">3</span>
+          <span class="sci-stat__sub">손으로 만져보기</span>
+        </div>
+        <div class="sci-stat">
+          <span class="sci-stat__label">결정적 저작</span>
+          <span class="sci-stat__value">1543<br>1687</span>
+          <span class="sci-stat__sub">시작과 끝</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shared-container">
+
+    <!-- ===== § I 시기 도식 ===== -->
+    <section class="sci-section" id="period-diagram">
+      <header>
+        <h2>시기 도식</h2>
+        <span class="latin">§ I &nbsp;·&nbsp; Period Diagram</span>
+      </header>
+      <p class="lead">결정적인 출판·발견들을 1500년에서 1700년 사이에 점으로 표시.</p>
+
+      <svg viewBox="0 0 1080 220" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="과학혁명 시기 도식" class="sci-timeline-svg">
+        <defs>
+          <style>
+            .ax  { stroke: #c8bea4; stroke-width: 1; fill: none; }
+            .axT { stroke: #c8bea4; stroke-width: 1; }
+            .axLb{ font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 11px; fill: #6b6253; }
+            .band{ fill: #2a5680; opacity: 0.18; }
+            .bandTop{ fill: #2a5680; }
+            .evt { font-family: 'Noto Sans KR', sans-serif; font-size: 10px; fill: #1f1a14; }
+            .evtY{ font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 11px; fill: #2a5680; }
+            .stem{ stroke: #2a5680; stroke-width: 1; }
+          </style>
+        </defs>
+
+        <!-- x = (year - 1500) * 4.85 + 60   for span 1500..1700 → 60..1030 -->
+        <rect class="band"    x="60" y="80" width="970" height="46" rx="3"/>
+        <rect class="bandTop" x="60" y="80" width="970" height="6"/>
+        <line class="ax" x1="60" y1="180" x2="1030" y2="180" />
+        <line class="axT" x1="60"   y1="178" x2="60"   y2="186"/>
+        <line class="axT" x1="302.5"   y1="178" x2="302.5"   y2="186"/>
+        <line class="axT" x1="545"   y1="178" x2="545"   y2="186"/>
+        <line class="axT" x1="787.5" y1="178" x2="787.5" y2="186"/>
+        <line class="axT" x1="1030"  y1="178" x2="1030"  y2="186"/>
+        <text class="axLb" x="60"    y="200" text-anchor="middle">1500</text>
+        <text class="axLb" x="302.5" y="200" text-anchor="middle">1550</text>
+        <text class="axLb" x="545"   y="200" text-anchor="middle">1600</text>
+        <text class="axLb" x="787.5" y="200" text-anchor="middle">1650</text>
+        <text class="axLb" x="1030"  y="200" text-anchor="middle">1700</text>
+
+        <!-- Event markers -->
+        <!-- 1543 코페르니쿠스 De Revolutionibus -->
+        <line class="stem" x1="268.55" y1="86" x2="268.55" y2="44"/>
+        <circle cx="268.55" cy="86" r="4" fill="#2a5680"/>
+        <text class="evtY" x="268.55" y="36" text-anchor="middle">1543</text>
+        <text class="evt"  x="268.55" y="22" text-anchor="middle">코페르니쿠스 De Revolutionibus</text>
+        <!-- 1543 베살리우스 De Humani Corporis Fabrica -->
+        <line class="stem" x1="268.55" y1="126" x2="268.55" y2="160"/>
+        <circle cx="268.55" cy="126" r="4" fill="#7c2030"/>
+        <text class="evt"  x="266" y="158" text-anchor="end">베살리우스 인체구조 ↑</text>
+        <!-- 1572 Tycho's supernova -->
+        <line class="stem" x1="409.7" y1="86" x2="409.7" y2="64"/>
+        <circle cx="409.7" cy="86" r="4" fill="#2a5680"/>
+        <text class="evtY" x="409.7" y="55" text-anchor="middle">1572</text>
+        <text class="evt"  x="409.7" y="42" text-anchor="middle">티코의 초신성</text>
+        <!-- 1609 케플러 1·2 -->
+        <line class="stem" x1="589.65" y1="86" x2="589.65" y2="50"/>
+        <circle cx="589.65" cy="86" r="4" fill="#2a5680"/>
+        <text class="evtY" x="589.65" y="42" text-anchor="middle">1609</text>
+        <text class="evt"  x="589.65" y="28" text-anchor="middle">케플러 1·2법칙</text>
+        <!-- 1610 갈릴레오 망원경 발견 -->
+        <line class="stem" x1="594.5" y1="126" x2="594.5" y2="156"/>
+        <circle cx="594.5" cy="126" r="4" fill="#a04030"/>
+        <text class="evt"  x="600" y="158">갈릴레오 망원경 발견</text>
+        <!-- 1620 베이컨 노붐 오르가눔 -->
+        <line class="stem" x1="643" y1="126" x2="643" y2="172"/>
+        <circle cx="643" cy="126" r="4" fill="#7c2030"/>
+        <text class="evt"  x="648" y="174">베이컨 노붐 오르가눔</text>
+        <!-- 1628 하비 De Motu Cordis -->
+        <line class="stem" x1="681.8" y1="126" x2="681.8" y2="146"/>
+        <circle cx="681.8" cy="126" r="4" fill="#7c2030"/>
+        <text class="evt"  x="687" y="148">하비 혈액 순환</text>
+        <!-- 1637 데카르트 방법서설 -->
+        <line class="stem" x1="725.45" y1="86" x2="725.45" y2="64"/>
+        <circle cx="725.45" cy="86" r="4" fill="#2a5680"/>
+        <text class="evtY" x="725.45" y="55" text-anchor="middle">1637</text>
+        <text class="evt"  x="725.45" y="42" text-anchor="middle">데카르트 방법서설</text>
+        <!-- 1665 후크 Micrographia -->
+        <line class="stem" x1="860.05" y1="126" x2="860.05" y2="158"/>
+        <circle cx="860.05" cy="126" r="4" fill="#a04030"/>
+        <text class="evt"  x="864" y="160">후크 Micrographia</text>
+        <!-- 1687 뉴턴 Principia -->
+        <line class="stem" x1="966.95" y1="86" x2="966.95" y2="44"/>
+        <circle cx="966.95" cy="86" r="4" fill="#2a5680"/>
+        <text class="evtY" x="966.95" y="36" text-anchor="middle">1687</text>
+        <text class="evt"  x="966.95" y="22" text-anchor="middle">뉴턴 Principia</text>
+      </svg>
+    </section>
+
+    <!-- ===== § II 핵심 인물 카드 ===== -->
+    <section class="sci-section" id="people">
+      <header>
+        <h2>핵심 인물</h2>
+        <span class="latin">§ II &nbsp;·&nbsp; Eight Lives</span>
+      </header>
+      <p class="lead">동시대를 살았지만 서로를 알지 못한 사람들이 많다. 200년의 호흡으로 보면 한 그림이다.</p>
+
+      <div class="scholars">
+        <article class="scholar">
+          <header>
+            <span class="name">니콜라우스 코페르니쿠스</span>
+            <span class="name-en">Nicolaus Copernicus</span>
+            <span class="life">1473 — 1543</span>
+          </header>
+          <p>폴란드 천문학자·성당 참사회원. 30년 가까이 묻어두었다가 임종 직전 출판한 <span class="work">De Revolutionibus Orbium Coelestium</span>(1543)이 *지구 중심* 모형을 *태양 중심*으로 뒤집는 출발점이 된다. 본인은 행성 궤도를 여전히 원으로 가정.</p>
+        </article>
+
+        <article class="scholar">
+          <header>
+            <span class="name">안드레아스 베살리우스</span>
+            <span class="name-en">Andreas Vesalius</span>
+            <span class="life">1514 — 1564</span>
+          </header>
+          <p>1543년 같은 해에 <span class="work">De Humani Corporis Fabrica</span> 출판. 갈레노스 이래 1,400년 동안 권위에 의존하던 인체 해부를 *직접 본 그림*으로 다시 그린다. 천체와 인체, 같은 해에 동시에 뒤집힌다.</p>
+        </article>
+
+        <article class="scholar">
+          <header>
+            <span class="name">갈릴레오 갈릴레이</span>
+            <span class="name-en">Galileo Galilei</span>
+            <span class="life">1564 — 1642</span>
+          </header>
+          <p>새 도구(망원경)와 새 언어(수학으로 쓴 자연)를 한 사람 안에. 목성의 위성·달의 산맥·금성의 위상으로 *태양 중심*에 결정적 증거를 던지고, 자유낙하의 정량 분석으로 운동학의 출발점을 만든다. 1633년 종교재판. 1642년 사망 — 그 해에 뉴턴이 태어난다.</p>
+        </article>
+
+        <article class="scholar">
+          <header>
+            <span class="name">요하네스 케플러</span>
+            <span class="name-en">Johannes Kepler</span>
+            <span class="life">1571 — 1630</span>
+          </header>
+          <p>티코 브라헤의 정밀 관측 데이터를 8년 동안 화성으로 씨름한 끝에 *원궤도*를 포기하고 *타원*에 도달. 천체의 운동을 처음으로 정량적 법칙(타원, 면적속도 일정, T² ∝ a³)으로 적는다. 신비주의자이자 수학자.</p>
+        </article>
+
+        <article class="scholar">
+          <header>
+            <span class="name">윌리엄 하비</span>
+            <span class="name-en">William Harvey</span>
+            <span class="life">1578 — 1657</span>
+          </header>
+          <p>1628 <span class="work">De Motu Cordis</span>. 혈액이 간에서 만들어져 소비된다는 갈레노스 모형을 폐기. 심장이 펌프이고 혈액이 *순환*함을 정량적으로 보인다. 측정과 모형이 의학에 들어온 순간.</p>
+        </article>
+
+        <article class="scholar">
+          <header>
+            <span class="name">르네 데카르트</span>
+            <span class="name-en">René Descartes</span>
+            <span class="life">1596 — 1650</span>
+          </header>
+          <p>1637 <span class="work">Discours de la méthode</span>. 의심을 도구로 삼는 *방법*과 좌표(해석기하)를 같은 책 안에 둔다. 자연을 수학으로 쓰는 어법을 다음 세기에 물려준다.</p>
+        </article>
+
+        <article class="scholar">
+          <header>
+            <span class="name">로버트 보일</span>
+            <span class="name-en">Robert Boyle</span>
+            <span class="life">1627 — 1691</span>
+          </header>
+          <p>"공기 펌프"로 진공의 성질을 실험하고, 압력-부피 관계(보일의 법칙)를 발견. 연금술과 화학의 경계에서 *측정 가능한 화학*을 향해 가는 길을 놓는다. Royal Society 창립 회원.</p>
+        </article>
+
+        <article class="scholar">
+          <header>
+            <span class="name">아이작 뉴턴</span>
+            <span class="name-en">Isaac Newton</span>
+            <span class="life">1643 — 1727</span>
+          </header>
+          <p>케플러의 천체 운동과 갈릴레오의 지상 운동을 *하나의 법칙*으로 통합. 1687 <span class="work">Philosophiæ Naturalis Principia Mathematica</span>. 만유인력과 운동 세 법칙으로 200년의 호흡을 닫는다. 미적분 동시 발견(라이프니츠와의 우선권 논쟁은 § VI).</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== § III 결정적 전환들 ===== -->
+    <section class="sci-section" id="shifts">
+      <header>
+        <h2>결정적 전환들</h2>
+        <span class="latin">§ III &nbsp;·&nbsp; What Got Rearranged</span>
+      </header>
+      <p class="lead">네 가지 영역이 동시에, 거의 같은 200년 안에, 각각 다시 묻힌다.</p>
+
+      <div class="themes">
+        <div class="theme">
+          <h3>천체 — 지구 중심에서 태양 중심으로 <span class="latin">Heavens</span></h3>
+          <p>코페르니쿠스의 가설이 *수학적으로 더 단순한 모형*으로 제출되고, 케플러의 정량적 법칙과 갈릴레오의 망원경 관측이 그 가설에 손에 잡히는 증거를 더한다.
+             역행 운동, 금성의 위상, 목성의 위성 — 모두 지구 중심에서는 어색하던 사실들이 태양 중심에서는 자연스럽게 설명된다.
+             § IV.1에서 두 모형을 직접 토글해 비교할 수 있다.</p>
+        </div>
+        <div class="theme">
+          <h3>운동 — 정성에서 정량으로 <span class="latin">Motion</span></h3>
+          <p>아리스토텔레스 자연철학이 "무거운 것은 본래의 자리로 돌아간다"고 정성적으로 설명했다면, 갈릴레오는 시계와 경사면으로 자유낙하를 측정해 <em>s ∝ t²</em>의 식을 얻는다.
+             케플러는 행성의 운동을 정량적 식 셋으로 적고, 뉴턴이 이 둘을 <em>F = ma</em>와 <em>F ∝ 1/r²</em>로 합친다. 자연이 수학으로 쓰여 있다는 가정이 자리잡는 200년.</p>
+        </div>
+        <div class="theme">
+          <h3>인체·생리 — 권위에서 관찰로 <span class="latin">Body</span></h3>
+          <p>베살리우스는 갈레노스의 1,400년 권위를 *직접 해부한 그림*으로 흔든다.
+             한 세대 뒤 하비는 심장의 박출량을 측정해 혈액이 *간에서 만들어져 소비*된다는 모형을 폐기하고 *순환*을 증명한다.
+             생리학에 측정과 모형이 들어선다.</p>
+        </div>
+        <div class="theme">
+          <h3>방법 — 무엇이 안다는 것인가 <span class="latin">Method</span></h3>
+          <p>베이컨의 귀납(<em>Novum Organum</em>, 1620)과 데카르트의 의심(<em>방법서설</em>, 1637)이 두 갈래의 답을 동시에 내놓는다.
+             자연을 권위로부터 떼어내 *방법*에 의존하기로 한 합의는, 200년의 모든 전환을 가능하게 한 토대.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== § IV 인터랙티브 ===== -->
+    <section class="sci-section" id="interactives">
+      <header>
+        <h2>손으로 만져보기</h2>
+        <span class="latin">§ IV &nbsp;·&nbsp; Interactive Models</span>
+      </header>
+      <p class="lead">200년의 핵심 발견 셋을 단순화한 모형으로. 정확한 수치가 아니라 *왜 그런 일이 일어나는가*를 손으로.</p>
+
+      <!-- IV.1 Heliocentric -->
+      <article class="sim-card">
+        <header>
+          <span class="num">§ IV.1</span>
+          <h3>태양 중심 vs 지구 중심</h3>
+          <span class="latin">Copernican vs Ptolemaic</span>
+        </header>
+        <p class="sim-intro">버튼으로 두 모형을 토글. 지구 중심 모형은 화성의 *역행 운동*을 설명하려 주전원(epicycle)을 도입한다. 태양 중심 모형에서는 역행이 그저 *두 행성의 속도 차*로 자연스럽게 나타난다.</p>
+        <div class="sim" data-sim-id="science.era.03-revolution.sim.heliocentric"></div>
+      </article>
+
+      <!-- IV.2 Kepler -->
+      <article class="sim-card">
+        <header>
+          <span class="num">§ IV.2</span>
+          <h3>케플러 제2법칙 — 면적 속도 일정</h3>
+          <span class="latin">Equal Areas in Equal Times</span>
+        </header>
+        <p class="sim-intro">행성-태양을 잇는 선이 같은 시간 동안 휘젓는 *부채꼴 면적*은 일정하다. 즉 가까울 때 빠르고, 멀어지면 느리다. 이심률 슬라이더로 궤도의 찌그러짐을 조절해보자.</p>
+        <div class="sim" data-sim-id="science.era.03-revolution.sim.kepler"></div>
+      </article>
+
+      <!-- IV.3 Newton -->
+      <article class="sim-card">
+        <header>
+          <span class="num">§ IV.3</span>
+          <h3>뉴턴 만유인력 — 원·타원·포물</h3>
+          <span class="latin">Inverse-Square Orbits</span>
+        </header>
+        <p class="sim-intro">힘은 거리의 제곱에 반비례한다. 초기 속도가 작으면 떨어지고, 적절하면 타원 궤도, 임계 속도 이상이면 영영 돌아오지 않는다. 거리·초기속도 슬라이더로 궤도의 모양이 어떻게 바뀌는지 보자.</p>
+        <div class="sim" data-sim-id="science.era.03-revolution.sim.newton-gravity"></div>
+      </article>
+    </section>
+
+    <!-- ===== § V 동양·이슬람 기여 ===== -->
+    <section class="sci-section" id="east">
+      <header>
+        <h2>같은 시기, 다른 자리</h2>
+        <span class="latin">§ V &nbsp;·&nbsp; Beyond Europe</span>
+      </header>
+      <p class="lead">유럽이 *다시 묻고* 있는 동안 동양과 이슬람권에서도 천문·의학·기술이 진행 중이었다.</p>
+
+      <div class="callout-box">
+        <h3>중국 — 명·청 전환기 <span class="latin">Ming → Qing</span></h3>
+        <p><strong>서광계와 마테오 리치</strong> — 1607년 유클리드 <em>원론</em> 6권 번역(<em>幾何原本</em>). 예수회 선교사들을 통해 유럽 천문학(케플러와 동시대의 천체관)과 중국 천문 전통이 처음으로 본격적으로 접한다.</p>
+        <p><strong>송응성 <em>천공개물</em>(1637)</strong> — 농업·금속·직조·도자·화약 등 17세기 중국의 기술을 도판과 함께 정리. 같은 해 데카르트의 <em>방법서설</em>이 출판된다. 자연철학의 *방법*과 응용기술의 *체계*가 두 대륙에서 동시에.</p>
+      </div>
+
+      <div class="callout-box">
+        <h3>이슬람권 — 후기 천문 전통 <span class="latin">Late Islamic Astronomy</span></h3>
+        <p><strong>마라가 학파의 유산</strong> — 13세기 나시르 알딘 알투시의 "투시 짝(Tusi couple)"이 코페르니쿠스의 모형에 영향을 주었다는 학설이 강력하다.
+           16~17세기 이스탄불 천문대(타키 알딘, 1577)는 티코 브라헤의 우라니보르(1576)와 거의 동시기에 정밀 관측을 진행했지만 1580년 폐쇄.</p>
+        <p>유럽이 1500~1700년에 빠르게 변화한 한 가지 이유는 종교적·정치적 분권이 인쇄술과 만나 *지속적인 출판과 비판*을 가능하게 한 것이다. 이슬람권의 천문 전통은 그보다 일찍 정밀했지만, 제도의 모양이 달랐다.</p>
+      </div>
+
+      <div class="callout-box">
+        <h3>조선 — 실학의 씨앗 <span class="latin">Joseon · Early Silhak</span></h3>
+        <p>임진왜란 직전 <strong>이수광</strong>의 <em>지봉유설</em>(1614)이 마테오 리치의 <em>곤여만국전도</em>를 소개하며 *조선 바깥의 세계*를 들여놓는다.
+           17세기 후반 <strong>홍대용</strong>·박지원 등의 북학파에 이르러 지전설·우주관의 토론이 시작되지만, 그것이 본격적인 자연철학으로 자리잡는 것은 다음 시대(§ IV 고전과학 시기)이다.</p>
+      </div>
+    </section>
+
+    <!-- ===== § VI 학설 갈래 ===== -->
+    <section class="sci-section" id="debates">
+      <header>
+        <h2>학설 갈래</h2>
+        <span class="latin">§ VI &nbsp;·&nbsp; Where Stories Split</span>
+      </header>
+      <p class="lead">단정하지 않는다. 어디까지가 합의이고 어디부터가 해석인지 표시한다.</p>
+
+      <div class="debates">
+        <div class="debate">
+          <h3>갈릴레오 재판 — 종교 vs 과학?</h3>
+          <dl>
+            <dt>속설</dt>
+            <dd>"종교의 권위가 과학의 진실을 탄압했다"는 단순 도식.</dd>
+            <dt>학계</dt>
+            <dd>실제로는 17세기 가톨릭 교회 내부의 신학 정치, 갈릴레오 본인의 외교적 실수, 코페르니쿠스 가설의 *증거 부족* 문제, 트리엔트 공의회 이후의 교회 분위기 등이 복잡하게 얽힌 사건. 단순 대립 구도로는 잡히지 않는다.</dd>
+            <dt>본문</dt>
+            <dd>"종교 vs 과학"으로 환원하지 않는다. 사건의 복잡성을 그대로 둔다.</dd>
+          </dl>
+        </div>
+
+        <div class="debate">
+          <h3>미적분 우선권 — 뉴턴 vs 라이프니츠</h3>
+          <dl>
+            <dt>사실</dt>
+            <dd>뉴턴이 1666년경 *유율법(fluxions)*으로 먼저 발견. 출판은 라이프니츠가 1684년 먼저(<em>Acta Eruditorum</em>).</dd>
+            <dt>합의</dt>
+            <dd>두 사람의 <em>독립 발견</em>이라는 것이 현 학계의 합의. 1710년대 영국 왕립학회의 공식 판정은 뉴턴 손을 들어주었지만 그 자체가 정치적이었다.</dd>
+            <dt>본문</dt>
+            <dd>독립 발견으로 기록한다. 우선권 논쟁은 *과학자들도 사람*이라는 사례로 별도 박스에서 짧게.</dd>
+          </dl>
+        </div>
+
+        <div class="debate">
+          <h3>"과학혁명"이라는 명칭 자체</h3>
+          <dl>
+            <dt>전통</dt>
+            <dd>코이레·버터필드 이래 1500~1700년의 변화는 "혁명"으로 불려왔다.</dd>
+            <dt>비판</dt>
+            <dd>최근 과학사학(쉐이핀 등)은 *혁명*이라는 어법 자체가 19세기 이후 만들어진 신화에 가깝다고 본다. 실제 진행은 더 느리고 누적적.</dd>
+            <dt>본문</dt>
+            <dd>편의상 "과학혁명"이라는 명칭을 쓰되, 변화가 *한 번에 일어난 것*이 아니라 *200년 동안 누적된 것*임을 본문에서 강조한다.</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== § VII 출처 메모 ===== -->
+    <section class="sci-section" id="sources">
+      <header>
+        <h2>출처 메모</h2>
+        <span class="latin">§ VII &nbsp;·&nbsp; Citations</span>
+      </header>
+      <p class="lead">이 페이지의 모든 사실은 다음 출처에서 교차 확인되었다. 시뮬레이션은 교육 목적의 *단순화 모형*이며 실제 천체 데이터의 정확한 재현은 아니다.</p>
+
+      <div class="sources-note">
+        주요 출처 — MacTutor History of Mathematics (St Andrews), Stanford Encyclopedia of Philosophy, Galileo Project (Rice), Newton Project (Oxford), NASA Solar System Exploration, Encyclopædia Britannica. 자세한 목록과 페이지별 사용처는
+        <a href="../../research/science.html">/research/science.html</a>
+        에서 확인할 수 있다.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../../assets/shared/nav.js" defer></script>
+<script src="../../assets/shared/footer.js" defer></script>
+<script src="../../assets/science-history/interactives/sim-heliocentric.js" defer></script>
+<script src="../../assets/science-history/interactives/sim-kepler.js" defer></script>
+<script src="../../assets/science-history/interactives/sim-newton-gravity.js" defer></script>
+</body>
+</html>

@@ -2,183 +2,283 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>자연과학사 — 작업중 | 아들을 위한 아카이브</title>
+<title>자연과학사 | 아들을 위한 아카이브</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="탈레스부터 양자컴퓨터까지, 자연과학의 발견사. 현재 자료를 정리 중입니다.">
+<meta name="description" content="탈레스의 만물 근원에 대한 물음부터 양자컴퓨터까지, 자연과학의 발견사를 6개 시대로 정리한 학습 자료. 인터랙티브 시뮬레이션 포함.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
 <link rel="stylesheet" href="../assets/shared/styles-base.css">
-
-<style>
-  .wip-hero {
-    padding: 80px 0 40px;
-    text-align: center;
-  }
-  .wip-hero .latin {
-    color: var(--accent);
-    font-size: 22px;
-    letter-spacing: 0.04em;
-  }
-  .wip-hero h1 {
-    font-family: var(--serif-ko);
-    font-size: 52px;
-    font-weight: 700;
-    margin: 14px 0 8px;
-    letter-spacing: -0.01em;
-  }
-  .wip-hero .subtitle {
-    font-family: var(--serif-en);
-    font-style: italic;
-    font-size: 22px;
-    color: var(--ink-mute);
-    margin-bottom: 28px;
-  }
-  .wip-badge {
-    display: inline-block;
-    padding: 6px 16px;
-    font-family: var(--sans-ko);
-    font-size: 12px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--paper);
-    background: var(--accent);
-    border-radius: 2px;
-  }
-  .wip-prose {
-    max-width: 640px;
-    margin: 48px auto 0;
-    font-size: 16px;
-    line-height: 1.85;
-    color: var(--ink-soft);
-  }
-  .wip-prose p { margin-bottom: 1.2em; }
-  .wip-prose em {
-    font-family: var(--serif-en);
-    font-style: italic;
-    color: var(--accent);
-  }
-  .wip-eras {
-    max-width: 760px;
-    margin: 48px auto 0;
-    padding: 28px 32px;
-    border: 1px solid var(--rule);
-    background: var(--paper-light);
-    font-family: var(--sans-ko);
-    font-size: 13px;
-  }
-  .wip-eras h2 {
-    font-family: var(--serif-ko);
-    font-size: 17px;
-    font-weight: 600;
-    margin: 0 0 18px;
-    color: var(--ink);
-  }
-  .wip-eras ol {
-    counter-reset: era;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px 28px;
-  }
-  .wip-eras li {
-    counter-increment: era;
-    padding-left: 36px;
-    position: relative;
-    color: var(--ink-soft);
-    line-height: 1.55;
-  }
-  .wip-eras li::before {
-    content: counter(era, upper-roman);
-    position: absolute;
-    left: 0;
-    top: 1px;
-    font-family: var(--serif-en);
-    font-style: italic;
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 14px;
-  }
-  .wip-eras li .era-years {
-    display: block;
-    font-family: var(--serif-en);
-    color: var(--ink-mute);
-    font-size: 11px;
-    letter-spacing: 0.04em;
-    margin-top: 2px;
-  }
-  .wip-cta {
-    margin: 48px auto 0;
-    max-width: 640px;
-    text-align: center;
-    font-family: var(--sans-ko);
-    font-size: 13px;
-  }
-  .wip-cta a {
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid var(--accent);
-    padding-bottom: 2px;
-  }
-  @media (max-width: 640px) {
-    .wip-hero h1 { font-size: 38px; }
-    .wip-eras ol { grid-template-columns: 1fr; }
-  }
-</style>
+<link rel="stylesheet" href="../assets/science-history/styles.css">
 </head>
 <body class="shared-body collection-science" data-page-id="science.main">
 
-<main>
-  <section class="wip-hero">
+<main class="science">
+  <section class="sci-hero">
     <div class="shared-container">
-      <span class="latin shared-latin">§ III</span>
-      <h1>자연과학사</h1>
-      <p class="subtitle">Natural Science History</p>
-      <span class="wip-badge">작업중</span>
+      <span class="kicker">§ III · est. 2026</span>
+      <h1>자연과학사<span class="latin">Natural Science History</span></h1>
+      <p class="subtitle">탈레스의 물음부터 양자컴퓨터까지</p>
+      <p class="lead">
+        인간이 <em>자연을 어떻게 알아왔는지</em>의 기록.
+        밀레토스 항구에서 시작된 한 가지 물음 — *만물의 근원은 무엇인가* —
+        이 어떻게 알하이삼의 광학으로, 케플러의 8년 데이터 씨름으로,
+        아인슈타인의 공간 곡률로, 그리고 오늘의 양자 큐비트로 이어졌는지.
+        6개 시대로 나눠 인물·발견·전환을 정리하고,
+        손으로 만져 이해할 수 있도록 <em>인터랙티브 시뮬레이션</em>을 포함한다.
+      </p>
+      <div class="sci-stats">
+        <div class="sci-stat">
+          <span class="sci-stat__label">시대 구분</span>
+          <span class="sci-stat__value">6</span>
+          <span class="sci-stat__sub">고대 → 동시대</span>
+        </div>
+        <div class="sci-stat">
+          <span class="sci-stat__label">시간 범위</span>
+          <span class="sci-stat__value">~2,600<span class="latin" style="font-size:0.5em;margin-left:4px;">yrs</span></span>
+          <span class="sci-stat__sub">BC 600 — 현재</span>
+        </div>
+        <div class="sci-stat">
+          <span class="sci-stat__label">인터랙티브</span>
+          <span class="sci-stat__value">~18</span>
+          <span class="sci-stat__sub">시대당 2~4개 예정</span>
+        </div>
+        <div class="sci-stat">
+          <span class="sci-stat__label">학설 처리</span>
+          <span class="sci-stat__value">병기</span>
+          <span class="sci-stat__sub">갈래는 양립 서술</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <div class="shared-container">
-    <div class="wip-prose">
-      <p>
-        탈레스의 <em>만물의 근원은 무엇인가</em>에서 시작해,
-        아리스타르코스의 태양 중심 가설, 알하이삼의 광학,
-        코페르니쿠스의 천체 회전, 케플러의 행성 운동, 뉴턴의 만유인력,
-        다윈의 진화, 멘델의 유전, 맥스웰의 전자기,
-        아인슈타인의 상대성, 양자역학, DNA 이중나선,
-        그리고 오늘의 양자컴퓨터와 인공지능까지.
-      </p>
-      <p>
-        인간이 <em>자연을 어떻게 알아왔는지</em>의 기록을 6개 시대로 정리합니다.
-        현재 기획서를 작성하고 자료를 모으는 중입니다.
-      </p>
-    </div>
 
-    <div class="wip-eras">
-      <h2>예정된 6개 시대</h2>
-      <ol>
-        <li>고대 — 자연철학의 시작
-          <span class="era-years">BC 600 — AD 500</span></li>
-        <li>중세 — 빛과 균형의 학문
-          <span class="era-years">AD 500 — 1500</span></li>
-        <li>과학혁명 — 우주의 재배치
-          <span class="era-years">1500 — 1700</span></li>
-        <li>고전과학 — 법칙의 시대
-          <span class="era-years">1700 — 1900</span></li>
-        <li>현대물리 — 원자와 시공
-          <span class="era-years">1900 — 1970</span></li>
-        <li>동시대 — 정보와 생명
-          <span class="era-years">1970 — 현재</span></li>
-      </ol>
-    </div>
+    <!-- ===== § I 통합 연표 SVG ===== -->
+    <section class="sci-section" id="timeline">
+      <header>
+        <h2>통합 연표</h2>
+        <span class="latin">§ I &nbsp;·&nbsp; Integrated Timeline</span>
+      </header>
+      <p class="lead">자연을 알아온 2,600년을 6개 띠로 나누어 한눈에. 띠 위의 점은 그 시대의 결정적 사건이다.</p>
 
-    <p class="wip-cta">
-      현재 진행 상황을 보려면 →
-      <a href="../research/science.html">/research/science.html</a>
-    </p>
+      <svg viewBox="0 0 1080 380" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="자연과학사 통합 연표" class="sci-timeline-svg">
+        <defs>
+          <style>
+            .ax    { stroke: #c8bea4; stroke-width: 1; fill: none; }
+            .axT   { stroke: #c8bea4; stroke-width: 1; }
+            .axLb  { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 11px; fill: #6b6253; }
+            .erat  { font-family: 'Noto Serif KR', serif; font-weight: 700; font-size: 13px; fill: #1f1a14; }
+            .erat-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 11px; fill: #6b6253; }
+            .seg-1 { fill: #b58853; }
+            .seg-2 { fill: #6a8f7e; }
+            .seg-3 { fill: #2a5680; }
+            .seg-4 { fill: #c4a64a; }
+            .seg-5 { fill: #7c2030; }
+            .seg-6 { fill: #3a3328; }
+            .evt   { font-family: 'Noto Sans KR', sans-serif; font-size: 9.5px; fill: #1f1a14; }
+            .evtY  { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 10px; fill: #b08d4d; }
+            .seg:hover .seg-bg { opacity: 0.85; }
+            .seg .seg-bg { transition: opacity 0.18s; }
+          </style>
+        </defs>
+
+        <!-- Axis: BC 600 .. AD 2026 over 980 pixels (60..1040), so unit = 980/2626 = 0.3732
+             yearToX(y) = (y - (-600)) * 0.3732 + 60 = (y + 600) * 0.3732 + 60
+             y = -600 -> 60         (BC 600)
+             y = 0    -> 283.92     (AD 0)
+             y = 500  -> 470.51     (AD 500, end of §I)
+             y = 1000 -> 657.10     (AD 1000)
+             y = 1500 -> 843.69     (AD 1500, end of §II)
+             y = 1700 -> 918.32     (end of §III, start of §IV)
+             y = 1900 -> 992.95     (end of §IV)
+             y = 1970 -> 1019.07    (end of §V)
+             y = 2026 -> 1040       (current)
+        -->
+
+        <!-- Axis line at y=320 -->
+        <line class="ax" x1="60" y1="320" x2="1040" y2="320" />
+        <line class="axT" x1="60"      y1="318" x2="60"      y2="326" />
+        <line class="axT" x1="283.92"  y1="318" x2="283.92"  y2="326" />
+        <line class="axT" x1="470.51"  y1="318" x2="470.51"  y2="326" />
+        <line class="axT" x1="657.10"  y1="318" x2="657.10"  y2="326" />
+        <line class="axT" x1="843.69"  y1="318" x2="843.69"  y2="326" />
+        <line class="axT" x1="918.32"  y1="318" x2="918.32"  y2="326" />
+        <line class="axT" x1="992.95"  y1="318" x2="992.95"  y2="326" />
+        <line class="axT" x1="1019.07" y1="318" x2="1019.07" y2="326" />
+        <line class="axT" x1="1040"    y1="318" x2="1040"    y2="326" />
+
+        <text class="axLb" x="60"      y="340" text-anchor="middle">BC 600</text>
+        <text class="axLb" x="283.92"  y="340" text-anchor="middle">0</text>
+        <text class="axLb" x="470.51"  y="340" text-anchor="middle">500</text>
+        <text class="axLb" x="657.10"  y="340" text-anchor="middle">1000</text>
+        <text class="axLb" x="843.69"  y="340" text-anchor="middle">1500</text>
+        <text class="axLb" x="918.32"  y="340" text-anchor="middle">1700</text>
+        <text class="axLb" x="992.95"  y="340" text-anchor="middle">1900</text>
+        <text class="axLb" x="1019.07" y="340" text-anchor="middle">1970</text>
+        <text class="axLb" x="1040"    y="340" text-anchor="end">2026</text>
+
+        <!-- ===== Era bands ===== -->
+        <!-- §I 고대 BC600 - 500 -->
+        <g class="seg">
+          <rect class="seg-bg seg-1" x="60" y="58" width="410.51" height="34" rx="3" opacity="0.18"/>
+          <rect class="seg-1" x="60" y="60" width="410.51" height="6"/>
+          <text class="erat"   x="68" y="78">§ I 고대</text>
+          <text class="erat-en" x="68" y="90">Antiquity · BC 600 — AD 500</text>
+          <circle class="seg-1" cx="120" cy="120" r="3.5"/><text class="evt" x="126" y="124">탈레스</text><text class="evtY" x="60" y="112">BC 585</text>
+          <circle class="seg-1" cx="180" cy="120" r="3.5"/><text class="evt" x="186" y="124">피타고라스</text>
+          <circle class="seg-1" cx="245" cy="120" r="3.5"/><text class="evt" x="251" y="124">유클리드</text>
+          <circle class="seg-1" cx="300" cy="120" r="3.5"/><text class="evt" x="306" y="124">아르키메데스</text>
+          <circle class="seg-1" cx="370" cy="120" r="3.5"/><text class="evt" x="376" y="124">프톨레마이오스</text>
+        </g>
+
+        <!-- §II 중세 500 - 1500 -->
+        <g class="seg">
+          <rect class="seg-bg seg-2" x="470.51" y="58" width="373.18" height="34" rx="3" opacity="0.18"/>
+          <rect class="seg-2" x="470.51" y="60" width="373.18" height="6"/>
+          <text class="erat"   x="478" y="78">§ II 중세</text>
+          <text class="erat-en" x="478" y="90">Medieval · 500 — 1500</text>
+          <circle class="seg-2" cx="565" cy="148" r="3.5"/><text class="evt" x="571" y="152">알하이삼 광학</text><text class="evtY" x="540" y="140">~1015</text>
+          <circle class="seg-2" cx="635" cy="148" r="3.5"/><text class="evt" x="641" y="152">이븐 시나</text>
+          <circle class="seg-2" cx="745" cy="148" r="3.5"/><text class="evt" x="751" y="152">오레슴</text>
+          <circle class="seg-2" cx="820" cy="148" r="3.5"/><text class="evt" x="826" y="152">파리 대학</text>
+        </g>
+
+        <!-- §III 과학혁명 1500 - 1700 -->
+        <g class="seg">
+          <rect class="seg-bg seg-3" x="843.69" y="58" width="74.63" height="34" rx="3" opacity="0.18"/>
+          <rect class="seg-3" x="843.69" y="60" width="74.63" height="6"/>
+          <text class="erat"   x="848" y="78">§ III 과학혁명</text>
+          <text class="erat-en" x="848" y="90">Revolution · 1500 — 1700</text>
+          <circle class="seg-3" cx="847" cy="174" r="3.5"/><text class="evt" x="853" y="178" font-size="9">1543 코페르니쿠스</text>
+          <circle class="seg-3" cx="867" cy="190" r="3.5"/><text class="evt" x="873" y="194" font-size="9">1609 케플러</text>
+          <circle class="seg-3" cx="888" cy="206" r="3.5"/><text class="evt" x="894" y="210" font-size="9">1610 갈릴레오</text>
+          <circle class="seg-3" cx="914" cy="222" r="3.5"/><text class="evt" x="920" y="226" font-size="9">1687 뉴턴 Principia</text>
+        </g>
+
+        <!-- §IV 고전과학 1700 - 1900 -->
+        <g class="seg">
+          <rect class="seg-bg seg-4" x="918.32" y="58" width="74.63" height="34" rx="3" opacity="0.18"/>
+          <rect class="seg-4" x="918.32" y="60" width="74.63" height="6"/>
+          <text class="erat"   x="922" y="78">§ IV 고전과학</text>
+          <text class="erat-en" x="922" y="90">Classical · 1700 — 1900</text>
+          <circle class="seg-4" cx="930" cy="240" r="3.5"/><text class="evt" x="936" y="244" font-size="9">패러데이</text>
+          <circle class="seg-4" cx="955" cy="240" r="3.5"/><text class="evt" x="961" y="244" font-size="9">맥스웰</text>
+          <circle class="seg-4" cx="980" cy="240" r="3.5"/><text class="evt" x="986" y="244" font-size="9">다윈 1859</text>
+        </g>
+
+        <!-- §V 현대물리 1900 - 1970 -->
+        <g class="seg">
+          <rect class="seg-bg seg-5" x="992.95" y="58" width="26.12" height="34" rx="3" opacity="0.18"/>
+          <rect class="seg-5" x="992.95" y="60" width="26.12" height="6"/>
+          <text class="erat"   x="996" y="78" font-size="11">§ V 현대물리</text>
+          <text class="erat-en" x="996" y="90" font-size="9">Modern · 1900 — 1970</text>
+          <circle class="seg-5" cx="999"  cy="258" r="3.5"/><text class="evt" x="1005" y="262" font-size="9">1905 아인슈타인</text>
+          <circle class="seg-5" cx="1009" cy="274" r="3.5"/><text class="evt" x="1015" y="278" font-size="9">1925 양자역학</text>
+          <circle class="seg-5" cx="1017" cy="290" r="3.5"/><text class="evt" x="1023" y="294" font-size="9" text-anchor="end">1953 DNA</text>
+        </g>
+
+        <!-- §VI 동시대 1970 - 2026 -->
+        <g class="seg">
+          <rect class="seg-bg seg-6" x="1019.07" y="58" width="20.93" height="34" rx="3" opacity="0.18"/>
+          <rect class="seg-6" x="1019.07" y="60" width="20.93" height="6"/>
+          <text class="erat"   x="1040" y="78" font-size="11" text-anchor="end">§ VI 동시대</text>
+          <text class="erat-en" x="1040" y="90" font-size="9" text-anchor="end">Contemporary · 1970 — ·</text>
+        </g>
+      </svg>
+    </section>
+
+    <!-- ===== § II 시대 카드 ===== -->
+    <section class="sci-section" id="eras">
+      <header>
+        <h2>6개 시대</h2>
+        <span class="latin">§ II &nbsp;·&nbsp; Six Eras</span>
+      </header>
+      <p class="lead">현재 작업이 끝난 것은 § III 과학혁명. 나머지 시대는 점진적으로 추가된다.</p>
+
+      <div class="era-cards">
+        <div class="era-card disabled" aria-disabled="true">
+          <span class="era-num">§ I</span>
+          <h3 class="era-title">고대 — 자연철학의 시작 <span class="badge-wip">작업중</span></h3>
+          <p class="era-period">BC 600 — AD 500</p>
+          <p class="era-desc">밀레토스 항구에서 시작된 한 가지 물음. 자연을 신화에서 떼어내고 *원소·운동·천체*에 대한 첫 합리적 설명들이 만들어진다.</p>
+          <p class="era-people"><strong>핵심 인물</strong>탈레스 · 피타고라스 · 아리스토텔레스 · 아리스타르코스 · 유클리드 · 아르키메데스 · 프톨레마이오스</p>
+        </div>
+
+        <div class="era-card disabled" aria-disabled="true">
+          <span class="era-num">§ II</span>
+          <h3 class="era-title">중세 — 빛과 균형의 학문 <span class="badge-wip">작업중</span></h3>
+          <p class="era-period">AD 500 — 1500</p>
+          <p class="era-desc">이슬람 황금기의 광학·의학·천문, 그리고 유럽 대학의 형성. 정량적 사고가 자라난다.</p>
+          <p class="era-people"><strong>핵심 인물</strong>알하이삼 · 이븐 시나 · 알 콰리즈미 · 오레슴 · 코페르니쿠스 직전 세대</p>
+        </div>
+
+        <a class="era-card" href="eras/03-revolution.html">
+          <span class="era-num">§ III</span>
+          <h3 class="era-title">과학혁명 — 우주의 재배치</h3>
+          <p class="era-period">1500 — 1700</p>
+          <p class="era-desc">천체·운동·인체 모두 다시 묻고, *방법*에 대해 새로 묻는다. 코페르니쿠스에서 뉴턴까지의 200년.</p>
+          <p class="era-people"><strong>핵심 인물</strong>코페르니쿠스 · 베살리우스 · 갈릴레오 · 케플러 · 데카르트 · 하비 · 보일 · 뉴턴</p>
+        </a>
+
+        <div class="era-card disabled" aria-disabled="true">
+          <span class="era-num">§ IV</span>
+          <h3 class="era-title">고전과학 — 법칙의 시대 <span class="badge-wip">작업중</span></h3>
+          <p class="era-period">1700 — 1900</p>
+          <p class="era-desc">전기와 자기가 한 가지 힘으로 묶이고, 열역학·진화·주기율이 자리잡는다.</p>
+          <p class="era-people"><strong>핵심 인물</strong>오일러 · 라부아지에 · 패러데이 · 맥스웰 · 다윈 · 멘델 · 멘델레예프</p>
+        </div>
+
+        <div class="era-card disabled" aria-disabled="true">
+          <span class="era-num">§ V</span>
+          <h3 class="era-title">현대물리 — 원자와 시공 <span class="badge-wip">작업중</span></h3>
+          <p class="era-period">1900 — 1970</p>
+          <p class="era-desc">양자와 상대성. 시간과 공간이 휘고, 입자가 파동이 된다. 그리고 DNA.</p>
+          <p class="era-people"><strong>핵심 인물</strong>플랑크 · 아인슈타인 · 보어 · 하이젠베르크 · 슈뢰딩거 · 디랙 · 왓슨 · 크릭 · 프랭클린</p>
+        </div>
+
+        <div class="era-card disabled" aria-disabled="true">
+          <span class="era-num">§ VI</span>
+          <h3 class="era-title">동시대 — 정보와 생명 <span class="badge-wip">작업중</span></h3>
+          <p class="era-period">1970 — 현재</p>
+          <p class="era-desc">DNA 시퀀싱·인터넷·표준모형·CRISPR·양자컴퓨터·LLM. 인간이 생명과 정보를 다루기 시작한다.</p>
+          <p class="era-people"><strong>핵심 인물</strong>사이언스 + 엔지니어링이 같이 가는 시대 — 게놈 컨소시엄 · 두드나 · 호프필드 · 힌턴</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== § III 톤 안내 ===== -->
+    <section class="sci-section" id="tone">
+      <header>
+        <h2>이 자료의 톤</h2>
+        <span class="latin">§ III &nbsp;·&nbsp; How We Tell It</span>
+      </header>
+      <div class="themes">
+        <div class="theme">
+          <h3>인물 중심 + 개념 균형 <span class="latin">Through Lives</span></h3>
+          <p>케플러를 <em>법칙 셋</em>이 아니라, 8년 동안 화성 데이터와 씨름한 한 사람의 이야기로. 다윈을 *진화*가 아니라 비글호 5년의 관찰 노트로.
+             다만 일대기로 흐르지 않게 핵심 개념을 함께. 만져 이해할 수 있는 것은 시뮬레이션에 맡긴다.</p>
+        </div>
+        <div class="theme">
+          <h3>서양 주류 + 동양·이슬람 기여 <span class="latin">Beyond the Greek-to-Newton Line</span></h3>
+          <p>큰 줄기는 그리스 → 이슬람 황금기 → 르네상스 유럽 → 근대 서양 → 동시대 글로벌의 흐름이다. 이 흐름을 따라간다.
+             동양·이슬람권의 기여는 각 시대 페이지의 <em>별도 서술 박스</em>에서, 변두리가 아닌 평행한 가치 있는 발달로.</p>
+        </div>
+        <div class="theme">
+          <h3>학설 갈래는 양립 <span class="latin">Where the Story Splits</span></h3>
+          <p>갈릴레오 재판을 "종교 대 과학"으로 단순화하지 않고, 양자역학의 해석을 코펜하겐 하나로 정리하지 않는다.
+             단정 대신 <em>학설 갈래</em> 섹션을 둔다.</p>
+        </div>
+        <div class="theme">
+          <h3>출처 추적 가능 <span class="latin">Citable</span></h3>
+          <p>모든 사실은 <a href="../research/science.html">/research/science.html</a>에서 출처를 추적할 수 있도록 한다.
+             단순화 모형(시뮬레이션 등)은 그것이 단순화임을 명시한다.</p>
+        </div>
+      </div>
+    </section>
+
   </div>
 </main>
 

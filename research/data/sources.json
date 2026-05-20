@@ -154,6 +154,96 @@
         { "page": "religion.main", "section": "전반 — 사실·연도 교차 확인" }
       ],
       "notes": "본문에서 'Britannica·Wikipedia 등을 교차 확인하여 작성'으로 명시. 권위 출처와 함께 검증용으로만 사용."
+    },
+    {
+      "id": "src-0201",
+      "project": "science",
+      "type": "academic-archive",
+      "title": "MacTutor History of Mathematics Archive",
+      "publisher": "University of St Andrews",
+      "url": "https://mathshistory.st-andrews.ac.uk/",
+      "accessed": "2026-05-20",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "science.era.03-revolution", "section": "인물 카드 — 케플러·뉴턴·데카르트 생몰과 업적 검증" }
+      ],
+      "notes": "수학·수학자 일대기의 학술 표준."
+    },
+    {
+      "id": "src-0202",
+      "project": "science",
+      "type": "academic-archive",
+      "title": "Stanford Encyclopedia of Philosophy",
+      "publisher": "Stanford University",
+      "url": "https://plato.stanford.edu/",
+      "accessed": "2026-05-20",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "science.era.03-revolution", "section": "학설 갈래 — 갈릴레오 재판·과학혁명 개념 비판" }
+      ],
+      "notes": "과학사·과학철학 해석의 학계 동향. 'Galileo' 'Scientific Revolution' 항목 참조."
+    },
+    {
+      "id": "src-0203",
+      "project": "science",
+      "type": "academic-archive",
+      "title": "The Galileo Project",
+      "publisher": "Rice University",
+      "url": "http://galileo.rice.edu/",
+      "accessed": "2026-05-20",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "science.era.03-revolution", "section": "갈릴레오 생애·문서·재판 배경" }
+      ],
+      "notes": "갈릴레오 전기 데이터의 학술 기준."
+    },
+    {
+      "id": "src-0204",
+      "project": "science",
+      "type": "academic-archive",
+      "title": "The Newton Project",
+      "publisher": "University of Oxford",
+      "url": "https://www.newtonproject.ox.ac.uk/",
+      "accessed": "2026-05-20",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "science.era.03-revolution", "section": "뉴턴 인물·Principia 배경" }
+      ],
+      "notes": "뉴턴 원전 디지털 아카이브."
+    },
+    {
+      "id": "src-0205",
+      "project": "science",
+      "type": "government-doc",
+      "title": "NASA Solar System Exploration",
+      "publisher": "NASA",
+      "url": "https://science.nasa.gov/solar-system/",
+      "accessed": "2026-05-20",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "science.era.03-revolution.sim.heliocentric", "section": "행성 궤도 데이터(단순화)" },
+        { "page": "science.era.03-revolution.sim.kepler",       "section": "행성 운동 검증" }
+      ],
+      "notes": "시뮬레이션은 단순화 모형이지만 정성적 동작은 NASA 데이터와 부합."
+    },
+    {
+      "id": "src-0206",
+      "project": "science",
+      "type": "encyclopedia",
+      "title": "Encyclopædia Britannica — Scientific Revolution",
+      "publisher": "Encyclopædia Britannica, Inc.",
+      "url": "https://www.britannica.com/event/Scientific-Revolution",
+      "accessed": "2026-05-20",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "science.era.03-revolution", "section": "전반 — 사실·연도 교차 확인" }
+      ]
     }
   ]
 }
