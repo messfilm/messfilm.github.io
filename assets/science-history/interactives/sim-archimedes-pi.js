@@ -36,7 +36,7 @@
 
     var caption = document.createElement('p');
     caption.className = 'sim-caption';
-    caption.textContent = '원을 내접·외접 다각형으로 끼워 가두면, π는 두 다각형의 둘레 비 사이에 *반드시* 있다. 변의 수를 늘릴수록 두 값이 좁혀진다. 아르키메데스는 변 96개까지 계산해 π가 3.1408과 3.1429 사이임을 증명했다.';
+    caption.textContent = '원을 내접·외접 다각형으로 끼워 가두면, π는 두 다각형의 둘레 비 사이에 반드시 있다. 변의 수를 늘릴수록 두 값이 좁혀진다. 아르키메데스는 변 96개까지 계산해 π가 3.1408과 3.1429 사이임을 증명했다.';
     container.appendChild(caption);
 
     var W = 480, H = 360;

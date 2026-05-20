@@ -48,7 +48,7 @@
 
     var caption = document.createElement('p');
     caption.className = 'sim-caption';
-    caption.textContent = '멘델은 약 28,000개의 콩으로 실험했다. 노란 콩(Y, 우성) × 녹색 콩(g, 열성)의 F₁ 모두 노란색. F₁끼리 교배한 F₂에서는 노란:녹색 = *약 3:1*. 표본이 클수록 비율이 3:1에 가까워진다 — *통계적 법칙*의 등장.';
+    caption.textContent = '멘델은 약 28,000개의 콩으로 실험했다. 노란 콩(Y, 우성) × 녹색 콩(g, 열성)의 F₁ 모두 노란색. F₁끼리 교배한 F₂에서는 노란:녹색 = 약 3:1. 표본이 클수록 비율이 3:1에 가까워진다 — 통계적 법칙의 등장.';
     container.appendChild(caption);
 
     var W = 480, H = 380;

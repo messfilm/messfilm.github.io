@@ -61,7 +61,7 @@
 
     var caption = document.createElement('p');
     caption.className = 'sim-caption';
-    caption.textContent = '자석을 코일 쪽으로 *움직이면* 전류가 생긴다. 멈추면 전류가 0. 반대로 빼면 반대 방향 전류. 자기 *변화*가 전기를 만든다. 슬라이더로 자석을 움직여보자.';
+    caption.textContent = '자석을 코일 쪽으로 움직이면 전류가 생긴다. 멈추면 전류가 0. 반대로 빼면 반대 방향 전류. 자기 변화가 전기를 만든다. 슬라이더로 자석을 움직여보자.';
     container.appendChild(caption);
 
     var W = 480, H = 320;

@@ -50,7 +50,7 @@
 
     var caption = document.createElement('p');
     caption.className = 'sim-caption';
-    caption.textContent = '알 콰리즈미의 *대수* — 이차방정식 x² + bx = c를 *사각형 완성*으로 푸는 기하 풀이. 큰 사각형 x²에 폭 b/2 직사각형 둘을 붙이고, 빠진 모서리(b/2)²만 채우면 변 x+b/2의 큰 정사각형. 그 면적은 c + (b/2)².';
+    caption.textContent = '알 콰리즈미의 대수 — 이차방정식 x² + bx = c를 사각형 완성으로 푸는 기하 풀이. 큰 사각형 x²에 폭 b/2 직사각형 둘을 붙이고, 빠진 모서리(b/2)²만 채우면 변 x+b/2의 큰 정사각형. 그 면적은 c + (b/2)².';
     container.appendChild(caption);
 
     var W = 480, H = 380;

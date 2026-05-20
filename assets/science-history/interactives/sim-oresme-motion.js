@@ -81,7 +81,7 @@
 
     var caption = document.createElement('p');
     caption.className = 'sim-caption';
-    caption.textContent = '오레슴은 *시간-속도* 그래프를 처음으로 그렸다. 거리 = 그래프 아래의 *면적*. 등속이면 사각형, 등가속이면 삼각형. 17세기 갈릴레오의 *s ∝ t²*가 여기서 자라난다.';
+    caption.textContent = '오레슴은 시간-속도 그래프를 처음으로 그렸다. 거리 = 그래프 아래의 면적. 등속이면 사각형, 등가속이면 삼각형. 17세기 갈릴레오의 s ∝ t²가 여기서 자라난다.';
     container.appendChild(caption);
 
     var W = 480, H = 320;

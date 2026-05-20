@@ -61,7 +61,7 @@
 
     var caption = document.createElement('p');
     caption.className = 'sim-caption';
-    caption.textContent = '알하이삼은 빛이 *눈에서 나가 사물을 더듬는다*는 그리스의 시각론을 폐기하고, *사물에서 출발한 빛이 눈에 들어온다*는 모형을 제시했다. 반사각=입사각, 굴절은 매질의 밀도에 따라 — 그가 정리한 법칙을 직접 만져보자.';
+    caption.textContent = '알하이삼은 빛이 눈에서 나가 사물을 더듬는다는 그리스의 시각론을 폐기하고, 사물에서 출발한 빛이 눈에 들어온다는 모형을 제시했다. 반사각=입사각, 굴절은 매질의 밀도에 따라 — 그가 정리한 법칙을 직접 만져보자.';
     container.appendChild(caption);
 
     var W = 480, H = 320;

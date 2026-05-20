@@ -64,7 +64,7 @@
 
     var caption = document.createElement('p');
     caption.className = 'sim-caption';
-    caption.textContent = '"자연에서 만들어지는 것은 없고 잃는 것도 없다. 모든 것은 변화할 뿐이다." — 라부아지에. 화학 반응 전·후의 총 질량은 *반드시 같다*. 세 반응을 양팔 저울로 직접 확인해보자.';
+    caption.textContent = '"자연에서 만들어지는 것은 없고 잃는 것도 없다. 모든 것은 변화할 뿐이다." — 라부아지에. 화학 반응 전·후의 총 질량은 반드시 같다. 세 반응을 양팔 저울로 직접 확인해보자.';
     container.appendChild(caption);
 
     var W = 480, H = 380;
