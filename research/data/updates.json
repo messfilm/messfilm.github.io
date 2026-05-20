@@ -61,6 +61,26 @@
       "description": "자연과학사 기획서 추가",
       "by": "Claude Code",
       "details": "docs/projects/science_history_dashboard_prompt.md. 시대 페이지의 표준 구조, 톤, 문화 범위, 인터랙티브 사양 정의."
+    },
+    {
+      "id": "upd-0007",
+      "date": "2026-05-20",
+      "project": "science",
+      "page": "science.era.03-revolution",
+      "type": "addition",
+      "description": "스토리텔링 보강 — 인물 카드 확장, 결정적 전환 장면화, 에피소드 11건 신규",
+      "by": "Father + Claude Code",
+      "details": "인물 카드 8개를 각 2~3단락으로(일화·관계·맥락). 결정적 전환 4편을 구체적 사건 묘사로 확장. § IV 에피소드 섹션 신규 추가(11개 장면, 1543 코페르니쿠스 임종부터 1687 Principia 출판까지). 섹션 번호 § IV~VIII로 재조정."
+    },
+    {
+      "id": "upd-0008",
+      "date": "2026-05-20",
+      "project": "science",
+      "page": "science.foundation",
+      "type": "update",
+      "description": "기획서에 스토리텔링 우선 원칙 추가",
+      "by": "Claude Code",
+      "details": "§4.1.1 스토리텔링 우선 — 인물 카드 2~3단락, 결정적 전환의 장면 묘사, 시대 페이지마다 에피소드 섹션 표준화. 시대 페이지 표준 구조의 섹션 순서 갱신."
     }
   ]
 }

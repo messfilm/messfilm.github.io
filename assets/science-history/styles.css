@@ -306,6 +306,78 @@ main.science { padding-bottom: 80px; }
   color: var(--accent);
 }
 
+/* ===== Episodes (시대 안의 짧은 장면들) ===== */
+.episodes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--rule-soft);
+}
+.episode {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 28px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.episode time {
+  font-family: var(--serif-en);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  display: block;
+}
+.episode .place {
+  display: block;
+  margin-top: 3px;
+  font-family: var(--sans-ko);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.episode .body h3 {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: 16.5px;
+  margin: 0 0 6px;
+  letter-spacing: -0.005em;
+}
+.episode .body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+}
+.episode .body p em {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--accent);
+}
+.episode .body .work {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--ink);
+}
+.episode .body .source {
+  display: inline-block;
+  margin-top: 6px;
+  font-family: var(--sans-ko);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+  font-style: italic;
+}
+@media (max-width: 760px) {
+  .episode {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .episode time { font-size: 14px; }
+}
+
 /* ===== Simulation cards ===== */
 .sim-card {
   margin-bottom: 22px;
