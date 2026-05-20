@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>자연과학사 — 연구 자료 (작업중) | Archive for Som & Chan</title>
+<title>자연과학사 — 연구 자료 | Archive for Som & Chan</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,18 +20,25 @@
       <h1>자연과학사 — 연구 자료</h1>
       <p class="subtitle">Natural Science History Research</p>
       <p class="lead">
-        탈레스부터 양자컴퓨터까지. 자료 정리와 시뮬레이션 설계를 진행하고 있다.
-        본 페이지는 작업이 시작되면 출처·이력·노트로 채워진다.
+        탈레스부터 양자컴퓨터까지. 자연과학사 통사 작성에 참고한 출처, 변경 이력, 학설 갈래 결정 기록.
       </p>
     </div>
   </section>
 
   <div class="shared-container">
-    <div class="wip-banner">
-      <span class="badge">작업중</span>
-      <p>자연과학사 프로젝트는 현재 기획서 단계입니다.</p>
-      <p>작업이 시작되면 이 페이지에 출처·업데이트 이력·연구 노트가 등록됩니다.</p>
+    <div class="research-stats" id="sc-stats">
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">출처</span></div>
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">업데이트</span></div>
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">노트</span></div>
     </div>
+
+    <section class="research-section">
+      <header>
+        <h2>출처</h2>
+        <span class="count">신뢰도 순</span>
+      </header>
+      <div id="sc-sources"></div>
+    </section>
 
     <section class="research-section">
       <header>
@@ -39,6 +46,14 @@
         <span class="count">시간 역순</span>
       </header>
       <div id="sc-updates"></div>
+    </section>
+
+    <section class="research-section">
+      <header>
+        <h2>연구 노트</h2>
+        <span class="count">결정 기록</span>
+      </header>
+      <div id="sc-notes"></div>
     </section>
   </div>
 </main>
@@ -50,7 +65,10 @@
 <script>
   window.addEventListener('load', function () {
     ResearchLoader.load('science').then(function (data) {
+      ResearchLoader.renderStats(data, '#sc-stats');
+      ResearchLoader.renderSources(data.sources, '#sc-sources');
       ResearchLoader.renderUpdates(data.updates, '#sc-updates');
+      ResearchLoader.renderNotes(data.notes, '#sc-notes');
     });
   });
 </script>
