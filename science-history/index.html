@@ -63,130 +63,180 @@
       </header>
       <p class="lead">자연을 알아온 2,600년을 6개 띠로 나누어 한눈에. 띠 위의 점은 그 시대의 결정적 사건이다.</p>
 
-      <svg viewBox="0 0 1080 380" xmlns="http://www.w3.org/2000/svg" role="img"
+      <svg viewBox="0 0 1080 250" xmlns="http://www.w3.org/2000/svg" role="img"
            aria-label="자연과학사 통합 연표" class="sci-timeline-svg">
         <defs>
           <style>
-            .ax    { stroke: #c8bea4; stroke-width: 1; fill: none; }
-            .axT   { stroke: #c8bea4; stroke-width: 1; }
-            .axLb  { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 11px; fill: #6b6253; }
-            .erat  { font-family: 'Noto Serif KR', serif; font-weight: 700; font-size: 13px; fill: #1f1a14; }
-            .erat-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 11px; fill: #6b6253; }
-            .seg-1 { fill: #b58853; }
-            .seg-2 { fill: #6a8f7e; }
-            .seg-3 { fill: #2a5680; }
-            .seg-4 { fill: #c4a64a; }
-            .seg-5 { fill: #7c2030; }
-            .seg-6 { fill: #3a3328; }
-            .evt   { font-family: 'Noto Sans KR', sans-serif; font-size: 9.5px; fill: #1f1a14; }
-            .evtY  { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 10px; fill: #b08d4d; }
+            .ax      { stroke: #c8bea4; stroke-width: 1; fill: none; }
+            .axT     { stroke: #c8bea4; stroke-width: 1; }
+            .axLb    { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 11px; fill: #6b6253; }
+            .erat    { font-family: 'Noto Serif KR', serif; font-weight: 700; font-size: 12px; fill: #1f1a14; }
+            .erat-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 10.5px; fill: #6b6253; }
+            .seg-1   { fill: #b58853; }
+            .seg-2   { fill: #6a8f7e; }
+            .seg-3   { fill: #2a5680; }
+            .seg-4   { fill: #c4a64a; }
+            .seg-5   { fill: #7c2030; }
+            .seg-6   { fill: #3a3328; }
+            .evt     { font-family: 'Noto Sans KR', sans-serif; font-size: 9px; fill: #1f1a14; }
+            .evtY    { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 9.5px; fill: #6b6253; }
+            .stemDot { stroke: #c8bea4; stroke-width: 0.6; fill: none; }
             .seg:hover .seg-bg { opacity: 0.85; }
             .seg .seg-bg { transition: opacity 0.18s; }
           </style>
         </defs>
 
-        <!-- Axis: BC 600 .. AD 2026 over 980 pixels (60..1040), so unit = 980/2626 = 0.3732
-             yearToX(y) = (y - (-600)) * 0.3732 + 60 = (y + 600) * 0.3732 + 60
-             y = -600 -> 60         (BC 600)
-             y = 0    -> 283.92     (AD 0)
-             y = 500  -> 470.51     (AD 500, end of §I)
-             y = 1000 -> 657.10     (AD 1000)
-             y = 1500 -> 843.69     (AD 1500, end of §II)
-             y = 1700 -> 918.32     (end of §III, start of §IV)
-             y = 1900 -> 992.95     (end of §IV)
-             y = 1970 -> 1019.07    (end of §V)
-             y = 2026 -> 1040       (current)
-        -->
-
-        <!-- Axis line at y=320 -->
-        <line class="ax" x1="60" y1="320" x2="1040" y2="320" />
-        <line class="axT" x1="60"      y1="318" x2="60"      y2="326" />
-        <line class="axT" x1="283.92"  y1="318" x2="283.92"  y2="326" />
-        <line class="axT" x1="470.51"  y1="318" x2="470.51"  y2="326" />
-        <line class="axT" x1="657.10"  y1="318" x2="657.10"  y2="326" />
-        <line class="axT" x1="843.69"  y1="318" x2="843.69"  y2="326" />
-        <line class="axT" x1="918.32"  y1="318" x2="918.32"  y2="326" />
-        <line class="axT" x1="992.95"  y1="318" x2="992.95"  y2="326" />
-        <line class="axT" x1="1019.07" y1="318" x2="1019.07" y2="326" />
-        <line class="axT" x1="1040"    y1="318" x2="1040"    y2="326" />
-
-        <text class="axLb" x="60"      y="340" text-anchor="middle">BC 600</text>
-        <text class="axLb" x="283.92"  y="340" text-anchor="middle">0</text>
-        <text class="axLb" x="470.51"  y="340" text-anchor="middle">500</text>
-        <text class="axLb" x="657.10"  y="340" text-anchor="middle">1000</text>
-        <text class="axLb" x="843.69"  y="340" text-anchor="middle">1500</text>
-        <text class="axLb" x="918.32"  y="340" text-anchor="middle">1700</text>
-        <text class="axLb" x="992.95"  y="340" text-anchor="middle">1900</text>
-        <text class="axLb" x="1019.07" y="340" text-anchor="middle">1970</text>
-        <text class="axLb" x="1040"    y="340" text-anchor="end">2026</text>
-
-        <!-- ===== Era bands ===== -->
-        <!-- §I 고대 BC600 - 500 -->
+        <!-- § I 고대 -->
         <g class="seg">
-          <rect class="seg-bg seg-1" x="60" y="58" width="410.51" height="34" rx="3" opacity="0.18"/>
-          <rect class="seg-1" x="60" y="60" width="410.51" height="6"/>
-          <text class="erat"   x="68" y="78">§ I 고대</text>
-          <text class="erat-en" x="68" y="90">Antiquity · BC 600 — AD 500</text>
-          <circle class="seg-1" cx="120" cy="120" r="3.5"/><text class="evt" x="126" y="124">탈레스</text><text class="evtY" x="60" y="112">BC 585</text>
-          <circle class="seg-1" cx="180" cy="120" r="3.5"/><text class="evt" x="186" y="124">피타고라스</text>
-          <circle class="seg-1" cx="245" cy="120" r="3.5"/><text class="evt" x="251" y="124">유클리드</text>
-          <circle class="seg-1" cx="300" cy="120" r="3.5"/><text class="evt" x="306" y="124">아르키메데스</text>
-          <circle class="seg-1" cx="370" cy="120" r="3.5"/><text class="evt" x="376" y="124">프톨레마이오스</text>
+          <rect class="seg-bg seg-1" x="60.00" y="58" width="161.67" height="34" rx="3" opacity="0.18"/>
+          <rect class="seg-1" x="60.00" y="60" width="161.67" height="6"/>
+          <text class="erat"    x="140.83" y="80" text-anchor="middle">§ I 고대</text>
+          <text class="erat-en" x="140.83" y="92" text-anchor="middle">BC 600 — AD 500</text>
+          <line class="stemDot" x1="92.33" y1="102" x2="92.33" y2="130"/>
+          <circle class="seg-1" cx="92.33" cy="102" r="3"/>
+          <text class="evtY" x="92.33" y="128" text-anchor="middle">BC 585</text>
+          <text class="evt"  x="92.33" y="116" text-anchor="middle">탈레스</text>
+          <line class="stemDot" x1="124.67" y1="148" x2="124.67" y2="152"/>
+          <circle class="seg-1" cx="124.67" cy="148" r="3"/>
+          <text class="evtY" x="124.67" y="174" text-anchor="middle">BC 300</text>
+          <text class="evt"  x="124.67" y="162" text-anchor="middle">유클리드</text>
+          <line class="stemDot" x1="157.00" y1="102" x2="157.00" y2="130"/>
+          <circle class="seg-1" cx="157.00" cy="102" r="3"/>
+          <text class="evtY" x="157.00" y="128" text-anchor="middle">BC 240</text>
+          <text class="evt"  x="157.00" y="116" text-anchor="middle">에라토스테네스</text>
+          <line class="stemDot" x1="189.33" y1="148" x2="189.33" y2="152"/>
+          <circle class="seg-1" cx="189.33" cy="148" r="3"/>
+          <text class="evtY" x="189.33" y="174" text-anchor="middle">AD 150</text>
+          <text class="evt"  x="189.33" y="162" text-anchor="middle">프톨레마이오스</text>
         </g>
 
-        <!-- §II 중세 500 - 1500 -->
+        <!-- § II 중세 -->
         <g class="seg">
-          <rect class="seg-bg seg-2" x="470.51" y="58" width="373.18" height="34" rx="3" opacity="0.18"/>
-          <rect class="seg-2" x="470.51" y="60" width="373.18" height="6"/>
-          <text class="erat"   x="478" y="78">§ II 중세</text>
-          <text class="erat-en" x="478" y="90">Medieval · 500 — 1500</text>
-          <circle class="seg-2" cx="565" cy="148" r="3.5"/><text class="evt" x="571" y="152">알하이삼 광학</text><text class="evtY" x="540" y="140">~1015</text>
-          <circle class="seg-2" cx="635" cy="148" r="3.5"/><text class="evt" x="641" y="152">이븐 시나</text>
-          <circle class="seg-2" cx="745" cy="148" r="3.5"/><text class="evt" x="751" y="152">오레슴</text>
-          <circle class="seg-2" cx="820" cy="148" r="3.5"/><text class="evt" x="826" y="152">파리 대학</text>
+          <rect class="seg-bg seg-2" x="221.67" y="58" width="161.67" height="34" rx="3" opacity="0.18"/>
+          <rect class="seg-2" x="221.67" y="60" width="161.67" height="6"/>
+          <text class="erat"    x="302.50" y="80" text-anchor="middle">§ II 중세</text>
+          <text class="erat-en" x="302.50" y="92" text-anchor="middle">500 — 1500</text>
+          <line class="stemDot" x1="254.00" y1="102" x2="254.00" y2="130"/>
+          <circle class="seg-2" cx="254.00" cy="102" r="3"/>
+          <text class="evtY" x="254.00" y="128" text-anchor="middle">825</text>
+          <text class="evt"  x="254.00" y="116" text-anchor="middle">알 콰리즈미</text>
+          <line class="stemDot" x1="286.33" y1="148" x2="286.33" y2="152"/>
+          <circle class="seg-2" cx="286.33" cy="148" r="3"/>
+          <text class="evtY" x="286.33" y="174" text-anchor="middle">1015</text>
+          <text class="evt"  x="286.33" y="162" text-anchor="middle">알하이삼</text>
+          <line class="stemDot" x1="318.67" y1="102" x2="318.67" y2="130"/>
+          <circle class="seg-2" cx="318.67" cy="102" r="3"/>
+          <text class="evtY" x="318.67" y="128" text-anchor="middle">1200</text>
+          <text class="evt"  x="318.67" y="116" text-anchor="middle">파리·옥스퍼드</text>
+          <line class="stemDot" x1="351.00" y1="148" x2="351.00" y2="152"/>
+          <circle class="seg-2" cx="351.00" cy="148" r="3"/>
+          <text class="evtY" x="351.00" y="174" text-anchor="middle">1360</text>
+          <text class="evt"  x="351.00" y="162" text-anchor="middle">오레슴 그래프</text>
         </g>
 
-        <!-- §III 과학혁명 1500 - 1700 -->
+        <!-- § III 과학혁명 -->
         <g class="seg">
-          <rect class="seg-bg seg-3" x="843.69" y="58" width="74.63" height="34" rx="3" opacity="0.18"/>
-          <rect class="seg-3" x="843.69" y="60" width="74.63" height="6"/>
-          <text class="erat"   x="848" y="78">§ III 과학혁명</text>
-          <text class="erat-en" x="848" y="90">Revolution · 1500 — 1700</text>
-          <circle class="seg-3" cx="847" cy="174" r="3.5"/><text class="evt" x="853" y="178" font-size="9">1543 코페르니쿠스</text>
-          <circle class="seg-3" cx="867" cy="190" r="3.5"/><text class="evt" x="873" y="194" font-size="9">1609 케플러</text>
-          <circle class="seg-3" cx="888" cy="206" r="3.5"/><text class="evt" x="894" y="210" font-size="9">1610 갈릴레오</text>
-          <circle class="seg-3" cx="914" cy="222" r="3.5"/><text class="evt" x="920" y="226" font-size="9">1687 뉴턴 Principia</text>
+          <rect class="seg-bg seg-3" x="383.33" y="58" width="161.67" height="34" rx="3" opacity="0.18"/>
+          <rect class="seg-3" x="383.33" y="60" width="161.67" height="6"/>
+          <text class="erat"    x="464.17" y="80" text-anchor="middle">§ III 과학혁명</text>
+          <text class="erat-en" x="464.17" y="92" text-anchor="middle">1500 — 1700</text>
+          <line class="stemDot" x1="415.67" y1="102" x2="415.67" y2="130"/>
+          <circle class="seg-3" cx="415.67" cy="102" r="3"/>
+          <text class="evtY" x="415.67" y="128" text-anchor="middle">1543</text>
+          <text class="evt"  x="415.67" y="116" text-anchor="middle">코페르니쿠스</text>
+          <line class="stemDot" x1="448.00" y1="148" x2="448.00" y2="152"/>
+          <circle class="seg-3" cx="448.00" cy="148" r="3"/>
+          <text class="evtY" x="448.00" y="174" text-anchor="middle">1609</text>
+          <text class="evt"  x="448.00" y="162" text-anchor="middle">케플러</text>
+          <line class="stemDot" x1="480.33" y1="102" x2="480.33" y2="130"/>
+          <circle class="seg-3" cx="480.33" cy="102" r="3"/>
+          <text class="evtY" x="480.33" y="128" text-anchor="middle">1610</text>
+          <text class="evt"  x="480.33" y="116" text-anchor="middle">갈릴레오</text>
+          <line class="stemDot" x1="512.67" y1="148" x2="512.67" y2="152"/>
+          <circle class="seg-3" cx="512.67" cy="148" r="3"/>
+          <text class="evtY" x="512.67" y="174" text-anchor="middle">1687</text>
+          <text class="evt"  x="512.67" y="162" text-anchor="middle">뉴턴 Principia</text>
         </g>
 
-        <!-- §IV 고전과학 1700 - 1900 -->
+        <!-- § IV 고전과학 -->
         <g class="seg">
-          <rect class="seg-bg seg-4" x="918.32" y="58" width="74.63" height="34" rx="3" opacity="0.18"/>
-          <rect class="seg-4" x="918.32" y="60" width="74.63" height="6"/>
-          <text class="erat"   x="922" y="78">§ IV 고전과학</text>
-          <text class="erat-en" x="922" y="90">Classical · 1700 — 1900</text>
-          <circle class="seg-4" cx="930" cy="240" r="3.5"/><text class="evt" x="936" y="244" font-size="9">패러데이</text>
-          <circle class="seg-4" cx="955" cy="240" r="3.5"/><text class="evt" x="961" y="244" font-size="9">맥스웰</text>
-          <circle class="seg-4" cx="980" cy="240" r="3.5"/><text class="evt" x="986" y="244" font-size="9">다윈 1859</text>
+          <rect class="seg-bg seg-4" x="545.00" y="58" width="161.67" height="34" rx="3" opacity="0.18"/>
+          <rect class="seg-4" x="545.00" y="60" width="161.67" height="6"/>
+          <text class="erat"    x="625.83" y="80" text-anchor="middle">§ IV 고전과학</text>
+          <text class="erat-en" x="625.83" y="92" text-anchor="middle">1700 — 1900</text>
+          <line class="stemDot" x1="577.33" y1="102" x2="577.33" y2="130"/>
+          <circle class="seg-4" cx="577.33" cy="102" r="3"/>
+          <text class="evtY" x="577.33" y="128" text-anchor="middle">1789</text>
+          <text class="evt"  x="577.33" y="116" text-anchor="middle">라부아지에</text>
+          <line class="stemDot" x1="609.67" y1="148" x2="609.67" y2="152"/>
+          <circle class="seg-4" cx="609.67" cy="148" r="3"/>
+          <text class="evtY" x="609.67" y="174" text-anchor="middle">1831</text>
+          <text class="evt"  x="609.67" y="162" text-anchor="middle">패러데이</text>
+          <line class="stemDot" x1="642.00" y1="102" x2="642.00" y2="130"/>
+          <circle class="seg-4" cx="642.00" cy="102" r="3"/>
+          <text class="evtY" x="642.00" y="128" text-anchor="middle">1859</text>
+          <text class="evt"  x="642.00" y="116" text-anchor="middle">다윈</text>
+          <line class="stemDot" x1="674.33" y1="148" x2="674.33" y2="152"/>
+          <circle class="seg-4" cx="674.33" cy="148" r="3"/>
+          <text class="evtY" x="674.33" y="174" text-anchor="middle">1869</text>
+          <text class="evt"  x="674.33" y="162" text-anchor="middle">멘델레예프</text>
         </g>
 
-        <!-- §V 현대물리 1900 - 1970 -->
+        <!-- § V 현대물리 -->
         <g class="seg">
-          <rect class="seg-bg seg-5" x="992.95" y="58" width="26.12" height="34" rx="3" opacity="0.18"/>
-          <rect class="seg-5" x="992.95" y="60" width="26.12" height="6"/>
-          <text class="erat"   x="996" y="78" font-size="11">§ V 현대물리</text>
-          <text class="erat-en" x="996" y="90" font-size="9">Modern · 1900 — 1970</text>
-          <circle class="seg-5" cx="999"  cy="258" r="3.5"/><text class="evt" x="1005" y="262" font-size="9">1905 아인슈타인</text>
-          <circle class="seg-5" cx="1009" cy="274" r="3.5"/><text class="evt" x="1015" y="278" font-size="9">1925 양자역학</text>
-          <circle class="seg-5" cx="1017" cy="290" r="3.5"/><text class="evt" x="1023" y="294" font-size="9" text-anchor="end">1953 DNA</text>
+          <rect class="seg-bg seg-5" x="706.67" y="58" width="161.67" height="34" rx="3" opacity="0.18"/>
+          <rect class="seg-5" x="706.67" y="60" width="161.67" height="6"/>
+          <text class="erat"    x="787.50" y="80" text-anchor="middle">§ V 현대물리</text>
+          <text class="erat-en" x="787.50" y="92" text-anchor="middle">1900 — 1970</text>
+          <line class="stemDot" x1="747.08" y1="102" x2="747.08" y2="130"/>
+          <circle class="seg-5" cx="747.08" cy="102" r="3"/>
+          <text class="evtY" x="747.08" y="128" text-anchor="middle">1905</text>
+          <text class="evt"  x="747.08" y="116" text-anchor="middle">아인슈타인</text>
+          <line class="stemDot" x1="787.50" y1="148" x2="787.50" y2="152"/>
+          <circle class="seg-5" cx="787.50" cy="148" r="3"/>
+          <text class="evtY" x="787.50" y="174" text-anchor="middle">1925</text>
+          <text class="evt"  x="787.50" y="162" text-anchor="middle">양자역학</text>
+          <line class="stemDot" x1="827.92" y1="102" x2="827.92" y2="130"/>
+          <circle class="seg-5" cx="827.92" cy="102" r="3"/>
+          <text class="evtY" x="827.92" y="128" text-anchor="middle">1953</text>
+          <text class="evt"  x="827.92" y="116" text-anchor="middle">DNA</text>
         </g>
 
-        <!-- §VI 동시대 1970 - 2026 -->
+        <!-- § VI 동시대 -->
         <g class="seg">
-          <rect class="seg-bg seg-6" x="1019.07" y="58" width="20.93" height="34" rx="3" opacity="0.18"/>
-          <rect class="seg-6" x="1019.07" y="60" width="20.93" height="6"/>
-          <text class="erat"   x="1040" y="78" font-size="11" text-anchor="end">§ VI 동시대</text>
-          <text class="erat-en" x="1040" y="90" font-size="9" text-anchor="end">Contemporary · 1970 — ·</text>
+          <rect class="seg-bg seg-6" x="868.33" y="58" width="161.67" height="34" rx="3" opacity="0.18"/>
+          <rect class="seg-6" x="868.33" y="60" width="161.67" height="6"/>
+          <text class="erat"    x="949.17" y="80" text-anchor="middle">§ VI 동시대</text>
+          <text class="erat-en" x="949.17" y="92" text-anchor="middle">1970 — ·</text>
+          <line class="stemDot" x1="908.75" y1="102" x2="908.75" y2="130"/>
+          <circle class="seg-6" cx="908.75" cy="102" r="3"/>
+          <text class="evtY" x="908.75" y="128" text-anchor="middle">1990</text>
+          <text class="evt"  x="908.75" y="116" text-anchor="middle">게놈</text>
+          <line class="stemDot" x1="949.17" y1="148" x2="949.17" y2="152"/>
+          <circle class="seg-6" cx="949.17" cy="148" r="3"/>
+          <text class="evtY" x="949.17" y="174" text-anchor="middle">2012</text>
+          <text class="evt"  x="949.17" y="162" text-anchor="middle">CRISPR</text>
+          <line class="stemDot" x1="989.58" y1="102" x2="989.58" y2="130"/>
+          <circle class="seg-6" cx="989.58" cy="102" r="3"/>
+          <text class="evtY" x="989.58" y="128" text-anchor="middle">2020s</text>
+          <text class="evt"  x="989.58" y="116" text-anchor="middle">양자·AI</text>
         </g>
+
+        <line class="ax" x1="60" y1="210" x2="1030" y2="210"/>
+        <line class="axT" x1="60.00" y1="208" x2="60.00" y2="216"/>
+        <line class="axT" x1="221.67" y1="208" x2="221.67" y2="216"/>
+        <line class="axT" x1="383.33" y1="208" x2="383.33" y2="216"/>
+        <line class="axT" x1="545.00" y1="208" x2="545.00" y2="216"/>
+        <line class="axT" x1="706.67" y1="208" x2="706.67" y2="216"/>
+        <line class="axT" x1="868.33" y1="208" x2="868.33" y2="216"/>
+        <line class="axT" x1="1030.00" y1="208" x2="1030.00" y2="216"/>
+        <text class="axLb" x="60.00" y="226" text-anchor="start">BC 600</text>
+        <text class="axLb" x="221.67" y="226" text-anchor="middle">AD 500</text>
+        <text class="axLb" x="383.33" y="226" text-anchor="middle">1500</text>
+        <text class="axLb" x="545.00" y="226" text-anchor="middle">1700</text>
+        <text class="axLb" x="706.67" y="226" text-anchor="middle">1900</text>
+        <text class="axLb" x="868.33" y="226" text-anchor="middle">1970</text>
+        <text class="axLb" x="1030.00" y="226" text-anchor="end">2026</text>
       </svg>
     </section>
 
