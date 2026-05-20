@@ -82,9 +82,27 @@
     pop.appendChild(titleWrap);
     const body = document.createElement('div');
     body.className = 'glossary-pop__body';
-    body.textContent = data.summary || '';
+    body.innerHTML = renderSummary(data.summary || '');
     pop.appendChild(body);
     return pop;
+  }
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+  function renderSummary(text) {
+    // 1) HTML 이스케이프 → XSS 방지
+    // 2) *xxx* 패턴을 <em>xxx</em>로 변환
+    // 3) <em>...</em>을 안전하게 복원 (데이터에 이미 들어있는 경우)
+    const safe = escapeHtml(text);
+    const withEm = safe.replace(/\*([^*\n]+?)\*/g, '<em>$1</em>');
+    // 데이터에 원래 <em>으로 적혀 있던 부분은 위에서 &lt;em&gt;으로 이스케이프됨 → 복원
+    return withEm
+      .replace(/&lt;em&gt;/g, '<em>')
+      .replace(/&lt;\/em&gt;/g, '</em>');
   }
 
   function positionPopup(termEl, pop) {
