@@ -18,19 +18,20 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
    Design Tokens — 한지·먹·오방색
    ===================================================================== */
 :root {
+  /* 한지·먹·구분선은 공유 styles-base.css의 변수를 alias.
+     사이트 톤은 shared 한 곳에서 제어되며, 여기서는 한국사 시맨틱 이름만 부여. */
+
   /* 한지 (베이지) — 본문 배경 */
-  --hanji:        #f5efe0;
-  --hanji-light:  #faf6eb;
-  --hanji-dark:   #ebe3cf;
+  --hanji:        var(--paper);
+  --hanji-light:  var(--paper-light);
+  --hanji-dark:   var(--paper-dark);
 
   /* 먹 (짙은 갈색 검정) */
-  --meok:         #1f1a14;
-  --meok-soft:    #3a3328;
-  --meok-mute:    #6b6253;
+  --meok:         var(--ink);
+  --meok-soft:    var(--ink-soft);
+  --meok-mute:    var(--ink-mute);
 
-  /* 구분선 */
-  --rule:         #c8bea4;
-  --rule-soft:    #d8d0b8;
+  /* 구분선 — --rule, --rule-soft는 shared에서 직접 상속 (별도 정의 불필요) */
 
   /* 오방색 (五方色) */
   --cheong:       #1e5594;   /* 청 — 東·春·木 */
