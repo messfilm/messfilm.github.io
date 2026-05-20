@@ -1,5 +1,5 @@
 /* ============================================================
-   Archive for My Son — Shared Page Footer
+   Archive for Som & Chan — Shared Page Footer
    updates.json에서 data-page-id 매칭하여 last updated 자동 표시
    ============================================================ */
 
@@ -47,7 +47,7 @@
   // Right: copyright
   var copy = document.createElement('div');
   copy.className = 'copyright';
-  copy.textContent = '© Archive for My Son — 학습 자료 (CC BY-NC-SA 4.0)';
+  copy.textContent = '© Archive for Som & Chan — 학습 자료 (CC BY-NC-SA 4.0)';
   inner.appendChild(copy);
 
   footer.appendChild(inner);

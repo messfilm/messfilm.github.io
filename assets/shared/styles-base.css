@@ -1,5 +1,5 @@
 /* ============================================================
-   Archive for My Son — Shared Base Styles
+   Archive for Som & Chan — Shared Base Styles
    세 컬렉션 + 연구 아카이브가 공유하는 디자인 토큰
    ============================================================ */
 
@@ -25,7 +25,8 @@
   /* Project accents — overridable per collection */
   --accent:       var(--gold);
 
-  --maxw:         1080px;
+  --maxw:         1200px;
+  --maxw-text:    760px;
 }
 
 /* Collection-scoped accents */
@@ -52,56 +53,170 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Brand: two-face logo + Archive for / Som & Chan */
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+.site-brand .brand-logo {
+  display: block;
+  flex-shrink: 0;
+}
+.site-brand .brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.site-brand .brand-prefix {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 4px;
+}
+.site-brand .brand-names {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+.site-brand .brand-amp {
+  color: var(--gold);
+  font-weight: 500;
+}
+.site-brand:hover .brand-names {
+  color: var(--gold);
+}
+
+/* Right-side hint (no chapter nav) */
+.site-header__hint {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-size: 12px;
+  color: var(--ink-mute);
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   Collection sub-header (injected by nav.js when on a chapter page)
+   전역 헤더 바로 아래에 컬렉션 정체성 + 섹션 nav
+   ============================================================ */
+
+.site-subheader {
+  background: var(--paper-light);
+  border-bottom: 1px solid var(--rule);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  font-family: var(--sans-ko);
+  --accent: var(--gold);
+}
+.site-subheader.collection-religion { --accent: #7c2030; }
+.site-subheader.collection-korean   { --accent: #4a7a6e; }
+.site-subheader.collection-science  { --accent: #2a5680; }
+
+.site-subheader__inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
 }
-.site-brand {
+
+.site-subheader__brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+}
+.site-subheader__brand .sub-name {
   font-family: var(--serif-ko);
   font-weight: 700;
   font-size: 15px;
   color: var(--ink);
-  text-decoration: none;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.005em;
 }
-.site-brand .latin {
+.site-subheader__brand .sub-latin {
   font-family: var(--serif-en);
   font-style: italic;
   font-weight: 500;
-  color: var(--ink-mute);
-  font-size: 13px;
-  margin-left: 8px;
-}
-.site-header__nav {
-  display: flex;
-  gap: 20px;
   font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-family: var(--sans-ko);
+  color: var(--ink-mute);
+  letter-spacing: 0.04em;
 }
-.site-header__nav a {
-  color: var(--ink-soft);
-  text-decoration: none;
-  padding: 4px 0;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.18s, color 0.18s;
-  white-space: nowrap;
-}
-.site-header__nav a:hover { color: var(--ink); border-bottom-color: var(--gold); }
-.site-header__nav a[aria-current="page"] {
-  color: var(--ink);
-  border-bottom-color: var(--accent);
-}
-.site-header__nav .badge-wip {
+.site-subheader__brand .sub-wip {
   display: inline-block;
-  margin-left: 6px;
   padding: 1px 6px;
   font-size: 9.5px;
   letter-spacing: 0.1em;
+  font-weight: 500;
   color: var(--paper);
   background: var(--ink-mute);
   border-radius: 2px;
   vertical-align: middle;
+}
+.site-subheader__brand:hover .sub-name {
+  color: var(--accent);
+}
+
+.site-subheader__list {
+  display: flex;
+  gap: 14px;
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.site-subheader__list a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 3px 0;
+  border-bottom: 1px solid transparent;
+  white-space: nowrap;
+  transition: border-color 0.18s, color 0.18s;
+}
+.site-subheader__list a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+.site-subheader__list a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+@media (max-width: 760px) {
+  .site-subheader__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 18px;
+  }
+  .site-subheader__list {
+    width: 100%;
+    overflow-x: auto;
+    gap: 12px;
+    font-size: 10.5px;
+    padding-bottom: 4px;
+  }
 }
 
 /* ============================================================
@@ -200,7 +315,10 @@ html, body { margin: 0; padding: 0; }
 
 /* Mobile */
 @media (max-width: 700px) {
-  .site-header__inner { gap: 12px; }
-  .site-header__nav { gap: 14px; font-size: 11px; overflow-x: auto; }
-  .site-brand .latin { display: none; }
+  .site-header__inner { gap: 10px; padding: 0 18px; }
+  .site-brand { gap: 10px; }
+  .site-brand .brand-logo { width: 62px; height: 35px; }
+  .site-brand .brand-prefix { font-size: 10px; letter-spacing: 0.14em; margin-bottom: 2px; }
+  .site-brand .brand-names { font-size: 21px; }
+  .site-header__hint { display: none; }
 }

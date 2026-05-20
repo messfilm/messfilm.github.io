@@ -1,5 +1,5 @@
 /* ============================================================
-   Archive for My Son — Research Archive JSON Loader
+   Archive for Som & Chan — Research Archive JSON Loader
    sources.json / updates.json / notes.json을 카드형 HTML로 렌더링
    ============================================================ */
 

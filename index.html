@@ -2,9 +2,9 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>아들을 위한 아카이브 — Archive for My Son</title>
+<title>Archive for Som & Chan</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="한 아버지가 자녀에게 정리해 물려주는 세 권의 학습 노트. 아브라함 계통 종교의 4,000년, 한국사 4,000년, 자연과학사. 그리고 모든 출처를 추적할 수 있는 연구 아카이브.">
+<meta name="description" content="아빠가 두 아이(솜·찬)에게 정리해 물려주는 학습 노트. 아브라함 계통 종교의 4,000년, 한국사 4,000년, 자연과학사. 그리고 모든 출처를 추적할 수 있는 연구 아카이브.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,40 +17,84 @@
      ============================================================ */
 
   .home-hero {
-    padding: 84px 0 36px;
+    padding: 72px 0 44px;
     border-bottom: 1px solid var(--rule);
+    text-align: center;
+  }
+  .home-hero .hero-portraits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 0 auto 28px;
+  }
+  .home-hero .hero-portraits svg {
+    display: block;
+  }
+  .home-hero .hero-portraits .portrait-som {
+    margin-right: -32px;
+    position: relative;
+    z-index: 2;
+  }
+  .home-hero .hero-portraits .portrait-chan {
+    position: relative;
+    z-index: 1;
+  }
+  .home-hero .name-plates {
+    display: flex;
+    justify-content: center;
+    gap: 96px;
+    margin: 8px 0 22px;
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink-mute);
+    letter-spacing: 0.12em;
   }
   .home-hero .kicker {
     font-family: var(--serif-en);
     font-style: italic;
     color: var(--gold);
-    font-size: 18px;
-    letter-spacing: 0.04em;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 8px;
   }
-  .home-hero h1 {
-    font-family: var(--serif-ko);
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 1.05;
-    margin: 12px 0 6px;
-    letter-spacing: -0.01em;
-  }
-  .home-hero h1 .latin {
+  .home-hero .brand-display {
     font-family: var(--serif-en);
     font-style: italic;
+    margin: 18px 0 8px;
+    line-height: 1;
+  }
+  .home-hero .brand-display .archive-for {
+    display: block;
+    font-size: 16px;
     font-weight: 500;
     color: var(--ink-mute);
-    font-size: 0.42em;
-    margin-left: 14px;
-    letter-spacing: 0.02em;
-    vertical-align: middle;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .home-hero .brand-display .names {
+    display: block;
+    font-size: 76px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+  .home-hero .brand-display .amp {
+    color: var(--gold);
+    font-weight: 500;
   }
   .home-hero .lead {
-    max-width: 720px;
-    margin-top: 26px;
+    max-width: 640px;
+    margin: 30px auto 0;
     font-size: 16px;
     line-height: 1.85;
     color: var(--ink-soft);
+    text-align: left;
   }
   .home-hero .lead em {
     font-family: var(--serif-en);
@@ -233,8 +277,13 @@
   }
 
   @media (max-width: 760px) {
-    .home-hero h1 { font-size: 44px; }
-    .home-hero h1 .latin { display: block; margin-left: 0; }
+    .home-hero { padding: 48px 0 32px; }
+    .home-hero .hero-portraits svg { width: 160px; height: 187px; }
+    .home-hero .hero-portraits .portrait-som { margin-right: -22px; }
+    .home-hero .name-plates { gap: 60px; font-size: 15px; }
+    .home-hero .brand-display .archive-for { font-size: 13px; letter-spacing: 0.18em; }
+    .home-hero .brand-display .names { font-size: 50px; }
+    .home-hero .lead { font-size: 15px; margin-top: 22px; }
     .home-cards { grid-template-columns: 1fr; }
   }
 </style>
@@ -244,10 +293,83 @@
 <main>
   <section class="home-hero">
     <div class="shared-container">
+
+      <!-- Two medallion portraits — Som & Chan -->
+      <div class="hero-portraits" aria-label="솜과 찬의 초상">
+
+        <!-- Som -->
+        <svg class="portrait-som" viewBox="0 0 240 280" width="220" height="257" xmlns="http://www.w3.org/2000/svg" aria-label="솜">
+          <circle cx="120" cy="130" r="108" fill="#faf6eb" stroke="#a37e2c" stroke-width="1.5"/>
+          <circle cx="120" cy="130" r="102" fill="none" stroke="#1f1a14" stroke-width="0.4" opacity="0.4"/>
+          <defs><clipPath id="heroSomClip"><circle cx="120" cy="130" r="105"/></clipPath></defs>
+          <g clip-path="url(#heroSomClip)">
+            <path d="M 70 105 Q 62 150 70 230 L 90 230 Q 82 160 84 108 Z" fill="#1f1a14"/>
+            <path d="M 170 105 Q 178 150 170 230 L 150 230 Q 158 160 156 108 Z" fill="#1f1a14"/>
+            <ellipse cx="120" cy="142" rx="44" ry="47" fill="#faf6eb" stroke="#1f1a14" stroke-width="1.4"/>
+            <path d="M 76 122 C 70 102, 88 85, 120 84 C 152 85, 170 102, 164 122 Q 162 116 158 121 Q 154 110 150 123 Q 144 113 140 122 Q 134 110 130 122 Q 125 113 123 119 Q 120 116 117 119 Q 115 113 110 122 Q 106 110 100 122 Q 96 113 90 123 Q 86 110 82 121 Q 78 116 76 122 Z" fill="#1f1a14"/>
+            <path d="M 92 96 Q 110 90 130 94" stroke="#3a3328" stroke-width="1" fill="none" opacity="0.35" stroke-linecap="round"/>
+            <path d="M 96 130 Q 103 127 110 130" stroke="#1f1a14" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M 130 130 Q 137 127 144 130" stroke="#1f1a14" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="103" cy="140" rx="4.2" ry="4.8" fill="#1f1a14"/>
+            <ellipse cx="137" cy="140" rx="4.2" ry="4.8" fill="#1f1a14"/>
+            <circle cx="104.5" cy="138.5" r="1.3" fill="#faf6eb"/>
+            <circle cx="138.5" cy="138.5" r="1.3" fill="#faf6eb"/>
+            <ellipse cx="84" cy="162" rx="10" ry="6" fill="#e8a99c" opacity="0.5"/>
+            <ellipse cx="156" cy="162" rx="10" ry="6" fill="#e8a99c" opacity="0.5"/>
+            <path d="M 117 155 Q 116 165 119 168 Q 121 169 123 168" stroke="#1f1a14" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+            <path d="M 104 178 Q 120 190 136 178" fill="none" stroke="#1f1a14" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M 64 230 L 96 208 L 120 220 L 144 208 L 176 230 L 176 240 L 64 240 Z" fill="#a3b9cf" stroke="#1f1a14" stroke-width="1"/>
+            <rect x="64" y="218" width="112" height="2.5" fill="#faf6eb" opacity="0.85"/>
+            <rect x="64" y="226" width="112" height="2.5" fill="#faf6eb" opacity="0.85"/>
+            <path d="M 92 218 L 120 244 L 148 218 L 148 240 L 92 240 Z" fill="#3a3328"/>
+            <path d="M 105 213 L 120 226 L 135 213" fill="#faf6eb" stroke="#1f1a14" stroke-width="0.9"/>
+          </g>
+        </svg>
+
+        <!-- Chan -->
+        <svg class="portrait-chan" viewBox="0 0 240 280" width="220" height="257" xmlns="http://www.w3.org/2000/svg" aria-label="찬">
+          <circle cx="120" cy="130" r="108" fill="#faf6eb" stroke="#a37e2c" stroke-width="1.5"/>
+          <circle cx="120" cy="130" r="102" fill="none" stroke="#1f1a14" stroke-width="0.4" opacity="0.4"/>
+          <defs><clipPath id="heroChanClip"><circle cx="120" cy="130" r="105"/></clipPath></defs>
+          <g clip-path="url(#heroChanClip)">
+            <ellipse cx="120" cy="145" rx="42" ry="44" fill="#faf6eb" stroke="#1f1a14" stroke-width="1.4"/>
+            <path d="M 70 110 L 64 78 L 76 100 L 82 60 L 92 92 L 100 55 L 110 90 L 118 50 L 128 88 L 138 60 L 146 92 L 158 70 L 162 102 L 168 88 L 170 115 Q 168 130 162 132 L 78 132 Q 70 128 70 110 Z" fill="#1f1a14"/>
+            <path d="M 168 110 L 178 105 L 172 118 Z" fill="#1f1a14"/>
+            <path d="M 70 110 L 60 108 L 68 120 Z" fill="#1f1a14"/>
+            <circle cx="100" cy="142" r="15.5" fill="#faf6eb" stroke="#1f1a14" stroke-width="1.5"/>
+            <circle cx="140" cy="142" r="15.5" fill="#faf6eb" stroke="#1f1a14" stroke-width="1.5"/>
+            <line x1="115.5" y1="142" x2="124.5" y2="142" stroke="#1f1a14" stroke-width="1.3"/>
+            <ellipse cx="100" cy="142" rx="2.2" ry="2.6" fill="#1f1a14"/>
+            <ellipse cx="140" cy="142" rx="2.2" ry="2.6" fill="#1f1a14"/>
+            <circle cx="101" cy="141" r="0.7" fill="#faf6eb"/>
+            <circle cx="141" cy="141" r="0.7" fill="#faf6eb"/>
+            <ellipse cx="86" cy="160" rx="5" ry="3" fill="#d9a3a0" opacity="0.3"/>
+            <ellipse cx="154" cy="160" rx="5" ry="3" fill="#d9a3a0" opacity="0.3"/>
+            <path d="M 119 158 Q 118 168 122 171" fill="none" stroke="#1f1a14" stroke-width="0.9" stroke-linecap="round"/>
+            <path d="M 112 182 Q 120 184 128 181" fill="none" stroke="#1f1a14" stroke-width="1.3" stroke-linecap="round"/>
+            <path d="M 75 220 L 92 200 L 105 218 L 120 222 L 135 218 L 148 200 L 165 220" fill="#faf6eb" stroke="#1f1a14" stroke-width="1.4"/>
+            <circle cx="115" cy="216" r="1.4" fill="#1f1a14"/>
+            <circle cx="125" cy="216" r="1.4" fill="#1f1a14"/>
+            <line x1="115" y1="217" x2="113" y2="228" stroke="#1f1a14" stroke-width="0.9"/>
+            <line x1="125" y1="217" x2="127" y2="228" stroke="#1f1a14" stroke-width="0.9"/>
+          </g>
+        </svg>
+
+      </div>
+
+      <div class="name-plates" aria-hidden="true">
+        <span>Som</span>
+        <span>Chan</span>
+      </div>
+
+      <div class="brand-display">
+        <span class="archive-for">Archive for</span>
+        <span class="names">Som <span class="amp">&amp;</span> Chan</span>
+      </div>
       <span class="kicker">est. 2026 · Seoul</span>
-      <h1>아들을 위한 아카이브<span class="latin">Archive for My Son</span></h1>
+
       <p class="lead">
-        한 아버지가 자녀를 위해 정리한 세 권의 학습 노트.
+        아빠가 두 아이에게 정리해 물려주는 학습 노트.
         인류가 <em>신을 어떻게 이해해왔는지</em>, 한반도가 <em>어떻게 지금이 되었는지</em>,
         그리고 인간이 <em>자연을 어떻게 알아왔는지</em>의 기록.
         모든 사실은 출처에서 검증할 수 있도록 정리되어 있다.

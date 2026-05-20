@@ -32,41 +32,8 @@ body{
 }
 a{color:inherit;text-decoration:none}
 
-/* ===== Top Nav ===== */
-.topnav{
-  position:sticky;top:0;z-index:50;
-  background:var(--bg);
-  border-bottom:1px solid var(--rule);
-}
-.topnav-inner{
-  max-width:1700px;margin:0 auto;
-  padding:14px 60px;
-  display:flex;align-items:center;justify-content:space-between;
-  gap:24px;
-}
-.topnav-brand{
-  font-family:var(--fs-display);font-style:italic;
-  font-size:20px;color:var(--ink);letter-spacing:0.01em;
-}
-.topnav-brand b{font-style:normal;font-weight:700;color:var(--gold)}
-.topnav-list{
-  display:flex;gap:22px;flex-wrap:wrap;
-  font-family:var(--fs-sans);font-size:11.5px;
-  text-transform:uppercase;letter-spacing:0.14em;
-  color:var(--ink-soft);
-}
-.topnav-list a{
-  padding:4px 0;border-bottom:1px solid transparent;
-  transition:border-color .2s,color .2s;
-}
-.topnav-list a:hover{color:var(--ink);border-bottom-color:var(--gold)}
-.topnav-list a .num{
-  font-family:var(--fs-display);font-style:italic;
-  color:var(--gold);font-size:13px;margin-right:4px;
-}
-
 /* ===== Container ===== */
-.container{max-width:1700px;margin:0 auto;padding:0 60px}
+.container{max-width:1200px;margin:0 auto;padding:0 32px}
 
 /* ===== Section header ===== */
 .section{padding:80px 0 60px}
@@ -684,7 +651,7 @@ a{color:inherit;text-decoration:none}
   padding:60px 0 50px;margin-top:80px;
 }
 .footer-inner{
-  max-width:1700px;margin:0 auto;padding:0 60px;
+  max-width:1200px;margin:0 auto;padding:0 32px;
   display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;
 }
 .footer h4{
@@ -696,7 +663,7 @@ a{color:inherit;text-decoration:none}
 .footer ul{list-style:none;font-size:13px;color:var(--ink-soft)}
 .footer li{padding:5px 0}
 .footer .copyright{
-  max-width:1700px;margin:48px auto 0;padding:24px 60px 0;
+  max-width:1200px;margin:48px auto 0;padding:24px 32px 0;
   border-top:1px solid var(--rule);
   font-family:var(--fs-display);font-style:italic;
   color:var(--ink-muted);font-size:13px;
@@ -780,7 +747,7 @@ a{color:inherit;text-decoration:none}
   .footer-inner{grid-template-columns:1fr 1fr}
 }
 @media (max-width:768px){
-  .container,.topnav-inner,.footer-inner,.footer .copyright{padding-left:24px;padding-right:24px}
+  .container,.footer-inner,.footer .copyright{padding-left:24px;padding-right:24px}
   .grid-3,.grid-2,.grid-4,.sect-grid,.actor-grid,.hero-stats{grid-template-columns:1fr}
   .hero-stat{border-right:none;border-bottom:1px solid var(--rule)}
   .hero-stat:last-child{border-bottom:none}
@@ -794,7 +761,6 @@ a{color:inherit;text-decoration:none}
   .section-num{font-size:18px}
   .section-title{font-size:24px}
   .section-sub{display:none}
-  .topnav-list{display:none}
   .tl-wrap,.tl-era,.tl-event{grid-template-columns:90px 1fr}
   .tl-year{padding:14px 12px 14px 0;font-size:11.5px}
   .tl-era-label{padding:18px 12px 18px 0}
@@ -817,23 +783,6 @@ a{color:inherit;text-decoration:none}
     <marker id="arrowhead-j" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 L2,4 Z" fill="#1b3a6b"/></marker>
   </defs>
 </svg>
-
-<nav class="topnav">
-  <div class="topnav-inner">
-    <div class="topnav-brand"><b>§</b> Abrahamic <em>·</em> 종교 · 역사 · 분파</div>
-    <ul class="topnav-list">
-      <li><a href="#origins"><span class="num">I</span>뿌리</a></li>
-      <li><a href="#three"><span class="num">II</span>세 종교</a></li>
-      <li><a href="#sects"><span class="num">III</span>분파</a></li>
-      <li><a href="#timeline"><span class="num">IV</span>연대기</a></li>
-      <li><a href="#wars"><span class="num">V</span>전쟁</a></li>
-      <li><a href="#iran-israel"><span class="num">VI</span>이란·이스라엘</a></li>
-      <li><a href="#actors"><span class="num">VII</span>행위자</a></li>
-      <li><a href="#territory"><span class="num">VIII</span>영토</a></li>
-      <li><a href="#impact"><span class="num">IX</span>현재</a></li>
-    </ul>
-  </div>
-</nav>
 
 <header class="hero">
   <div class="container">
