@@ -288,6 +288,65 @@
       "usedFor": [
         { "page": "science.era.01-ancient", "section": "아르키메데스 죽음의 가장 오래된 기록" }
       ]
+    },
+    {
+      "id": "src-0210",
+      "project": "science",
+      "type": "academic-archive",
+      "title": "Stanford Encyclopedia of Philosophy — Ibn al-Haytham",
+      "publisher": "Stanford University",
+      "url": "https://plato.stanford.edu/entries/ibn-al-haytham/",
+      "accessed": "2026-05-20",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "science.era.02-medieval", "section": "알하이삼 광학 모형" }
+      ]
+    },
+    {
+      "id": "src-0211",
+      "project": "science",
+      "type": "journal-article",
+      "title": "The Coherence of the Arabic-Latin Translation Programme in Toledo",
+      "publisher": "Burnett (Science in Context, 2001)",
+      "url": "https://www.cambridge.org/core/journals/science-in-context",
+      "accessed": "2026-05-20",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "science.era.02-medieval", "section": "톨레도 번역 학파" }
+      ],
+      "notes": "Charles Burnett. 12세기 아랍어→라틴어 번역 작업의 학술 정리."
+    },
+    {
+      "id": "src-0212",
+      "project": "science",
+      "type": "book",
+      "title": "A History of the University in Europe (Vol. I)",
+      "publisher": "Cambridge University Press",
+      "url": "https://www.cambridge.org/9780521541138",
+      "accessed": "2026-05-20",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "science.era.02-medieval", "section": "12~13세기 대학 형성" }
+      ],
+      "notes": "Walter Rüegg 편 (1992). 유럽 대학 통사 표준 자료."
+    },
+    {
+      "id": "src-0213",
+      "project": "science",
+      "type": "book",
+      "title": "The Black Death and the Transformation of the West",
+      "publisher": "Harvard University Press",
+      "url": "https://www.hup.harvard.edu/catalog.php?isbn=9780674076136",
+      "accessed": "2026-05-20",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        { "page": "science.era.02-medieval", "section": "14세기 흑사병의 사회·학문적 영향" }
+      ],
+      "notes": "Samuel Cohn (2002). 흑사병 영향 학술 분석."
     }
   ]
 }
