@@ -44,6 +44,19 @@
   }
   inner.appendChild(meta);
 
+  // Center: contact (email · Instagram)
+  var contact = document.createElement('div');
+  contact.className = 'page-footer__contact';
+  // Assemble email at runtime to dodge naïve scrapers
+  var emailUser = 'messfilm';
+  var emailDomain = 'gmail.com';
+  var emailAddr = emailUser + '@' + emailDomain;
+  contact.innerHTML =
+    '<a href="mailto:' + emailAddr + '" aria-label="이메일로 연락">' + emailAddr + '</a>' +
+    '<span class="contact-sep" aria-hidden="true">·</span>' +
+    '<a href="https://instagram.com/messfilm" target="_blank" rel="noopener" aria-label="Instagram @messfilm">@messfilm</a>';
+  inner.appendChild(contact);
+
   // Right: copyright
   var copy = document.createElement('div');
   copy.className = 'copyright';

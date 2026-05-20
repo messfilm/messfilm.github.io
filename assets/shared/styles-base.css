@@ -265,6 +265,24 @@
   color: var(--ink-mute);
 }
 
+/* Contact (email · instagram) — center segment of footer */
+.page-footer__contact {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--sans-ko);
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+.page-footer__contact .contact-sep {
+  color: var(--rule);
+}
+.page-footer__contact a {
+  font-family: var(--serif-en);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
 /* ============================================================
    Generic layout primitives
    ============================================================ */

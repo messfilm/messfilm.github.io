@@ -60,11 +60,13 @@
       base: 'science-history/',
       wip: true,
       sections: [
-        { href: 'science-history/index.html',             label: '개관',  overviewFor: 'main' },
-        { href: 'science-history/eras/01-ancient.html',   label: '고대',  eraKey: '01-ancient' },
-        { href: 'science-history/eras/02-medieval.html',  label: '중세',  eraKey: '02-medieval' },
-        { href: 'science-history/eras/03-revolution.html', label: '혁명', eraKey: '03-revolution' },
-        { href: 'science-history/eras/04-classical.html', label: '고전과학', eraKey: '04-classical' }
+        { href: 'science-history/index.html',              label: '개관',     overviewFor: 'main' },
+        { href: 'science-history/eras/01-ancient.html',    label: '고대',     eraKey: '01-ancient' },
+        { href: 'science-history/eras/02-medieval.html',   label: '중세',     eraKey: '02-medieval' },
+        { href: 'science-history/eras/03-revolution.html', label: '혁명',     eraKey: '03-revolution' },
+        { href: 'science-history/eras/04-classical.html',  label: '고전과학', eraKey: '04-classical' },
+        { href: 'science-history/eras/05-modern.html',     label: '현대물리', eraKey: '05-modern' },
+        { href: 'science-history/eras/06-contemporary.html', label: '동시대', eraKey: '06-contemporary' }
       ]
     }
   };
