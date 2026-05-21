@@ -92,7 +92,48 @@ viewBox 기준 1080 × 360 권장 (자연과학사 1080 × 250 대비 띠가 1�
 - **후대 각색**: 같은 패턴, 라벨만 다름 (`<em class="legend-flag">후대 각색</em>`)
 - **도시전설**: 명백히 근거 없는 것만 (예: "애플 로고 = 튜링 추모")
 
-## 6. 검증 우선순위 (스펙 § 9 그대로)
+## 6. 시대별 인터랙티브 ID (확정)
+
+각 sim은 IIFE 패턴으로 `data-sim-id` 컨테이너를 찾아 자체 UI 주입. 파일명은 `sim-<id>.js`.
+
+| § | data-sim-id | 컨셉 |
+|---|-------------|------|
+| § I | `base-60-converter` | 60↔10진법 변환기 (바빌로니아 잔재 체감) |
+| § I | `babylonian-cuneiform` | 점토판 쐐기문자 숫자 읽기 (1-59 입력 → 쐐기 렌더) |
+| § I | `egyptian-unit-fractions` | 이집트 단위분수 퍼즐 (분수 → 1/a + 1/b … 분해) |
+| § II | `eratosthenes-earth` | 에라토스테네스 지구 둘레 측정 |
+| § II | `sieve-of-eratosthenes` | 소수의 체 게임 |
+| § II | `euclidean-algorithm` | 호제법 시각화 (큰 수 → 작은 사각형들로 분할) |
+| § II | `sqrt2-irrational` | √2가 분수 아님 보이기 (귀류법 시각화) |
+| § III | `roman-vs-arabic` | (이미 완성) 로마숫자 vs 아라비아숫자 곱셈 대결 |
+| § IV | `cartesian-grapher` | 데카르트 좌표 함수 그래퍼 (y=f(x) 슬라이더로 변형) |
+| § IV | `calculus-intuition` | 미적분 직관 (접선 기울기 + 곡선 아래 넓이 슬라이더) |
+| § IV | `logarithm-slide-rule` | 로그·계산자 (두 자 슬라이드로 곱셈 → 덧셈) |
+| § V | `law-of-large-numbers` | 동전·주사위 시뮬레이션 (시도 ↑ → 기댓값 수렴) |
+| § V | `galton-board` | 골턴 보드 (정규분포 형성 체감) |
+| § V | `monty-hall` | 몬티 홀 문제 (자동 시뮬 + 사용자 시도) |
+| § VI | `cantor-diagonal` | 칸토어 대각선 논법 (실수 비가산성 시각화) |
+| § VI | `hilbert-hotel` | 힐베르트 무한 호텔 (무한+1, 무한+무한 손님 배정) |
+| § VI | `non-euclidean` | 비유클리드 기하 (구면·쌍곡면 삼각형 내각합) |
+| § VII | `turing-machine` | 튜링 기계 시뮬레이터 (간단한 규칙 + 테이프) |
+| § VII | `caesar-public-key` | 시저 암호 + 공개키 RSA 비교 데모 |
+| § VII | `info-bits-twentyq` | 정보=비트 스무고개 (log₂N 질문 횟수) |
+
+## 7. era-pagination 체인 (각 시대 페이지 하단)
+
+| § | Prev | Next |
+|---|------|------|
+| § I  | (없음) | § II  |
+| § II | § I | § III |
+| § III | § II | § IV |
+| § IV | § III | § V |
+| § V | § IV | § VI |
+| § VI | § V | § VII |
+| § VII | § VI | (없음, 또는 "수학사 개관으로") |
+
+각 era 페이지 추가될 때 인접 era들도 prev/next 링크 활성화.
+
+## 8. 검증 우선순위 (스펙 § 9 그대로)
 1. MacTutor History of Mathematics (St Andrews) — 일급 출처
 2. Stanford Encyclopedia of Philosophy — 논리·기초
 3. 대학·박물관·학술기관

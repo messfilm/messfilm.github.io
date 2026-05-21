@@ -76,6 +76,7 @@
       wip: true,
       sections: [
         { href: 'math-history/index.html',                 label: '개관',     overviewFor: 'main' },
+        { href: 'math-history/eras/01-counting.html',      label: '셈',       eraKey: '01-counting' },
         { href: 'math-history/eras/03-zero-algebra.html',  label: '0과 대수', eraKey: '03-zero-algebra' }
       ]
     }
