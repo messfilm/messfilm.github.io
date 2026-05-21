@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>무한과 기초를 묻다 · § VI 수학사 | Archive for Som & Chan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="수학이 자기 자신을 캐묻기 시작한 한 세기. 비유클리드 기하·갈루아의 군·리만의 휜 공간·칸토어의 무한·힐베르트의 23 문제·괴델의 불완전성 — 1820에서 1940, 120년의 토대 흔들기.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="../../assets/shared/styles-base.css">
+<link rel="stylesheet" href="../../assets/math-history/styles.css">
+</head>
+<body class="shared-body collection-math" data-page-id="math.era.06-infinity-foundations">
+
+<main class="math">
+  <div class="shared-container">
+    <nav class="era-breadcrumb" aria-label="현재 위치">
+      <a href="../">수학사</a>
+      <span class="sep">/</span>
+      <span class="current">§ VI · 무한과 기초를 묻다</span>
+    </nav>
+  </div>
+
+  <section class="math-hero">
+    <div class="shared-container">
+      <span class="kicker">§ VI · INFINITY &amp; FOUNDATIONS</span>
+      <h1>무한과 기초를 묻다<span class="latin">Infinity &amp; Foundations · 19th–Early 20th Century</span></h1>
+      <p class="subtitle">수학이 자기 자신을 캐묻기 시작한 한 세기 · 1820 — 1940</p>
+      <p class="lead">
+        2,000년 동안 수학은 <em>세상</em>을 묻는 학문이었다. 별의 궤도, 다리의 형태,
+        주사위의 결과. 그러나 19세기에 한 가지가 달라진다. 수학자들이 — 자기 발 밑의 토대를 —
+        의심하기 시작한다. <em>평행선 공준은 정말 자명한가?</em> <em>방정식은 늘 풀리는가?</em>
+        <em>무한에는 크기가 있는가?</em> <em>모든 참인 명제는 증명될 수 있는가?</em>
+        독일·러시아·헝가리·오스트리아의 한 세대가 이 질문들을 한 줄씩 적어 내려간다. 120년 끝에 한 젊은 오스트리아인이
+        조용한 한 논문으로 답한다 — <em>아니, 그것은 불가능합니다.</em>
+      </p>
+      <div class="math-stats">
+        <div class="math-stat">
+          <span class="math-stat__label">시간 범위</span>
+          <span class="math-stat__value">120<span class="latin" style="font-size:0.5em;margin-left:4px;">yrs</span></span>
+          <span class="math-stat__sub">1820 — 1940</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">핵심 인물</span>
+          <span class="math-stat__value">7</span>
+          <span class="math-stat__sub">로바쳅스키 → 괴델</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">무대</span>
+          <span class="math-stat__value">5</span>
+          <span class="math-stat__sub">독일·러시아·헝가리·프랑스·오스트리아</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">결정적 저작</span>
+          <span class="math-stat__value">1900<br>1931</span>
+          <span class="math-stat__sub">힐베르트 23 문제 → 괴델 불완전성</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shared-container">
+
+    <nav class="chapter-toc" aria-label="이 시대 챕터 목차">
+      <span class="chapter-toc__label">이 시대를 여섯 호흡으로</span>
+      <ol>
+        <li><a href="#ch1">다섯 번째 공준의 반란 — 비유클리드 기하<span class="years">1829–32</span></a></li>
+        <li><a href="#ch2">갈루아 — 군과 대칭, 그리고 결투<span class="years">1811–32</span></a></li>
+        <li><a href="#ch3">리만의 휜 공간<span class="years">1854</span></a></li>
+        <li><a href="#ch4">칸토어 — 무한의 크기<span class="years">1874–91</span></a></li>
+        <li><a href="#ch5">힐베르트의 23 문제<span class="years">1900</span></a></li>
+        <li><a href="#ch6">괴델의 충격<span class="years">1931</span></a></li>
+      </ol>
+    </nav>
+
+    <!-- ===== 시기 도식 ===== -->
+    <section class="math-section" id="period-diagram">
+      <header><h2>시기 도식</h2><span class="latin">§ I &nbsp;·&nbsp; Period Diagram</span></header>
+      <p class="lead">120년의 호흡. 비유클리드 기하의 첫 발표(1829)에서 괴델 불완전성(1931)까지 — 결정적 저작·사건을 1820에서 1940 사이에 점으로 표시한다. 그 위에 비유클리드 평행선·무한 호텔·괴델 자기참조의 상징이 함께 놓인다.</p>
+
+      <div class="math-timeline-scroll">
+      <svg viewBox="0 0 1080 280" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="§ VI 무한과 기초를 묻다 시기 도식" class="math-timeline-svg">
+        <defs>
+          <style>
+            .ax  { stroke: #c8bea4; stroke-width: 1; fill: none; }
+            .axT { stroke: #c8bea4; stroke-width: 1; }
+            .axLb{ font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 10.5px; fill: #6b6253; }
+            .band{ fill: #5a7090; opacity: 0.18; }
+            .bandTop{ fill: #5a7090; }
+            .evt { font-family: 'Noto Sans KR', sans-serif; font-size: 9px; fill: #1f1a14; }
+            .evtY{ font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 10px; fill: #554a8a; }
+            .stem{ stroke: #554a8a; stroke-width: 1; }
+            .region{ font-family: 'Noto Sans KR', sans-serif; font-size: 9.5px; fill: #7a7163; font-style: italic; }
+            .glyph{ fill: none; stroke: #554a8a; stroke-width: 0.9; opacity: 0.55; }
+          </style>
+        </defs>
+
+        <!-- x = (year - 1820) * (970/120) + 60   for 1820..1940 → 60..1030 -->
+        <rect class="band"    x="60" y="130" width="970" height="40" rx="3"/>
+        <rect class="bandTop" x="60" y="130" width="970" height="6"/>
+        <line class="ax" x1="60" y1="230" x2="1030" y2="230" />
+        <line class="axT" x1="60"     y1="228" x2="60"     y2="236"/>
+        <line class="axT" x1="262"    y1="228" x2="262"    y2="236"/>
+        <line class="axT" x1="464"    y1="228" x2="464"    y2="236"/>
+        <line class="axT" x1="666"    y1="228" x2="666"    y2="236"/>
+        <line class="axT" x1="868"    y1="228" x2="868"    y2="236"/>
+        <line class="axT" x1="1030"   y1="228" x2="1030"   y2="236"/>
+        <text class="axLb" x="60"   y="250" text-anchor="middle">1820</text>
+        <text class="axLb" x="262"  y="250" text-anchor="middle">1845</text>
+        <text class="axLb" x="464"  y="250" text-anchor="middle">1870</text>
+        <text class="axLb" x="666"  y="250" text-anchor="middle">1895</text>
+        <text class="axLb" x="868"  y="250" text-anchor="middle">1920</text>
+        <text class="axLb" x="1030" y="250" text-anchor="middle">1940</text>
+
+        <!-- 시대 글리프: 비유클리드 평행선(좌) · 무한 곡선(중) · 괴델 자기참조(우) -->
+        <path class="glyph" d="M 90 188 Q 110 196 130 188 M 90 200 Q 110 192 130 200"/>
+        <path class="glyph" d="M 530 198 C 545 184 555 212 570 198 C 585 184 595 212 610 198"/>
+        <g transform="translate(975,198)" opacity="0.55">
+          <circle r="9" class="glyph"/>
+          <path d="M -6 0 A 6 6 0 1 0 6 0" class="glyph"/>
+          <path d="M 6 0 L 3 -2 M 6 0 L 3 2" class="glyph"/>
+        </g>
+
+        <!-- region labels -->
+        <text class="region" x="160" y="120" text-anchor="middle">러시아 카잔 · 헝가리</text>
+        <text class="region" x="380" y="120" text-anchor="middle">프랑스 파리</text>
+        <text class="region" x="560" y="120" text-anchor="middle">독일 괴팅겐</text>
+        <text class="region" x="780" y="120" text-anchor="middle">독일 할레</text>
+        <text class="region" x="960" y="120" text-anchor="middle">오스트리아 빈</text>
+
+        <!-- 1829 로바쳅스키 첫 비유클리드 발표 -->
+        <line class="stem" x1="132.75" y1="130" x2="132.75" y2="78"/>
+        <circle cx="132.75" cy="130" r="4.5" fill="#554a8a"/>
+        <text class="evtY" x="132.75" y="70" text-anchor="start">1829</text>
+        <text class="evt"  x="132.75" y="58" text-anchor="start">로바쳅스키 「기하학 원리에 관하여」 (Kazan)</text>
+
+        <!-- 1832 보여이 부록 -->
+        <line class="stem" x1="157" y1="170" x2="157" y2="186"/>
+        <circle cx="157" cy="170" r="3" fill="#554a8a"/>
+        <text class="evt"  x="170" y="188">1832 · 보여이, 부친의 책 부록으로 절대 기하</text>
+
+        <!-- 1832 갈루아 결투·사망 -->
+        <line class="stem" x1="157" y1="130" x2="157" y2="104" stroke-dasharray="2 1"/>
+        <circle cx="157" cy="130" r="3.5" fill="#554a8a"/>
+        <text class="evt"  x="157" y="100" text-anchor="middle">1832.5.31 · 갈루아 사망 (결투 다음날, 20세)</text>
+
+        <!-- 1846 갈루아 유고 출판 (리우빌) -->
+        <line class="stem" x1="270.17" y1="170" x2="270.17" y2="186"/>
+        <circle cx="270.17" cy="170" r="3" fill="#554a8a"/>
+        <text class="evt"  x="270.17" y="188" text-anchor="middle">1846 · 리우빌, 갈루아 유고 출판</text>
+
+        <!-- 1854 리만 Habilitationsvortrag -->
+        <line class="stem" x1="334.83" y1="130" x2="334.83" y2="78"/>
+        <circle cx="334.83" cy="130" r="4.5" fill="#554a8a"/>
+        <text class="evtY" x="334.83" y="70" text-anchor="middle">1854</text>
+        <text class="evt"  x="334.83" y="58" text-anchor="middle">리만 Habilitation 강연 (휜 공간의 기하)</text>
+
+        <!-- 1859 리만 제타 함수 -->
+        <line class="stem" x1="375.25" y1="170" x2="375.25" y2="186"/>
+        <circle cx="375.25" cy="170" r="3" fill="#554a8a"/>
+        <text class="evt"  x="375.25" y="188" text-anchor="middle">1859 · 리만 제타 함수·소수 가설</text>
+
+        <!-- 1874 칸토어 첫 비가산성 -->
+        <line class="stem" x1="496.5" y1="130" x2="496.5" y2="100"/>
+        <circle cx="496.5" cy="130" r="4" fill="#554a8a"/>
+        <text class="evtY" x="496.5" y="92" text-anchor="middle">1874</text>
+        <text class="evt"  x="496.5" y="80" text-anchor="middle">칸토어, 실수의 비가산성 (첫 증명)</text>
+
+        <!-- 1891 칸토어 대각선 논법 -->
+        <line class="stem" x1="633.92" y1="130" x2="633.92" y2="78"/>
+        <circle cx="633.92" cy="130" r="4.5" fill="#554a8a"/>
+        <text class="evtY" x="633.92" y="70" text-anchor="middle">1891</text>
+        <text class="evt"  x="633.92" y="58" text-anchor="middle">칸토어 대각선 논법</text>
+
+        <!-- 1900 힐베르트 23 문제 -->
+        <line class="stem" x1="706.67" y1="130" x2="706.67" y2="100"/>
+        <circle cx="706.67" cy="130" r="4.5" fill="#554a8a"/>
+        <text class="evtY" x="706.67" y="92" text-anchor="end">1900</text>
+        <text class="evt"  x="706.67" y="80" text-anchor="end">힐베르트, 파리 ICM 23 문제</text>
+
+        <!-- 1903 러셀의 역설 -->
+        <line class="stem" x1="730.92" y1="170" x2="730.92" y2="186"/>
+        <circle cx="730.92" cy="170" r="3" fill="#554a8a"/>
+        <text class="evt"  x="730.92" y="188" text-anchor="middle">1903 · 러셀의 역설 (프레게에게)</text>
+
+        <!-- 1930 힐베르트 쾨니히스베르크 연설 -->
+        <line class="stem" x1="949.17" y1="130" x2="949.17" y2="102"/>
+        <circle cx="949.17" cy="130" r="3.5" fill="#554a8a"/>
+        <text class="evt"  x="949.17" y="94" text-anchor="end">1930.9.8 · 힐베르트 "Wir müssen wissen"</text>
+
+        <!-- 1931 괴델 불완전성 -->
+        <line class="stem" x1="957.25" y1="130" x2="957.25" y2="78"/>
+        <circle cx="957.25" cy="130" r="5" fill="#a04050"/>
+        <text class="evtY" x="957.25" y="70" text-anchor="end" fill="#a04050">1931</text>
+        <text class="evt"  x="957.25" y="58" text-anchor="end">괴델 불완전성 정리</text>
+      </svg>
+      </div>
+    </section>
+
+    <!-- ===== 챕터 1 — 비유클리드 기하 ===== -->
+    <section class="chapter" id="ch1">
+      <header class="chapter__head"><span class="chapter__num">제1장</span>
+        <h2 class="chapter__title">다섯 번째 공준의 반란 <span class="latin">The Parallel Postulate Falls</span></h2>
+        <p class="chapter__years">1820년대–30년대 · 러시아 카잔, 헝가리 트란실바니아, 독일 괴팅겐</p>
+      </header>
+      <div class="narrative">
+        <p class="dropcap ko">유클리드의 <span class="work">원론</span>(§ II)은 다섯 개의 공준으로 시작한다. 앞의 네 개는 자명하다 — 두 점을 직선으로 잇는다, 직선을 무한히 연장한다, 임의의 중심·반지름으로 원을 그린다, 직각은 모두 같다. 그러나 다섯 번째는 다르다. <em>한 직선 밖의 한 점을 지나는 평행선은 단 하나뿐</em>이라는 그 명제는 — 다른 넷보다 길고, 다른 넷보다 덜 자명했다. 2,000년 동안 수학자들은 그것을 다른 네 공준으로부터 <em>증명</em>하려 했다. 모두 실패했다.</p>
+        <p>19세기 초, 세 사람이 — 서로 모른 채 — 같은 결론에 도달한다. <em>제5공준은 증명되지 않는다. 그것이 부정된 기하학도 일관된다.</em> 첫 번째는 독일 괴팅겐의 <strong>가우스</strong>(1777–1855)였다. 그는 1816년경 자기 노트에 그 결과를 적었지만 — 발표하지 않았다. 그는 칸트의 <em>공간의 선험성</em>을 둘러싼 한 시대의 격렬한 논쟁에 자기 이름을 던지고 싶지 않았다. "보이오티아인들의 비명소리가 두렵다." 그가 친구 베셀에게 보낸 편지의 한 줄이다.</p>
+        <figure class="inline-figure"><div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="88" height="96" fill="#f5efe0"/>
+          <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#2a2018"/>
+          <path d="M 30 64 Q 44 78 58 64 L 56 64 Q 44 74 32 64 Z" fill="#faf6eb" stroke="#a09078" stroke-width="0.4"/>
+          <rect x="38" y="56" width="12" height="10" fill="#d2b48c"/>
+          <ellipse cx="44" cy="40" rx="14" ry="17" fill="#d2b48c"/>
+          <path d="M 24 32 Q 22 18 32 14 Q 44 8 56 14 Q 66 18 64 32 Q 60 24 44 24 Q 28 24 24 32 Z" fill="#8a7060"/>
+          <path d="M 26 34 L 26 40 Q 32 36 38 36 L 50 36 Q 56 36 62 40 L 62 34 Q 54 30 44 30 Q 34 30 26 34 Z" fill="#5a4030"/>
+          <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/><circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+          <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+          <path d="M 38 56 Q 44 60 50 56" stroke="#3a2418" stroke-width="0.5" fill="none"/>
+        </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">니콜라이 로바쳅스키</span>
+            <span class="inline-figure__name-en">Nikolai Lobachevsky</span>
+            <span class="inline-figure__life">1792 — 1856</span>
+          </figcaption>
+        </figure>
+        <p>두 번째는 러시아 카잔의 <strong>로바쳅스키</strong>(1792–1856)였다. 카잔 대학 교수였던 그는 1826년 2월 한 강연에서 그 결과를 처음 말로 보였고, 1829년 카잔 학회지 <span class="work">Казанский вестник</span>에 「기하학 원리에 관하여」(О началах геометрии)로 인쇄한다. 인류 역사상 비유클리드 기하학의 첫 활자가 한 러시아어 학회지의 한 호에 묻혀 있었다. 그가 그것을 인정받기까지는 30년이 더 걸린다. 그는 1846년 카잔 대학에서 (사상 때문이 아니라 행정적 이유로) 해직되고, 시력을 잃은 채 1856년 사망한다.</p>
+        <p>세 번째는 헝가리의 한 청년 <strong>야노시 보여이</strong>(János Bolyai, 1802–1860)였다. 그의 아버지는 가우스의 친구였던 수학자 파르카시 보여이. 야노시는 1820년대 말 평행선 공준 없는 기하학을 독립적으로 구성했고, 그것을 1832년 아버지의 책에 26쪽 부록으로 붙여 출판한다. <em>Appendix Scientiam Spatii Absolute Veram Exhibens</em>(절대적으로 참인 공간의 학문을 보이는 부록). 부친 파르카시가 그 부록을 자랑스레 가우스에게 보냈다. 가우스의 답장은 청년에게 잔인했다 — "당신 아들의 결과를 칭찬할 수가 없다. 그를 칭찬하는 것은 곧 나 자신을 칭찬하는 일이 되기 때문이다. 이 결과는 30여 년 전부터 내 머릿속에 있었다." 야노시는 이 답장 뒤로 수학을 떠난다.</p>
+        <aside class="inline-scene">
+          <div class="inline-scene__pictogram"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="56" height="56" fill="#f5efe0"/>
+            <line x1="6" y1="20" x2="50" y2="20" stroke="#554a8a" stroke-width="0.8"/>
+            <circle cx="28" cy="32" r="2" fill="#554a8a"/>
+            <line x1="6" y1="44" x2="50" y2="44" stroke="#554a8a" stroke-width="0.6"/>
+            <path d="M 6 50 Q 28 28 50 50" fill="none" stroke="#554a8a" stroke-width="0.6"/>
+            <path d="M 6 38 Q 28 36 50 38" fill="none" stroke="#554a8a" stroke-width="0.6" stroke-dasharray="2 1"/>
+          </svg></div>
+          <div>
+            <div class="inline-scene__meta">
+              <time datetime="1829">1829 / 1832</time>
+              <span class="place">카잔 · 트란실바니아 · 괴팅겐</span>
+            </div>
+            <div class="inline-scene__body">
+              <strong>같은 결론에 도달한 세 사람</strong>
+              가우스는 적었지만 발표하지 않았다(1816년경 메모, 발표 영영 없음). 로바쳅스키는 1829년 러시아어로 발표했지만 서방 학계는 30년 뒤에야 그것을 읽었다. 보여이는 1832년 부친의 책 부록으로 발표했지만 가우스의 한 편지로 의지가 꺾였다. 비유클리드 기하학의 발견은 — 한 명의 천재가 아니라 — 한 세대의 셋이 같은 자리에 동시에 닿은 사건이었다. 한 시대의 토양에 그 결론이 익어 있었던 것이다. 그것을 한 일관된 기하학으로 만들고 — 가우스의 권위 뒤에서 — 서방 학계가 진지하게 받아들이게 된 자리는 1854년 리만(제3장)이다.
+              <span class="source">MacTutor "Lobachevsky", "János Bolyai", "Gauss" · Britannica "Non-Euclidean geometry"</span>
+            </div>
+          </div>
+        </aside>
+        <p>제5공준이 부정될 수 있다는 사실은 — 한 기하학이 두 개가 될 수 있다는 뜻이었다. 더 정확히는, <em>여러 개</em>가 될 수 있다. 한 점을 지나는 평행선이 무수히 많은 기하(쌍곡 기하, 로바쳅스키-보여이), 한 점을 지나는 평행선이 하나도 없는 기하(구면 기하, 후에 리만), 그리고 우리가 학교에서 배운 유클리드 기하. 셋 모두 자기 안에서 모순이 없다. 그렇다면 — <em>어느 것이 우리가 사는 공간의 진짜 기하인가</em>? 그 질문은 70년 뒤 아인슈타인이 휜 시공간의 일반상대성으로 답할 것이다(자연과학사 § V).</p>
+
+        <aside class="inline-sim">
+          <div class="inline-sim__head"><span class="num">시뮬 1</span><h4>비유클리드 기하 — 구면·쌍곡면 삼각형의 내각합</h4><span class="latin">Non-Euclidean Triangles</span></div>
+          <p class="inline-sim__lead">평면에서 삼각형의 내각합은 180도다. 그것을 우리는 학교에서 배웠다. 그러나 — 구면 위에서 삼각형을 그리면 그 합은 180도보다 크고, 안장 모양의 쌍곡면 위에서 그리면 작아진다. 두 경우 모두 — 한 기하학으로서 — 자기 안에서 일관된다.</p>
+          <div class="sim" data-sim-id="non-euclidean"></div>
+        </aside>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 2 — 갈루아 ===== -->
+    <section class="chapter" id="ch2">
+      <header class="chapter__head"><span class="chapter__num">제2장</span>
+        <h2 class="chapter__title">갈루아 — 군과 대칭, 그리고 결투 <span class="latin">Galois · Symmetry, and a Duel</span></h2>
+        <p class="chapter__years">1811 — 1832 · 프랑스 파리, 부르 라 렌</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure inline-figure--left"><div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="88" height="96" fill="#f5efe0"/>
+          <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#1a1410"/>
+          <path d="M 28 64 L 38 76 L 50 76 L 60 64 Z" fill="#e8dfc8" stroke="#a09078" stroke-width="0.4"/>
+          <rect x="38" y="56" width="12" height="10" fill="#e8c8a8"/>
+          <ellipse cx="44" cy="40" rx="14" ry="17" fill="#e8c8a8"/>
+          <path d="M 24 34 Q 22 20 32 14 Q 44 10 56 14 Q 66 20 64 34 Q 60 26 44 26 Q 28 26 24 34 Z" fill="#2a1f18"/>
+          <path d="M 28 36 L 28 42 Q 34 38 40 38 L 48 38 Q 54 38 60 42 L 60 36 Q 54 32 44 32 Q 34 32 28 36 Z" fill="#3a2820"/>
+          <line x1="38" y1="42" x2="42" y2="42" stroke="#1f1a14" stroke-width="0.6"/>
+          <line x1="46" y1="42" x2="50" y2="42" stroke="#1f1a14" stroke-width="0.6"/>
+          <circle cx="40" cy="45" r="0.7" fill="#1f1a14"/><circle cx="48" cy="45" r="0.7" fill="#1f1a14"/>
+          <path d="M 44 46 L 43 51 L 45 51 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+          <path d="M 40 56 Q 44 58 48 56" stroke="#7a4030" stroke-width="0.5" fill="none"/>
+        </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">에바리스트 갈루아</span>
+            <span class="inline-figure__name-en">Évariste Galois</span>
+            <span class="inline-figure__life">1811 — 1832</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko"><strong>에바리스트 갈루아</strong>. 1811년 10월 25일 파리 남쪽 부르 라 렌에서 출생. 1832년 5월 31일 파리에서 사망. 만 20세 7개월. 그가 살아 있는 동안 학계가 인정한 논문은 거의 없었다. 그러나 그가 죽고 14년 뒤 — 그의 유고가 출판되면서 — 한 새로운 학문이 시작된다. 군론(group theory)이다.</p>
+        <p>16세기 이탈리아의 카르다노·페라리·타르탈리아가 3차·4차방정식의 일반 해법을 찾았다(§ III에서 짧게 언급). 그 뒤 300년 동안 수학자들은 5차방정식의 일반 해법을 찾고 있었다 — 즉 계수만으로 사칙연산과 거듭제곱근만 써서 답을 쓰는 공식. 1824년 노르웨이의 <strong>닐스 헨리크 아벨</strong>(1802–1829)이 그것이 — 일반적으로 — <em>불가능</em>하다는 사실을 증명했다. 그러나 그는 <em>왜</em> 그것이 불가능한지의 깊은 이유를 적지는 못했다.</p>
+        <p>17세 갈루아가 그 자리에 들어선다. 그는 한 방정식의 해들이 가지는 <em>대칭의 구조</em>를 본다. 해들을 서로 자리바꿈하는 작업들 — 그것들이 한 묶음을 이룬다. 그 묶음에 그가 붙인 이름이 <em>군</em>(groupe)이다. 한 방정식이 거듭제곱근으로 풀리는가 — 그 질문은 그 방정식의 군이 한 특별한 종류(나중에 <em>가해군 solvable group</em>이라 불릴)인가의 질문으로 바뀐다. 5차 이상의 일반 방정식은 가해군이 아니다. 따라서 일반 해법이 없다. 한 줄로 닫히는 이 일반화가 — 18세 청년의 머리에서 — 1829년경 적힌 셈이다.</p>
+        <p>그러나 그는 인정받지 못했다. 1829년 5월 제출한 첫 논문을 코시(Cauchy)가 잃어버린다(혹은 "보류"한다 — 자료가 명확치 않다). 1830년 다시 제출한 논문은 푸리에(Fourier)가 읽어 보기 전에 죽고, 원고가 사라진다. 1831년 마지막 시도 — 푸아송(Poisson)이 심사한 — 는 "이해할 수 없다"는 평으로 반려된다. 21세 봄, 그는 학계에서 한 번도 받아들여지지 못한 채 — 정치적 격동의 파리에서 — 공화주의 운동에 깊이 들어가 두 차례 투옥된다.</p>
+        <blockquote class="pull">
+          Je n'ai pas le temps. ... Tu prieras publiquement Jacobi ou Gauss de donner leur avis, non sur la vérité, mais sur l'importance des théorèmes.
+          <span class="attr">— 갈루아, 결투 전야 슈발리에에게 보낸 편지, 1832년 5월 29일 (의역: "나는 시간이 없다. … 너는 야코비나 가우스에게, 이 정리들의 — 진위가 아니라 — 중요성을 공개적으로 물어다오.")</span>
+        </blockquote>
+        <p>1832년 5월 30일 새벽, 그는 한 결투에 나간다. 결투의 정확한 동기는 한 여인을 둘러싼 명예 문제로 전해지지만, 자료의 단편성과 후대 각색 때문에 학계의 공식 견해는 <em>정확히 모른다</em>이다. 그는 복부에 총상을 입고 들판에 버려져, 한 농부에 의해 발견되어 병원으로 옮겨진다. 5월 31일 사망. 형 알프레드가 옆에 있었다.</p>
+
+        <div class="legend-vs-fact">
+          <div class="legend-vs-fact__legend">
+            <h4>전설 · 자주 듣는 이야기</h4>
+            <p><strong>"갈루아는 결투 전날 밤, 한 자기 다락방에서 군론을 모두 발명해 적었다."</strong></p>
+            <p>그가 죽음을 예감하고 — 잉크에 끓는 정신을 적시며 — 인류 역사상 가장 위대한 한 수학적 유언을 그 한 밤 안에 적어 내려갔다는 이야기. 다음날 새벽 결투에서 죽는 한 천재의 마지막 빛. 1937년 E. T. Bell의 <em>Men of Mathematics</em>의 "Genius and Stupidity" 장이 이 그림을 결정적으로 굳혔고, 그 뒤 20세기의 모든 통속 수학사 책이 그것을 따라 적었다.</p>
+          </div>
+          <div class="legend-vs-fact__fact">
+            <h4>사실 · 학계가 말하는 것</h4>
+            <p><strong>그의 주요 정리는 1829-1831 사이에 이미 작성·제출되어 있었다.</strong></p>
+            <p>1829년 5월 코시에게 제출, 1830년 푸리에에게 제출, 1831년 1월 푸아송에게 제출. 세 차례의 정식 제출이 결투 전에 이미 있었다. 1832년 5월 29-30일 밤 그가 슈발리에에게 적은 편지는 — 이미 작성한 결과들의 <em>요약·우선순위·해설</em>이지, 결과 자체의 첫 도출이 아니다. 본인이 그 편지 안에 적었다 — <em>"Je n'ai pas le temps"</em>("나는 시간이 없다"). "모든 정리의 증명을 해 줄 시간이 없다"고. 그 한 밤은 위대했지만, 그것이 군론의 한 밤은 아니었다.</p>
+            <p class="legend-vs-fact__source" style="font-size:11px; color:var(--ink-mute); font-style:italic; margin-top:8px;">— Tony Rothman <em>Genius and Biographers: The Fictionalization of Évariste Galois</em>(American Mathematical Monthly, 1982); Peter M. Neumann <em>The Mathematical Writings of Évariste Galois</em>(EMS, 2011); MacTutor "Évariste Galois"</p>
+          </div>
+        </div>
+
+        <p>그의 원고 묶음은 형 알프레드와 친구 슈발리에가 보관했다. 1843년 슈발리에가 그것을 한 학회지에 제출했고, 1846년 수학자 조제프 리우빌이 <span class="work">Journal de Mathématiques Pures et Appliquées</span>에 갈루아의 주요 논문을 정리해 출판한다. 한 청년이 죽고 14년이 지난 뒤, 학계가 그의 한 줄을 처음 진지하게 읽기 시작한 것이다. 19세기 후반부터 20세기 전체의 추상대수학 — 군·환·체·갈루아 이론 — 은 그가 22세를 채우지 못하고 죽기 전에 적어 둔 한 묶음의 직계 후손이다.</p>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 3 — 리만 ===== -->
+    <section class="chapter" id="ch3">
+      <header class="chapter__head"><span class="chapter__num">제3장</span>
+        <h2 class="chapter__title">리만의 휜 공간 <span class="latin">Riemann · Geometry of Curved Space</span></h2>
+        <p class="chapter__years">1854 · 독일 괴팅겐</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure"><div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="88" height="96" fill="#f5efe0"/>
+          <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#2a2018"/>
+          <path d="M 30 64 Q 44 78 58 64 L 56 64 Q 44 74 32 64 Z" fill="#faf6eb" stroke="#a09078" stroke-width="0.4"/>
+          <rect x="38" y="56" width="12" height="10" fill="#d8b48c"/>
+          <ellipse cx="44" cy="40" rx="14" ry="17" fill="#d8b48c"/>
+          <path d="M 24 32 Q 24 18 32 14 Q 44 8 56 14 Q 64 18 64 32 Q 60 26 44 26 Q 28 26 24 32 Z" fill="#3a2820"/>
+          <path d="M 28 34 L 28 40 Q 34 36 40 36 L 48 36 Q 54 36 60 40 L 60 34 Q 54 30 44 30 Q 34 30 28 34 Z" fill="#5a4030"/>
+          <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/><circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+          <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+          <path d="M 36 54 Q 44 58 52 54 L 50 60 Q 44 62 38 60 Z" fill="#3a2820"/>
+          <path d="M 40 50 Q 44 52 48 50" stroke="#3a2418" stroke-width="0.5" fill="none"/>
+        </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">베른하르트 리만</span>
+            <span class="inline-figure__name-en">Bernhard Riemann</span>
+            <span class="inline-figure__life">1826 — 1866</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko">1854년 6월 10일 오후, 괴팅겐 대학의 한 강의실. 28세의 사강사 <strong>베른하르트 리만</strong>이 자기 교수자격(Habilitation) 강연을 한다. 청중 중에는 77세의 가우스가 앉아 있다. 강연 제목은 <em>Über die Hypothesen, welche der Geometrie zu Grunde liegen</em>(기하학의 토대에 놓인 가설들에 관하여). 그 한 시간의 강연에서 리만은 — 비유클리드 기하의 단편적 발견들을 — 한 일반 이론으로 묶었다.</p>
+        <p>그가 한 일은 이렇다. 한 공간을 — 그것의 모양과 무관하게 — <em>각 점에서의 거리의 미세 구조</em>(metric)로 정의한다. 한 점에서 무한히 가까운 또 한 점까지의 거리를 어떻게 잴 것인가. 그 미세 구조가 곳마다 다를 수 있고 — 따라서 공간 자체가 휘어 있을 수 있다. 평면도, 구면도, 안장면도 — 모두 한 종류의 대상의 다른 경우다. 그것이 <em>리만 다양체</em>의 시작이다.</p>
+        <p>강연 직후 가우스가 — 평소 말이 적은 그가 — 한 동료에게 흥분을 표했다고 한다. 그러나 강연 원고는 곧바로 출판되지 않았다. 리만은 1859년 베를린 학회에 입회 논문 <span class="work">Über die Anzahl der Primzahlen unter einer gegebenen Größe</span>(주어진 크기 미만의 소수의 수에 관하여)를 제출한다 — 그 논문의 한 줄에 후대에 <em>리만 가설</em>이라 불릴 한 추측이 적혀 있다. 제타 함수 ζ(s)의 모든 비자명한 영점의 실수부는 1/2이라는 추측. 2026년 현재까지 미해결. 클레이 수학연구소의 밀레니엄 7대 문제 중 하나(상금 100만 달러).</p>
+        <p>리만 자신은 39세에 — 폐결핵으로 — 1866년 이탈리아 셀라스카에서 사망한다. 1854년의 강연 원고는 그가 죽고 2년 뒤인 1868년 그의 동료 데데킨트가 정리해 출판한다. 그 한 묶음의 원고에서 — 19세기 후반의 미분기하학, 20세기 초의 아인슈타인 일반상대성, 20세기 중반의 게이지 이론, 21세기의 끈 이론까지 — 후대의 모든 휜 공간 물리학이 한 발씩 한 발씩 자라난다.</p>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 4 — 칸토어 ===== -->
+    <section class="chapter" id="ch4">
+      <header class="chapter__head"><span class="chapter__num">제4장</span>
+        <h2 class="chapter__title">칸토어 — 무한의 크기 <span class="latin">Cantor · Sizes of Infinity</span></h2>
+        <p class="chapter__years">1874 — 1891 · 독일 할레</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure inline-figure--left"><div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="88" height="96" fill="#f5efe0"/>
+          <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#1a1410"/>
+          <path d="M 30 64 Q 44 80 58 64 L 56 64 Q 44 76 32 64 Z" fill="#faf6eb" stroke="#a09078" stroke-width="0.4"/>
+          <rect x="38" y="56" width="12" height="10" fill="#d8b48c"/>
+          <ellipse cx="44" cy="40" rx="14" ry="17" fill="#d8b48c"/>
+          <path d="M 22 32 Q 22 16 30 12 Q 44 6 58 12 Q 66 16 66 32 Q 60 22 44 22 Q 28 22 22 32 Z" fill="#a09078"/>
+          <path d="M 26 36 L 24 56 Q 28 48 32 46 L 56 46 Q 60 48 64 56 L 62 36 Q 54 32 44 32 Q 34 32 26 36 Z" fill="#7a6850"/>
+          <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/><circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+          <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+          <path d="M 36 56 L 32 70 L 38 64 Z M 52 56 L 56 70 L 50 64 Z" fill="#a09078"/>
+        </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">게오르크 칸토어</span>
+            <span class="inline-figure__name-en">Georg Cantor</span>
+            <span class="inline-figure__life">1845 — 1918</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko">2,000년 동안 수학자들은 <em>무한</em>을 한 개의 개념으로 다뤘다. 무한은 무한이다. 끝나지 않는 것. 그것 이상이 아니었다. 1874년, 독일 할레 대학의 한 29세 사강사 <strong>게오르크 칸토어</strong>가 한 짧은 논문을 발표한다. 제목은 「모든 실대수의 한 성질에 관하여」. 그 논문에서 그는 한 가지를 증명했다 — <em>자연수의 집합과 실수의 집합은 같은 크기가 아니다. 실수가 더 많다.</em></p>
+        <p>그것이 이상하게 들릴 수 있다. 둘 다 무한 아닌가? 그렇다. 그러나 칸토어가 보인 것은 — 한 무한과 다른 무한 사이에 — 일대일 대응이 불가능한 경우가 있다는 것이었다. 자연수 1, 2, 3, 4… 와 실수를 한 줄로 나란히 짝지을 수가 없다. 실수가 너무 많다. 이 한 사실이 — 무한에도 <em>크기</em>가 있다는 사실의 첫 증명이었다.</p>
+        <p>1874년의 첫 증명은 <em>구간의 중첩</em>을 쓴 다소 복잡한 논증이었다. 17년 뒤인 1891년, 칸토어는 같은 결론에 도달하는 한 충격적으로 간단한 논증을 발표한다. <em>대각선 논법</em>(Diagonalargument)이다. 만약 0과 1 사이의 모든 실수를 한 표로 적을 수 있다고 가정한다 — 그 표의 대각선 자리의 숫자를 한 자리씩 바꿔 새 수를 만들면, 그 새 수는 표 안의 어떤 줄과도 다르다. 따라서 가정이 틀렸다. 실수는 한 표로 적을 수 없다. 비가산이다.</p>
+        <blockquote class="pull">
+          Das Wesen der Mathematik liegt gerade in ihrer Freiheit.
+          <span class="attr">— 게오르크 칸토어, 1883 · 의역: "수학의 본질은 — 다름 아닌 — 그것의 자유에 있다."</span>
+        </blockquote>
+        <p>칸토어는 더 나아갔다. 두 무한 사이에 일대일 대응이 가능한가의 질문을 — 모든 무한 집합 사이에 — 적용했다. 자연수와 같은 크기(ℵ₀, 알레프 영)인 집합들 — 정수, 유리수, 대수적 수 — 의 묶음. 실수와 같은 크기(ℵ₁? 혹은 더 큰?)인 집합들. 그리고 한 집합의 멱집합은 — 그 집합보다 — 늘 크다. ℵ₀ &lt; 2^ℵ₀ &lt; 2^(2^ℵ₀) &lt; … 무한히 큰 무한들이 무한히 많다. 한 인간이 손으로 적은 우주에서 가장 어지러운 한 풍경이다.</p>
+
+        <aside class="inline-sim">
+          <div class="inline-sim__head"><span class="num">시뮬 2</span><h4>칸토어 대각선 논법 — 실수가 자연수보다 많다는 증명</h4><span class="latin">Cantor's Diagonal</span></div>
+          <p class="inline-sim__lead">0과 1 사이의 실수를 한 표에 모두 적어 보자. 그 표의 대각선 숫자를 한 자리씩 바꾸면 — 표 안에 없는 새 수가 만들어진다. 직접 그 과정을 본다. 무한이 무한보다 클 수 있다는 사실의 — 한 손가락 짧은 증명.</p>
+          <div class="sim" data-sim-id="cantor-diagonal"></div>
+        </aside>
+
+        <div class="episode">
+          <span class="episode__label">에피소드 · 칸토어의 비극</span>
+          <h4 class="episode__title">"누구도 우리를 칸토어가 만든 낙원에서 쫓아내지 못할 것이다"</h4>
+          <div class="episode__body">
+            <p>칸토어의 무한 이론은 — 발표 직후 — 학계의 격렬한 반대에 부딪혔다. 베를린 대학의 거물 <strong>레오폴트 크로네커</strong>(1823–1891)가 가장 격렬했다. "자연수는 신이 만들었고, 나머지는 모두 인간의 일이다." 그는 — 칸토어의 한 단계 한 단계에 — 공개적으로 적대했고, 칸토어가 베를린 대학 자리에 응모할 때마다 그것을 막았다. 칸토어는 평생 — 독일 학계의 변두리 — 할레 대학에서 가르쳤다.</p>
+            <p>1884년 — 39세 — 칸토어는 첫 신경쇠약 발작을 일으킨다. 그 후 30년 동안 그는 — 깊은 우울과 정신병원 입원을 — 반복했다. 1918년 1월 6일 할레 정신병원에서 사망. 마지막 몇 년은 굶주림에 가까운 상태였다(1차대전 후의 독일).</p>
+            <p>그러나 그가 죽기 전에 — 학계의 시선이 바뀌고 있었다. 1900년 힐베르트가 파리에서 한 23 문제 중 <em>첫 번째</em>가 칸토어의 한 추측(연속체 가설)이었다. 1925년 힐베르트는 적었다 — <em>"누구도 우리를 칸토어가 만든 낙원에서 쫓아내지 못할 것이다."</em> 한 시대가 거부한 한 인간의 한 작업을 — 그 다음 시대가 자기 시대의 토대로 인정한 것이다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 5 — 힐베르트 ===== -->
+    <section class="chapter" id="ch5">
+      <header class="chapter__head"><span class="chapter__num">제5장</span>
+        <h2 class="chapter__title">힐베르트의 23 문제 <span class="latin">Hilbert's 23 Problems</span></h2>
+        <p class="chapter__years">1900년 8월 8일 · 파리 ICM</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure"><div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="88" height="96" fill="#f5efe0"/>
+          <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#1a1410"/>
+          <path d="M 30 64 L 38 76 L 50 76 L 58 64 Z" fill="#e8dfc8" stroke="#a09078" stroke-width="0.4"/>
+          <rect x="38" y="56" width="12" height="10" fill="#d8b48c"/>
+          <ellipse cx="44" cy="40" rx="13" ry="16" fill="#d8b48c"/>
+          <path d="M 26 32 Q 28 22 36 18 Q 44 14 52 18 Q 60 22 62 32 L 58 32 Q 56 28 44 28 Q 32 28 30 32 Z" fill="#a09078"/>
+          <path d="M 26 32 L 26 44 Q 30 38 36 36 L 52 36 Q 58 38 62 44 L 62 32 Z" fill="#7a6850"/>
+          <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/><circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+          <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+          <path d="M 40 52 Q 44 54 48 52" stroke="#3a2418" stroke-width="0.5" fill="none"/>
+          <ellipse cx="44" cy="22" rx="9" ry="3" fill="#3a2820"/>
+          <rect x="36" y="20" width="16" height="3" fill="#3a2820"/>
+        </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">다비트 힐베르트</span>
+            <span class="inline-figure__name-en">David Hilbert</span>
+            <span class="inline-figure__life">1862 — 1943</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko">1900년 8월 8일, 파리 소르본의 한 강의실. 제2차 국제수학자대회(ICM). 38세의 괴팅겐 대학 교수 <strong>다비트 힐베르트</strong>가 강단에 선다. 강연 제목은 <em>Mathematische Probleme</em>(수학적 문제들). 그 한 시간 안에 그는 — 20세기 수학이 풀어야 할 — 23개의 문제를 한 목록으로 제시한다.</p>
+        <p>그 23 문제는 한 시대의 의제가 되었다. 어떤 문제는 그가 강연한 그 해에 풀렸고(제3 문제, 막스 덴), 어떤 문제는 1세기가 지나 풀렸고(제10 문제, 1970년 유리 마타세비치), 어떤 문제는 — 2026년 현재까지 — 풀리지 않은 채 남아 있다. 제8 문제(리만 가설), 제12 문제(클로네커-베버 정리의 일반화) 등.</p>
+        <p>그러나 이 강연에서 가장 무거운 자리는 <em>제2 문제</em>였다. <strong>"산술의 공리들이 일관됨을 증명하라."</strong> 즉 — 우리가 수학에서 쓰는 기본 규칙들이, 자기 안에서 모순을 낳지 않음을 증명하라. 우리가 어떤 명제와 그 부정을 동시에 증명할 수는 없음을 — 보장하라. 이것이 — 30년 뒤 그의 한 야심찬 계획(<em>힐베르트 프로그램</em>)의 한 시작점이었다.</p>
+        <p>힐베르트의 야심은 더 컸다. 그는 수학 전체를 — 한 형식 체계로 — 환원할 수 있다고 믿었다. 모든 참인 수학적 명제는 그 형식 체계 안에서 — 유한한 단계로 — 증명될 수 있다. 그리고 그 체계가 — 자기 안에서 — 일관됨이 증명될 수 있다. 30년 동안 그는 이 한 계획을 자기 학파(베르나이스·아커만 등)와 함께 추진한다. 그 정점이 — 1930년 9월 8일, 자기 고향 쾨니히스베르크에서 행한 — 한 짧은 라디오 연설이었다.</p>
+        <blockquote class="pull">
+          Wir müssen wissen — wir werden wissen.
+          <span class="attr">— 다비트 힐베르트, 1930년 9월 8일 쾨니히스베르크 연설 마지막 문장 · "우리는 알아야 한다 — 우리는 알게 될 것이다."</span>
+        </blockquote>
+        <p>이 한 줄은 — 한 시대 수학적 낙관의 정점이었다. 모든 진리는 인간이 알 수 있다. 어떤 <em>ignorabimus</em>(우리는 모를 것이다)도 없다. 한 세대 전 베를린 대학의 한 생리학자 뒤 부아 레몽의 비관(<em>ignoramus et ignorabimus</em> — 우리는 모르고, 영원히 모를 것이다)을 — 힐베르트는 정면으로 거부했다. 그 마지막 문장은 후대 그의 묘비에 새겨진다.</p>
+        <p>그 연설이 있던 날에는 — 그가 모르고 있었지만 — 한 가지가 이미 일어나고 있었다. 같은 시기에 같은 도시 쾨니히스베르크에서 열린 한 다른 학회에서, 한 24세의 오스트리아 청년이 — 한 짧은 발표로 — 힐베르트의 한 시대의 낙관을 무너뜨릴 결과를 처음 알렸다.</p>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 6 — 괴델 ===== -->
+    <section class="chapter" id="ch6">
+      <header class="chapter__head"><span class="chapter__num">제6장</span>
+        <h2 class="chapter__title">괴델의 충격 — 불완전성 정리 <span class="latin">Gödel · The Incompleteness Theorems</span></h2>
+        <p class="chapter__years">1931 · 오스트리아 빈</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure inline-figure--left"><div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="88" height="96" fill="#f5efe0"/>
+          <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#2a2018"/>
+          <path d="M 28 64 L 36 78 L 52 78 L 60 64 Z" fill="#e8dfc8" stroke="#a09078" stroke-width="0.4"/>
+          <rect x="38" y="56" width="12" height="10" fill="#e8c8a8"/>
+          <ellipse cx="44" cy="40" rx="13" ry="16" fill="#e8c8a8"/>
+          <path d="M 26 32 Q 26 20 34 16 Q 44 12 54 16 Q 62 20 62 32 L 58 32 Q 56 28 44 28 Q 32 28 30 32 Z" fill="#3a2820"/>
+          <path d="M 28 34 L 28 40 Q 32 36 38 36 L 50 36 Q 56 36 60 40 L 60 34 Z" fill="#5a4030"/>
+          <!-- 안경 -->
+          <circle cx="40" cy="42" r="3.5" fill="none" stroke="#1f1a14" stroke-width="0.7"/>
+          <circle cx="48" cy="42" r="3.5" fill="none" stroke="#1f1a14" stroke-width="0.7"/>
+          <line x1="43.5" y1="42" x2="44.5" y2="42" stroke="#1f1a14" stroke-width="0.5"/>
+          <circle cx="40" cy="42" r="0.6" fill="#1f1a14"/><circle cx="48" cy="42" r="0.6" fill="#1f1a14"/>
+          <path d="M 44 46 L 43 50 L 45 50 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+          <path d="M 40 54 Q 44 56 48 54" stroke="#3a2418" stroke-width="0.5" fill="none"/>
+        </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">쿠르트 괴델</span>
+            <span class="inline-figure__name-en">Kurt Gödel</span>
+            <span class="inline-figure__life">1906 — 1978</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko"><strong>쿠르트 괴델</strong>. 1906년 4월 28일 모라비아 브륀(현 체코 브르노)에서 출생. 1924년 빈 대학에 입학해 수리논리를 공부한다. 1929년 박사 학위(논리학의 완전성), 1930년 9월 6일 쾨니히스베르크의 한 학회에서 — 25세에 — 한 결과를 짧게 처음 알린다. 이틀 뒤인 9월 8일, 같은 도시의 다른 자리에서 힐베르트가 "Wir müssen wissen"을 외쳤다. 두 사람이 만난 일은 없다.</p>
+        <p>1931년 1월, 괴델은 빈 학술원 학술지 <span class="work">Monatshefte für Mathematik und Physik</span>에 한 논문을 발표한다. 25쪽. 제목은 — <em>Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I</em>(<em>Principia Mathematica</em> 및 관련 체계의 형식적으로 결정 불가능한 명제들에 관하여, 제1편). 그 25쪽 안에 — 한 시대를 뒤집을 — 두 정리가 들어 있었다.</p>
+        <p><em>제1 불완전성 정리.</em> 충분히 강한(자연수 산술을 포함하는) 일관된 형식 체계는 — 그 안에서 <em>참이지만 증명할 수 없는</em> 명제를 적어도 하나 가진다. 즉 — 어떤 체계도 모든 참을 증명할 수는 없다. <em>제2 불완전성 정리.</em> 더 강한 결과 — 그 체계 자체의 일관성은 — 그 체계 안에서 증명될 수 없다. 즉 — 한 체계가 모순이 없음을 — 그 체계 자체로는 — 보장할 수 없다.</p>
+        <p>괴델이 한 핵심 아이디어는 — 한 형식 체계 안에서 <em>그 체계 자체를 말하는 명제</em>를 만든 것이다. 한 정수를 한 명제에 대응시키는 부호 매김(Gödel numbering)을 통해, 그는 한 명제를 만들었다 — "이 명제는 이 체계 안에서 증명될 수 없다." 만약 그것이 증명된다면 — 자기 부정의 증명이 되고 — 체계가 모순이다. 따라서 일관된 체계에서는 그것이 증명되지 않는다. 그러나 그것은 <em>참</em>이다(자기가 증명 불가능하다 말하고, 실제로 증명 불가능하므로). 한 체계 안에 참이지만 증명될 수 없는 명제가 있다.</p>
+        <p>이 결과는 — 힐베르트 프로그램의 한 핵심을 — 정면으로 무너뜨렸다. 모든 참을 한 형식 체계 안에서 증명하는 일은 — 가능하지 않다. 수학 전체를 한 일관된 형식 체계로 환원하는 일은 — 가능하지 않다. 30년 동안 추진해 온 한 야심찬 계획이 — 25세 청년의 25쪽 논문 한 편에 — 한 막을 닫았다.</p>
+
+        <aside class="inline-sim">
+          <div class="inline-sim__head"><span class="num">시뮬 3</span><h4>힐베르트 무한 호텔 — 무한이 만석이라도 손님을 받는 법</h4><span class="latin">Hilbert's Hotel</span></div>
+          <p class="inline-sim__lead">방이 무한히 많은 한 호텔이 — 만석이다. 그런데 새 손님 한 명이 도착한다. 어떻게 받을 것인가. 모든 손님을 한 방씩 옆으로 옮기면 1번 방이 빈다. 그러면 — 무한히 많은 새 손님이 도착한다면? 모든 손님을 짝수 방으로 옮기면 홀수 방이 모두 빈다. 무한의 한 직관을 만져 본다.</p>
+          <div class="sim" data-sim-id="hilbert-hotel"></div>
+        </aside>
+
+        <div class="episode">
+          <span class="episode__label">에피소드 · 괴델과 아인슈타인의 산책</span>
+          <h4 class="episode__title">프린스턴의 한 길</h4>
+          <div class="episode__body">
+            <p>1933년 괴델은 빈에서 미국 프린스턴 고등연구소(IAS)를 방문한다. 1940년 나치의 오스트리아 합병 뒤 — 시민권을 가진 채 — 시베리아 횡단철도와 일본·태평양을 거쳐 프린스턴에 정착한다. 그곳에서 그는 — 26세에 — 자기 결과로 무너뜨린 한 시대의 또 다른 거인 — 알베르트 아인슈타인 — 의 가장 친한 친구가 된다. 두 사람은 거의 매일 오후 — 프린스턴 IAS와 자기 집 사이를 — 함께 걸었다. 아인슈타인이 만년에 적었다 — "나는 이제 일하기 위해서가 아니라 — 괴델과 함께 집에 걸어가는 특권을 누리기 위해서 — 연구소에 나간다."</p>
+            <p>1947년 괴델이 미국 시민권을 취득할 때, 한 가지 작은 사건이 있었다. 그는 미국 헌법을 — 자기 특유의 논리로 — 꼼꼼히 분석하다가 — 한 논리적 허점을 발견했다. 그 허점으로 미국이 합법적으로 독재 국가가 될 수 있다는 것이다. 시민권 시험 자리에서 그가 그것을 판사에게 설명하려 하자 — 동행한 아인슈타인과 모르겐슈테른이 황급히 그를 말렸다. 다행히 판사가 그 화제를 짧게 정리했다고 한다. 한 시대의 가장 엄밀한 한 정신이 — 일상의 한 자리에서 — 어떻게 작동했는지를 보이는 일화다.</p>
+            <p>괴델은 만년 — 편집증적 망상과 — 깊은 우울에 시달렸다. 자기가 누군가에게 독살당할 것을 두려워해 — 아내가 직접 조리한 음식만 먹었다. 1977년 아내가 입원하자 — 그는 식사를 거부했다. 1978년 1월 14일 프린스턴 병원에서 사망. 사인은 — 의무 기록에 따르면 — <em>"인격 장애로 인한 영양실조 및 쇠약"</em>. 체중 29kg. 한 시대 가장 위대한 한 논리학자의 마지막은 — 한 시대 가장 슬픈 한 마침이었다.</p>
+          </div>
+        </div>
+
+        <p>120년의 호흡이 닫혔다. 19세기 초 — 한 다섯째 공준의 의심에서 시작한 한 호흡이 — 1931년 1월 빈의 한 25쪽 논문에서 한 막을 닫았다. 그 사이에 일어난 일은 한 줄로 적히지 않는다. <em>수학이 자기 자신을 묻기 시작한 한 세기.</em> 그리고 — 자기 안의 한 깊은 한계를 — 자기 자신의 도구로 — 증명한 한 세기.</p>
+
+        <p>그러나 한 막이 닫힌 그 자리가 — 다음 한 막의 시작이 되었다. 괴델의 1931년 논문에서 — 한 형식 체계의 한 부호 매김(numbering)이 — 한 핵심 도구였다. 한 명제에 한 정수를 대응시키는 한 절차. 그 한 절차가 — 한 청년에게 한 다른 기계의 한 시작이 된다. 그 청년의 이름은 앨런 튜링. 1936년 그가 적은 한 논문이 — 한 다른 시대의 — 한 다른 기계의 — 한 다른 시작이다(§ VII).</p>
+      </div>
+    </section>
+
+    <!-- ===== 출처 메모 ===== -->
+    <section class="math-section" id="sources">
+      <header><h2>출처 메모</h2><span class="latin">§ VII &nbsp;·&nbsp; Citations</span></header>
+      <p class="lead">이 페이지의 모든 사실은 다음 출처에서 교차 확인되었다. 인용은 가능한 한 원전 또는 정평 있는 영역(英譯)을 따랐고, 의역이면 명시했다. 시뮬레이션은 교육 목적의 <em>단순화 모형</em>이다.</p>
+
+      <div class="sources-note">
+        주요 출처 — MacTutor History of Mathematics (St Andrews) "Lobachevsky", "János Bolyai", "Gauss", "Évariste Galois", "Bernhard Riemann", "Georg Cantor", "David Hilbert", "Kurt Gödel"; Stanford Encyclopedia of Philosophy "Set Theory: Constructive and Intuitionistic", "Gödel's Incompleteness Theorems", "Hilbert's Program"; Encyclopædia Britannica "Non-Euclidean geometry", "Set theory", "Foundations of mathematics"; Peter M. Neumann <em>The Mathematical Writings of Évariste Galois</em>(EMS, 2011); Tony Rothman <em>Genius and Biographers: The Fictionalization of Évariste Galois</em>(American Mathematical Monthly 89:2, 1982, 84–106); Joseph W. Dauben <em>Georg Cantor: His Mathematics and Philosophy of the Infinite</em>(Harvard, 1979); Constance Reid <em>Hilbert</em>(Springer, 1996); John W. Dawson Jr. <em>Logical Dilemmas: The Life and Work of Kurt Gödel</em>(A K Peters, 1997); Rebecca Goldstein <em>Incompleteness: The Proof and Paradox of Kurt Gödel</em>(Norton, 2005). 자세한 목록은
+        <a href="../../research/math.html">/research/math.html</a>에서 추적할 수 있다(연구 아카이브 페이지는 § IV 컬렉션 완성과 함께 공개된다).
+      </div>
+    </section>
+
+    <nav class="era-pagination" aria-label="시대 간 이동">
+      <a class="prev" href="05-uncertainty.html">
+        <span class="dir">← 이전 시대</span>
+        <span class="title">§ V 불확실성을 길들이다</span>
+        <span class="latin">Uncertainty · 1650 — 1900</span>
+      </a>
+      <a class="next" href="07-the-machine.html">
+        <span class="dir">다음 시대 →</span>
+        <span class="title">§ VII 수학이 기계가 되다</span>
+        <span class="latin">The Machine · 1930 — 현재</span>
+      </a>
+    </nav>
+
+  </div>
+</main>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../../assets/shared/nav.js" defer></script>
+<script src="../../assets/shared/footer.js" defer></script>
+<script src="../../assets/math-history/interactives/sim-cantor-diagonal.js" defer></script>
+<script src="../../assets/math-history/interactives/sim-hilbert-hotel.js" defer></script>
+<script src="../../assets/math-history/interactives/sim-non-euclidean.js" defer></script>
+</body>
+</html>
