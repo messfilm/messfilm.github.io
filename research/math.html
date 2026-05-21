@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>수학사 — 연구 자료 | Archive for Som & Chan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="../assets/shared/styles-base.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* math 컬렉션 액센트 — 잉크 보라 (#554a8a) */
+  .shared-body.collection-math { --accent: #554a8a; }
+</style>
+</head>
+<body class="shared-body collection-math" data-page-id="research.math">
+
+<main class="research">
+  <section class="research-hero">
+    <div class="shared-container">
+      <span class="kicker">§ IV</span>
+      <h1>수학사 — 연구 자료</h1>
+      <p class="subtitle">History of Mathematics Research</p>
+      <p class="lead">
+        수학사 통사 작성에 참고한 출처, 변경 이력, 결정 기록.
+        7개 시대 본문과 19개 인터랙티브의 모든 사실은 여기서 추적할 수 있다.
+      </p>
+    </div>
+  </section>
+
+  <div class="shared-container">
+    <div class="research-stats" id="ma-stats">
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">출처</span></div>
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">업데이트</span></div>
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">노트</span></div>
+    </div>
+
+    <section class="research-section">
+      <header>
+        <h2>출처</h2>
+        <span class="count">신뢰도 순</span>
+      </header>
+      <div id="ma-sources"></div>
+    </section>
+
+    <section class="research-section">
+      <header>
+        <h2>업데이트 이력</h2>
+        <span class="count">시간 역순</span>
+      </header>
+      <div id="ma-updates"></div>
+    </section>
+
+    <section class="research-section">
+      <header>
+        <h2>연구 노트</h2>
+        <span class="count">결정 기록</span>
+      </header>
+      <div id="ma-notes"></div>
+    </section>
+  </div>
+</main>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../assets/shared/nav.js" defer></script>
+<script src="../assets/shared/footer.js" defer></script>
+<script src="../assets/shared/research-loader.js" defer></script>
+<script>
+  window.addEventListener('load', function () {
+    ResearchLoader.load('math').then(function (data) {
+      ResearchLoader.renderStats(data, '#ma-stats');
+      ResearchLoader.renderSources(data.sources, '#ma-sources');
+      ResearchLoader.renderUpdates(data.updates, '#ma-updates');
+      ResearchLoader.renderNotes(data.notes, '#ma-notes');
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-19",
+  "lastUpdated": "2026-05-21",
   "sources": [
     {
       "id": "src-0001",
@@ -14,7 +14,10 @@
       "reliability": "high",
       "language": "ko",
       "usedFor": [
-        { "page": "korean.main", "section": "전반" }
+        {
+          "page": "korean.main",
+          "section": "전반"
+        }
       ],
       "notes": "한국사 표준 1차 자료. 연도·인명·관직 권위."
     },
@@ -30,7 +33,10 @@
       "reliability": "high",
       "language": "ko",
       "usedFor": [
-        { "page": "korean.main", "section": "전반" }
+        {
+          "page": "korean.main",
+          "section": "전반"
+        }
       ],
       "notes": "인물·사건·제도·문화 항목의 학술 기준 정리."
     },
@@ -46,7 +52,10 @@
       "reliability": "high",
       "language": "ko",
       "usedFor": [
-        { "page": "korean.main", "section": "전반" }
+        {
+          "page": "korean.main",
+          "section": "전반"
+        }
       ],
       "notes": "국편위의 대중 교육용 콘텐츠. 한국사데이터베이스 보완."
     },
@@ -62,7 +71,10 @@
       "reliability": "high",
       "language": "ko",
       "usedFor": [
-        { "page": "korean.main", "section": "주변국 관계" }
+        {
+          "page": "korean.main",
+          "section": "주변국 관계"
+        }
       ],
       "notes": "고대사·국경·간도·독도 관련 학술 자료."
     },
@@ -77,7 +89,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "religion.main", "section": "전반 — 분파·교리·역사 사실 교차 확인" }
+        {
+          "page": "religion.main",
+          "section": "전반 — 분파·교리·역사 사실 교차 확인"
+        }
       ],
       "notes": "본문 푸터에 '교차 확인 출처'로 명시됨."
     },
@@ -92,7 +107,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "religion.main", "section": "신도 분포·분파 비중" }
+        {
+          "page": "religion.main",
+          "section": "신도 분포·분파 비중"
+        }
       ],
       "notes": "분파별 신도 수와 지역 분포 통계. 본문에서 'Pew Research Center, 2025'로 인용."
     },
@@ -107,7 +125,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "religion.main", "section": "현대 종교 분쟁 — 이란-이스라엘 전쟁 등" }
+        {
+          "page": "religion.main",
+          "section": "현대 종교 분쟁 — 이란-이스라엘 전쟁 등"
+        }
       ],
       "notes": "최근 사건의 다중 소스 교차 확인."
     },
@@ -122,7 +143,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "religion.main", "section": "현대 종교 분쟁" }
+        {
+          "page": "religion.main",
+          "section": "현대 종교 분쟁"
+        }
       ]
     },
     {
@@ -136,7 +160,10 @@
       "reliability": "medium",
       "language": "en",
       "usedFor": [
-        { "page": "religion.main", "section": "현대 종교 분쟁 — 중동 시각 균형" }
+        {
+          "page": "religion.main",
+          "section": "현대 종교 분쟁 — 중동 시각 균형"
+        }
       ],
       "notes": "서구 매체와 균형을 위한 중동권 보도. 신뢰도는 사안별 다중 확인 권장."
     },
@@ -151,7 +178,10 @@
       "reliability": "medium",
       "language": "en",
       "usedFor": [
-        { "page": "religion.main", "section": "전반 — 사실·연도 교차 확인" }
+        {
+          "page": "religion.main",
+          "section": "전반 — 사실·연도 교차 확인"
+        }
       ],
       "notes": "본문에서 'Britannica·Wikipedia 등을 교차 확인하여 작성'으로 명시. 권위 출처와 함께 검증용으로만 사용."
     },
@@ -166,7 +196,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "science.era.03-revolution", "section": "인물 카드 — 케플러·뉴턴·데카르트 생몰과 업적 검증" }
+        {
+          "page": "science.era.03-revolution",
+          "section": "인물 카드 — 케플러·뉴턴·데카르트 생몰과 업적 검증"
+        }
       ],
       "notes": "수학·수학자 일대기의 학술 표준."
     },
@@ -181,7 +214,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "science.era.03-revolution", "section": "학설 갈래 — 갈릴레오 재판·과학혁명 개념 비판" }
+        {
+          "page": "science.era.03-revolution",
+          "section": "학설 갈래 — 갈릴레오 재판·과학혁명 개념 비판"
+        }
       ],
       "notes": "과학사·과학철학 해석의 학계 동향. 'Galileo' 'Scientific Revolution' 항목 참조."
     },
@@ -196,7 +232,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "science.era.03-revolution", "section": "갈릴레오 생애·문서·재판 배경" }
+        {
+          "page": "science.era.03-revolution",
+          "section": "갈릴레오 생애·문서·재판 배경"
+        }
       ],
       "notes": "갈릴레오 전기 데이터의 학술 기준."
     },
@@ -211,7 +250,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "science.era.03-revolution", "section": "뉴턴 인물·Principia 배경" }
+        {
+          "page": "science.era.03-revolution",
+          "section": "뉴턴 인물·Principia 배경"
+        }
       ],
       "notes": "뉴턴 원전 디지털 아카이브."
     },
@@ -226,8 +268,14 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "science.era.03-revolution.sim.heliocentric", "section": "행성 궤도 데이터(단순화)" },
-        { "page": "science.era.03-revolution.sim.kepler",       "section": "행성 운동 검증" }
+        {
+          "page": "science.era.03-revolution.sim.heliocentric",
+          "section": "행성 궤도 데이터(단순화)"
+        },
+        {
+          "page": "science.era.03-revolution.sim.kepler",
+          "section": "행성 운동 검증"
+        }
       ],
       "notes": "시뮬레이션은 단순화 모형이지만 정성적 동작은 NASA 데이터와 부합."
     },
@@ -242,7 +290,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "science.era.03-revolution", "section": "전반 — 사실·연도 교차 확인" }
+        {
+          "page": "science.era.03-revolution",
+          "section": "전반 — 사실·연도 교차 확인"
+        }
       ]
     },
     {
@@ -256,7 +307,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "science.era.01-ancient", "section": "탈레스 BC 585 일식 검증" }
+        {
+          "page": "science.era.01-ancient",
+          "section": "탈레스 BC 585 일식 검증"
+        }
       ],
       "notes": "역사적 일식의 정확한 날짜·경로 데이터."
     },
@@ -271,7 +325,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "science.era.01-ancient", "section": "알렉산드리아 도서관 소실 학설" }
+        {
+          "page": "science.era.01-ancient",
+          "section": "알렉산드리아 도서관 소실 학설"
+        }
       ],
       "notes": "Edward Watts (2008). 도서관·아카데미아 종말의 점진적 과정 학술 정리."
     },
@@ -286,7 +343,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "science.era.01-ancient", "section": "아르키메데스 죽음의 가장 오래된 기록" }
+        {
+          "page": "science.era.01-ancient",
+          "section": "아르키메데스 죽음의 가장 오래된 기록"
+        }
       ]
     },
     {
@@ -300,7 +360,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "science.era.02-medieval", "section": "알하이삼 광학 모형" }
+        {
+          "page": "science.era.02-medieval",
+          "section": "알하이삼 광학 모형"
+        }
       ]
     },
     {
@@ -314,7 +377,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "science.era.02-medieval", "section": "톨레도 번역 학파" }
+        {
+          "page": "science.era.02-medieval",
+          "section": "톨레도 번역 학파"
+        }
       ],
       "notes": "Charles Burnett. 12세기 아랍어→라틴어 번역 작업의 학술 정리."
     },
@@ -329,7 +395,10 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "science.era.02-medieval", "section": "12~13세기 대학 형성" }
+        {
+          "page": "science.era.02-medieval",
+          "section": "12~13세기 대학 형성"
+        }
       ],
       "notes": "Walter Rüegg 편 (1992). 유럽 대학 통사 표준 자료."
     },
@@ -344,9 +413,230 @@
       "reliability": "high",
       "language": "en",
       "usedFor": [
-        { "page": "science.era.02-medieval", "section": "14세기 흑사병의 사회·학문적 영향" }
+        {
+          "page": "science.era.02-medieval",
+          "section": "14세기 흑사병의 사회·학문적 영향"
+        }
       ],
       "notes": "Samuel Cohn (2002). 흑사병 영향 학술 분석."
+    },
+    {
+      "id": "src-0301",
+      "project": "math",
+      "type": "academic-archive",
+      "title": "MacTutor History of Mathematics",
+      "title_en": "MacTutor History of Mathematics archive",
+      "publisher": "School of Mathematics and Statistics, University of St Andrews",
+      "url": "https://mathshistory.st-andrews.ac.uk/",
+      "accessed": "2026-05-21",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "math.era.01-counting",
+          "section": "전반"
+        },
+        {
+          "page": "math.era.02-proof",
+          "section": "탈레스·유클리드·아르키메데스·히파티아"
+        },
+        {
+          "page": "math.era.03-zero-algebra",
+          "section": "브라마굽타·알 콰리즈미·하이얌·피보나치"
+        },
+        {
+          "page": "math.era.04-natures-language",
+          "section": "네이피어·데카르트·뉴턴·라이프니츠·오일러"
+        },
+        {
+          "page": "math.era.05-uncertainty",
+          "section": "파스칼·페르마·베르누이·가우스"
+        },
+        {
+          "page": "math.era.06-infinity-foundations",
+          "section": "로바쳅스키·갈루아·리만·칸토어·힐베르트·괴델"
+        },
+        {
+          "page": "math.era.07-the-machine",
+          "section": "튜링·폰 노이만·섀넌"
+        }
+      ],
+      "notes": "수학자 1차 전기·연구 사료 표준. 본 컬렉션의 일급 출처. 17,000명 이상 수학자 항목."
+    },
+    {
+      "id": "src-0302",
+      "project": "math",
+      "type": "encyclopedia",
+      "title": "Stanford Encyclopedia of Philosophy",
+      "title_en": "Stanford Encyclopedia of Philosophy",
+      "publisher": "Metaphysics Research Lab, Stanford University",
+      "url": "https://plato.stanford.edu/",
+      "accessed": "2026-05-21",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "math.era.06-infinity-foundations",
+          "section": "괴델 불완전성·집합론·논리"
+        },
+        {
+          "page": "math.era.07-the-machine",
+          "section": "튜링 기계·계산 가능성"
+        }
+      ],
+      "notes": "수리논리·기초·계산이론 분야 학술 표준. 익명 동료심사."
+    },
+    {
+      "id": "src-0303",
+      "project": "math",
+      "type": "primary-database",
+      "title": "Plimpton 322 Cuneiform Tablet — Columbia University",
+      "title_en": "Plimpton 322 (Columbia Rare Book Collection)",
+      "publisher": "Columbia University Libraries · Rare Book & Manuscript Library",
+      "url": "https://en.wikipedia.org/wiki/Plimpton_322",
+      "accessed": "2026-05-21",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "math.era.01-counting",
+          "section": "플림프턴 322"
+        }
+      ],
+      "notes": "BC 1822-1762년 라르사 점토판. Neugebauer 1945 첫 해독, Robson 2002 vs Mansfield-Wildberger 2017 학설 논쟁."
+    },
+    {
+      "id": "src-0304",
+      "project": "math",
+      "type": "primary-database",
+      "title": "Rhind Mathematical Papyrus — British Museum EA10058",
+      "title_en": "Rhind Mathematical Papyrus, EA10057-10058",
+      "publisher": "The British Museum",
+      "url": "https://www.britishmuseum.org/collection/object/Y_EA10058",
+      "accessed": "2026-05-21",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "math.era.01-counting",
+          "section": "이집트 단위분수·린드 파피루스"
+        }
+      ],
+      "notes": "BC 1650년경 이집트 서기 아메스 필사. 84개 수학 문제. 단위분수 2/n 표."
+    },
+    {
+      "id": "src-0305",
+      "project": "math",
+      "type": "book",
+      "title": "Euclid's Elements (Heath 영역본)",
+      "title_en": "The Thirteen Books of Euclid's Elements, trans. Thomas L. Heath",
+      "publisher": "Dover Publications (1956 재판)",
+      "url": "https://archive.org/details/thirteenbookseu03heatgoog",
+      "accessed": "2026-05-21",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "math.era.02-proof",
+          "section": "유클리드 『원론』·5공준"
+        }
+      ],
+      "notes": "유클리드 『원론』 13권 표준 영역. 1908 초판. 본 사이트의 공준·정의 표기는 이 판본 기준."
+    },
+    {
+      "id": "src-0306",
+      "project": "math",
+      "type": "journal-article",
+      "title": "Galois's Last Letter — Mathematical Decoding",
+      "title_en": "Genius and Biographers: The Fictionalization of Évariste Galois",
+      "publisher": "American Mathematical Monthly, Tony Rothman, 1982",
+      "url": "https://www.jstor.org/stable/2320923",
+      "accessed": "2026-05-21",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "math.era.06-infinity-foundations",
+          "section": "갈루아 결투 전야 신화 반박"
+        }
+      ],
+      "notes": "Bell 1937 *Men of Mathematics*의 낭만화에 대한 표준 학술 반박. Peter Neumann 2011 EMS가 후속 정리."
+    },
+    {
+      "id": "src-0307",
+      "project": "math",
+      "type": "journal-article",
+      "title": "On Computable Numbers — Alan Turing 1936",
+      "title_en": "On Computable Numbers, with an Application to the Entscheidungsproblem",
+      "publisher": "Proc. London Math. Soc., Series 2, Vol. 42 (1937)",
+      "url": "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf",
+      "accessed": "2026-05-21",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "math.era.07-the-machine",
+          "section": "튜링 기계·계산 가능성"
+        }
+      ],
+      "notes": "튜링 1936년 5월 28일 제출, 1937년 출판. 결정 문제 부정 해결. 보편 튜링 기계 개념."
+    },
+    {
+      "id": "src-0308",
+      "project": "math",
+      "type": "journal-article",
+      "title": "A Mathematical Theory of Communication — Claude Shannon 1948",
+      "title_en": "A Mathematical Theory of Communication",
+      "publisher": "Bell System Technical Journal, Vol. 27 (July, October 1948)",
+      "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf",
+      "accessed": "2026-05-21",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "math.era.07-the-machine",
+          "section": "섀넌 정보이론·비트"
+        }
+      ],
+      "notes": "1948년 7·10월 두 부 분리 게재. 정보 단위 '비트' 첫 도입. 정보이론 창립 논문."
+    },
+    {
+      "id": "src-0309",
+      "project": "math",
+      "type": "book",
+      "title": "The History of Statistics — Stephen M. Stigler",
+      "title_en": "The History of Statistics: The Measurement of Uncertainty before 1900",
+      "publisher": "Harvard University Press, 1986",
+      "url": "https://www.hup.harvard.edu/catalog.php?isbn=9780674403413",
+      "accessed": "2026-05-21",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "math.era.05-uncertainty",
+          "section": "확률·통계 19세기 통사"
+        }
+      ],
+      "notes": "확률·통계 1900년 이전 표준 통사. 파스칼·페르마·가우스·라플라스 등 검증."
+    },
+    {
+      "id": "src-0310",
+      "project": "math",
+      "type": "book",
+      "title": "Liber Abaci — Fibonacci, trans. Sigler",
+      "title_en": "Fibonacci's Liber Abaci: A Translation into Modern English",
+      "publisher": "Springer, Laurence Sigler trans., 2002",
+      "url": "https://link.springer.com/book/10.1007/978-1-4613-0079-3",
+      "accessed": "2026-05-21",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "math.era.03-zero-algebra",
+          "section": "피보나치·인도-아라비아 숫자 전파·토끼 문제"
+        }
+      ],
+      "notes": "피보나치 1202년 『산반서』 표준 현대 영역. 12장에 토끼 번식 문제 원전."
     }
   ]
 }
