@@ -309,6 +309,21 @@ main.science { padding-bottom: 80px; }
   border: 1px solid var(--rule);
   padding: 18px 14px;
 }
+.sci-timeline-scroll {
+  /* desktop: pass through; mobile: horizontal scroll */
+}
+@media (max-width: 760px) {
+  .sci-timeline-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -28px;
+    padding: 0 28px;
+  }
+  .sci-timeline-scroll .sci-timeline-svg {
+    min-width: 880px;
+    width: 880px;
+  }
+}
 
 /* ===== Era cards ===== */
 .era-cards {
