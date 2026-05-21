@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>수학이 기계가 되다 · § VII 수학사 | Archive for Som & Chan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="20세기 후반 수학이 계산하는 기계가 되다. 튜링의 1936년 결정 문제, 폰 노이만 구조, 섀넌의 비트, 공개키 암호, 페르마의 마지막 정리, 그리고 AI의 수학 — 1930에서 현재까지의 디지털 토대.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="../../assets/shared/styles-base.css">
+<link rel="stylesheet" href="../../assets/math-history/styles.css">
+</head>
+<body class="shared-body collection-math" data-page-id="math.era.07-the-machine">
+
+<main class="math">
+  <div class="shared-container">
+    <nav class="era-breadcrumb" aria-label="현재 위치">
+      <a href="../">수학사</a>
+      <span class="sep">/</span>
+      <span class="current">§ VII · 수학이 기계가 되다</span>
+    </nav>
+  </div>
+
+  <section class="math-hero">
+    <div class="shared-container">
+      <span class="kicker">§ VII · THE MACHINE</span>
+      <h1>수학이 기계가 되다<span class="latin">The Machine · 20th–21st Century</span></h1>
+      <p class="subtitle">수학이 계산하는 기계가 되다 · 1930 — 현재</p>
+      <p class="lead">
+        괴델의 1931년 25쪽 논문은 한 시대의 막을 닫았다(§ VI). 그러나 그 안에 적힌 도구
+        — 한 명제에 정수를 매기는 부호 매김 — 은 다음 시대의 핵심이 되었다. 1936년 영국
+        케임브리지의 24세 청년 <em>앨런 튜링</em>이 한 논문에서 그 도구를 한 단계 더 밀고 갔다.
+        명제에 정수를 매기는 일을 가상의 기계가 종이테이프 위에서 하게 만든 것이다. 그가 적은
+        그 가상의 기계가, 지금 우리가 손에 쥔 스마트폰의 깊은 조상이다. 수학적 도구가 물리적
+        기계가 되고, 그 기계가 한 시대의 모든 디지털 문명의 토대가 되는 — 90년의 호흡.
+      </p>
+      <div class="math-stats">
+        <div class="math-stat">
+          <span class="math-stat__label">시간 범위</span>
+          <span class="math-stat__value">90<span class="latin" style="font-size:0.5em;margin-left:4px;">yrs</span></span>
+          <span class="math-stat__sub">1930 — 현재</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">핵심 인물</span>
+          <span class="math-stat__value">4</span>
+          <span class="math-stat__sub">튜링 · 폰 노이만 · 섀넌 · 와일즈</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">무대</span>
+          <span class="math-stat__value">4</span>
+          <span class="math-stat__sub">케임브리지 · 블레츨리 · 프린스턴 · MIT</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">결정적 저작</span>
+          <span class="math-stat__value">1936<br>1948</span>
+          <span class="math-stat__sub">튜링 → 섀넌</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shared-container">
+
+    <nav class="chapter-toc" aria-label="이 시대 챕터 목차">
+      <span class="chapter-toc__label">이 시대를 여섯 호흡으로</span>
+      <ol>
+        <li><a href="#ch1">튜링의 1936 — 계산 가능성과 결정 문제<span class="years">1936</span></a></li>
+        <li><a href="#ch2">전쟁이 부른 컴퓨터 — 에니그마·콜로서스<span class="years">1939–45</span></a></li>
+        <li><a href="#ch3">폰 노이만 구조<span class="years">1945</span></a></li>
+        <li><a href="#ch4">섀넌의 정보이론 — 비트의 발명<span class="years">1948</span></a></li>
+        <li><a href="#ch5">공개키 암호와 인터넷<span class="years">1976–77</span></a></li>
+        <li><a href="#ch6">페르마, 그리고 AI<span class="years">1995 → 2017–</span></a></li>
+      </ol>
+    </nav>
+
+    <!-- ===== 시기 도식 ===== -->
+    <section class="math-section" id="period-diagram">
+      <header><h2>시기 도식</h2><span class="latin">§ I &nbsp;·&nbsp; Period Diagram</span></header>
+      <p class="lead">90년의 호흡. 튜링의 종이테이프 기계(1936)에서 시작해 폰 노이만 구조(1945), 섀넌의 비트(1948), 공개키 암호(1976–77), 와일즈의 페르마 증명(1995), 트랜스포머와 AI(2017–)까지 — 결정적 저작·사건을 1930에서 2026 사이에 점으로 표시한다.</p>
+
+      <div class="math-timeline-scroll">
+      <svg viewBox="0 0 1080 280" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="§ VII 수학이 기계가 되다 시기 도식" class="math-timeline-svg">
+        <defs>
+          <style>
+            .ax  { stroke: #c8bea4; stroke-width: 1; fill: none; }
+            .axT { stroke: #c8bea4; stroke-width: 1; }
+            .axLb{ font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 10.5px; fill: #6b6253; }
+            .band{ fill: #5a7090; opacity: 0.18; }
+            .bandTop{ fill: #5a7090; }
+            .evt { font-family: 'Noto Sans KR', sans-serif; font-size: 9px; fill: #1f1a14; }
+            .evtY{ font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 10px; fill: #554a8a; }
+            .stem{ stroke: #554a8a; stroke-width: 1; }
+            .region{ font-family: 'Noto Sans KR', sans-serif; font-size: 9.5px; fill: #7a7163; font-style: italic; }
+            .glyph{ fill: none; stroke: #554a8a; stroke-width: 0.9; opacity: 0.55; }
+          </style>
+        </defs>
+
+        <!-- x = (year - 1930) * (970/96) + 60   for 1930..2026 → 60..1030 -->
+        <rect class="band"    x="60" y="130" width="970" height="40" rx="3"/>
+        <rect class="bandTop" x="60" y="130" width="970" height="6"/>
+        <line class="ax" x1="60" y1="230" x2="1030" y2="230" />
+        <line class="axT" x1="60"     y1="228" x2="60"     y2="236"/>
+        <line class="axT" x1="262.08" y1="228" x2="262.08" y2="236"/>
+        <line class="axT" x1="464.17" y1="228" x2="464.17" y2="236"/>
+        <line class="axT" x1="666.25" y1="228" x2="666.25" y2="236"/>
+        <line class="axT" x1="868.33" y1="228" x2="868.33" y2="236"/>
+        <line class="axT" x1="1030"   y1="228" x2="1030"   y2="236"/>
+        <text class="axLb" x="60"     y="250" text-anchor="middle">1930</text>
+        <text class="axLb" x="262.08" y="250" text-anchor="middle">1950</text>
+        <text class="axLb" x="464.17" y="250" text-anchor="middle">1970</text>
+        <text class="axLb" x="666.25" y="250" text-anchor="middle">1990</text>
+        <text class="axLb" x="868.33" y="250" text-anchor="middle">2010</text>
+        <text class="axLb" x="1030"   y="250" text-anchor="middle">2026</text>
+
+        <!-- 시대 글리프 -->
+        <g transform="translate(95,198)" opacity="0.55">
+          <rect x="-30" y="-4" width="60" height="8" class="glyph"/>
+          <line x1="-22" y1="-4" x2="-22" y2="4" class="glyph"/>
+          <line x1="-14" y1="-4" x2="-14" y2="4" class="glyph"/>
+          <line x1="-6"  y1="-4" x2="-6"  y2="4" class="glyph"/>
+          <line x1="2"   y1="-4" x2="2"   y2="4" class="glyph"/>
+          <line x1="10"  y1="-4" x2="10"  y2="4" class="glyph"/>
+          <line x1="18"  y1="-4" x2="18"  y2="4" class="glyph"/>
+          <line x1="26"  y1="-4" x2="26"  y2="4" class="glyph"/>
+        </g>
+        <text x="540" y="201" class="evtY" fill="#554a8a" opacity="0.55" text-anchor="middle">0 1 0 1 1 0</text>
+        <g transform="translate(975,198)" opacity="0.55">
+          <circle cx="-12" cy="-6" r="2.4" class="glyph"/>
+          <circle cx="-12" cy="6"  r="2.4" class="glyph"/>
+          <circle cx="0"   cy="0"  r="2.4" class="glyph"/>
+          <circle cx="12"  cy="-6" r="2.4" class="glyph"/>
+          <circle cx="12"  cy="6"  r="2.4" class="glyph"/>
+          <line x1="-10" y1="-5" x2="-2" y2="-1" class="glyph"/>
+          <line x1="-10" y1="5"  x2="-2" y2="1"  class="glyph"/>
+          <line x1="2"   y1="-1" x2="10" y2="-5" class="glyph"/>
+          <line x1="2"   y1="1"  x2="10" y2="5"  class="glyph"/>
+        </g>
+
+        <!-- region labels -->
+        <text class="region" x="120" y="120" text-anchor="middle">영국 케임브리지</text>
+        <text class="region" x="290" y="120" text-anchor="middle">블레츨리 · 프린스턴</text>
+        <text class="region" x="500" y="120" text-anchor="middle">벨 연구소 · MIT</text>
+        <text class="region" x="720" y="120" text-anchor="middle">스탠퍼드 · MIT · 프린스턴</text>
+        <text class="region" x="920" y="120" text-anchor="middle">전 지구 · AI</text>
+
+        <!-- 1936 튜링 -->
+        <line class="stem" x1="120.62" y1="130" x2="120.62" y2="78"/>
+        <circle cx="120.62" cy="130" r="4.5" fill="#554a8a"/>
+        <text class="evtY" x="120.62" y="70" text-anchor="start">1936</text>
+        <text class="evt"  x="120.62" y="58" text-anchor="start">튜링 「On Computable Numbers」 (Cambridge)</text>
+
+        <!-- 1939 폴란드 → 영국 -->
+        <line class="stem" x1="150.94" y1="170" x2="150.94" y2="186"/>
+        <circle cx="150.94" cy="170" r="3" fill="#554a8a"/>
+        <text class="evt"  x="155" y="188">1939 · 폴란드, 영국에 에니그마 해독 자료 전달</text>
+
+        <!-- 1943 콜로서스 -->
+        <line class="stem" x1="191.35" y1="130" x2="191.35" y2="104" stroke-dasharray="2 1"/>
+        <circle cx="191.35" cy="130" r="3.5" fill="#554a8a"/>
+        <text class="evt"  x="191.35" y="100" text-anchor="middle">1943.12 · 콜로서스 가동 (블레츨리)</text>
+
+        <!-- 1945 EDVAC -->
+        <line class="stem" x1="211.56" y1="130" x2="211.56" y2="78"/>
+        <circle cx="211.56" cy="130" r="4.5" fill="#554a8a"/>
+        <text class="evtY" x="211.56" y="70" text-anchor="start">1945</text>
+        <text class="evt"  x="211.56" y="58" text-anchor="start">폰 노이만 「First Draft of EDVAC」</text>
+
+        <!-- 1948 섀넌 -->
+        <line class="stem" x1="241.88" y1="130" x2="241.88" y2="104"/>
+        <circle cx="241.88" cy="130" r="4.5" fill="#554a8a"/>
+        <text class="evtY" x="241.88" y="96" text-anchor="middle">1948</text>
+        <text class="evt"  x="241.88" y="84" text-anchor="middle">섀넌 「A Mathematical Theory of Communication」</text>
+
+        <!-- 1954.6.7 튜링 사망 -->
+        <line class="stem" x1="302.5" y1="170" x2="302.5" y2="186"/>
+        <circle cx="302.5" cy="170" r="3" fill="#554a8a"/>
+        <text class="evt"  x="302.5" y="188" text-anchor="middle">1954.6.7 · 튜링 사망 (41세)</text>
+
+        <!-- 1976 Diffie-Hellman -->
+        <line class="stem" x1="524.79" y1="130" x2="524.79" y2="78"/>
+        <circle cx="524.79" cy="130" r="4.5" fill="#554a8a"/>
+        <text class="evtY" x="524.79" y="70" text-anchor="middle">1976</text>
+        <text class="evt"  x="524.79" y="58" text-anchor="middle">디피·헬먼 공개키 교환</text>
+
+        <!-- 1977 RSA -->
+        <line class="stem" x1="534.9" y1="170" x2="534.9" y2="200"/>
+        <circle cx="534.9" cy="170" r="3.5" fill="#554a8a"/>
+        <text class="evt"  x="534.9" y="212" text-anchor="middle">1977 · RSA (Rivest·Shamir·Adleman)</text>
+
+        <!-- 1989 WWW -->
+        <line class="stem" x1="656.15" y1="170" x2="656.15" y2="186"/>
+        <circle cx="656.15" cy="170" r="3" fill="#554a8a"/>
+        <text class="evt"  x="656.15" y="188" text-anchor="middle">1989 · 팀 버너스리, WWW 제안</text>
+
+        <!-- 1995 와일즈 -->
+        <line class="stem" x1="716.77" y1="130" x2="716.77" y2="78"/>
+        <circle cx="716.77" cy="130" r="5" fill="#a04050"/>
+        <text class="evtY" x="716.77" y="70" text-anchor="middle" fill="#a04050">1995</text>
+        <text class="evt"  x="716.77" y="58" text-anchor="middle">와일즈 「Modular elliptic curves &amp; Fermat's Last Theorem」</text>
+
+        <!-- 2012 AlexNet -->
+        <line class="stem" x1="888.54" y1="170" x2="888.54" y2="200"/>
+        <circle cx="888.54" cy="170" r="3" fill="#554a8a"/>
+        <text class="evt"  x="888.54" y="212" text-anchor="middle">2012 · AlexNet (딥러닝 부활)</text>
+
+        <!-- 2017 Transformer -->
+        <line class="stem" x1="939.06" y1="130" x2="939.06" y2="104"/>
+        <circle cx="939.06" cy="130" r="4" fill="#554a8a"/>
+        <text class="evtY" x="939.06" y="96" text-anchor="end">2017</text>
+        <text class="evt"  x="939.06" y="84" text-anchor="end">「Attention Is All You Need」 (Transformer)</text>
+      </svg>
+      </div>
+    </section>
+
+    <!-- ===== 챕터 1 ===== -->
+    <section class="chapter" id="ch1">
+      <header class="chapter__head"><span class="chapter__num">제1장</span>
+        <h2 class="chapter__title">튜링의 1936 — 계산 가능성과 결정 문제 <span class="latin">Turing's 1936 · On Computable Numbers</span></h2>
+        <p class="chapter__years">1936 · 영국 케임브리지 · 미국 프린스턴</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure"><div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="88" height="96" fill="#f5efe0"/>
+          <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#2a2018"/>
+          <path d="M 30 64 Q 44 76 58 64 L 56 64 Q 44 72 32 64 Z" fill="#faf6eb" stroke="#a09078" stroke-width="0.4"/>
+          <rect x="38" y="56" width="12" height="10" fill="#e8c8a8"/>
+          <ellipse cx="44" cy="40" rx="13" ry="16" fill="#e8c8a8"/>
+          <path d="M 26 32 Q 26 18 34 14 Q 44 10 54 14 Q 62 18 62 32 Q 58 24 44 24 Q 30 24 26 32 Z" fill="#5a4030"/>
+          <path d="M 28 34 L 28 40 Q 34 36 40 36 L 48 36 Q 54 36 60 40 L 60 34 Q 54 30 44 30 Q 34 30 28 34 Z" fill="#3a2820"/>
+          <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/><circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+          <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+          <path d="M 40 53 Q 44 55 48 53" stroke="#3a2418" stroke-width="0.5" fill="none"/>
+        </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">앨런 튜링</span>
+            <span class="inline-figure__name-en">Alan Turing</span>
+            <span class="inline-figure__life">1912 — 1954</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko">1936년 봄, 영국 케임브리지 킹스 칼리지. 24세의 펠로 <strong>앨런 튜링</strong>이 한 논문을 마치고 있었다. 제목은 <em>On Computable Numbers, with an Application to the Entscheidungsproblem</em>(계산 가능한 수에 관하여, 결정 문제에의 응용). 1936년 5월 28일 런던 수학회에 접수되어 1937년 1월 발표된다. 36쪽. 한 시대의 새 막이 그 36쪽 안에서 열렸다.</p>
+        <p>그가 답하려 한 질문은 한 시대 전 힐베르트가 던진 <em>Entscheidungsproblem</em>(결정 문제)이었다. 형식 체계 안에서 한 명제가 주어졌을 때, 그 명제가 그 체계 안에서 증명 가능한지를 유한한 단계로 결정하는 일반적 절차가 있는가? 1928년 힐베르트와 아커만이 던진 이 질문에 한 시대의 큰 희망이 걸려 있었다. 만약 그런 절차가 있다면 수학의 모든 결정 가능한 문제는 기계적 단계의 묶음으로 풀릴 것이다.</p>
+        <p>튜링이 답하기 위해 한 일은 — 그 "기계적 절차"가 무엇인지를 수학적 정의로 적는 것이었다. 직관적으로 누구나 안다. 한 사람이 종이와 연필로 한 단계씩 따라가는 절차. 그러나 그것이 수학적 정의로 적힌 적은 없었다. 튜링은 그것을 가상의 기계로 적었다. 무한히 긴 종이테이프. 한 칸씩 적힌 기호. 헤드가 한 칸을 읽고, 규칙에 따라 기호를 적고, 왼쪽 또는 오른쪽으로 한 칸 옮긴다. 규칙의 묶음과 상태(state)의 묶음으로 절차가 정의된다. 그가 적은 그 가상의 기계가 지금 우리가 부르는 <em>튜링 기계</em>다.</p>
+        <p>그 정의가 적힌 자리에서 더 깊은 결과가 따라온다. 그가 적은 보편 기계(universal Turing machine)는 다른 튜링 기계의 기술(description)을 입력으로 받아 그 기계를 모방한다. 한 기계가 다른 기계를 모방한다. 이 그림이 지금 운영체제가 응용 프로그램을 실행하는 그림, 한 컴퓨터가 다른 컴퓨터를 시뮬레이트하는 그림의 깊은 조상이다.</p>
+        <blockquote class="pull">
+          We may compare a man in the process of computing a real number to a machine which is only capable of a finite number of conditions.
+          <span class="attr">— 앨런 튜링, <em>On Computable Numbers</em> § 9, 1936 · 의역: "실수를 계산하는 사람을 — 유한한 수의 상태만을 가진 기계와 — 비교할 수 있다."</span>
+        </blockquote>
+        <p>그리고 마지막 한 줄. 튜링은 기계를 정의한 자리에서 결정 문제의 답을 적었다. <em>그런 일반적 절차는 존재하지 않는다.</em> 한 튜링 기계가 주어진 입력에 대해 정지할지 영원히 계산을 계속할지를 일반적으로 결정하는 절차는 없다(<em>정지 문제 halting problem</em>). 따라서 형식 체계에서의 일반적 결정 절차도 없다. 24세 청년이 형식 체계의 도구를 가상의 기계로 종이에 적은 그 자리에서, 한 시대의 또 한 막이 닫혔다. 그리고 다른 시대의 한 막이 같은 자리에서 열렸다.</p>
+        <p>같은 1936년, 미국 프린스턴의 <strong>알론조 처치</strong>(1903–1995)가 독립적으로 다른 길로 같은 결론에 도달한다. 람다 계산(λ-calculus)을 통해. 두 사람의 도구는 다르지만 결론은 같다. 그리고 후대가 보였듯이 두 도구는 같은 계산 가능성을 정의한다(<em>처치-튜링 명제 Church-Turing Thesis</em>). 튜링은 1936년 가을 프린스턴으로 옮겨 처치 아래에서 박사 학위를 한다(1938).</p>
+
+        <aside class="inline-sim">
+          <div class="inline-sim__head"><span class="num">시뮬 1</span><h4>튜링 기계 — 종이테이프 위의 한 기계</h4><span class="latin">Turing Machine</span></div>
+          <p class="inline-sim__lead">무한 종이테이프, 헤드 하나, 규칙의 묶음. 가장 단순한 컴퓨터의 가상 조상. 입력 0과 1의 묶음을 규칙에 따라 한 단계씩 처리한다. 1936년 튜링이 종이에 적은 기계의 단순화 시뮬레이션.</p>
+          <div class="sim" data-sim-id="turing-machine"></div>
+        </aside>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 2 ===== -->
+    <section class="chapter" id="ch2">
+      <header class="chapter__head"><span class="chapter__num">제2장</span>
+        <h2 class="chapter__title">전쟁이 부른 컴퓨터 — 에니그마와 콜로서스 <span class="latin">Wartime · Enigma and Colossus</span></h2>
+        <p class="chapter__years">1939 — 1945 · 영국 블레츨리 파크</p>
+      </header>
+      <div class="narrative">
+        <p class="dropcap ko">1939년 9월 1일 독일이 폴란드를 침공했다. 영국이 9월 3일 선전포고를 한다. 그 다음날 9월 4일, 튜링이 영국 정부 암호 학교(GC&amp;CS)에 출근한다. 근무지는 런던 북쪽 65km, 블레츨리 파크의 한 시골 저택. 비밀의 4년이 시작됐다.</p>
+        <p>독일군의 핵심 암호 기계는 <em>에니그마</em>(Enigma)였다. 키를 누르면 회전하는 회전자(rotor) 묶음이 다른 문자를 전구로 켠다. 같은 자리에 같은 키를 두 번 누르면 다른 문자가 나온다. 회전자의 설정이 매일, 매번 바뀐다. 단순 통계로는 풀리지 않는다.</p>
+        <p>첫 큰 돌파는 영국이 아니라 폴란드에서 왔다. 1932년부터 폴란드 암호국의 <strong>마리안 레예프스키</strong>(Marian Rejewski, 1905–1980)와 동료들이 수학적 방법으로 에니그마의 약점을 한 단계씩 풀어 왔다. 1939년 7월 25일, 전쟁 직전, 폴란드 정보국은 영국·프랑스 정보국 대표를 바르샤바 근교의 비밀 회의에 초대해 그들의 결과를 폴란드제 에니그마 복제본과 함께 모두 전달했다. 영국이 자기 작업을 시작한 자리는 사실 폴란드의 6년 작업 위에 있었다. 이 사실이 영국에서는 1973년에야 폴란드 회고록 출판으로 일반에 알려진다.</p>
+        <p>블레츨리에서 튜링은 폴란드의 <em>봄바</em>(bomba)를 더 일반적인 기계 <em>봄베</em>(Bombe)로 발전시켰다. 거대한 회전자 묶음이 가능한 설정 묶음을 빠르게 검색한다. 1940년 3월 첫 봄베가 가동된다(코드명 "Victory"). 매일 정해진 시각에 반복되는 평문 패턴("wetter — 날씨" 등)을 활용해 설정 수를 좁혔다.</p>
+        <p>전쟁 말기, 더 어려운 암호 — 독일 최고 사령부가 쓰던 <em>로렌츠</em>(Lorenz) 암호 — 를 위해 더 큰 기계가 필요했다. 1943년 12월, 영국 우체국 연구소의 <strong>토미 플라워스</strong>(Tommy Flowers)가 약 1,600개의 진공관으로 기계 <em>콜로서스</em>(Colossus)를 가동한다. 사상 첫 프로그램 가능 전자식 디지털 컴퓨터다(다만 본격적 의미의 폰 노이만 구조는 아니다, § 3). 1944년 6월 5일 D-day 전날 밤, 콜로서스가 히틀러의 한 메시지를 풀었다. 그 메시지가 노르망디 상륙 작전의 결정을 결정적으로 도왔다.</p>
+        <aside class="inline-scene">
+          <div class="inline-scene__pictogram"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="56" height="56" fill="#f5efe0"/>
+            <rect x="8" y="14" width="40" height="28" fill="none" stroke="#554a8a" stroke-width="0.8"/>
+            <circle cx="18" cy="22" r="3" fill="none" stroke="#554a8a" stroke-width="0.7"/>
+            <circle cx="28" cy="22" r="3" fill="none" stroke="#554a8a" stroke-width="0.7"/>
+            <circle cx="38" cy="22" r="3" fill="none" stroke="#554a8a" stroke-width="0.7"/>
+            <rect x="12" y="30" width="6" height="6" fill="none" stroke="#554a8a" stroke-width="0.6"/>
+            <rect x="20" y="30" width="6" height="6" fill="none" stroke="#554a8a" stroke-width="0.6"/>
+            <rect x="28" y="30" width="6" height="6" fill="none" stroke="#554a8a" stroke-width="0.6"/>
+            <rect x="36" y="30" width="6" height="6" fill="none" stroke="#554a8a" stroke-width="0.6"/>
+          </svg></div>
+          <div>
+            <div class="inline-scene__meta">
+              <time datetime="1939">1939 — 1945</time>
+              <span class="place">블레츨리 파크 · 영국</span>
+            </div>
+            <div class="inline-scene__body">
+              <strong>한 시골 저택의 비밀 묶음</strong>
+              블레츨리 파크의 작업은 한 시대 최대의 비밀이었다. 정점에서 약 1만 명이 일했다. 그러나 1975년 공개되기까지 30년 동안 누구도 그 작업을 가족에게도 말한 적이 없었다. 자료(봄베·콜로서스)가 종전 직후 폐기 명령에 따라 거의 모두 파쇄되었다. 한 시대의 가장 결정적 기계 묶음의 흔적이 의도적으로 지워진 것이다. 역사가 이 사실에 늦게 닿았다.
+              <span class="source">Hodges <em>Alan Turing: The Enigma</em>(2014, 2nd ed.) · BBC History "Bletchley Park" · MacTutor "Turing"</span>
+            </div>
+          </div>
+        </aside>
+        <p>전쟁이 끝나고 학계의 추정은 — 5,500만 명이 죽은 6년의 전쟁을 약 2년 단축했다는 결론에 닿았다(F. H. Hinsley 등). 명확한 숫자는 알 수 없지만 분명한 사실은 수학이 한 전쟁의 결정에 직접 닿았다는 것이다. 한 사람이 종이에 적은 식이 수십만 명의 죽음을 줄였다.</p>
+
+        <div class="episode">
+          <span class="episode__label">에피소드 · 튜링의 마지막</span>
+          <h4 class="episode__title">한 사과 옆에서</h4>
+          <div class="episode__body">
+            <p>전쟁이 끝나고 튜링은 맨체스터 대학으로 옮긴다. 1948년부터 그곳 컴퓨터 연구소에서 세계 최초의 저장 프로그램 컴퓨터 — <em>맨체스터 베이비</em>(Manchester Baby)의 작업에 참여한다. 1950년 그는 짧은 논문 <em>Computing Machinery and Intelligence</em>(<span class="work">Mind</span>)을 적는다. 유명한 <em>튜링 테스트</em>가 그 안에 적혀 있다. "기계가 생각할 수 있는가?"의 질문을 다른 질문으로 바꾼다 — "한 인간이 화면 너머의 상대와 대화할 때, 그 상대가 사람인지 기계인지 구분할 수 없는 기계를 만들 수 있는가?"</p>
+            <p>1952년 1월, 그의 집에 절도가 든다. 그가 경찰 조사에서 무심코 자기와 19세 청년의 관계를 말했다. 당시 영국에서 동성애는 형법 11조에 따른 범죄(gross indecency)였다. 튜링은 재판에서 유죄 선고를 받았다. 선택은 두 가지였다 — 감옥, 혹은 화학적 거세(에스트로겐 주사). 그는 후자를 택한다. 1년의 주사로 그의 몸이 변형됐다(가슴이 발달했다고 기록).</p>
+            <p>1954년 6월 7일, 그는 맨체스터 자기 집에서 사망 상태로 발견된다. 41세. 침대 옆에 청산가리에 적신, 한 입 베어 문 사과가 놓여 있었다. 검시 결과는 청산가리 음독. 공식 결론은 자살. 그러나 그의 어머니와 일부 후대 연구자(특히 Jack Copeland)는 실험실 화학 작업 중 사고 가능성을 제시했다(그가 그날 실험 도구로 사과에 청산가리를 묻혔을 수 있다는). 분명한 결론은 자료가 부족해 영원히 알 수 없을 것이다. 자살이 공식 결론이지만 사고의 가능성도 정직하게 함께 적는다. 2009년 영국 총리 고든 브라운이 공식 사과를, 2013년 엘리자베스 2세가 사후 사면을 발표했다.</p>
+            <p class="legend-vs-fact__source" style="font-size:11px; color:var(--ink-mute); font-style:italic; margin-top:8px;">— Andrew Hodges <em>Alan Turing: The Enigma</em>(2014); B. Jack Copeland <em>Turing: Pioneer of the Information Age</em>(2012)</p>
+          </div>
+        </div>
+
+        <div class="legend-vs-fact">
+          <div class="legend-vs-fact__legend">
+            <h4>전설 · 도시 전설</h4>
+            <p><strong>"애플 컴퓨터 로고의 베어진 사과는 튜링의 죽음을 추모한 것이다."</strong></p>
+            <p>튜링이 청산가리에 적신 사과를 베어 물고 죽었다는 사실 — 그리고 애플 로고가 한 입 베어 문 사과라는 사실. 두 사실이 묶여 도시 전설이 자라났다. 스티브 잡스가 튜링에 대한 묵묵한 추모로 그 로고를 디자인했다는 이야기. 인터넷이 등장한 1990년대 이래 이 이야기가 끊임없이 반복되어 왔다.</p>
+          </div>
+          <div class="legend-vs-fact__fact">
+            <h4>사실 · 디자이너 본인의 부인</h4>
+            <p><strong>근거 없는 도시 전설이다. 애플 로고 디자이너 본인이 부인했다.</strong></p>
+            <p>1977년 애플 로고를 디자인한 사람은 그래픽 디자이너 <strong>롭 자노프</strong>(Rob Janoff)다. 그는 여러 인터뷰에서 베어진 사과의 의미를 정직하게 설명했다. 첫째 — 사과를 체리 등 다른 둥근 과일과 구분하기 위한 시각적 장치. 둘째 — 영어 "bite"(한 입 베어 물기)와 컴퓨터 "byte"(8 비트)의 발음이 같다는 사실에서 떠올린 말장난. 자노프 본인이 명확히 적었다 — "튜링 이야기는 디자인 당시 내가 알지 못한 이야기였고, 사후의 우연한 연결이지 의도가 아니었다." 매력적인 이야기지만 사실이 아니다.</p>
+            <p class="legend-vs-fact__source" style="font-size:11px; color:var(--ink-mute); font-style:italic; margin-top:8px;">— Rob Janoff 인터뷰 (CreativeBits.org 2009; CNN 2011)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 3 ===== -->
+    <section class="chapter" id="ch3">
+      <header class="chapter__head"><span class="chapter__num">제3장</span>
+        <h2 class="chapter__title">폰 노이만 구조 <span class="latin">Von Neumann · The EDVAC Architecture</span></h2>
+        <p class="chapter__years">1945 · 미국 펜실베이니아 무어 스쿨 · 프린스턴 IAS</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure inline-figure--left"><div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="88" height="96" fill="#f5efe0"/>
+          <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#1a1410"/>
+          <path d="M 30 64 L 38 76 L 50 76 L 58 64 Z" fill="#e8dfc8" stroke="#a09078" stroke-width="0.4"/>
+          <rect x="38" y="56" width="12" height="10" fill="#d8b48c"/>
+          <ellipse cx="44" cy="40" rx="13" ry="16" fill="#d8b48c"/>
+          <path d="M 26 32 Q 28 22 36 18 Q 44 14 52 18 Q 60 22 62 32 L 58 32 Q 56 28 44 28 Q 32 28 30 32 Z" fill="#a09078"/>
+          <path d="M 26 32 L 26 42 Q 30 38 36 36 L 52 36 Q 58 38 62 42 L 62 32 Z" fill="#7a6850"/>
+          <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/><circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+          <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+          <path d="M 40 52 Q 44 54 48 52" stroke="#3a2418" stroke-width="0.5" fill="none"/>
+          <ellipse cx="44" cy="22" rx="10" ry="3" fill="#3a2820"/>
+        </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">존 폰 노이만</span>
+            <span class="inline-figure__name-en">John von Neumann</span>
+            <span class="inline-figure__life">1903 — 1957</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko"><strong>야노시 노이만</strong>은 1903년 12월 28일 부다페스트의 부유한 유대인 가문에서 태어났다. 6세에 8자리 정수를 머릿속으로 나눴고, 8세에 미적분을 했다. 1926년 23세에 부다페스트 대학에서 박사 학위, 같은 해 취리히 ETH에서 화학공학 학사도 받는다. 1930년 미국 프린스턴에 객원교수로 오고, 1933년 새로 생긴 고등연구소(IAS)의 첫 6인 교수 중 한 사람이 된다 — 아인슈타인·괴델과 같은 자리에. 미국 입국 후 이름을 <em>John von Neumann</em>으로 바꾼다.</p>
+        <p>1944년 가을, 그는 한 기차역에서 우연히 무어 스쿨의 수학자 <strong>허먼 골드스타인</strong>을 만난다. 골드스타인이 미군의 한 비밀 프로젝트 — <em>ENIAC</em>(Electronic Numerical Integrator and Computer) — 의 책임자였다. 18,000개의 진공관, 30톤, 시간당 1,000번 이상의 곱셈. 그 자체로 거대한 기계였다. 그러나 결정적 단점이 있었다 — 다른 프로그램을 실행하려면 손으로 케이블을 다시 꽂아야 했다. 며칠이 걸렸다.</p>
+        <p>폰 노이만이 이 사실을 듣고 ENIAC 팀에 합류한다. 다음 해 새 기계 <em>EDVAC</em>(Electronic Discrete Variable Automatic Computer)을 위해 그는 새 구조를 제안한다. 1945년 6월 30일, 101쪽 문서 — <em>First Draft of a Report on the EDVAC</em> — 를 골드스타인이 동료들에게 회람한다. 문서 표지에 저자가 폰 노이만 한 사람으로 적혔다(이 사실이 후대 우선권 분쟁의 씨가 된다 — 에피소드).</p>
+        <p>그 101쪽이 적은 새 구조가 지금 우리가 부르는 <em>폰 노이만 구조</em>다. 단순화하면 네 묶음. ① 산술논리장치(ALU). ② 제어장치. ③ 메모리. ④ 입출력. 핵심 새로움은 메모리가 데이터와 프로그램을 같은 자리에 함께 둔다는 것이었다(<em>저장 프로그램 stored-program</em>). 프로그램이 데이터처럼 메모리에 적힌다. 다른 프로그램을 실행하려면 케이블을 다시 꽂는 게 아니라, 다른 묶음의 수를 메모리에 적으면 된다.</p>
+        <p>이 단순한 사실이 한 시대 모든 컴퓨터의 기본 그림이 된다. 21세기 스마트폰도 깊은 자리에서는 폰 노이만 구조다. 1945년 6월의 101쪽 문서 안의 그림이 80년의 시간을 지나 두 아이의 손에 닿아 있다.</p>
+
+        <div class="episode">
+          <span class="episode__label">에피소드 · ENIAC 팀의 분노</span>
+          <h4 class="episode__title">101쪽 표지의 한 이름</h4>
+          <div class="episode__body">
+            <p>골드스타인이 회람한 101쪽 문서 표지에는 저자로 폰 노이만 한 사람의 이름이 적혀 있었다. 사실 그 문서에 적힌 새 구조의 핵심 묶음은 ENIAC 팀의 두 핵심인 <strong>존 모클리</strong>(John Mauchly, 1907–1980)와 <strong>존 프레스퍼 에커트</strong>(J. Presper Eckert, 1919–1995), 그리고 폰 노이만 사이의 토론에서 자라난 것이었다. 폰 노이만이 한 일은 그 토론을 깔끔한 형식 언어로 일반화하고 정리한 것이지, 새 핵심 모두가 그 한 사람의 발명은 아니었다.</p>
+            <p>모클리와 에커트가 분노한다. 1946년 그들은 ENIAC 팀을 떠나 자기 회사 — 후의 <em>UNIVAC</em> — 를 만든다. 학계의 평가도 갈렸다. 1980년대 이후 컴퓨터 역사학자들의 정설은 핵심 구조의 발명은 팀의 묶음 작업이고, 폰 노이만의 기여는 그것을 명료한 형식으로 정리해 다음 시대에 전달한 큰 일이라는 균형 잡힌 자리다. "폰 노이만 구조"라는 이름은 — 사실보다 명료한 정리가 한 시대를 어떻게 명령하는가의 한 작은 사례다.</p>
+            <p class="legend-vs-fact__source" style="font-size:11px; color:var(--ink-mute); font-style:italic; margin-top:8px;">— Martin Davis <em>The Universal Computer</em>(2000, 2018) · Thomas Haigh, Mark Priestley, Crispin Rope <em>ENIAC in Action</em>(MIT Press, 2016)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 4 ===== -->
+    <section class="chapter" id="ch4">
+      <header class="chapter__head"><span class="chapter__num">제4장</span>
+        <h2 class="chapter__title">섀넌의 정보이론 — 비트의 발명 <span class="latin">Shannon · The Bit</span></h2>
+        <p class="chapter__years">1948 · 미국 뉴저지 머레이힐, 벨 연구소</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure"><div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="88" height="96" fill="#f5efe0"/>
+          <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#2a2018"/>
+          <path d="M 30 64 Q 44 78 58 64 L 56 64 Q 44 74 32 64 Z" fill="#faf6eb" stroke="#a09078" stroke-width="0.4"/>
+          <rect x="38" y="56" width="12" height="10" fill="#e8c8a8"/>
+          <ellipse cx="44" cy="40" rx="13" ry="16" fill="#e8c8a8"/>
+          <path d="M 26 32 Q 26 18 34 14 Q 44 10 54 14 Q 62 18 62 32 Q 58 26 44 26 Q 30 26 26 32 Z" fill="#7a6850"/>
+          <path d="M 28 34 L 28 40 Q 32 36 38 36 L 50 36 Q 56 36 60 40 L 60 34 Q 54 30 44 30 Q 34 30 28 34 Z" fill="#5a4030"/>
+          <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+          <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/><circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+          <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+          <path d="M 40 54 Q 44 56 48 54" stroke="#3a2418" stroke-width="0.5" fill="none"/>
+        </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">클로드 섀넌</span>
+            <span class="inline-figure__name-en">Claude Shannon</span>
+            <span class="inline-figure__life">1916 — 2001</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko"><strong>클로드 엘우드 섀넌</strong>은 1916년 4월 30일 미시간주 페토스키에서 태어났다. 1936년 미시간 대학에서 수학·전기공학 학사. 같은 해 MIT 대학원에 입학해 디지털 회로의 선구자 <strong>버니바 부시</strong>(Vannevar Bush)의 미분 해석기(differential analyzer, 아날로그 컴퓨터)를 운영했다. 1937년 21세에 그가 적은 석사 논문 — <em>A Symbolic Analysis of Relay and Switching Circuits</em>(계전기와 스위칭 회로의 기호적 분석) — 이 종종 "한 시대 가장 영향력 있는 석사 논문"으로 꼽힌다. 19세기 영국의 <strong>조지 불</strong>(George Boole, 1815–1864)이 적은 논리 대수(Boolean algebra)가 스위치 회로의 동작과 같다는 사실을 21세 청년이 처음 적었다. 디지털 회로의 수학적 기초가 그 자리에 적혔다.</p>
+        <p>1941년 섀넌은 미국 뉴저지 머레이힐의 벨 연구소에 입사한다. 전쟁 중 그는 군사 암호의 수학적 기초를 정리한다(1945년 비밀 보고서, 1949년 공개판 <em>Communication Theory of Secrecy Systems</em>). 전쟁 직후 그가 정리한 더 큰 묶음의 결과가 1948년 7월·10월 두 호에 걸쳐 <span class="work">Bell System Technical Journal</span>에 출판된다. 79쪽. 제목은 <em>A Mathematical Theory of Communication</em>(통신의 수학적 이론).</p>
+        <blockquote class="pull">
+          The fundamental problem of communication is that of reproducing at one point either exactly or approximately a message selected at another point.
+          <span class="attr">— 클로드 섀넌, <em>A Mathematical Theory of Communication</em>, Bell System Technical Journal, 1948 · 첫 문장 · 의역: "통신의 근본 문제는 — 한 자리에서 선택된 메시지를 — 다른 자리에서 정확히 혹은 근사로 재현하는 일이다."</span>
+        </blockquote>
+        <p>이 79쪽 안에 새 학문 — <em>정보이론</em>(information theory) — 이 거의 완성된 형태로 적혀 있었다. 핵심이 두 가지다. 첫째 — <em>비트</em>(bit, binary digit)가 정보의 단위라는 사실. 한 사건의 가능한 결과 묶음을 정수 묶음으로 적는 가장 짧은 부호의 평균 길이가 그 사건의 정보량이다. 가장 단순한 단위로, 동전 던지기의 결과(앞/뒤)가 1비트의 정보. 둘째 — <em>잡음 채널의 용량 이론</em>. 잡음이 끼는 채널에서도, 잡음의 통계가 알려져 있다면, 적절한 부호화로 임의로 작은 오류율로 정보를 보낼 수 있다. 그 한계가 <em>채널 용량</em>(channel capacity)이다.</p>
+        <p>이 결과 묶음이 한 시대 모든 통신·저장 기술의 토대다. CD·DVD의 오류 정정 부호, 와이파이·5G의 채널 부호화, ZIP·MP3·JPEG의 압축 — 모두 1948년의 79쪽 안에서 자라났다. <em>비트</em>라는 단어 자체도 1948년 그 논문에서 처음 인쇄됐다(섀넌의 동료 통계학자 존 터키 John Tukey의 제안).</p>
+
+        <aside class="inline-sim">
+          <div class="inline-sim__head"><span class="num">시뮬 2</span><h4>스무고개 — 정보의 한 단위</h4><span class="latin">20 Questions · log₂</span></div>
+          <p class="inline-sim__lead">한 묶음에서 정답을 예/아니오 질문 묶음으로 좁혀 간다. 가능한 정답이 N개일 때 필요한 질문의 평균 수는 ⌈log₂ N⌉. 비트의 직관을 손가락으로 만져 본다.</p>
+          <div class="sim" data-sim-id="info-bits-twentyq"></div>
+        </aside>
+
+        <div class="episode">
+          <span class="episode__label">에피소드 · 외발자전거의 한 사람</span>
+          <h4 class="episode__title">벨 연구소 복도에서</h4>
+          <div class="episode__body">
+            <p>섀넌은 일상에서도 별난 사람이었다. 벨 연구소의 긴 복도를, 그는 외발자전거를 타고 — 묶음의 공을 던지며 — 출근했다. 그가 만든 장난감 묶음에는 미로를 푸는 기계 쥐 "테세우스"(1950, 사상 최초의 기계학습 시연 중 하나), 미적분을 기계로 푸는 장치, 마지막 시기의 <em>저글링하는 기계</em>(1980년대) 등이 있었다. 그의 1985년 강연 영상이 유튜브에 남아 있다 — 70세 노수학자가 외발자전거를 타고 묶음의 공을 던지며 강연한다.</p>
+            <p>1949년 그는 컴퓨터 체스의 토대 논문 <em>Programming a Computer for Playing Chess</em>를 발표한다. 컴퓨터가 체스를 두는 첫 정식 분석이다. 가능한 수의 묶음을 추정한다 — 약 10^120. 우주의 원자 수보다 훨씬 많다. 그가 정리한 두 검색 전략(미니맥스·알파-베타)이 1997년 IBM 딥블루의 카스파로프 격파의 토대가 된다.</p>
+            <p>섀넌은 일찍 자기 자리를 떠난 사람이다. 1956년 MIT로 옮긴 뒤 정보이론의 폭발적 발전을 옆에서 보면서도 본인은 거의 논문을 적지 않았다. "더 적을 것이 없다"고 그가 말했다. 1990년대 알츠하이머. 2001년 2월 24일 매사추세츠 메드퍼드의 한 요양원에서 사망. 84세. 한 시대 가장 명료한 정신이 마지막에 자기 정리를 잊었다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 5 ===== -->
+    <section class="chapter" id="ch5">
+      <header class="chapter__head"><span class="chapter__num">제5장</span>
+        <h2 class="chapter__title">공개키 암호와 인터넷 <span class="latin">Public-Key Cryptography &amp; the Internet</span></h2>
+        <p class="chapter__years">1976 — 1977 · 스탠퍼드 · MIT</p>
+      </header>
+      <div class="narrative">
+        <p class="dropcap ko">암호에는 한 시대 해결되지 않은 한 문제가 있었다. <em>열쇠 교환의 문제</em>다. 한 사람이 한 다른 사람에게 한 비밀 메시지를 보내려면 — 먼저 두 사람이 한 같은 비밀 열쇠를 공유해야 한다. 그러나 그 열쇠 자체를 어떻게 안전하게 교환하는가? 만약 누군가가 그 열쇠 교환을 엿듣는다면 — 그 뒤의 모든 메시지가 풀린다. 한 시대의 모든 군사·외교·상업 암호가 이 한 문제와 씨름해 왔다.</p>
+        <p>1976년 6월, 스탠퍼드 대학의 두 사람 — <strong>휘트필드 디피</strong>(Whitfield Diffie, 1944–)와 <strong>마틴 헬먼</strong>(Martin Hellman, 1945–) — 이 한 논문을 발표한다. <em>New Directions in Cryptography</em>(IEEE Transactions on Information Theory). 두 사람이 적은 새 그림은 — 한 천재적으로 단순했다. 두 열쇠를 만든다. 한 <em>공개 열쇠</em>(public key)는 누구에게나 공개한다. 한 <em>비밀 열쇠</em>(private key)는 본인만 안다. 누구나 공개 열쇠로 메시지를 잠글 수 있지만 — 비밀 열쇠를 가진 본인만 그것을 풀 수 있다. 두 사람이 한 비밀을 미리 공유할 필요가 없다.</p>
+        <p>디피·헬먼이 1976년 적은 것은 — 그 한 일반적 그림과, 한 구체적 한 묶음의 <em>열쇠 교환 알고리즘</em>(Diffie–Hellman key exchange)이었다. 두 사람이 — 공개된 채널에서 — 한 공동의 비밀을 한 만들 수 있다. 엿듣는 사람이 모든 메시지를 보아도 — 그 공동 비밀을 한 알 수 없다. 이산 로그 문제(discrete logarithm)의 한 계산적 어려움이 그 안전성의 뿌리다.</p>
+        <p>다음 해 1977년 4월, MIT의 세 사람 — <strong>론 라이베스트</strong>(Ron Rivest), <strong>아디 샤미르</strong>(Adi Shamir), <strong>레너드 에이들먼</strong>(Leonard Adleman) — 이 디피·헬먼의 일반적 그림에 맞는 구체적인 알고리즘을 만든다. 세 사람의 머리글자를 따 <em>RSA</em>다. RSA의 안전성은 큰 정수의 소인수분해가 계산적으로 어렵다는 사실에 기반한다. 두 큰 소수 p, q를 곱해 N=pq를 만든다. N은 공개, p와 q는 비밀. N에서 p와 q를 다시 찾아내는 일은 — N이 충분히 크면(현재 2048 비트 이상) — 전 우주의 컴퓨터를 모아도 풀 수 없다.</p>
+
+        <aside class="inline-sim">
+          <div class="inline-sim__head"><span class="num">시뮬 3</span><h4>시저 암호 → 공개키 — 한 자물쇠의 그림</h4><span class="latin">Caesar &amp; Public Key</span></div>
+          <p class="inline-sim__lead">한 시대의 가장 단순한 암호 — 시저 암호의 글자 회전 — 에서 시작해 비밀 키와 공개 키의 그림에 닿는다. 자물쇠와 열쇠의 비유로 한 시대 인터넷 보안의 토대를 만져 본다.</p>
+          <div class="sim" data-sim-id="caesar-public-key"></div>
+        </aside>
+
+        <p>이 결과 묶음이 한 시대를 어떻게 바꾸었는가는 짧은 한 줄로 닫히지 않는다. 1989년 영국의 <strong>팀 버너스리</strong>(Tim Berners-Lee)가 CERN에서 <em>월드 와이드 웹</em>(WWW)을 제안한다. 1990년 첫 웹 서버가 가동된다. 1995년 SSL 1.0(이후 TLS)이 출시된다 — RSA를 핵심에 둔 인터넷 보안 프로토콜. 지금 당신이 웹 브라우저의 주소창에서 자물쇠 아이콘을 본다면 — 그 자물쇠는 1976년 디피·헬먼과 1977년 RSA의 직계 후손이다.</p>
+        <p>한 후일담이 있다. 1997년 영국 정보국 GCHQ가 비밀 자료를 공개했다. 그 자료에 따르면 1973년 GCHQ의 <strong>클리포드 콕스</strong>(Clifford Cocks)가 — 디피·헬먼·RSA보다 3년 일찍 — 같은 그림에 도달했다. 그러나 그것이 국가 기밀로 묶여 1997년까지 24년 동안 학계에 알려지지 않았다. 디피·헬먼·RSA가 같은 자리를 독립적으로 다시 발견한 셈이다. 한 시대의 결과는 한 천재의 발명이 아니라, 그 시대의 토양에 익은 자리에 여러 사람이 거의 동시에 닿는 일이다(§ VI 비유클리드 기하의 세 사람에서 이미 본 그림이다).</p>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 6 ===== -->
+    <section class="chapter" id="ch6">
+      <header class="chapter__head"><span class="chapter__num">제6장</span>
+        <h2 class="chapter__title">페르마, 그리고 AI <span class="latin">Fermat's Last · and the Mathematics of AI</span></h2>
+        <p class="chapter__years">1995 · 프린스턴 → 2017 · 전 지구</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure inline-figure--left"><div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="88" height="96" fill="#f5efe0"/>
+          <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#2a2018"/>
+          <path d="M 30 64 Q 44 76 58 64 L 56 64 Q 44 72 32 64 Z" fill="#faf6eb" stroke="#a09078" stroke-width="0.4"/>
+          <rect x="38" y="56" width="12" height="10" fill="#e8c8a8"/>
+          <ellipse cx="44" cy="40" rx="13" ry="16" fill="#e8c8a8"/>
+          <path d="M 26 32 Q 26 22 34 18 Q 44 14 54 18 Q 62 22 62 32 Q 58 26 44 26 Q 30 26 26 32 Z" fill="#9a8870"/>
+          <path d="M 28 34 L 28 40 Q 34 36 40 36 L 48 36 Q 54 36 60 40 L 60 34 Q 54 30 44 30 Q 34 30 28 34 Z" fill="#7a6850"/>
+          <!-- 안경 -->
+          <circle cx="40" cy="42" r="3.6" fill="none" stroke="#1f1a14" stroke-width="0.7"/>
+          <circle cx="48" cy="42" r="3.6" fill="none" stroke="#1f1a14" stroke-width="0.7"/>
+          <line x1="43.6" y1="42" x2="44.4" y2="42" stroke="#1f1a14" stroke-width="0.5"/>
+          <circle cx="40" cy="42" r="0.6" fill="#1f1a14"/><circle cx="48" cy="42" r="0.6" fill="#1f1a14"/>
+          <path d="M 44 46 L 43 50 L 45 50 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+          <path d="M 40 54 Q 44 56 48 54" stroke="#3a2418" stroke-width="0.5" fill="none"/>
+        </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">앤드루 와일즈</span>
+            <span class="inline-figure__name-en">Andrew Wiles</span>
+            <span class="inline-figure__life">1953 —</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko">1637년경, 프랑스 툴루즈의 한 법관 <strong>피에르 드 페르마</strong>가 디오판토스의 <span class="work">산술</span> 한 책의 여백에 짧은 한 문장을 적었다. <em>x<sup>n</sup> + y<sup>n</sup> = z<sup>n</sup></em>(n &gt; 2)을 만족하는 양의 정수 x, y, z는 없다. 그리고 한 줄을 덧붙였다 — "나는 이것의 놀랄 만한 증명을 발견했으나 이 여백은 그것을 적기에 너무 좁다(<em>Cuius rei demonstrationem mirabilem sane detexi; hanc marginis exiguitas non caperet</em>)." 그 한 줄이 358년 동안 — 한 시대의 가장 유명한 수학 문제 — <em>페르마의 마지막 정리</em>(Fermat's Last Theorem) — 가 되었다.</p>
+        <p>1986년, 프린스턴 대학의 <strong>앤드루 와일즈</strong>(Andrew Wiles, 1953–) 교수는 한 사실을 듣고 자기 사무실 다락방에 침묵하기로 결심한다. 동료 켄 리벳이 — 1985년의 한 결과를 정리해 — 다니야마-시무라 추측(이제 모듈러성 정리)이 페르마의 마지막 정리를 함의한다는 결과를 증명한 직후였다. 와일즈는 그 길을 따라 페르마를 풀어 보기로 한다. 그는 33세였다. 페르마는 그가 10세에 처음 만난 평생의 문제였다.</p>
+        <p>7년의 침묵이 시작됐다. 그는 자기 학생 두 사람을 제외하고는 동료 어느 누구에게도 자기 작업을 말하지 않았다. 주말마다 그는 자기 다락방의 책상에 앉아 식을 적었다. 아내가 그 침묵을 옆에서 지켰다. 1993년 6월, 그는 케임브리지 한 학회에서 — 3일 연속의 강의 마지막 줄에서 — 페르마의 마지막 정리의 증명을 발표한다. 박수, 그리고 그 자리가 큰 신문 일면을 채웠다.</p>
+        <p>그러나 짧은 기쁨이 오래가지 않았다. 1993년 9월, 심사 과정에서 결정적 결함이 발견됐다. 증명의 핵심 한 단계 — 한 오일러 체계(Euler system)에 관한 한 부분 — 가 와일즈가 적은 형태로는 닫히지 않았다. 한 페이지의 한 결함이 7년의 작업을 무너뜨릴 수 있는 자리였다. 9월부터 1994년 9월까지 — 1년의 분투 — 동안 와일즈는 자기 옛 제자 <strong>리처드 테일러</strong>(Richard Taylor)와 함께 그 자리를 다시 잡았다. 1994년 9월 19일 아침, 와일즈가 자기 책상에서 한 다른 길을 떠올린다. 두 사람이 적은 두 번째 한 묶음의 논문이 1995년 5월 <span class="work">Annals of Mathematics</span>에 출판된다. 「Modular elliptic curves and Fermat's Last Theorem」(와일즈, 109쪽), 그리고 「Ring-theoretic properties of certain Hecke algebras」(테일러·와일즈, 21쪽). 358년의 한 여백이 닫혔다.</p>
+        <blockquote class="pull">
+          We can only see a short distance ahead, but we can see plenty there that needs to be done.
+          <span class="attr">— 앨런 튜링, <em>Computing Machinery and Intelligence</em> 마지막 문장, 1950 · 의역: "우리는 앞으로 짧은 거리만 볼 수 있다 — 그러나 그 자리에 우리가 해야 할 일이 충분히 있는 것은 보인다."</span>
+        </blockquote>
+
+        <div class="episode">
+          <span class="episode__label">에피소드 · 7년의 침묵과 그 다음 1년</span>
+          <h4 class="episode__title">한 다락방의 책상</h4>
+          <div class="episode__body">
+            <p>와일즈는 1993년 6월의 발표 뒤에도, 1993년 9월의 결함 통보 뒤에도 — 동일한 자리에서 동일한 방식으로 일했다. 자기 사무실 위층 다락방의 한 책상. 그는 인터뷰에서 적었다 — "나는 학회의 자리도, 강연도 좋아하지 않았다. 그저 작업이 그 자리에 닫히기를 바랐다." 1994년 9월 19일 아침, 그가 다른 길을 떠올렸을 때 그 자리에 있던 것은 그와 책상뿐이었다. 그가 적었다 — "그것은 형언할 수 없이 아름다운 순간이었다. 너무도 단순하고 너무도 우아해서, 30분 동안 나는 그저 책상을 바라보았다."</p>
+            <p>보강 논문이 1년 더 걸린 그 자리에서, 수학자 사회는 7년의 침묵을 비판하지 않았다. 오히려 그 침묵이 작업의 결실을 만든 자리로 인정받았다. 와일즈는 1996년 울프상, 1998년 필즈 메달 특별 표창(필즈 메달은 40세 미만이 원칙이지만 IMU가 와일즈에게 한 특별 명판을 수여), 2016년 아벨상을 받았다. 와일즈가 페르마를 푼 자리는 영원히 그의 이름이 적힐 자리다.</p>
+            <p class="legend-vs-fact__source" style="font-size:11px; color:var(--ink-mute); font-style:italic; margin-top:8px;">— Simon Singh <em>Fermat's Enigma</em>(1997) · BBC Horizon <em>Fermat's Last Theorem</em>(1996) · Andrew Wiles 1995 Annals of Math 인터뷰</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top:48px; font-family:var(--serif-ko); font-size:20px; font-weight:600;">코다 · AI의 수학</h3>
+        <p>페르마의 358년이 1995년에 닫혔다. 같은 1990년대 후반부터 다른 자리에서 또 한 시대가 자라기 시작한다. <em>딥러닝</em>(deep learning)이다. 핵심 그림은 — 19세기의 미적분(§ IV)과 통계(§ V), 20세기 초의 선형대수, 20세기 중반의 정보이론(§ 4)이 한 묶음으로 한 자리에 놓이는 것이다. 1986년 <strong>제프리 힌턴</strong>(Geoffrey Hinton) 등이 다층 신경망의 학습 알고리즘 — <em>역전파</em>(backpropagation) — 의 영향력 있는 논문을 적는다. 그러나 1990년대·2000년대 학계는 신경망을 신뢰하지 않았다. 작은 자료와 작은 컴퓨터로는 그 잠재력이 보이지 않았다.</p>
+        <p>2012년이 자리를 바꿨다. 토론토 대학 힌턴 연구실의 두 학생 — <strong>알렉스 크리제프스키</strong>와 <strong>일리야 수츠케버</strong> — 가 ImageNet 영상 인식 대회에서 깊은 합성곱 신경망(AlexNet)으로 큰 차이의 1위를 했다. 그 자리에서 한 시대가 다시 바뀌었다. 2017년 구글의 여덟 사람의 팀이 논문 <em>Attention Is All You Need</em>를 발표한다. <em>트랜스포머</em>(Transformer) 구조. 그 구조 위에 2020년대의 대규모 언어 모델(LLM)이 자라난다.</p>
+        <p>그러나 이 모든 자리에서 핵심 수학은 새것이 아니다. 선형대수의 행렬 곱. 미적분의 기울기(gradient). 확률의 최대 우도. 정보이론의 엔트로피. 모두 1700년부터 1950년 사이에 수학자들이 적어 둔 도구다. AI의 폭발은 새로운 수학의 발견이 아니라, 한 시대의 컴퓨터(§ 1, § 3)와 자료(인터넷, § 5)가 옛 수학을 새 방식으로 만난 자리다.</p>
+        <p>두 아이가 스마트폰을 켜고 음성 비서에게 말을 건넨다. 그 자리의 핵심에는 — 1936년 튜링의 종이테이프, 1945년 폰 노이만의 메모리, 1948년 섀넌의 비트, 1977년 RSA의 자물쇠, 1995년 와일즈의 모듈러성 정리(타원곡선이 디지털 서명·암호의 핵심 도구로 자라남), 그리고 2017년 트랜스포머의 어텐션이 — 모두 자리한다. 2,000년 수학의 마지막 90년이 그 작은 화면 한 자리에 모두 적혀 있다.</p>
+        <p>90년의 호흡이 닫혔다. 1931년 한 막을 닫은 자리에서 다른 막이 1936년에 열렸다. 그 막이 90년의 끝에 두 아이의 손에 닿아 있다. 수학이 기계가 된 한 시대 — 그러나 그 기계의 깊은 자리에는 여전히 수학이 적혀 있다.</p>
+      </div>
+    </section>
+
+    <!-- ===== 출처 메모 ===== -->
+    <section class="math-section" id="sources">
+      <header><h2>출처 메모</h2><span class="latin">§ VII &nbsp;·&nbsp; Citations</span></header>
+      <p class="lead">이 페이지의 모든 사실은 다음 출처에서 교차 확인되었다. 인용은 가능한 한 원전 또는 정평 있는 영역(英譯)을 따랐고, 의역이면 명시했다. 시뮬레이션은 교육 목적의 <em>단순화 모형</em>이다.</p>
+
+      <div class="sources-note">
+        주요 출처 — Andrew Hodges <em>Alan Turing: The Enigma</em>(Princeton UP, 2014, 2nd ed.); B. Jack Copeland <em>Turing: Pioneer of the Information Age</em>(Oxford, 2012); Martin Davis <em>The Universal Computer: The Road from Leibniz to Turing</em>(CRC Press, 2000/2018); Thomas Haigh, Mark Priestley, Crispin Rope <em>ENIAC in Action</em>(MIT Press, 2016); Claude E. Shannon <em>A Mathematical Theory of Communication</em>(Bell System Technical Journal, 1948); James Gleick <em>The Information: A History, a Theory, a Flood</em>(Pantheon, 2011); Whitfield Diffie &amp; Martin Hellman <em>New Directions in Cryptography</em>(IEEE Trans. Inf. Theory, 1976); Simon Singh <em>The Code Book</em>(1999); Simon Singh <em>Fermat's Enigma</em>(Walker, 1997); Andrew Wiles <em>Modular elliptic curves and Fermat's Last Theorem</em>(Annals of Mathematics 141:3, 1995, 443–551); MacTutor History of Mathematics (St Andrews) "Alan Turing", "John von Neumann", "Claude Shannon", "Andrew Wiles"; Stanford Encyclopedia of Philosophy "Turing Machines", "Church-Turing Thesis", "Information"; Rob Janoff 인터뷰(CreativeBits.org 2009; CNN 2011); Vaswani et al. <em>Attention Is All You Need</em>(NeurIPS 2017). 자세한 목록은
+        <a href="../../research/math.html">/research/math.html</a>에서 추적할 수 있다(연구 아카이브 페이지는 § IV 컬렉션 완성과 함께 공개된다).
+      </div>
+    </section>
+
+    <nav class="era-pagination" aria-label="시대 간 이동">
+      <a class="prev" href="06-infinity-foundations.html">
+        <span class="dir">← 이전 시대</span>
+        <span class="title">§ VI 무한과 기초를 묻다</span>
+        <span class="latin">Infinity &amp; Foundations · 1820 — 1940</span>
+      </a>
+      <a class="next" href="../index.html">
+        <span class="dir">수학사 개관으로 ↗</span>
+        <span class="title">§ IV 수학사 — 일곱 시대를 한 자리에서</span>
+        <span class="latin">Return to the Collection</span>
+      </a>
+    </nav>
+
+  </div>
+</main>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../../assets/shared/nav.js" defer></script>
+<script src="../../assets/shared/footer.js" defer></script>
+<script src="../../assets/math-history/interactives/sim-turing-machine.js" defer></script>
+<script src="../../assets/math-history/interactives/sim-caesar-public-key.js" defer></script>
+<script src="../../assets/math-history/interactives/sim-info-bits-twentyq.js" defer></script>
+</body>
+</html>

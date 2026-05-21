@@ -63,7 +63,7 @@
         <h2>통합 연표</h2>
         <span class="latin">§ I &nbsp;·&nbsp; Integrated Timeline</span>
       </header>
-      <p class="lead">수학이 만들어진 5,000년을 7개 띠로 나누어 한눈에. 띠 위의 점은 그 시대의 결정적 사건이다. 현재 본문이 작성된 시대는 <em>§ III (0과 대수)</em> 뿐 — 나머지 띠는 점선·반투명으로 두었다.</p>
+      <p class="lead">수학이 만들어진 5,000년을 7개 띠로 나누어 한눈에. 띠 위의 점은 그 시대의 결정적 사건이다. 7개 시대 모두 본문이 작성되어 있다 — 띠를 클릭하면 해당 시대 페이지로 이동한다.</p>
 
       <div class="math-timeline-scroll">
       <svg viewBox="0 0 1080 360" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -205,14 +205,14 @@
         </g>
         </a>
 
-        <!-- § VII 수학이 기계가 되다 — 1930 ~ 2026 -->
-        <g class="seg seg-pending">
-          <title>§ VII 수학이 기계가 되다 — 준비중</title>
-          <rect class="seg-bg seg-7" x="925.00" y="40" width="105.00" height="34" rx="3"/>
+        <!-- § VII 수학이 기계가 되다 — 1930 ~ 2026 — ★작성 완료 (링크 활성) -->
+        <a href="eras/07-the-machine.html" class="seg-active-link">
+        <g class="seg seg-active">
+          <title>§ VII 수학이 기계가 되다 — 페이지로 이동</title>
+          <rect class="seg-bg seg-7" x="925.00" y="40" width="105.00" height="34" rx="3" opacity="0.18"/>
           <rect class="seg-bar seg-7" x="925.00" y="46" width="105.00" height="6"/>
           <text class="erat-sm" x="977.50" y="62" text-anchor="middle">§ VII 기계가 되다</text>
           <text class="erat-en" x="977.50" y="73" text-anchor="middle">1930 — ·</text>
-          <text class="wip-tag" x="977.50" y="86" text-anchor="middle">PREPARING</text>
           <line class="stemDot" x1="931.60" y1="86" x2="931.60" y2="110"/>
           <circle class="seg-7" cx="931.60" cy="86" r="3"/>
           <text class="evtY" x="931.60" y="108" text-anchor="middle">1936</text>
@@ -222,6 +222,7 @@
           <text class="evtY" x="975.00" y="154" text-anchor="middle">1948</text>
           <text class="evt"  x="975.00" y="142" text-anchor="middle">섀넌 정보이론</text>
         </g>
+        </a>
 
         <!-- 축 -->
         <line class="ax" x1="60" y1="200" x2="1030" y2="200"/>
@@ -244,7 +245,7 @@
 
         <!-- 범례 -->
         <g transform="translate(60, 245)">
-          <text class="axLb" x="0" y="0" style="font-family:'Noto Sans KR',sans-serif;letter-spacing:0.06em;">시대 띠의 점선과 PREPARING 표시는 본문이 아직 준비 중인 시대 — 띠를 클릭하면 그 시대 페이지로 이동(§ III만 현재 활성).</text>
+          <text class="axLb" x="0" y="0" style="font-family:'Noto Sans KR',sans-serif;letter-spacing:0.06em;">각 띠를 클릭하면 그 시대 페이지로 이동한다. 7개 시대 모두 작성 완료.</text>
         </g>
       </svg>
       </div>
@@ -256,7 +257,7 @@
         <h2>7개 시대</h2>
         <span class="latin">§ II &nbsp;·&nbsp; Seven Eras</span>
       </header>
-      <p class="lead">현재 작업이 끝난 것은 § III(0과 대수). 나머지 6개 시대는 점진적으로 추가된다.</p>
+      <p class="lead">7개 시대 모두 본문 + 인터랙티브 시뮬레이션이 완성되어 있다. 각 시대 카드를 누르면 페이지로 이동한다.</p>
 
       <div class="era-cards">
         <a class="era-card" href="eras/01-counting.html">
@@ -307,13 +308,13 @@
           <p class="era-people"><strong>핵심 인물</strong>가우스 · 리만 · 갈루아 · 칸토어 · 힐베르트 · 괴델</p>
         </a>
 
-        <div class="era-card disabled" style="grid-column: 1 / -1;">
+        <a class="era-card" href="eras/07-the-machine.html" style="grid-column: 1 / -1;">
           <span class="era-num">§ VII</span>
-          <h3 class="era-title">수학이 기계가 되다 <span class="badge-wip">준비중</span></h3>
+          <h3 class="era-title">수학이 기계가 되다</h3>
           <p class="era-period">1930 — 현재 · <em style="font-family:var(--serif-en);color:var(--ink-mute);">Modern Era</em></p>
           <p class="era-desc">수학이 <em>계산하는 기계</em>가 되다. 디지털 문명 전체가 이 시대의 수학 위에 — 튜링의 계산 가능성, 섀넌의 비트, 공개키 암호, 그리고 오늘의 AI.</p>
           <p class="era-people"><strong>핵심 인물</strong>튜링 · 폰 노이만 · 섀넌 · 와일즈 · (현대) RSA · 머신러닝의 수학</p>
-        </div>
+        </a>
       </div>
     </section>
 
