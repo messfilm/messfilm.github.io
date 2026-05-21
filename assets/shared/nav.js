@@ -79,7 +79,8 @@
         { href: 'math-history/eras/01-counting.html',      label: '셈',       eraKey: '01-counting' },
         { href: 'math-history/eras/02-proof.html',         label: '증명',     eraKey: '02-proof' },
         { href: 'math-history/eras/03-zero-algebra.html',  label: '0과 대수', eraKey: '03-zero-algebra' },
-        { href: 'math-history/eras/04-natures-language.html', label: '자연 언어', eraKey: '04-natures-language' }
+        { href: 'math-history/eras/04-natures-language.html', label: '자연 언어', eraKey: '04-natures-language' },
+        { href: 'math-history/eras/05-uncertainty.html',   label: '불확실성', eraKey: '05-uncertainty' }
       ]
     }
   };

@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>불확실성을 길들이다 · § V 수학사 | Archive for Som & Chan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="우연을 수로 다루다. 파스칼·페르마의 1654 서신에서 가우스의 정규분포, 존 스노우의 콜레라 지도, 나이팅게일의 통계 시각화까지 — 1650에서 1900, 250년의 확률과 통계의 역사.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="../../assets/shared/styles-base.css">
+<link rel="stylesheet" href="../../assets/math-history/styles.css">
+</head>
+<body class="shared-body collection-math" data-page-id="math.era.05-uncertainty">
+
+<main class="math">
+  <div class="shared-container">
+    <nav class="era-breadcrumb" aria-label="현재 위치">
+      <a href="../">수학사</a>
+      <span class="sep">/</span>
+      <span class="current">§ V · 불확실성을 길들이다</span>
+    </nav>
+  </div>
+
+  <section class="math-hero">
+    <div class="shared-container">
+      <span class="kicker">§ V · UNCERTAINTY</span>
+      <h1>불확실성을 길들이다<span class="latin">Uncertainty · Probability and Statistics</span></h1>
+      <p class="subtitle">우연을 수로 다룬 250년 · 1650 — 1900</p>
+      <p class="lead">
+        17세기 중반까지 <em>우연</em>은 신의 영역이었다. 주사위 한 번의 결과,
+        한 도시의 한 해 사망자 수, 한 사람의 수명. 그 모든 것은 인간이
+        <em>예측</em>하는 대상이 아니라 <em>겪는</em> 대상이었다. 그런데 1654년 여름,
+        파리의 한 도박꾼이 수도사이자 수학자였던 친구에게 한 가지 분배 문제를
+        물었다. 그 친구는 툴루즈의 한 판사 동료에게 편지를 썼다. 그 한
+        여름의 편지 묶음에서 — <em>우연을 수로 다루는 학문</em>이 시작되었다.
+        그 흐름은 한 세대 뒤 베르누이의 <em>큰 수의 법칙</em>으로, 100년 뒤
+        가우스의 <em>정규분포</em>로, 그리고 19세기에 이르러 콜레라 지도와
+        장미 그림으로 — 마침내 <em>통계가 사람을 살리는</em> 도구가 되었다.
+      </p>
+      <div class="math-stats">
+        <div class="math-stat">
+          <span class="math-stat__label">시간 범위</span>
+          <span class="math-stat__value">250<span class="latin" style="font-size:0.5em;margin-left:4px;">yrs</span></span>
+          <span class="math-stat__sub">1650 — 1900</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">핵심 인물</span>
+          <span class="math-stat__value">6</span>
+          <span class="math-stat__sub">파스칼 → 나이팅게일</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">무대</span>
+          <span class="math-stat__value">4</span>
+          <span class="math-stat__sub">프랑스 · 스위스 · 독일 · 영국</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">결정적 저작</span>
+          <span class="math-stat__value">1713<br>1858</span>
+          <span class="math-stat__sub">Ars Conjectandi → 장미 그림</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shared-container">
+
+    <nav class="chapter-toc" aria-label="이 시대 챕터 목차">
+      <span class="chapter-toc__label">이 시대를 여섯 호흡으로</span>
+      <ol>
+        <li><a href="#ch1">도박이 낳은 학문 — 파스칼과 페르마의 여름 편지<span class="years">1654</span></a></li>
+        <li><a href="#ch2">베르누이와 큰 수의 법칙<span class="years">1713 (사후)</span></a></li>
+        <li><a href="#ch3">가우스 — 측량 오차에서 종 모양 곡선으로<span class="years">1809</span></a></li>
+        <li><a href="#ch4">통계가 사람을 살리다 — 스노우의 콜레라 지도<span class="years">1854</span></a></li>
+        <li><a href="#ch5">나이팅게일 — 그래프로 의회를 설득하다<span class="years">1858</span></a></li>
+        <li><a href="#ch6">우연을 길들인 뒤<span class="years">coda</span></a></li>
+      </ol>
+    </nav>
+
+    <!-- ===== 시기 도식 ===== -->
+    <section class="math-section" id="period-diagram">
+      <header>
+        <h2>시기 도식</h2>
+        <span class="latin">§ I &nbsp;·&nbsp; Period Diagram</span>
+      </header>
+      <p class="lead">250년의 호흡. 파스칼-페르마의 편지에서 나이팅게일의 장미까지 — 결정적 저작과 사건을 1650에서 1900 사이에 점으로 표시한다. 그 위에 주사위·정규분포 곡선·장미 도형이 함께 놓인다.</p>
+
+      <div class="math-timeline-scroll">
+      <svg viewBox="0 0 1080 280" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="§ V 불확실성을 길들이다 시기 도식" class="math-timeline-svg">
+        <defs>
+          <style>
+            .ax  { stroke: #c8bea4; stroke-width: 1; fill: none; }
+            .axT { stroke: #c8bea4; stroke-width: 1; }
+            .axLb{ font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 10.5px; fill: #6b6253; }
+            .band{ fill: #7a6b8a; opacity: 0.18; }
+            .bandTop{ fill: #7a6b8a; }
+            .evt { font-family: 'Noto Sans KR', sans-serif; font-size: 9px; fill: #1f1a14; }
+            .evtY{ font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 10px; fill: #554a8a; }
+            .stem{ stroke: #554a8a; stroke-width: 1; }
+            .region{ font-family: 'Noto Sans KR', sans-serif; font-size: 9.5px; fill: #7a7163; font-style: italic; }
+            .glyph{ fill: none; stroke: #554a8a; stroke-width: 0.9; opacity: 0.55; }
+          </style>
+        </defs>
+
+        <!-- x = (year - 1650) * (970/250) + 60   for 1650..1900 → 60..1030 -->
+        <rect class="band"    x="60" y="130" width="970" height="40" rx="3"/>
+        <rect class="bandTop" x="60" y="130" width="970" height="6"/>
+        <line class="ax" x1="60" y1="230" x2="1030" y2="230" />
+        <line class="axT" x1="60"     y1="228" x2="60"     y2="236"/>
+        <line class="axT" x1="254"    y1="228" x2="254"    y2="236"/>
+        <line class="axT" x1="448"    y1="228" x2="448"    y2="236"/>
+        <line class="axT" x1="642"    y1="228" x2="642"    y2="236"/>
+        <line class="axT" x1="836"    y1="228" x2="836"    y2="236"/>
+        <line class="axT" x1="1030"   y1="228" x2="1030"   y2="236"/>
+        <text class="axLb" x="60"     y="250" text-anchor="middle">1650</text>
+        <text class="axLb" x="254"    y="250" text-anchor="middle">1700</text>
+        <text class="axLb" x="448"    y="250" text-anchor="middle">1750</text>
+        <text class="axLb" x="642"    y="250" text-anchor="middle">1800</text>
+        <text class="axLb" x="836"    y="250" text-anchor="middle">1850</text>
+        <text class="axLb" x="1030"   y="250" text-anchor="middle">1900</text>
+
+        <!-- 시대 배경 그림 — 주사위 (좌), 종 곡선 (중), 장미 (우) -->
+        <!-- 주사위 -->
+        <rect class="glyph" x="78" y="186" width="18" height="18" rx="2"/>
+        <circle cx="84" cy="192" r="1.1" fill="#554a8a" opacity="0.5"/>
+        <circle cx="90" cy="198" r="1.1" fill="#554a8a" opacity="0.5"/>
+        <!-- 종 곡선 -->
+        <path class="glyph" d="M 520 208 C 540 208 555 188 575 188 C 595 188 610 208 630 208"/>
+        <line x1="520" y1="208" x2="630" y2="208" stroke="#554a8a" stroke-width="0.5" opacity="0.4"/>
+        <line x1="575" y1="188" x2="575" y2="208" stroke="#554a8a" stroke-width="0.4" stroke-dasharray="1 1" opacity="0.4"/>
+        <!-- 장미 -->
+        <g transform="translate(960,196)" opacity="0.5">
+          <path d="M 0 0 L 8 -2 A 9 9 0 0 0 5.5 -6.5 Z" fill="none" stroke="#554a8a" stroke-width="0.6"/>
+          <path d="M 0 0 L 5.5 -6.5 A 9 9 0 0 0 0 -9 Z" fill="none" stroke="#554a8a" stroke-width="0.6"/>
+          <path d="M 0 0 L 0 -9 A 9 9 0 0 0 -5.5 -6.5 Z" fill="none" stroke="#554a8a" stroke-width="0.6"/>
+          <path d="M 0 0 L -5.5 -6.5 A 9 9 0 0 0 -8 -2 Z" fill="none" stroke="#554a8a" stroke-width="0.6"/>
+          <path d="M 0 0 L -8 -2 A 9 9 0 0 0 -5.5 5.5 Z" fill="none" stroke="#554a8a" stroke-width="0.6"/>
+          <path d="M 0 0 L -5.5 5.5 A 9 9 0 0 0 0 9 Z" fill="none" stroke="#554a8a" stroke-width="0.6"/>
+          <path d="M 0 0 L 0 9 A 9 9 0 0 0 5.5 5.5 Z" fill="none" stroke="#554a8a" stroke-width="0.6"/>
+          <path d="M 0 0 L 5.5 5.5 A 9 9 0 0 0 8 -2 Z" fill="none" stroke="#554a8a" stroke-width="0.6"/>
+        </g>
+
+        <!-- region labels -->
+        <text class="region" x="140" y="120" text-anchor="middle">프랑스 (파리·툴루즈)</text>
+        <text class="region" x="360" y="120" text-anchor="middle">스위스 바젤</text>
+        <text class="region" x="630" y="120" text-anchor="middle">독일 괴팅겐</text>
+        <text class="region" x="910" y="120" text-anchor="middle">영국 (런던·스쿠타리)</text>
+
+        <!-- 1654 파스칼-페르마 서신 -->
+        <line class="stem" x1="75.52" y1="130" x2="75.52" y2="78"/>
+        <circle cx="75.52" cy="130" r="4.5" fill="#554a8a"/>
+        <text class="evtY" x="75.52" y="70" text-anchor="start">1654</text>
+        <text class="evt"  x="75.52" y="58" text-anchor="start">파스칼–페르마 서신 (확률의 탄생)</text>
+
+        <!-- 1657 호이겐스 De ratiociniis in ludo aleae -->
+        <line class="stem" x1="87.16" y1="170" x2="87.16" y2="186"/>
+        <circle cx="87.16" cy="170" r="3" fill="#554a8a"/>
+        <text class="evt"  x="100" y="188">1657 · 호이겐스 De ratiociniis (확률 첫 인쇄본)</text>
+
+        <!-- 1663 카르다노 Liber de Ludo Aleae 사후 출판 (집필 ~1564) -->
+        <line class="stem" x1="110.44" y1="130" x2="110.44" y2="104" stroke-dasharray="2 1"/>
+        <circle cx="110.44" cy="130" r="3" fill="#554a8a" opacity="0.7"/>
+        <text class="evt"  x="110.44" y="100" text-anchor="middle">1663 · 카르다노 Liber de Ludo Aleae 사후 출판</text>
+
+        <!-- 1713 야코프 베르누이 Ars Conjectandi (사후) -->
+        <line class="stem" x1="304.36" y1="130" x2="304.36" y2="78"/>
+        <circle cx="304.36" cy="130" r="4.5" fill="#554a8a"/>
+        <text class="evtY" x="304.36" y="70" text-anchor="middle">1713</text>
+        <text class="evt"  x="304.36" y="58" text-anchor="middle">베르누이 Ars Conjectandi (큰 수의 법칙)</text>
+
+        <!-- 1733 드무아브르 정규분포 근사 -->
+        <line class="stem" x1="381.92" y1="130" x2="381.92" y2="100" stroke-dasharray="2 1"/>
+        <circle cx="381.92" cy="130" r="3" fill="#554a8a" opacity="0.85"/>
+        <text class="evt"  x="381.92" y="92" text-anchor="middle">1733 · 드무아브르, 이항분포의 정규 근사</text>
+
+        <!-- 1763 베이즈 (사후) -->
+        <line class="stem" x1="498.32" y1="170" x2="498.32" y2="186"/>
+        <circle cx="498.32" cy="170" r="3" fill="#554a8a"/>
+        <text class="evt"  x="498.32" y="188" text-anchor="middle">1763 · 베이즈 정리 사후 발표</text>
+
+        <!-- 1805 르장드르 최소제곱 -->
+        <line class="stem" x1="661.4" y1="130" x2="661.4" y2="106" stroke-dasharray="2 1"/>
+        <circle cx="661.4" cy="130" r="3" fill="#554a8a" opacity="0.85"/>
+        <text class="evt"  x="661.4" y="100" text-anchor="middle">1805 · 르장드르, 최소제곱법 발표</text>
+
+        <!-- 1809 가우스 Theoria motus -->
+        <line class="stem" x1="676.92" y1="130" x2="676.92" y2="78"/>
+        <circle cx="676.92" cy="130" r="4.5" fill="#554a8a"/>
+        <text class="evtY" x="676.92" y="70" text-anchor="end">1809</text>
+        <text class="evt"  x="676.92" y="58" text-anchor="end">가우스 Theoria motus (정규분포·최소제곱)</text>
+
+        <!-- 1812 라플라스 Théorie analytique -->
+        <line class="stem" x1="688.56" y1="170" x2="688.56" y2="186"/>
+        <circle cx="688.56" cy="170" r="3" fill="#554a8a"/>
+        <text class="evt"  x="688.56" y="188" text-anchor="middle">1812 · 라플라스 Théorie analytique des probabilités</text>
+
+        <!-- 1838 푸아송 분포 -->
+        <line class="stem" x1="789.44" y1="130" x2="789.44" y2="106" stroke-dasharray="2 1"/>
+        <circle cx="789.44" cy="130" r="3" fill="#554a8a" opacity="0.85"/>
+        <text class="evt"  x="789.44" y="100" text-anchor="middle">1838 · 푸아송 분포</text>
+
+        <!-- 1854 스노우 콜레라 지도 -->
+        <line class="stem" x1="851.52" y1="130" x2="851.52" y2="78"/>
+        <circle cx="851.52" cy="130" r="4.5" fill="#554a8a"/>
+        <text class="evtY" x="851.52" y="70" text-anchor="middle">1854</text>
+        <text class="evt"  x="851.52" y="58" text-anchor="middle">존 스노우 Broad Street 콜레라 지도</text>
+
+        <!-- 1858 나이팅게일 polar area -->
+        <line class="stem" x1="867.04" y1="170" x2="867.04" y2="200"/>
+        <circle cx="867.04" cy="170" r="4" fill="#554a8a"/>
+        <text class="evt"  x="867.04" y="212" text-anchor="middle">1858 · 나이팅게일 Diagram of the Causes of Mortality</text>
+        <text class="evt"  x="867.04" y="222" text-anchor="middle">+ 영국 왕립통계학회 최초 여성 회원</text>
+
+        <!-- 1877 골턴 보드 -->
+        <line class="stem" x1="940.72" y1="130" x2="940.72" y2="106" stroke-dasharray="2 1"/>
+        <circle cx="940.72" cy="130" r="3" fill="#554a8a" opacity="0.85"/>
+        <text class="evt"  x="940.72" y="100" text-anchor="middle">1877 · 골턴 보드 (회귀·정규분포 시연)</text>
+
+        <!-- 1900 칼 피어슨 χ² -->
+        <line class="stem" x1="1030" y1="130" x2="1030" y2="78"/>
+        <circle cx="1030" cy="130" r="4" fill="#554a8a"/>
+        <text class="evtY" x="1030" y="70" text-anchor="end">1900</text>
+        <text class="evt"  x="1030" y="58" text-anchor="end">칼 피어슨 χ² 검정 (현대 통계학의 문턱)</text>
+      </svg>
+      </div>
+    </section>
+
+    <!-- ===== 챕터 1 — 도박이 낳은 학문 ===== -->
+    <section class="chapter" id="ch1">
+      <header class="chapter__head">
+        <span class="chapter__num">제1장</span>
+        <h2 class="chapter__title">도박이 낳은 학문 — 파스칼과 페르마의 여름 편지 <span class="latin">The Summer Letters</span></h2>
+        <p class="chapter__years">1654 · 파리와 툴루즈</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure">
+          <div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="88" height="96" fill="#f5efe0"/>
+            <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#1a1410"/>
+            <path d="M 28 64 Q 44 80 60 64 L 58 64 Q 44 76 30 64 Z" fill="#e8dfc8" stroke="#a09078" stroke-width="0.4"/>
+            <rect x="38" y="56" width="12" height="10" fill="#d2b48c"/>
+            <ellipse cx="44" cy="40" rx="14" ry="17" fill="#d2b48c"/>
+            <path d="M 24 36 Q 22 18 32 12 Q 44 6 56 12 Q 66 18 64 36 Q 58 26 44 26 Q 30 26 24 36 Z" fill="#3a2820"/>
+            <path d="M 28 36 Q 36 30 44 30 Q 52 30 60 36 Q 58 44 44 44 Q 30 44 28 36 Z" fill="#5a4030"/>
+            <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/>
+            <circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+            <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+            <path d="M 40 51 L 40 56 Q 44 58 48 56 L 48 51" stroke="#1f1a14" stroke-width="0.5" fill="none"/>
+          </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">블레즈 파스칼</span>
+            <span class="inline-figure__name-en">Blaise Pascal</span>
+            <span class="inline-figure__life">1623 — 1662</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko">1654년 여름, 파리. 31세의 <strong>블레즈 파스칼</strong>은 이미 한 시대를 살았다. 16세에 원뿔곡선에 관한 정리를 적었고, 19세에 세금 징수원 아버지를 돕기 위해 톱니바퀴 계산기 <em>파스칼린</em>을 발명했으며, 20대 초반에 진공과 대기압 실험으로 토리첼리를 이어 자기 이름을 학계에 적었다. 그러나 그해 그가 한 일은 — 다른 종류였다. 도박꾼의 질문 하나에 답하는 일이었다.</p>
+        <p>도박꾼의 이름은 슈발리에 드 메레, 본명 앙투안 곰보. 그는 파스칼에게 한 가지 분배 문제를 던졌다. <em>두 사람이 동전 던지기로 게임을 하기로 했다. 먼저 3승 거두는 쪽이 판돈을 가져간다. 그런데 한 사람이 2승, 다른 사람이 1승인 상태에서 게임이 중단되었다. 판돈은 어떻게 나눠야 공정한가.</em> 이른바 <em>분배 문제</em>(problem of points)다.</p>
+        <p>파스칼은 이 문제를 단독으로 풀지 못한 채, 툴루즈 의회의 한 판사에게 편지를 띄웠다. 그 판사는 본업이 법률가였고, 부업이 — 당대 유럽 최고의 수학자 중 하나였다. <strong>피에르 드 페르마</strong>. § IV에서 이미 만난 인물이다(디오판토스 여백의 그 사람). 1654년 7월에서 10월 사이, 두 사람 사이에 일곱 통의 편지가 오갔다(현재 남은 것 기준).</p>
+        <figure class="inline-figure inline-figure--left">
+          <div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="88" height="96" fill="#f5efe0"/>
+            <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#2a1f18"/>
+            <path d="M 28 64 Q 44 78 60 64 L 58 64 Q 44 74 30 64 Z" fill="#e8dfc8" stroke="#a09078" stroke-width="0.4"/>
+            <rect x="38" y="56" width="12" height="10" fill="#c69a72"/>
+            <ellipse cx="44" cy="40" rx="14" ry="17" fill="#c69a72"/>
+            <path d="M 24 36 Q 22 18 32 12 Q 44 6 56 12 Q 66 18 64 36 Q 58 26 44 26 Q 30 26 24 36 Z" fill="#3a2418"/>
+            <path d="M 26 38 L 26 46 Q 30 40 36 40 L 52 40 Q 58 40 62 46 L 62 38 Q 54 32 44 32 Q 34 32 26 38 Z" fill="#5a3a28"/>
+            <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/>
+            <circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+            <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+            <path d="M 38 52 Q 44 56 50 52" stroke="#3a2418" stroke-width="0.6" fill="none"/>
+          </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">피에르 드 페르마</span>
+            <span class="inline-figure__name-en">Pierre de Fermat</span>
+            <span class="inline-figure__life">1607 — 1665</span>
+          </figcaption>
+        </figure>
+        <p>두 사람의 풀이는 — 같은 답에 — 다른 길로 도착했다. 페르마는 가능한 모든 경우를 <em>나열</em>했다. 게임을 끝까지 마쳤다고 가정했을 때 일어날 수 있는 모든 결과를 한 표로 적은 다음, 그중 각 쪽이 이기는 경우의 수를 세어 그 비율로 판돈을 나눴다. 파스칼은 다른 길을 택했다. 그는 <em>아직 일어나지 않은</em> 게임에서 각 쪽이 이길 <em>가능성</em>에 — 우리가 지금 <em>확률</em>이라 부르는 그것에 — 직접 가격표를 매겼다. 그러고는 그 가격표를 <em>기댓값</em>이라 불렀다. 가능한 결과 각각에 그 결과의 가치를 곱하고, 그 결과가 일어날 확률로 가중평균한 양 — 그것이 한 판의 공정한 값이다.</p>
+        <blockquote class="pull">
+          The division must be made proportionate to what each player would have expected to win in the future, had the game continued.
+          <span class="attr">— 파스칼이 페르마에게, 1654년 여름 · 의역</span>
+        </blockquote>
+        <p>이 한 묶음의 편지에서 — <em>확률</em>·<em>기댓값</em>·<em>경우의 수 분해</em>·<em>조합론적 계산</em> — 오늘날 확률론의 입문 한 챕터 분량이 한 여름 안에 만들어졌다. 두 사람은 이 결과를 책으로 묶지 않았다. 그러나 그 편지의 사본이 곧 네덜란드의 한 청년에게 흘러갔고, 그 청년 — 크리스티안 호이겐스 — 가 1657년 그 내용을 <span class="work">De ratiociniis in ludo aleae</span>(주사위 놀이의 추론에 관하여)로 정리해 인쇄한다. 그것이 확률론의 첫 인쇄본이다.</p>
+        <aside class="inline-scene">
+          <div class="inline-scene__pictogram"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="56" height="56" fill="#f5efe0"/>
+            <rect x="10" y="14" width="16" height="16" rx="1.5" fill="#e8dfc8" stroke="#554a8a" stroke-width="0.6"/>
+            <circle cx="14" cy="18" r="1.2" fill="#554a8a"/>
+            <circle cx="22" cy="18" r="1.2" fill="#554a8a"/>
+            <circle cx="14" cy="26" r="1.2" fill="#554a8a"/>
+            <circle cx="22" cy="26" r="1.2" fill="#554a8a"/>
+            <rect x="30" y="22" width="16" height="16" rx="1.5" fill="#e8dfc8" stroke="#554a8a" stroke-width="0.6"/>
+            <circle cx="38" cy="30" r="1.2" fill="#554a8a"/>
+            <text x="6" y="50" font-family="serif" font-size="7" fill="#554a8a">P(A) = 11/16, P(B) = 5/16</text>
+          </svg></div>
+          <div>
+            <div class="inline-scene__meta">
+              <time datetime="1654-08-29">1654년 8월 29일</time>
+              <span class="place">툴루즈에서 파리로</span>
+            </div>
+            <div class="inline-scene__body">
+              <strong>한 봉투가 도착했다</strong>
+              현존하는 편지 중 한 통은 "툴루즈에서, 1654년 8월 29일"로 시작한다. 페르마가 파스칼에게 보낸 그 편지에서, 그는 <em>3승</em>을 노리는 두 사람 중 한 명이 2승, 다른 한 명이 1승인 채 게임이 멈춘 경우의 분배 비율을 <em>11 대 5</em>로 계산해 보냈다. 파스칼은 처음에 페르마의 <em>경우 나열</em> 방식에 회의적이었다. "n승까지 가는 경우 모두를 적는 것은 결국 한 게임마다 표를 새로 짜야 하는 일 아닌가." 그러나 곧 그는 페르마의 방법이 일반적인 정리로 이어진다는 사실을 인정한다. 두 사람이 서로 다른 문체로, 서로의 풀이를 칭찬한 그 편지들은 — 한 학문의 첫 페이지에 가장 어울리는 시작이었다.
+              <span class="source">American Physical Society "July 1654: Pascal's Letters to Fermat" · MacTutor "Pascal" · 페르마–파스칼 서신집(Pascal Œuvres complètes II)</span>
+            </div>
+          </div>
+        </aside>
+        <p>파스칼은 이 편지를 주고받고 두 달 뒤인 1654년 11월 23일 — 새벽에 종교 체험을 한다. 그는 그날 밤의 기억을 양피지에 적어 자기 옷 안감에 꿰매 넣었다. 그 양피지는 그가 1662년 39세에 죽고 난 뒤, 옷을 정리하던 하인이 발견한다. <em>불의 밤</em>이라 불리는 그 회심 이후 파스칼은 수학을 거의 떠난다. <em>팡세</em>를 적고, 포르 르 루아얄 수도원에 들어가, 신앙에 대해 적는다. 확률론의 한 시작점에 있던 그는 — 그 시작 뒤로 학문을 떠난 셈이었다.</p>
+
+        <div class="episode">
+          <span class="episode__label">에피소드 · 파스칼의 회심</span>
+          <h4 class="episode__title">불의 밤, 1654년 11월 23일</h4>
+          <div class="episode__body">
+            <p>1654년 11월 23일 밤 10시 30분에서 12시 30분 사이, 파스칼은 한 종교적 황홀경을 경험한다. 그는 그것을 한 장의 양피지에 적었다 — "불. 아브라함의 신, 이삭의 신, 야곱의 신, 철학자와 학자의 신이 아니라…" 이 양피지는 그가 죽기 전까지 8년 동안 그의 옷 안감 안에 꿰매져 있었고, 죽은 뒤 발견되어 지금은 프랑스 국립도서관에 보관되어 있다.</p>
+            <p>흥미로운 사실은 — 이 회심 직후 그가 한 마지막 수학적 작업이 <em>도박 분배 문제의 일반화</em>였다는 점이다. 그는 도박을 떠나면서 도박 문제를 마지막까지 풀었다. 그리고 곧이어 그가 <em>팡세</em>에서 적은 한 단편이 후대에 <em>파스칼의 내기</em>로 불리게 된다 — "신이 있을 확률에 무한한 보상을 곱하면, 어떤 작은 확률이라도 무한이 된다." 도박의 수학을 종교에 대고 쓴 한 사람의 일관성이 보인다.</p>
+          </div>
+        </div>
+
+        <p>여기서 한 가지를 직접 만져보면 좋다. 동전 한 닢을 던질 때 앞면이 나올 확률은 정확히 0.5. 그러나 한 번만 던지면 결과는 0 아니면 1이고, 평균 따위는 아무 의미가 없다. 두 번 던지면? 열 번 던지면? 100번 던지면? <em>시도를 늘릴수록</em> 평균이 0.5에 가까워진다는 사실은 — 직관적이지만, 그 직관을 <em>증명</em>한 사람은 따로 있었다.</p>
+
+        <aside class="inline-sim">
+          <div class="inline-sim__head">
+            <span class="num">시뮬 1</span>
+            <h4>큰 수의 법칙 — 시도가 늘수록 평균은 기댓값으로</h4>
+            <span class="latin">Law of Large Numbers</span>
+          </div>
+          <p class="inline-sim__lead">동전 한 닢을 한 번에 100번씩 던져, 평균이 어떻게 0.5에 수렴하는지 본다. 처음 몇 번은 0.3도, 0.8도 나온다. 그러나 1,000번, 10,000번에 이르면 — 평균은 0.5에 한없이 가까워진다. 이 사실의 첫 엄밀한 증명이 다음 챕터의 주인공이 죽은 뒤 8년이 지나 출판된다.</p>
+          <div class="sim" data-sim-id="law-of-large-numbers"></div>
+        </aside>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 2 — 베르누이와 큰 수의 법칙 ===== -->
+    <section class="chapter" id="ch2">
+      <header class="chapter__head">
+        <span class="chapter__num">제2장</span>
+        <h2 class="chapter__title">베르누이와 큰 수의 법칙 <span class="latin">The Law of Large Numbers</span></h2>
+        <p class="chapter__years">1713 (사후 출판) · 스위스 바젤</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure">
+          <div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="88" height="96" fill="#f5efe0"/>
+            <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#3a2820"/>
+            <path d="M 28 64 Q 44 80 60 64 L 58 64 Q 44 76 30 64 Z" fill="#faf6eb" stroke="#a09078" stroke-width="0.4"/>
+            <rect x="38" y="56" width="12" height="10" fill="#d2b48c"/>
+            <ellipse cx="44" cy="40" rx="14" ry="17" fill="#d2b48c"/>
+            <!-- 길게 늘어뜨린 가발 -->
+            <path d="M 22 32 Q 18 24 24 16 Q 44 8 64 16 Q 70 24 66 32 Q 70 50 62 64 L 60 64 Q 60 48 58 38 Q 54 30 44 30 Q 34 30 30 38 Q 28 48 28 64 L 26 64 Q 18 50 22 32 Z" fill="#e8dfc8" stroke="#a09078" stroke-width="0.3"/>
+            <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/>
+            <circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+            <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+            <path d="M 36 56 Q 44 60 52 56" stroke="#3a2418" stroke-width="0.5" fill="none"/>
+          </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">야코프 베르누이</span>
+            <span class="inline-figure__name-en">Jacob Bernoulli</span>
+            <span class="inline-figure__life">1654 — 1705</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko"><strong>야코프 베르누이</strong>. 베르누이 가문의 첫 수학자. 스위스 바젤 대학의 교수. 1654년 — 파스칼·페르마의 그 여름 — 에 태어난 사람이라 부르면 우연이 시적이지만, 그렇다.</p>
+        <p>그는 도박과 보험에 관심이 있었다. 17세기 후반 네덜란드와 영국에서는 종신연금이 막 거래되기 시작했고 — 한 사람이 얼마를 내고 얼마를 받아야 공정한지 — 그 답이 절실해지고 있었다. 이 시기의 보험·연금 계산은 직관과 거친 경험에 의지했다. 그것을 <em>수학으로</em> 정리하려면 한 가지 사실이 먼저 보장되어야 했다 — <em>충분히 많이 관찰하면 관찰된 빈도가 진짜 확률에 수렴한다</em>는 사실.</p>
+        <p>베르누이는 그것을 20년 가까이 붙들고 있었다. 그가 적은 책 <span class="work">Ars Conjectandi</span>(추측의 기술)는 1705년 그가 죽을 때까지도 완성되지 못했다. 8년이 지난 1713년, 그의 조카 <em>니콜라우스 1세 베르누이</em>가 삼촌의 미완성 원고를 정리해 출판한다. 그 책의 4부, <em>도덕적·시민적·경제적 문제에 대한 추측의 기술 적용</em>이라 이름 붙은 장에 — 우리가 지금 <em>큰 수의 법칙</em>(Law of Large Numbers)이라 부르는 정리의 첫 엄밀한 증명이 들어 있다.</p>
+        <blockquote class="pull">
+          Even the most stupid of men, by some instinct of nature, by himself and without any instruction, is convinced that the more observations have been made, the less danger there is of wandering from one's goal.
+          <span class="attr">— 야코프 베르누이, Ars Conjectandi 제4부 (1713 사후 출판)</span>
+        </blockquote>
+        <p>베르누이가 한 일은, 그 <em>당연해 보이는 직관</em>에 <em>얼마나 많이</em>의 정량적 답을 처음으로 적은 것이었다. <em>참 확률 p의 사건을 n번 관찰했을 때, 관찰 빈도가 p에서 ε 이상 벗어날 확률은 n이 커짐에 따라 임의로 작아진다.</em> 우리가 지금 통계학 첫 학기에 배우는 그 한 줄이, 1713년 사후 출판된 한 책에 — 17세기 라틴어 산문으로 — 처음 적혀 있다.</p>
+        <aside class="inline-scene">
+          <div class="inline-scene__pictogram"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="56" height="56" fill="#f5efe0"/>
+            <line x1="8" y1="44" x2="48" y2="44" stroke="#a09078" stroke-width="0.5"/>
+            <line x1="8" y1="44" x2="8" y2="12" stroke="#a09078" stroke-width="0.5"/>
+            <path d="M 8 32 L 14 22 L 20 36 L 26 28 L 32 30 L 38 29 L 48 29" fill="none" stroke="#554a8a" stroke-width="1.2"/>
+            <line x1="8" y1="29" x2="48" y2="29" stroke="#554a8a" stroke-width="0.3" stroke-dasharray="1 2"/>
+            <text x="50" y="31" font-family="serif" font-size="6" fill="#554a8a">p</text>
+            <text x="6" y="52" font-family="serif" font-size="6" fill="#554a8a">n →</text>
+          </svg></div>
+          <div>
+            <div class="inline-scene__meta">
+              <time datetime="1713">1713년</time>
+              <span class="place">바젤 · 사후 출판</span>
+            </div>
+            <div class="inline-scene__body">
+              <strong>충분히 많으면, 결국 도달한다</strong>
+              베르누이는 자기 정리의 의미를 한 가지 비유로 적었다 — "항아리에 검은 공과 흰 공이 들어 있는데, 그 비율을 모른다고 하자. 한 번에 하나씩 꺼내고 다시 넣기를 1만 번 한 뒤, 관찰된 흰 공의 비율은 — 우리가 원하는 만큼 — 진짜 비율에 가까이 다가갈 수 있다." 이것이 통계적 <em>추론</em>의 한 시작이었다. 우리가 관찰만으로 진실에 도달할 수 있다는 — 18세기 계몽주의가 17세기 도박 수학에서 빌려온 한 결정적 정당화.
+              <span class="source">MacTutor "Jacob Bernoulli" · MAA Convergence "Ars Conjectandi" · Britannica</span>
+            </div>
+          </div>
+        </aside>
+        <p>베르누이의 책은 곧바로 유럽 학계의 주목을 받았다. 한 세대 뒤, 프랑스에서 영국으로 망명한 위그노 출신 수학자 <strong>아브라암 드무아브르</strong>(1667–1754)가 1733년 베르누이의 이항분포를 <em>정규 근사</em>로 풀어낸다. 동전을 수천 번 던졌을 때 앞면이 나오는 횟수의 분포가 — 자연스럽게 — 한 종 모양의 곡선에 가까워진다는 사실을 그가 처음 적었다. 우리가 <em>가우스 곡선</em>이라 부르는 그 종이, 실은 가우스보다 70년 먼저 드무아브르가 발견한 셈이었다. 그러나 그것이 통계학의 한 표준이 되는 자리는 — 다음 챕터다.</p>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 3 — 가우스와 종 모양 곡선 ===== -->
+    <section class="chapter" id="ch3">
+      <header class="chapter__head">
+        <span class="chapter__num">제3장</span>
+        <h2 class="chapter__title">가우스 — 측량 오차에서 종 모양 곡선으로 <span class="latin">From Survey Errors to the Bell</span></h2>
+        <p class="chapter__years">1809 · 독일 괴팅겐</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure inline-figure--left">
+          <div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="88" height="96" fill="#f5efe0"/>
+            <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#2a2018"/>
+            <path d="M 28 64 Q 44 80 60 64 L 58 64 Q 44 76 30 64 Z" fill="#faf6eb" stroke="#a09078" stroke-width="0.4"/>
+            <rect x="38" y="56" width="12" height="10" fill="#d8b48c"/>
+            <ellipse cx="44" cy="40" rx="14" ry="17" fill="#d8b48c"/>
+            <path d="M 24 32 Q 22 18 32 12 Q 44 6 56 12 Q 66 18 64 32 Q 60 24 44 24 Q 28 24 24 32 Z" fill="#a09078"/>
+            <path d="M 28 32 L 28 38 Q 32 32 38 32 L 50 32 Q 56 32 60 38 L 60 32 Q 54 28 44 28 Q 34 28 28 32 Z" fill="#7a6850"/>
+            <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/>
+            <circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+            <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+            <path d="M 36 56 Q 44 58 52 56" stroke="#3a2418" stroke-width="0.5" fill="none"/>
+            <!-- 위에 둥근 옷깃 -->
+            <path d="M 32 64 Q 44 70 56 64 L 56 68 Q 44 74 32 68 Z" fill="#1f1a14"/>
+          </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">카를 프리드리히 가우스</span>
+            <span class="inline-figure__name-en">Carl Friedrich Gauss</span>
+            <span class="inline-figure__life">1777 — 1855</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko"><strong>카를 프리드리히 가우스</strong>. 19세기 수학의 군주. 한 사람이 일생 동안 적은 분야가 — 수론, 천체역학, 측지학, 자기학, 비유클리드 기하, 통계학 — 한 사람의 일이라고는 믿기 어려운 폭이다(§ VI에서 다시 만난다). 그가 1777년 4월 30일 브라운슈바이크의 가난한 벽돌공의 아들로 태어나, 1855년 괴팅겐 천문대에서 사망하기까지 78년. 그 사이에 그가 한 일 중 — 우리가 이 시대에서 다룰 일은 — <em>정규분포</em>다.</p>
+        <p>이야기는 1801년 한 작은 천체에서 시작된다. 그해 1월 1일, 시칠리아 팔레르모 천문대의 관측자 주세페 피아치가 작은 점 하나를 발견한다 — 화성과 목성 사이에 있던 새 천체, 후에 <em>케레스</em>로 명명되는 그 소행성이었다. 그러나 발견 직후 케레스는 태양 뒤로 숨어버린다. 41일치의 관측 자료만 남기고 사라진 그 점을 — 어떻게 다시 찾을 것인가. 천문학자들은 그것의 궤도를 한 짧은 호의 자료만으로 추정해야 했다.</p>
+        <p>24세의 가우스가 그 자리에 등장한다. 그는 자기가 <em>1794년 17세 무렵부터 써 오던</em> 방법 — 후에 <em>최소제곱법</em>이라 불리는 — 으로 케레스의 궤도를 계산해, 그 궤도가 1801년 12월 다시 보일 위치를 예측해 보냈다. 천문학자들이 그 자리에 망원경을 겨눴다. 케레스가 거기 있었다. 그 한 사건이 가우스를 24세에 유럽 수학계의 별로 만든다.</p>
+        <blockquote class="pull ko">
+          관측값이 진리에서 벗어나는 오차는, 만약 그것이 같은 종류의 작은 우연이 모인 결과라면, 한 특정한 모양으로 분포한다.
+          <span class="attr">— 가우스, Theoria motus 제3장 (1809) · 의역</span>
+        </blockquote>
+        <p>1809년 그는 그 방법의 자세한 정당화를 한 책으로 적는다. <span class="work">Theoria motus corporum coelestium</span>(천체의 운동 이론). 라틴어 200쪽. 그 책의 후반 한 장에서 그는 한 가지를 적었다 — 만약 관측 오차가 한 종 모양 곡선을 따라 분포한다고 가정하면, 그것에서 자연스럽게 <em>산술평균이 가장 그럴듯한 참값</em>이라는 결론이 나온다. 그리고 그 가정으로부터 — 우리가 <em>최소제곱법</em>이라 부르는 — 한 절차가 곧바로 도출된다.</p>
+        <aside class="inline-scene">
+          <div class="inline-scene__pictogram"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="56" height="56" fill="#f5efe0"/>
+            <line x1="6" y1="44" x2="50" y2="44" stroke="#a09078" stroke-width="0.5"/>
+            <line x1="28" y1="48" x2="28" y2="8" stroke="#a09078" stroke-width="0.3" stroke-dasharray="1 2"/>
+            <path d="M 6 44 C 16 44 20 40 24 28 C 26 18 28 12 28 12 C 28 12 30 18 32 28 C 36 40 40 44 50 44" fill="#7a6b8a" opacity="0.25" stroke="#554a8a" stroke-width="1"/>
+            <text x="28" y="52" font-family="serif" font-size="7" fill="#554a8a" text-anchor="middle">μ</text>
+            <text x="46" y="52" font-family="serif" font-size="6" fill="#7a7163" text-anchor="end">x</text>
+          </svg></div>
+          <div>
+            <div class="inline-scene__meta">
+              <time datetime="1809">1809년</time>
+              <span class="place">괴팅겐 · 작센</span>
+            </div>
+            <div class="inline-scene__body">
+              <strong>한 종(鐘)이 모든 곳에 울리기 시작했다</strong>
+              가우스의 종 모양 곡선은 — 우리가 지금 <em>정규분포</em>(normal distribution)라 부르는 — 그 모양은 사실 드무아브르가 1733년에 이미 본 것이었다. 그러나 그것이 <em>측정 오차의 자연스러운 모양</em>이라는 해석을 — 그리고 그로부터 최소제곱법이라는 한 일반 절차가 도출된다는 사실을 — 1809년 가우스가 처음 적었다. 이 한 권의 책 뒤로 천체역학·측지학·물리학·생물학·심리학·경제학 모든 분야에서 측정 오차의 표준 모형이 정규분포가 된다. 단, 학계가 인정하는 작은 진실 — 최소제곱법 자체는 1805년 프랑스의 르장드르가 먼저 인쇄 발표했다. 가우스는 자기가 1794-95년부터 그것을 써 왔다고 주장했고, 그것이 결국 인정되었지만 — 우선권 다툼의 흔적은 남았다.
+              <span class="source">MacTutor "Gauss" · Britannica "Normal distribution" · Stigler <em>The History of Statistics</em>(1986)</span>
+            </div>
+          </div>
+        </aside>
+        <p>가우스가 정규분포를 적은 1809년 이후로 — 50년이 지나지 않아 — 그 종 모양은 측정 오차를 넘어 <em>인간 그 자체</em>에 적용되기 시작한다. 1830년대 벨기에의 통계학자 <strong>아돌프 케틀레</strong>(1796–1874)가 군인들의 가슴둘레, 키, 몸무게가 모두 종 모양으로 분포한다는 사실을 발표했다. 케틀레는 그 평균에 <em>l'homme moyen</em>(평균인)이라는 이름을 붙였다. <em>한 사회의 평균에 가까운 모범</em>이라는 그의 해석은 19세기 후반 우생학으로 흘러가는 어두운 측면도 있었지만 — <em>인간 집단을 통계적으로 사유한다</em>는 한 시대의 시각은 거기서 자라났다.</p>
+        <p>그 사유의 다음 자리에 한 의사가 등장한다. 그는 평균이 아니라 — 한 도시의 한 거리의 한 펌프를 — 죽음의 분포로 그릴 것이었다.</p>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 4 — 스노우의 콜레라 지도 ===== -->
+    <section class="chapter" id="ch4">
+      <header class="chapter__head">
+        <span class="chapter__num">제4장</span>
+        <h2 class="chapter__title">통계가 사람을 살리다 — 스노우의 콜레라 지도 <span class="latin">A Map That Saved Lives</span></h2>
+        <p class="chapter__years">1854 · 영국 런던 소호 브로드 스트리트</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure">
+          <div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="88" height="96" fill="#f5efe0"/>
+            <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#1f1818"/>
+            <path d="M 28 64 Q 44 80 60 64 L 58 64 Q 44 76 30 64 Z" fill="#e8dfc8" stroke="#a09078" stroke-width="0.4"/>
+            <rect x="38" y="56" width="12" height="10" fill="#d8b48c"/>
+            <ellipse cx="44" cy="40" rx="14" ry="17" fill="#d8b48c"/>
+            <path d="M 24 32 Q 22 18 32 12 Q 44 6 56 12 Q 66 18 64 32 Q 58 24 44 24 Q 30 24 24 32 Z" fill="#2a1f18"/>
+            <path d="M 28 36 L 28 44 Q 30 38 36 38 L 52 38 Q 58 38 60 44 L 60 36 Q 54 32 44 32 Q 34 32 28 36 Z" fill="#3a2418"/>
+            <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/>
+            <circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+            <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+            <!-- 콧수염과 구레나룻 -->
+            <path d="M 34 48 L 30 56 L 36 54 Z M 54 48 L 58 56 L 52 54 Z" fill="#3a2418"/>
+            <path d="M 38 52 Q 44 54 50 52" stroke="#3a2418" stroke-width="0.6" fill="none"/>
+          </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">존 스노우</span>
+            <span class="inline-figure__name-en">John Snow</span>
+            <span class="inline-figure__life">1813 — 1858</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko">1854년 8월 31일 밤, 런던 소호 지구 브로드 스트리트(현재의 브로드윅 스트리트). 한 무리의 사람들이 갑자기 격렬한 설사와 구토로 쓰러진다. 콜레라였다. 다음 날에는 거리 전체가 죽음으로 채워졌고, 일주일 안에 같은 동네에서 — 폭이 250미터 남짓한 한 구역에서 — 200명 가까이 사망한다. 9월 30일까지 총 사망자는 616명. 빅토리아기 런던 최악의 콜레라 발병이었다.</p>
+        <p>당시 의학계의 정설은 <em>나쁜 공기 가설</em>(miasma theory)이었다. 콜레라·발진티푸스·페스트는 모두 <em>썩은 냄새</em>를 통해 전파된다는 생각이다. 19세기 중반 런던은 그 가설을 뒷받침할 만큼 — 끔찍하게 — 악취가 났다(같은 시기 의회의 한 회기가 템스 강 악취 때문에 휴회된 적이 있다). 그러나 한 의사가 그 가설을 의심하고 있었다.</p>
+        <p><strong>존 스노우</strong>. 잉글랜드 요크 태생. 마취과 의사로 빅토리아 여왕의 두 자녀 출산에 클로로폼 마취를 시술한 인물이다(1853 · 1857). 그는 1849년 한 짧은 책에서 콜레라가 — 공기가 아니라 — <em>물</em>을 통해 전파된다는 가설을 적었다. 같은 우물물을 마신 사람들에게 같은 시기에 같은 병이 도지는 패턴이, 공기 가설로는 설명되지 않는다는 것이 그의 논리였다. 그러나 1849년의 책은 학계에서 거의 무시되었다.</p>
+        <p>1854년 8월의 그 발병 — 자기 진료소에서 멀지 않은 자기 동네의 발병 — 이 스노우에게 한 번 더 그 가설을 시험할 자리를 주었다. 그는 곧바로 거리에 나갔다. 사망자가 발생한 집을 한 곳씩 방문해, 그 가족이 어디서 물을 길어왔는지를 물었다. 그 답을 거리 지도 위에 한 점씩 표시했다. 그러자 한 가지가 보였다 — 사망자들의 점이 한 펌프 — <em>브로드 스트리트의 그 펌프</em> — 주위에 한 송이 꽃처럼 모여 있었다.</p>
+        <aside class="inline-scene">
+          <div class="inline-scene__pictogram"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="56" height="56" fill="#f5efe0"/>
+            <!-- 거리 격자 -->
+            <line x1="8" y1="20" x2="48" y2="20" stroke="#a09078" stroke-width="0.4"/>
+            <line x1="8" y1="36" x2="48" y2="36" stroke="#a09078" stroke-width="0.4"/>
+            <line x1="20" y1="8" x2="20" y2="48" stroke="#a09078" stroke-width="0.4"/>
+            <line x1="36" y1="8" x2="36" y2="48" stroke="#a09078" stroke-width="0.4"/>
+            <!-- 펌프 -->
+            <rect x="26" y="26" width="4" height="6" fill="#554a8a"/>
+            <line x1="28" y1="32" x2="28" y2="36" stroke="#554a8a" stroke-width="0.8"/>
+            <!-- 사망 점 -->
+            <circle cx="22" cy="24" r="1.4" fill="#3a2418"/>
+            <circle cx="24" cy="22" r="1.4" fill="#3a2418"/>
+            <circle cx="26" cy="22" r="1.4" fill="#3a2418"/>
+            <circle cx="22" cy="28" r="1.4" fill="#3a2418"/>
+            <circle cx="32" cy="22" r="1.4" fill="#3a2418"/>
+            <circle cx="34" cy="24" r="1.4" fill="#3a2418"/>
+            <circle cx="32" cy="34" r="1.4" fill="#3a2418"/>
+            <circle cx="30" cy="38" r="1.4" fill="#3a2418"/>
+            <circle cx="22" cy="38" r="1.4" fill="#3a2418"/>
+            <circle cx="34" cy="40" r="1.4" fill="#3a2418"/>
+            <circle cx="14" cy="30" r="1.4" fill="#3a2418" opacity="0.4"/>
+            <circle cx="44" cy="32" r="1.4" fill="#3a2418" opacity="0.4"/>
+          </svg></div>
+          <div>
+            <div class="inline-scene__meta">
+              <time datetime="1854-09-08">1854년 9월 8일</time>
+              <span class="place">런던 소호 · 브로드 스트리트</span>
+            </div>
+            <div class="inline-scene__body">
+              <strong>손잡이를 떼어내다</strong>
+              스노우는 자기 자료를 들고 9월 7일 저녁 세인트 제임스 교구위원회 회의에 들어갔다. 거리의 점 지도를 보여주고, 그 펌프의 물을 마신 사람과 마시지 않은 사람의 사망률 차이를 적었다. 위원회는 — 공기 가설을 믿는 위원들의 회의 끝에 — <em>그냥 시도해 보자</em>고 결정한다. 다음 날 9월 8일 아침, 펌프의 손잡이가 떼어졌다. 그 펌프를 다시 쓸 수 없게 된 것이다. <em>학계의 통설에 반하는 가설을 가진 한 의사가, 거리 지도 하나를 들고, 그 가설로 한 도시의 한 펌프를 멈춰 세운 날.</em> 그것이 1854년 9월 8일이다.
+              <span class="source">Wikipedia "1854 Broad Street cholera outbreak" · John Snow Archive (UCLA) · MacTutor 보건통계 자료</span>
+            </div>
+          </div>
+        </aside>
+        <p>스노우가 손잡이를 뗀 그날 이후로 — 그 거리의 콜레라 발병은 빠르게 줄어들었다. 그러나 정직하게 말해야 한다 — 발병은 이미 손잡이가 떼어지기 전에 정점을 지나고 있었다. 사망자가 발생한 가구의 사람들이 지구를 떠난(현지를 떠난) 것도, 새 감염자가 줄어든 한 이유였다. <em>손잡이 한 번에 모든 것이 멈추었다</em>는 후대의 단정한 이야기는 — 실제 자료 곡선과는 조금 다르다. 그러나 한 가지는 분명하다 — 스노우가 그린 지도가, 콜레라가 물로 전파된다는 가설의 가장 강력한 시각적 증거가 되었다는 것이다.</p>
+        <p>그 후 그는 같은 가설을 한 번 더 정량적으로 시험한다. 같은 1854년, 런던 남부의 두 수도 회사 — 사우스워크 앤드 복솔 사와 램베스 사 — 가 같은 동네에 물을 공급하고 있었다. 한 회사는 템스 강 하수 유입 지점 아래에서, 다른 회사는 그 위에서 물을 길어 올렸다. 스노우는 같은 거리의 같은 사람들 중, 어느 회사의 물을 받느냐에 따라 콜레라 사망률이 — 정확히 정량적으로 — 8배 가까이 차이 난다는 사실을 적었다. 이것이 현대 <em>역학</em>(epidemiology)의 한 출발 자료로 받아들여진다.</p>
+        <p>스노우는 1858년 6월 — 콜레라 지도를 그리고 4년이 채 안 되어 — 뇌졸중으로 45세에 사망했다. 미아즈마 가설이 학계에서 공식적으로 폐기되고 콜레라가 <em>비브리오 콜레라이</em> 박테리아에 의한 감염이라는 사실이 인정되기까지는, 그가 죽고도 30년이 더 걸렸다(로베르트 코흐, 1884). 그러나 그가 만든 한 장의 지도는 — 이후 모든 공중보건학 교과서의 첫 그림이 되었다.</p>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 5 — 나이팅게일 ===== -->
+    <section class="chapter" id="ch5">
+      <header class="chapter__head">
+        <span class="chapter__num">제5장</span>
+        <h2 class="chapter__title">나이팅게일 — 그래프로 의회를 설득하다 <span class="latin">The Lady with the Lamp, and the Diagram</span></h2>
+        <p class="chapter__years">1858 · 영국 런던</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure inline-figure--left">
+          <div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="88" height="96" fill="#f5efe0"/>
+            <path d="M 6 96 Q 6 68 26 62 L 62 62 Q 82 68 82 96 Z" fill="#1a1410"/>
+            <path d="M 26 62 L 36 74 L 44 78 L 52 74 L 62 62 Z" fill="#e8dfc8" stroke="#a09078" stroke-width="0.4"/>
+            <rect x="38" y="54" width="12" height="10" fill="#e8c8a8"/>
+            <ellipse cx="44" cy="38" rx="13" ry="16" fill="#e8c8a8"/>
+            <!-- 머리 가르마 가운데 -->
+            <path d="M 24 34 Q 22 22 30 16 Q 44 12 58 16 Q 66 22 64 34 L 62 32 Q 56 26 44 26 Q 32 26 26 32 Z" fill="#5a3e26"/>
+            <path d="M 44 26 L 44 32" stroke="#3a2418" stroke-width="0.4"/>
+            <!-- 위로 묶은 머리 -->
+            <ellipse cx="44" cy="20" rx="8" ry="5" fill="#5a3e26"/>
+            <line x1="38" y1="38" x2="42" y2="38" stroke="#1f1a14" stroke-width="0.6"/>
+            <line x1="46" y1="38" x2="50" y2="38" stroke="#1f1a14" stroke-width="0.6"/>
+            <circle cx="40" cy="41" r="0.7" fill="#1f1a14"/>
+            <circle cx="48" cy="41" r="0.7" fill="#1f1a14"/>
+            <path d="M 44 42 L 43 47 L 45 47 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+            <path d="M 40 50 Q 44 52 48 50" stroke="#a04050" stroke-width="0.6" fill="none"/>
+            <!-- 옷깃 -->
+            <path d="M 26 62 L 30 76 L 58 76 L 62 62" fill="#3a2418"/>
+          </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">플로렌스 나이팅게일</span>
+            <span class="inline-figure__name-en">Florence Nightingale</span>
+            <span class="inline-figure__life">1820 — 1910</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko">우리는 <strong>플로렌스 나이팅게일</strong>을 — 학교 교과서의 한 그림으로 — 기억한다. 등불을 들고 야전 병원 복도를 걷는 한 여인. <em>등불을 든 여인</em>(The Lady with the Lamp). 그러나 그 그림은 그녀가 한 일의 한 면일 뿐이다. 그녀가 19세기 영국 의료에 남긴 가장 큰 발자국은 — 등불도, 침상 곁의 보살핌도 아니라 — <em>한 장의 그래프</em>였다.</p>
+        <p>1854년, 영국·프랑스·오스만 동맹이 러시아와 크림 전쟁을 벌이는 동안, 영국군 부상병들이 흑해 동쪽 콘스탄티노플 건너편의 한 막사 — 스쿠타리 야전 병원 — 에 옮겨졌다. 나이팅게일은 영국 정부의 위탁으로 38명의 간호 조수와 함께 그곳에 도착한다. 그녀가 본 것은 — 부상보다 더 많은 죽음이었다. 병원의 위생 상태가 끔찍했다. 변소가 부족했고, 환기가 안 되었고, 침구는 빨지 않은 채 다른 환자에게 돌아갔다. 콜레라·발진티푸스·이질이 부상보다 일곱 배 많은 사람을 죽이고 있었다.</p>
+        <p>그녀는 — 등불을 들고 복도를 걸으면서도 — 자기 노트에 <em>숫자</em>를 적기 시작했다. 매일 사망자 수, 사망 원인, 입원 환자 수, 병원의 위생 조치. 그녀가 1856년 전쟁이 끝나고 영국으로 돌아왔을 때, 그녀의 가방에는 한 두께의 표가 들어 있었다.</p>
+        <p>문제는 — 그 숫자를 누구에게 어떻게 보여줄 것이냐는 것이었다. 빅토리아 여왕도, 의회의 의원들도, 군 지휘부도 — 그 표를 펴 보지 않을 것이 분명했다. 그녀는 한 가지 발상에 도달한다. <em>숫자를 그림으로 그리자.</em></p>
+        <blockquote class="pull">
+          To understand God's thoughts we must study statistics, for these are the measure of His purpose.
+          <span class="attr">— 플로렌스 나이팅게일, 출처 표기에 따라 일부 의역 — 본인 글에서 통계는 신학의 한 측면이라는 주장 반복</span>
+        </blockquote>
+        <p>1858년, 그녀는 <span class="work">Notes on Matters Affecting the Health, Efficiency, and Hospital Administration of the British Army</span>(영국군의 건강·효율성·병원 행정에 관한 노트)를 출판한다. 800쪽이 넘는 그 보고서 안에, 한 색이 칠해진 원형 도식이 들어 있다. 12개의 부채꼴로 나뉜 원, 각 부채꼴은 한 달, 각 부채꼴의 면적은 그 달의 사망자 수에 비례한다. 사망 원인은 색으로 — 파란색은 <em>예방 가능한 감염병</em>, 빨간색은 <em>부상</em>, 검은색은 <em>그 외</em> — 구분된다. <em>polar area diagram</em>(극좌표 면적 도식), 본인은 그것을 <em>coxcomb</em>이라 불렀다.</p>
+        <aside class="inline-scene">
+          <div class="inline-scene__pictogram"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="56" height="56" fill="#f5efe0"/>
+            <g transform="translate(28,28)">
+              <!-- 12개의 부채꼴, 면적이 달마다 다름 -->
+              <path d="M 0 0 L 14 -3.7 A 14.5 14.5 0 0 0 12.6 -7.3 Z" fill="#2a5680" opacity="0.7"/>
+              <path d="M 0 0 L 9 -5.2 A 10.4 10.4 0 0 0 5.5 -8.8 Z" fill="#2a5680" opacity="0.7"/>
+              <path d="M 0 0 L 5.5 -9.5 A 11 11 0 0 0 0 -11 Z" fill="#2a5680" opacity="0.7"/>
+              <path d="M 0 0 L 0 -16 A 16 16 0 0 0 -8 -13.9 Z" fill="#2a5680" opacity="0.7"/>
+              <path d="M 0 0 L -8 -13.9 A 16 16 0 0 0 -13.9 -8 Z" fill="#2a5680" opacity="0.7"/>
+              <path d="M 0 0 L -10.6 -6.1 A 12.2 12.2 0 0 0 -12.2 0 Z" fill="#2a5680" opacity="0.7"/>
+              <path d="M 0 0 L -9 0 A 9 9 0 0 0 -7.8 4.5 Z" fill="#2a5680" opacity="0.7"/>
+              <path d="M 0 0 L -7 4 A 8 8 0 0 0 -4 6.9 Z" fill="#2a5680" opacity="0.7"/>
+              <path d="M 0 0 L -3 5.2 A 6 6 0 0 0 0 6 Z" fill="#2a5680" opacity="0.7"/>
+              <path d="M 0 0 L 0 7 A 7 7 0 0 0 3.5 6.1 Z" fill="#2a5680" opacity="0.7"/>
+              <path d="M 0 0 L 4 6.9 A 8 8 0 0 0 6.9 4 Z" fill="#2a5680" opacity="0.7"/>
+              <path d="M 0 0 L 8.5 4.9 A 9.8 9.8 0 0 0 9.8 0 Z" fill="#2a5680" opacity="0.7"/>
+              <!-- 부상 (작은 적색 부분) -->
+              <path d="M 0 0 L 4 -1 A 4 4 0 0 0 3 -2.6 Z" fill="#a04050" opacity="0.8"/>
+              <path d="M 0 0 L 2 -3.5 A 4 4 0 0 0 0 -4 Z" fill="#a04050" opacity="0.8"/>
+              <circle r="0.5" fill="#1f1a14"/>
+            </g>
+          </svg></div>
+          <div>
+            <div class="inline-scene__meta">
+              <time datetime="1858">1858년</time>
+              <span class="place">런던 · 빅토리아 여왕의 책상 위</span>
+            </div>
+            <div class="inline-scene__body">
+              <strong>장미 한 송이로 의회를 설득하다</strong>
+              나이팅게일의 polar area diagram은 한 가지를 한눈에 보였다 — 크림 전쟁에서 부상으로 죽은 영국군의 수보다, <em>병원의 위생 문제로 죽은 영국군의 수가 일곱 배 많았다</em>는 사실이다. 그 한 그림이 의회와 여왕을 설득해 — 1858년 영국군 병원 위생 개혁 위원회가 설치되고, 그 후 10년 사이 영국군 평시 사망률이 절반 가까이 줄었다. 1858년 같은 해, 그녀는 영국 왕립통계학회(Royal Statistical Society)의 <em>최초 여성 회원</em>으로 선출되었다. 그녀가 책상에서 그린 한 송이 장미가 — 학교 교과서의 등불보다 — 더 많은 사람을 살린 셈이다.
+              <span class="source">Science Museum (London) "Florence Nightingale: Pioneer Statistician" · Royal Statistical Society 사료 · Lynn McDonald <em>Florence Nightingale</em>(2003-)</span>
+            </div>
+          </div>
+        </aside>
+        <p>여기서 한 가지를 직접 만져보면 좋다. 정규분포가 <em>왜</em> 자연 어디에나 나타나는가. 한 가지 직관은 — <em>독립된 작은 우연이 충분히 많이 모이면, 그 합은 종 모양으로 분포한다</em> 는 것이다. 19세기 영국의 한 인물 <strong>프랜시스 골턴</strong>(1822–1911, 다윈의 사촌)이 1877년 그것을 한 작은 보드 — <em>골턴 보드</em> — 로 직접 시연했다. 공이 못 하나에 부딪혀 왼쪽 또는 오른쪽으로 떨어지기를 — 수십 줄 반복하면 — 그 공들이 바닥에 쌓이는 모양이 종이 된다.</p>
+
+        <aside class="inline-sim">
+          <div class="inline-sim__head">
+            <span class="num">시뮬 2</span>
+            <h4>골턴 보드 — 정규분포가 만들어지는 과정</h4>
+            <span class="latin">Galton Board</span>
+          </div>
+          <p class="inline-sim__lead">한 번에 수백 개의 공을 떨어뜨려, 못 사이를 통과한 공들이 바닥에 어떻게 쌓이는지 본다. 한 공 한 공은 우연이지만 — 그 우연 수백 개가 모이면 — 가우스의 종이 나타난다. 이것이 정규분포가 <em>왜</em> 측정 오차의 자연스러운 모양인지에 대한 한 가장 직관적인 답이다.</p>
+          <div class="sim" data-sim-id="galton-board"></div>
+        </aside>
+
+        <div class="episode">
+          <span class="episode__label">에피소드 · 폴라 에어리어 다이어그램의 발명</span>
+          <h4 class="episode__title">"군 의무 보고서를 누가 읽겠습니까"</h4>
+          <div class="episode__body">
+            <p>나이팅게일이 자기 보고서를 그래프로 그린 데에는 한 실용적 이유가 있었다. 그녀는 1857년 친구이자 정치가 시드니 허버트에게 보낸 편지에서 적었다 — "여왕도, 의원들도, 군의관들도 — 한 페이지의 표를 펴 보지 않을 사람들입니다. 한 그림이라면 모르겠지만." 그녀는 통계학자 윌리엄 파(William Farr, 1807-1883)에게서 자료 분석 조언을 받았고, 그래프 디자인은 — 본인이 직접 했다.</p>
+            <p>한 가지 흥미로운 사실 — 그녀의 polar area diagram은 사실 우리가 지금 <em>파이 차트</em>라 부르는 도식의 한 친척이다. 두 도식 모두 18세기 말~19세기 초 윌리엄 플레이페어가 발명한 통계 시각화 계보 위에 있다. 그러나 면적이 — 각이 아니라 — 양에 비례하는 나이팅게일의 도식은, 시간에 따른 변화를 한 원 안에 담을 수 있다는 점에서 — 그녀의 자료에 가장 어울리는 도구였다. 그녀는 그것을 <em>장미 도형</em> 또는 <em>닭벼슬</em>(coxcomb)이라 불렀다.</p>
+          </div>
+        </div>
+
+        <p>나이팅게일이 1858년 영국 왕립통계학회 최초 여성 회원으로 선출된 일은 — 단순한 명예가 아니었다. 19세기 중반 영국 학계에서 여성이 학회 회원이 되는 일이 <em>제도적으로 가능한가</em>는 그 자체로 한 논쟁거리였다. 그녀의 자료와 그래프가 한 학회가 자기 규약을 다시 보게 만든 셈이다. 그녀는 그 후 50년을 더 산다. 노년의 그녀는 — 등불을 든 모습보다 — 책상 위 자료 더미와 함께 있는 모습이 더 자기다웠다. 1910년 90세에 사망한다.</p>
+        <p>한 가지 더 — 우연을 길들이는 이 시대의 마지막 자리에 — 한 가지 짧은 퀴즈를 만져 본다. <em>몬티 홀 문제</em>다. 이 문제는 사실 20세기 후반에 만들어진 것이지만, 그 안에 들어 있는 직관과 계산의 충돌은 — 이 시대 확률론이 풀고자 한 그 종류의 충돌의 한 가장 선명한 사례다.</p>
+
+        <aside class="inline-sim">
+          <div class="inline-sim__head">
+            <span class="num">시뮬 3</span>
+            <h4>몬티 홀 문제 — 직관과 확률의 충돌</h4>
+            <span class="latin">The Monty Hall Problem</span>
+          </div>
+          <p class="inline-sim__lead">세 개의 문 뒤에 한 개의 자동차와 두 마리의 염소가 있다. 한 문을 선택한 뒤, 사회자가 남은 두 문 중 하나(염소가 있는 쪽)를 열어 보인다. 이제 당신은 선택을 바꿀 수 있다. 바꾸는 것이 유리한가, 그대로 두는 것이 유리한가. 직접 100번, 1,000번 해 본다. 직관이 한 번에 무너진다.</p>
+          <div class="sim" data-sim-id="monty-hall"></div>
+        </aside>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 6 — Coda ===== -->
+    <section class="chapter" id="ch6">
+      <header class="chapter__head">
+        <span class="chapter__num">제6장</span>
+        <h2 class="chapter__title">우연을 길들인 뒤 <span class="latin">Coda · After Uncertainty Was Tamed</span></h2>
+        <p class="chapter__years">1900 이후 · 250년의 의미</p>
+      </header>
+      <div class="narrative">
+        <p>250년의 호흡이 닫혔다. 그 호흡이 남긴 것은 무엇인가.</p>
+
+        <p>첫째, <em>우연이 수가 되었다</em>. 17세기 중반까지의 사람들에게 <em>주사위 한 번의 결과</em>·<em>다음 해의 사망자 수</em>·<em>한 사람의 수명</em>은 — 신의 영역이거나, 기껏해야 거친 경험의 영역이었다. 이 시대 이후 그것들은 한 변수가 되었다 — 분포가 있고, 평균이 있고, 분산이 있고, 그 분포에 대한 추론이 가능한. 우연이 수로 적힌 한 사실 위에 — 후대의 보험·연금·재해 예측·신약 효과 검증·여론조사·품질 관리 — 그 모든 것이 자라났다.</p>
+
+        <p>둘째, <em>관찰이 진실의 한 길이 되었다</em>. 베르누이의 큰 수의 법칙이 그 정당성을 처음 적었다. 충분히 많이 관찰하면 — 우리가 모르는 진실에 한없이 가까이 다가갈 수 있다. 이 사실 위에 — 18세기 후반 계몽주의의 자연과학 방법론이, 19세기 사회과학의 통계 조사가, 20세기 임상시험과 무작위 대조군 연구가 자란다. 우리가 지금 한 신약을 허가하기 전에 수천 명에게 — 무작위로 — 시험해 보는 일이, 17세기 한 도박 분배 문제와 한 직선으로 이어져 있다.</p>
+
+        <p>셋째, <em>한 장의 그림이 한 시대를 설득할 수 있다는 사실이 분명해졌다</em>. 스노우의 점 지도가 미아즈마 가설을 흔들었고, 나이팅게일의 장미가 영국군의 위생 개혁을 끌어냈다. 두 사람이 한 일은 — 같은 자료를 <em>표</em>로 펴 두는 대신 <em>한 도형</em>으로 그린 것 — 뿐이었다. 그러나 그 한 행위가 자료의 정치적 힘을 바꾸었다. 21세기 데이터 저널리즘과 인포그래픽은, 두 사람의 19세기 한 도형의 직계 후손이다.</p>
+
+        <p>넷째, <em>통계가 공중을 살리는 도구가 되었다</em>. 19세기 후반 영국·프랑스·독일의 공중보건 정책은 — 한 도시의 식수 공급, 하수 처리, 예방접종, 산모 사망률 — 모두 이 시대의 통계학적 사고 위에 만들어졌다. 1900년 영국의 출생 시 기대 수명은 50세였다. 2000년에는 78세였다. 그 사이 28년의 한 큰 몫이 — 이 시대 수학이 만든 도구 위에서 — 한 시대 한 시대 단위로 더해진 것이다.</p>
+
+        <div class="legend-vs-fact">
+          <div class="legend-vs-fact__legend">
+            <h4>전설 · 자주 듣는 이야기</h4>
+            <p><strong>"나이팅게일은 직접 콜레라 환자를 돌본 천사 같은 간호사다."</strong></p>
+            <p>학교 교과서와 통속적 전기는 그녀를 — 등불을 들고 콜레라 환자의 침상 곁을 걷는 여인 — 으로 그린다. <em>등불을 든 여인</em>이라는 별명도, 1855년 <em>The Times</em>의 한 종군 기자가 만든 표현이다. 빅토리아기 영국에서 그녀는 한 천사적 간호사의 상징이 되었다.</p>
+          </div>
+          <div class="legend-vs-fact__fact">
+            <h4>사실 · 학계가 말하는 것</h4>
+            <p><strong>그녀가 스쿠타리에서 다룬 환자의 대부분은 콜레라가 아니라 발진티푸스·이질·전쟁 부상이었고, 그녀가 19세기 영국에 남긴 가장 큰 자취는 침상 곁의 보살핌이 아니라 <em>책상 위의 자료와 그래프</em>였다.</strong></p>
+            <p>크림 전쟁 당시 스쿠타리 야전 병원의 주요 사망 원인은 — 그녀 자신의 자료에 따르면 — 콜레라보다 발진티푸스·이질·콜레라·괴저 등의 복합 감염이었다. 콜레라 환자 비중은 시기에 따라 변동했고, 그녀가 직접 환자 침상에서 보낸 시간보다 행정·보고서 작성·자료 분석에 쓴 시간이 훨씬 많았다. 1856년 영국 귀국 이후 그녀는 그라우 침상 곁이 아니라 — 자기 집 책상에서 — 폐결핵 후유증으로 거의 평생 침대에 누워 통계와 보고서를 적으며 50년을 보냈다. 그녀의 진짜 혁명은, 한 등불이 아니라 — 한 자료 그래프가 정치를 움직일 수 있다는 사실을 19세기 영국에 처음 보인 것이었다.</p>
+            <p class="legend-vs-fact__source" style="font-size:11px; color:var(--ink-mute); font-style:italic; margin-top:8px;">— Lynn McDonald <em>Florence Nightingale: Mystic, Visionary, Healer</em>(2010); Hugh Small <em>Florence Nightingale: Avenging Angel</em>(1998); Science Museum (London) "Florence Nightingale: Pioneer Statistician"</p>
+          </div>
+        </div>
+
+        <p>한 가지 더 — 이 시대의 통설에 대한 작은 단서. 우리는 흔히 <em>1654년 파스칼-페르마 서신을 확률론의 탄생</em>이라 부른다. 그러나 그것은 한 통설의 단정한 표현이다. 사실은 — 100년 전 이탈리아의 의사이자 수학자 <strong>지롤라모 카르다노</strong>(1501–1576)가 이미 <span class="work">Liber de Ludo Aleae</span>(주사위 놀이의 책)에서 같은 종류의 계산을 적었다(집필 ~1564, 사후 출판 1663). 카르다노의 책은 — 그가 죽고 거의 100년이 지난 뒤 — 인쇄되었고, 그 시점에는 이미 파스칼·페르마·호이겐스의 작업이 학계의 표준이 되어 있었다. 첫 번째라는 영예는 사실 <em>먼저 적은 사람</em>이 아니라 <em>먼저 인쇄된 사람</em>이 가져간 셈이다. 우연을 다루는 학문이 — 우연한 인쇄 순서에 의해 — 자기 시작점을 다르게 적게 된 것이다.</p>
+
+        <p>다음 시대는 또 다른 종류의 수학이다. 이 시대까지의 수학은 <em>자연</em>이나 <em>우연</em>을 — 자기 바깥의 무엇을 — 다루는 학문이었다. § VI의 수학은 다르다. 그것은 <em>수학 자기 자신</em>을 묻는다. 무한에는 크기가 있는가. 모든 참된 명제는 증명될 수 있는가. 1820년대 가우스에서 시작해 1930년대 괴델의 불완전성 정리에서 한 막을 닫는 그 호흡이 — 다음 페이지의 이야기다.</p>
+      </div>
+    </section>
+
+    <!-- ===== 출처 메모 ===== -->
+    <section class="math-section" id="sources">
+      <header>
+        <h2>출처 메모</h2>
+        <span class="latin">§ VII &nbsp;·&nbsp; Citations</span>
+      </header>
+      <p class="lead">이 페이지의 모든 사실은 다음 출처에서 교차 확인되었다. 인용은 가능한 한 원전 또는 정평이 있는 영역(英譯)을 따랐고, 의역이면 명시했다. 시뮬레이션은 교육 목적의 <em>단순화 모형</em>이다.</p>
+
+      <div class="sources-note">
+        주요 출처 — MacTutor History of Mathematics (St Andrews) "Pascal", "Fermat", "Jacob Bernoulli", "De Moivre", "Gauss", "Laplace", "Galton"; Stanford Encyclopedia of Philosophy "Probability, Interpretations of"; American Physical Society "July 1654: Pascal's Letters to Fermat on the Problem of Points"; Encyclopædia Britannica "Ars Conjectandi", "Normal distribution", "Cholera", "Florence Nightingale"; Wikipedia "1854 Broad Street cholera outbreak"; John Snow Archive (UCLA Department of Epidemiology); Royal Statistical Society "Florence Nightingale" 사료; Stephen M. Stigler <em>The History of Statistics: The Measurement of Uncertainty before 1900</em>(Harvard, 1986); Ian Hacking <em>The Emergence of Probability</em>(Cambridge, 1975); Lynn McDonald <em>Florence Nightingale: Mystic, Visionary, Healer</em>(2010); Hugh Small <em>Florence Nightingale: Avenging Angel</em>(1998); Mark Buchanan <em>The Social Atom</em>(2007) — 케틀레의 평균인 비판. 자세한 목록은
+        <a href="../../research/math.html">/research/math.html</a>에서 추적할 수 있다(연구 아카이브 페이지는 § IV 컬렉션 완성과 함께 공개된다).
+      </div>
+    </section>
+
+    <nav class="era-pagination" aria-label="시대 간 이동">
+      <a class="prev" href="04-natures-language.html">
+        <span class="dir">← 이전 시대</span>
+        <span class="title">§ IV 자연의 언어가 되다</span>
+        <span class="latin">Nature's Language · 1500 — 1750</span>
+      </a>
+      <span class="empty next">
+        <span class="dir">다음 시대 →</span>
+        <span class="title">§ VI 무한과 기초 <span class="wip-mark">작성 중</span></span>
+        <span class="latin">Infinity &amp; Foundations · 1820 — 1940</span>
+      </span>
+    </nav>
+
+  </div>
+</main>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../../assets/shared/nav.js" defer></script>
+<script src="../../assets/shared/footer.js" defer></script>
+<script src="../../assets/math-history/interactives/sim-law-of-large-numbers.js" defer></script>
+<script src="../../assets/math-history/interactives/sim-galton-board.js" defer></script>
+<script src="../../assets/math-history/interactives/sim-monty-hall.js" defer></script>
+</body>
+</html>
