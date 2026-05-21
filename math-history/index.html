@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>수학사 · § IV | Archive for Som & Chan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="이샹고 뼈의 새김에서 튜링·섀넌까지, 인류가 쌓아 올린 수학사를 7개 시대로 정리한 학습 자료. 전설과 사실을 가르고 출처를 추적한다.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="../assets/shared/styles-base.css">
+<link rel="stylesheet" href="../assets/math-history/styles.css">
+</head>
+<body class="shared-body collection-math" data-page-id="math.main">
+
+<main class="math">
+  <section class="math-hero">
+    <div class="shared-container">
+      <span class="kicker">§ IV · est. 2026</span>
+      <h1>수학사<span class="latin">History of Mathematics</span></h1>
+      <p class="subtitle">수를 세는 일에서 AI까지 — 수학이 세상을 만든 이야기</p>
+      <p class="lead">
+        인간이 <em>수와 형식을 어떻게 발명해 왔는지</em>의 기록.
+        곡식 자루를 세려고 시작된 한 가지 일 — *몇 개인가* —
+        이 어떻게 바빌로니아의 60진법으로, 유클리드의 증명으로,
+        브라마굽타의 0과 알 콰리즈미의 대수로, 뉴턴과 라이프니츠의 미적분으로,
+        칸토어의 무한과 괴델의 한계로, 그리고 튜링·섀넌의 계산하는 기계로 이어졌는지.
+        7개 시대로 나눠 인물·발견·전환을 정리하고, 손으로 만져 이해할 수 있도록
+        <em>인터랙티브 시뮬레이션</em>을 함께 둔다. 매력적인 일화는 살리되,
+        <em>전설은 전설로 표시</em>해 사실과 섞지 않는다.
+      </p>
+      <div class="math-stats">
+        <div class="math-stat">
+          <span class="math-stat__label">시대 구분</span>
+          <span class="math-stat__value">7</span>
+          <span class="math-stat__sub">고대 오리엔트 → 현대</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">시간 범위</span>
+          <span class="math-stat__value">~5,000<span class="latin" style="font-size:0.5em;margin-left:4px;">yrs</span></span>
+          <span class="math-stat__sub">BC 3000 — 현재</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">인터랙티브</span>
+          <span class="math-stat__value">~16</span>
+          <span class="math-stat__sub">시대당 2~4개 예정</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">학설 처리</span>
+          <span class="math-stat__value">병기</span>
+          <span class="math-stat__sub">전설은 전설로</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shared-container">
+
+    <!-- ===== § I 통합 연표 SVG ===== -->
+    <section class="math-section" id="timeline">
+      <header>
+        <h2>통합 연표</h2>
+        <span class="latin">§ I &nbsp;·&nbsp; Integrated Timeline</span>
+      </header>
+      <p class="lead">수학이 만들어진 5,000년을 7개 띠로 나누어 한눈에. 띠 위의 점은 그 시대의 결정적 사건이다. 현재 본문이 작성된 시대는 <em>§ III (0과 대수)</em> 뿐 — 나머지 띠는 점선·반투명으로 두었다.</p>
+
+      <div class="math-timeline-scroll">
+      <svg viewBox="0 0 1080 360" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="수학사 통합 연표 — 7개 시대" class="math-timeline-svg">
+        <defs>
+          <style>
+            .ax      { stroke: #c8bea4; stroke-width: 1; fill: none; }
+            .axT     { stroke: #c8bea4; stroke-width: 1; }
+            .axLb    { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 11px; fill: #6b6253; }
+            .erat    { font-family: 'Noto Serif KR', serif; font-weight: 700; font-size: 12px; fill: #1f1a14; }
+            .erat-sm { font-family: 'Noto Serif KR', serif; font-weight: 700; font-size: 10.5px; fill: #1f1a14; }
+            .erat-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 10px; fill: #6b6253; }
+            .seg-1   { fill: #b58853; }
+            .seg-2   { fill: #6a8f7e; }
+            .seg-3   { fill: #2a5680; }
+            .seg-4   { fill: #c4a64a; }
+            .seg-5   { fill: #7a6b8a; }
+            .seg-6   { fill: #5a7090; }
+            .seg-7   { fill: #3a5a4f; }
+            .evt     { font-family: 'Noto Sans KR', sans-serif; font-size: 9px; fill: #1f1a14; }
+            .evtY    { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 9.5px; fill: #6b6253; }
+            .stemDot { stroke: #c8bea4; stroke-width: 0.6; fill: none; }
+            .seg-pending .seg-bar { opacity: 0.45; }
+            .seg-pending .seg-bg  { opacity: 0.10; }
+            .seg-pending .seg-bar { stroke-dasharray: 4 3; stroke: #1f1a14; stroke-width: 0.4; }
+            .seg-active a { cursor: pointer; }
+            .seg .seg-bg { transition: opacity 0.18s; }
+            .seg-active:hover .seg-bg { opacity: 0.30; }
+            .wip-tag {
+              font-family: 'Noto Sans KR', sans-serif; font-size: 8px;
+              fill: #6b6253; letter-spacing: 0.08em;
+            }
+          </style>
+        </defs>
+
+        <!-- § I 수를 발명하다 — BC 3000 ~ BC 500 -->
+        <g class="seg seg-pending">
+          <title>§ I 수를 발명하다 — 준비중</title>
+          <rect class="seg-bg seg-1" x="60.00" y="40" width="215.00" height="34" rx="3"/>
+          <rect class="seg-bar seg-1" x="60.00" y="46" width="215.00" height="6"/>
+          <text class="erat" x="167.50" y="62" text-anchor="middle">§ I 수를 발명하다</text>
+          <text class="erat-en" x="167.50" y="73" text-anchor="middle">BC 3000 — BC 500</text>
+          <text class="wip-tag" x="167.50" y="86" text-anchor="middle">PREPARING</text>
+          <line class="stemDot" x1="163.00" y1="86" x2="163.00" y2="110"/>
+          <circle class="seg-1" cx="163.00" cy="86" r="3"/>
+          <text class="evtY" x="163.00" y="108" text-anchor="middle">~BC 1800</text>
+          <text class="evt"  x="163.00" y="98" text-anchor="middle">플림프턴 322</text>
+        </g>
+
+        <!-- § II 증명을 발명하다 — BC 600 ~ AD 400 -->
+        <g class="seg seg-pending">
+          <title>§ II 증명을 발명하다 — 준비중</title>
+          <rect class="seg-bg seg-2" x="275.00" y="40" width="170.00" height="34" rx="3"/>
+          <rect class="seg-bar seg-2" x="275.00" y="46" width="170.00" height="6"/>
+          <text class="erat" x="360.00" y="62" text-anchor="middle">§ II 증명을 발명하다</text>
+          <text class="erat-en" x="360.00" y="73" text-anchor="middle">BC 600 — AD 400</text>
+          <text class="wip-tag" x="360.00" y="86" text-anchor="middle">PREPARING</text>
+          <line class="stemDot" x1="326.00" y1="86" x2="326.00" y2="110"/>
+          <circle class="seg-2" cx="326.00" cy="86" r="3"/>
+          <text class="evtY" x="326.00" y="108" text-anchor="middle">~BC 300</text>
+          <text class="evt"  x="326.00" y="98" text-anchor="middle">유클리드 『원론』</text>
+        </g>
+
+        <!-- § III 0과 대수 — AD 400 ~ 1200 — ★작성 완료 (링크 활성) -->
+        <a href="eras/03-zero-algebra.html" class="seg-active-link">
+        <g class="seg seg-active">
+          <title>§ III 0과 대수 — 페이지로 이동</title>
+          <rect class="seg-bg seg-3" x="445.00" y="40" width="160.00" height="34" rx="3" opacity="0.18"/>
+          <rect class="seg-bar seg-3" x="445.00" y="46" width="160.00" height="6"/>
+          <text class="erat" x="525.00" y="62" text-anchor="middle">§ III 0과 대수</text>
+          <text class="erat-en" x="525.00" y="73" text-anchor="middle">AD 400 — 1200</text>
+          <line class="stemDot" x1="490.60" y1="86" x2="490.60" y2="110"/>
+          <circle class="seg-3" cx="490.60" cy="86" r="3"/>
+          <text class="evtY" x="490.60" y="108" text-anchor="middle">628</text>
+          <text class="evt"  x="490.60" y="98" text-anchor="middle">브라마굽타 0</text>
+          <line class="stemDot" x1="529.00" y1="128" x2="529.00" y2="132"/>
+          <circle class="seg-3" cx="529.00" cy="128" r="3"/>
+          <text class="evtY" x="529.00" y="154" text-anchor="middle">~820</text>
+          <text class="evt"  x="529.00" y="142" text-anchor="middle">알 콰리즈미</text>
+        </g>
+        </a>
+
+        <!-- § IV 자연의 언어 — 1500 ~ 1750 -->
+        <g class="seg seg-pending">
+          <title>§ IV 자연의 언어 — 준비중</title>
+          <rect class="seg-bg seg-4" x="605.00" y="40" width="110.00" height="34" rx="3"/>
+          <rect class="seg-bar seg-4" x="605.00" y="46" width="110.00" height="6"/>
+          <text class="erat-sm" x="660.00" y="62" text-anchor="middle">§ IV 자연의 언어</text>
+          <text class="erat-en" x="660.00" y="73" text-anchor="middle">1500 — 1750</text>
+          <text class="wip-tag" x="660.00" y="86" text-anchor="middle">PREPARING</text>
+          <line class="stemDot" x1="665.30" y1="86" x2="665.30" y2="110"/>
+          <circle class="seg-4" cx="665.30" cy="86" r="3"/>
+          <text class="evtY" x="665.30" y="108" text-anchor="middle">1637</text>
+          <text class="evt"  x="665.30" y="98" text-anchor="middle">데카르트 좌표</text>
+          <line class="stemDot" x1="687.30" y1="128" x2="687.30" y2="132"/>
+          <circle class="seg-4" cx="687.30" cy="128" r="3"/>
+          <text class="evtY" x="687.30" y="154" text-anchor="middle">1687</text>
+          <text class="evt"  x="687.30" y="142" text-anchor="middle">뉴턴 Principia</text>
+        </g>
+
+        <!-- § V 불확실성 — 1650 ~ 1900 -->
+        <g class="seg seg-pending">
+          <title>§ V 불확실성 — 준비중</title>
+          <rect class="seg-bg seg-5" x="715.00" y="40" width="110.00" height="34" rx="3"/>
+          <rect class="seg-bar seg-5" x="715.00" y="46" width="110.00" height="6"/>
+          <text class="erat-sm" x="770.00" y="62" text-anchor="middle">§ V 불확실성</text>
+          <text class="erat-en" x="770.00" y="73" text-anchor="middle">1650 — 1900</text>
+          <text class="wip-tag" x="770.00" y="86" text-anchor="middle">PREPARING</text>
+          <line class="stemDot" x1="716.80" y1="86" x2="716.80" y2="110"/>
+          <circle class="seg-5" cx="716.80" cy="86" r="3"/>
+          <text class="evtY" x="716.80" y="108" text-anchor="middle">1654</text>
+          <text class="evt"  x="716.80" y="98" text-anchor="middle">파스칼·페르마</text>
+          <line class="stemDot" x1="785.00" y1="128" x2="785.00" y2="132"/>
+          <circle class="seg-5" cx="785.00" cy="128" r="3"/>
+          <text class="evtY" x="785.00" y="154" text-anchor="middle">1809</text>
+          <text class="evt"  x="785.00" y="142" text-anchor="middle">가우스 정규분포</text>
+        </g>
+
+        <!-- § VI 무한과 기초 — 1820 ~ 1940 -->
+        <g class="seg seg-pending">
+          <title>§ VI 무한과 기초 — 준비중</title>
+          <rect class="seg-bg seg-6" x="825.00" y="40" width="100.00" height="34" rx="3"/>
+          <rect class="seg-bar seg-6" x="825.00" y="46" width="100.00" height="6"/>
+          <text class="erat-sm" x="875.00" y="62" text-anchor="middle">§ VI 무한과 기초</text>
+          <text class="erat-en" x="875.00" y="73" text-anchor="middle">1820 — 1940</text>
+          <text class="wip-tag" x="875.00" y="86" text-anchor="middle">PREPARING</text>
+          <line class="stemDot" x1="884.20" y1="86" x2="884.20" y2="110"/>
+          <circle class="seg-6" cx="884.20" cy="86" r="3"/>
+          <text class="evtY" x="884.20" y="108" text-anchor="middle">1891</text>
+          <text class="evt"  x="884.20" y="98" text-anchor="middle">칸토어 대각선</text>
+          <line class="stemDot" x1="917.50" y1="128" x2="917.50" y2="132"/>
+          <circle class="seg-6" cx="917.50" cy="128" r="3"/>
+          <text class="evtY" x="917.50" y="154" text-anchor="middle">1931</text>
+          <text class="evt"  x="917.50" y="142" text-anchor="middle">괴델 불완전성</text>
+        </g>
+
+        <!-- § VII 수학이 기계가 되다 — 1930 ~ 2026 -->
+        <g class="seg seg-pending">
+          <title>§ VII 수학이 기계가 되다 — 준비중</title>
+          <rect class="seg-bg seg-7" x="925.00" y="40" width="105.00" height="34" rx="3"/>
+          <rect class="seg-bar seg-7" x="925.00" y="46" width="105.00" height="6"/>
+          <text class="erat-sm" x="977.50" y="62" text-anchor="middle">§ VII 기계가 되다</text>
+          <text class="erat-en" x="977.50" y="73" text-anchor="middle">1930 — ·</text>
+          <text class="wip-tag" x="977.50" y="86" text-anchor="middle">PREPARING</text>
+          <line class="stemDot" x1="931.60" y1="86" x2="931.60" y2="110"/>
+          <circle class="seg-7" cx="931.60" cy="86" r="3"/>
+          <text class="evtY" x="931.60" y="108" text-anchor="middle">1936</text>
+          <text class="evt"  x="931.60" y="98" text-anchor="middle">튜링 기계</text>
+          <line class="stemDot" x1="975.00" y1="128" x2="975.00" y2="132"/>
+          <circle class="seg-7" cx="975.00" cy="128" r="3"/>
+          <text class="evtY" x="975.00" y="154" text-anchor="middle">1948</text>
+          <text class="evt"  x="975.00" y="142" text-anchor="middle">섀넌 정보이론</text>
+        </g>
+
+        <!-- 축 -->
+        <line class="ax" x1="60" y1="200" x2="1030" y2="200"/>
+        <line class="axT" x1="60.00" y1="198" x2="60.00" y2="206"/>
+        <line class="axT" x1="275.00" y1="198" x2="275.00" y2="206"/>
+        <line class="axT" x1="445.00" y1="198" x2="445.00" y2="206"/>
+        <line class="axT" x1="605.00" y1="198" x2="605.00" y2="206"/>
+        <line class="axT" x1="715.00" y1="198" x2="715.00" y2="206"/>
+        <line class="axT" x1="825.00" y1="198" x2="825.00" y2="206"/>
+        <line class="axT" x1="925.00" y1="198" x2="925.00" y2="206"/>
+        <line class="axT" x1="1030.00" y1="198" x2="1030.00" y2="206"/>
+        <text class="axLb" x="60.00" y="218" text-anchor="start">BC 3000</text>
+        <text class="axLb" x="275.00" y="218" text-anchor="middle">BC 500</text>
+        <text class="axLb" x="445.00" y="218" text-anchor="middle">AD 400</text>
+        <text class="axLb" x="605.00" y="218" text-anchor="middle">1500</text>
+        <text class="axLb" x="715.00" y="218" text-anchor="middle">1650</text>
+        <text class="axLb" x="825.00" y="218" text-anchor="middle">1820</text>
+        <text class="axLb" x="925.00" y="218" text-anchor="middle">1930</text>
+        <text class="axLb" x="1030.00" y="218" text-anchor="end">2026</text>
+
+        <!-- 범례 -->
+        <g transform="translate(60, 245)">
+          <text class="axLb" x="0" y="0" style="font-family:'Noto Sans KR',sans-serif;letter-spacing:0.06em;">시대 띠의 점선과 PREPARING 표시는 본문이 아직 준비 중인 시대 — 띠를 클릭하면 그 시대 페이지로 이동(§ III만 현재 활성).</text>
+        </g>
+      </svg>
+      </div>
+    </section>
+
+    <!-- ===== § II 시대 카드 ===== -->
+    <section class="math-section" id="eras">
+      <header>
+        <h2>7개 시대</h2>
+        <span class="latin">§ II &nbsp;·&nbsp; Seven Eras</span>
+      </header>
+      <p class="lead">현재 작업이 끝난 것은 § III(0과 대수). 나머지 6개 시대는 점진적으로 추가된다.</p>
+
+      <div class="era-cards">
+        <div class="era-card disabled">
+          <span class="era-num">§ I</span>
+          <h3 class="era-title">수를 발명하다 <span class="badge-wip">준비중</span></h3>
+          <p class="era-period">~BC 3000 — BC 500 · <em style="font-family:var(--serif-en);color:var(--ink-mute);">Ancient Orient</em></p>
+          <p class="era-desc">수는 철학이 아니라 <em>회계</em>에서 태어났다. 곡식·가축·세금을 세야 했기에 수가 생겼다. 메소포타미아의 점토 토큰과 60진법, 이집트의 측량과 단위분수.</p>
+          <p class="era-people"><strong>핵심 인물·자료</strong>이샹고 뼈 · 바빌로니아 서기 · 이집트 측량가 · 플림프턴 322 · 린드 파피루스</p>
+        </div>
+
+        <div class="era-card disabled">
+          <span class="era-num">§ II</span>
+          <h3 class="era-title">증명을 발명하다 <span class="badge-wip">준비중</span></h3>
+          <p class="era-period">~BC 600 — AD 400 · <em style="font-family:var(--serif-en);color:var(--ink-mute);">Ancient Greece</em></p>
+          <p class="era-desc">그리스인은 "답"이 아니라 <em>"왜 그런가"</em>를 물었다. 증명의 발명, 그리고 2,000년 교과서가 된 『원론』.</p>
+          <p class="era-people"><strong>핵심 인물</strong>탈레스 · 피타고라스 · 유클리드 · 아르키메데스 · 에라토스테네스 · 디오판토스 · 히파티아</p>
+        </div>
+
+        <a class="era-card" href="eras/03-zero-algebra.html">
+          <span class="era-num">§ III</span>
+          <h3 class="era-title">0과 대수</h3>
+          <p class="era-period">~AD 400 — 1200 · <em style="font-family:var(--serif-en);color:var(--ink-mute);">Indo-Islamic Golden Age</em></p>
+          <p class="era-desc">가장 늦게 발명된 수 <em>0</em>, 그리고 방정식을 푸는 기술 <em>대수</em>. 인도의 자리값에서 바그다드 『지혜의 집』까지 — *algorithm*은 알 콰리즈미의 이름.</p>
+          <p class="era-people"><strong>핵심 인물</strong>브라마굽타 · 알 콰리즈미 · 오마르 하이얌 · 피보나치</p>
+        </a>
+
+        <div class="era-card disabled">
+          <span class="era-num">§ IV</span>
+          <h3 class="era-title">자연의 언어가 되다 <span class="badge-wip">준비중</span></h3>
+          <p class="era-period">~1500 — 1750 · <em style="font-family:var(--serif-en);color:var(--ink-mute);">Scientific Revolution &amp; Enlightenment</em></p>
+          <p class="era-desc">수학이 <em>자연을 기술하는 언어</em>가 되다. 좌표와 미적분이 행성 궤도와 포탄 탄도를 같은 식으로 적는다.</p>
+          <p class="era-people"><strong>핵심 인물</strong>네이피어 · 데카르트 · 페르마 · 뉴턴 · 라이프니츠 · 오일러</p>
+        </div>
+
+        <div class="era-card disabled">
+          <span class="era-num">§ V</span>
+          <h3 class="era-title">불확실성을 길들이다 <span class="badge-wip">준비중</span></h3>
+          <p class="era-period">~1650 — 1900 · <em style="font-family:var(--serif-en);color:var(--ink-mute);">Probability and Statistics</em></p>
+          <p class="era-desc">우연을 수로 다루다 — 도박에서 시작해 보험·의학·사회를 바꾼다. 가우스의 정규분포, 스노우의 콜레라 지도, 나이팅게일의 통계 시각화.</p>
+          <p class="era-people"><strong>핵심 인물</strong>파스칼 · 페르마 · 베르누이 · 가우스 · 존 스노우 · 나이팅게일</p>
+        </div>
+
+        <div class="era-card disabled">
+          <span class="era-num">§ VI</span>
+          <h3 class="era-title">무한과 기초를 묻다 <span class="badge-wip">준비중</span></h3>
+          <p class="era-period">~1820 — 1940 · <em style="font-family:var(--serif-en);color:var(--ink-mute);">19th–Early 20th Century</em></p>
+          <p class="era-desc">수학이 <em>자기 자신</em>을 캐묻다. 무한에 크기가 있는가? 모든 참은 증명 가능한가? 비유클리드 기하·집합론·괴델 불완전성.</p>
+          <p class="era-people"><strong>핵심 인물</strong>가우스 · 리만 · 갈루아 · 칸토어 · 힐베르트 · 괴델</p>
+        </div>
+
+        <div class="era-card disabled" style="grid-column: 1 / -1;">
+          <span class="era-num">§ VII</span>
+          <h3 class="era-title">수학이 기계가 되다 <span class="badge-wip">준비중</span></h3>
+          <p class="era-period">1930 — 현재 · <em style="font-family:var(--serif-en);color:var(--ink-mute);">Modern Era</em></p>
+          <p class="era-desc">수학이 <em>계산하는 기계</em>가 되다. 디지털 문명 전체가 이 시대의 수학 위에 — 튜링의 계산 가능성, 섀넌의 비트, 공개키 암호, 그리고 오늘의 AI.</p>
+          <p class="era-people"><strong>핵심 인물</strong>튜링 · 폰 노이만 · 섀넌 · 와일즈 · (현대) RSA · 머신러닝의 수학</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== § III 톤 안내 ===== -->
+    <section class="math-section" id="tone">
+      <header>
+        <h2>이 자료의 톤</h2>
+        <span class="latin">§ III &nbsp;·&nbsp; How We Tell It</span>
+      </header>
+      <div class="themes">
+        <div class="theme">
+          <h3>인물 중심 스토리텔링 <span class="latin">Through Lives</span></h3>
+          <p>알 콰리즈미를 <em>대수의 발명자</em>로만 적지 않고, 바그다드 『지혜의 집』에서 인도 수학을 번역해 그리스 기하와 합친 한 사람의 이야기로.
+             괴델을 <em>불완전성 정리</em>가 아니라, 25살에 힐베르트 프로그램을 무너뜨린 빈의 청년으로. 정리는 그 사람의 삶 속에서 비로소 살아난다.</p>
+        </div>
+        <div class="theme">
+          <h3>전설과 사실을 가른다 <span class="latin">Legend, Labeled</span></h3>
+          <p>수학사에는 매력적이지만 근거가 약한 일화가 많다. 히파소스의 √2 폭로 익사, 아르키메데스의 "유레카", 뉴턴 머리에 떨어진 사과,
+             갈루아가 결투 전야에 군론을 다 썼다는 이야기. 살리되 <em>전설·후대 각색·도시전설</em> 라벨로 사실과 섞지 않는다.</p>
+        </div>
+        <div class="theme">
+          <h3>발견에서 영향으로 <span class="latin">From Idea to Impact</span></h3>
+          <p>모든 시대를 "이게 세상을 어떻게 바꿨나"로 닫는다. 60진법이 지금 시계와 각도에 살아있고, 인도-아라비아 숫자가 상업을 바꿨고,
+             섀넌의 비트가 두 아이가 쓰는 모든 디지털 기기 안에 있다. 수학은 발명품이고, 그 발명은 세상을 다시 짠다.</p>
+        </div>
+        <div class="theme">
+          <h3>출처 추적 가능 <span class="latin">Citable</span></h3>
+          <p>모든 사실은 <a href="../research/math.html">/research/math.html</a>에서 출처를 추적할 수 있도록 한다. 일급 출처는
+             <em>MacTutor</em>(세인트앤드루스대 수학사), <em>Stanford Encyclopedia of Philosophy</em>(논리·기초), 대학·박물관 자료.
+             시뮬레이션은 단순화 모형임을 명시한다.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../assets/shared/nav.js" defer></script>
+<script src="../assets/shared/footer.js" defer></script>
+</body>
+</html>

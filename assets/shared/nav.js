@@ -67,6 +67,17 @@
         { href: 'science-history/eras/05-modern.html',     label: '현대물리', eraKey: '05-modern' },
         { href: 'science-history/eras/06-contemporary.html', label: '동시대', eraKey: '06-contemporary' }
       ]
+    },
+    math: {
+      num: '§ IV',
+      name: '수학사',
+      latin: 'Mathematics',
+      base: 'math-history/',
+      wip: true,
+      sections: [
+        { href: 'math-history/index.html',                 label: '개관',     overviewFor: 'main' },
+        { href: 'math-history/eras/03-zero-algebra.html',  label: '0과 대수', eraKey: '03-zero-algebra' }
+      ]
     }
   };
 

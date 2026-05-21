@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>0과 대수 · § III 수학사 | Archive for Som & Chan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="가장 늦게 발명된 수 0, 그리고 방정식을 푸는 기술 대수. 브라마굽타에서 피보나치까지 800년의 인도-이슬람 황금기. 인물·결정적 전환·인터랙티브 시뮬레이션.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="../../assets/shared/styles-base.css">
+<link rel="stylesheet" href="../../assets/math-history/styles.css">
+</head>
+<body class="shared-body collection-math" data-page-id="math.era.03-zero-algebra">
+
+<main class="math">
+  <div class="shared-container">
+    <nav class="era-breadcrumb" aria-label="현재 위치">
+      <a href="../">수학사</a>
+      <span class="sep">/</span>
+      <span class="current">§ III · 0과 대수</span>
+    </nav>
+  </div>
+
+  <section class="math-hero">
+    <div class="shared-container">
+      <span class="kicker">§ III · ZERO AND ALGEBRA</span>
+      <h1>0과 대수<span class="latin">Zero and Algebra</span></h1>
+      <p class="subtitle">없음을 수로 적은 사람들 · AD 400 — 1200</p>
+      <p class="lead">
+        가장 늦게 발명된 수가 있다. <em>0</em>. 그것은 수를 세는 데 필요한 수가 아니었고,
+        오히려 <em>없음</em>을 어떻게 적을 것인가의 문제였다. 인도의 한 천문학자가
+        628년에 처음으로 0과 음수의 연산 규칙을 적었고, 200년 뒤 바그다드의 한
+        수학자가 방정식을 푸는 기술에 <em>al-jabr</em>이라는 이름을 붙였다.
+        800년이 지나 그 두 발명이 합쳐져 유럽에 도착했을 때, 상업과 회계와 과학이
+        함께 다시 쓰였다.
+      </p>
+      <div class="math-stats">
+        <div class="math-stat">
+          <span class="math-stat__label">시간 범위</span>
+          <span class="math-stat__value">800<span class="latin" style="font-size:0.5em;margin-left:4px;">yrs</span></span>
+          <span class="math-stat__sub">AD 400 — 1200</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">핵심 인물</span>
+          <span class="math-stat__value">4</span>
+          <span class="math-stat__sub">브라마굽타 → 피보나치</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">두 무대</span>
+          <span class="math-stat__value">2</span>
+          <span class="math-stat__sub">인도 · 바그다드</span>
+        </div>
+        <div class="math-stat">
+          <span class="math-stat__label">결정적 저작</span>
+          <span class="math-stat__value">628<br>1202</span>
+          <span class="math-stat__sub">시작과 도착</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shared-container">
+
+    <nav class="chapter-toc" aria-label="이 시대 챕터 목차">
+      <span class="chapter-toc__label">이 시대를 여섯 호흡으로</span>
+      <ol>
+        <li><a href="#ch1">자리값과 0의 탄생<span class="years">~AD 400–628</span></a></li>
+        <li><a href="#ch2">브라마굽타의 세 줄<span class="years">628</span></a></li>
+        <li><a href="#ch3">지혜의 집과 알 콰리즈미<span class="years">820년경</span></a></li>
+        <li><a href="#ch4">하이얌의 기하해<span class="years">1070년경</span></a></li>
+        <li><a href="#ch5">피보나치, 유럽으로<span class="years">1202</span></a></li>
+        <li><a href="#ch6">세상이 어떻게 바뀌었나<span class="years">coda</span></a></li>
+      </ol>
+    </nav>
+
+    <!-- ===== 시기 도식 ===== -->
+    <section class="math-section" id="period-diagram">
+      <header>
+        <h2>시기 도식</h2>
+        <span class="latin">§ I &nbsp;·&nbsp; Period Diagram</span>
+      </header>
+      <p class="lead">800년의 호흡. 결정적인 저작·발견들을 AD 400에서 1200 사이에 점으로 표시한다.</p>
+
+      <div class="math-timeline-scroll">
+      <svg viewBox="0 0 1080 240" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="0과 대수 시기 도식" class="math-timeline-svg">
+        <defs>
+          <style>
+            .ax  { stroke: #c8bea4; stroke-width: 1; fill: none; }
+            .axT { stroke: #c8bea4; stroke-width: 1; }
+            .axLb{ font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 10.5px; fill: #6b6253; }
+            .band{ fill: #554a8a; opacity: 0.16; }
+            .bandTop{ fill: #554a8a; }
+            .evt { font-family: 'Noto Sans KR', sans-serif; font-size: 9px; fill: #1f1a14; }
+            .evtY{ font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 10px; fill: #554a8a; }
+            .stem{ stroke: #554a8a; stroke-width: 1; }
+            .region{ font-family: 'Noto Sans KR', sans-serif; font-size: 9.5px; fill: #7a7163; font-style: italic; }
+          </style>
+        </defs>
+
+        <!-- x = (year - 400) * 1.2125 + 60   for span 400..1200 → 60..1030 -->
+        <rect class="band"    x="60" y="100" width="970" height="40" rx="3"/>
+        <rect class="bandTop" x="60" y="100" width="970" height="6"/>
+        <line class="ax" x1="60" y1="200" x2="1030" y2="200" />
+        <line class="axT" x1="60"    y1="198" x2="60"    y2="206"/>
+        <line class="axT" x1="302.5" y1="198" x2="302.5" y2="206"/>
+        <line class="axT" x1="545"   y1="198" x2="545"   y2="206"/>
+        <line class="axT" x1="787.5" y1="198" x2="787.5" y2="206"/>
+        <line class="axT" x1="1030"  y1="198" x2="1030"  y2="206"/>
+        <text class="axLb" x="60"    y="220" text-anchor="middle">400</text>
+        <text class="axLb" x="302.5" y="220" text-anchor="middle">600</text>
+        <text class="axLb" x="545"   y="220" text-anchor="middle">800</text>
+        <text class="axLb" x="787.5" y="220" text-anchor="middle">1000</text>
+        <text class="axLb" x="1030"  y="220" text-anchor="middle">1200</text>
+
+        <!-- region labels -->
+        <text class="region" x="200" y="92" text-anchor="middle">인도 (굽타·후기굽타)</text>
+        <text class="region" x="540" y="92" text-anchor="middle">바그다드 (지혜의 집)</text>
+        <text class="region" x="800" y="92" text-anchor="middle">페르시아 (이스파한·니샤푸르)</text>
+        <text class="region" x="980" y="92" text-anchor="middle">피사</text>
+
+        <!-- ~3-4세기: 바흐샬리 사본 (시작 전 표시, 점선) -->
+        <line class="stem" x1="60" y1="100" x2="60" y2="80" stroke-dasharray="2 2"/>
+        <circle cx="60" cy="100" r="3.5" fill="#554a8a"/>
+        <text class="evtY" x="60" y="72" text-anchor="start">~3–7세기</text>
+        <text class="evt"  x="60" y="60" text-anchor="start">바흐샬리 사본 · 점으로서의 0</text>
+
+        <!-- 628 브라마굽타 -->
+        <line class="stem" x1="336.5" y1="106" x2="336.5" y2="50"/>
+        <circle cx="336.5" cy="106" r="4" fill="#554a8a"/>
+        <text class="evtY" x="336.5" y="42" text-anchor="middle">628</text>
+        <text class="evt"  x="336.5" y="28" text-anchor="middle">브라마굽타 Brāhmasphuṭasiddhānta</text>
+
+        <!-- 820년경 알 콰리즈미 al-Jabr -->
+        <line class="stem" x1="569.25" y1="106" x2="569.25" y2="64"/>
+        <circle cx="569.25" cy="106" r="4" fill="#554a8a"/>
+        <text class="evtY" x="569.25" y="56" text-anchor="middle">~820</text>
+        <text class="evt"  x="569.25" y="42" text-anchor="middle">알 콰리즈미 Kitāb al-Jabr</text>
+
+        <!-- 825 알 콰리즈미 인도식 산술 -->
+        <line class="stem" x1="575.31" y1="140" x2="575.31" y2="166"/>
+        <circle cx="575.31" cy="140" r="4" fill="#554a8a"/>
+        <text class="evt"  x="580" y="168">인도 숫자 산술서 (라틴어 번역으로 algorism 어원)</text>
+
+        <!-- 1070 하이얌 -->
+        <line class="stem" x1="872.25" y1="106" x2="872.25" y2="56"/>
+        <circle cx="872.25" cy="106" r="4" fill="#554a8a"/>
+        <text class="evtY" x="872.25" y="48" text-anchor="middle">~1070</text>
+        <text class="evt"  x="872.25" y="34" text-anchor="middle">오마르 하이얌 3차방정식 기하해</text>
+
+        <!-- 1202 피보나치 Liber Abaci -->
+        <line class="stem" x1="1032" y1="106" x2="1032" y2="76"/>
+        <circle cx="1032" cy="106" r="4" fill="#554a8a"/>
+        <text class="evtY" x="1032" y="68" text-anchor="end">1202</text>
+        <text class="evt"  x="1032" y="56" text-anchor="end">피보나치 Liber Abaci</text>
+
+        <!-- 1145 알 콰리즈미 라틴어 번역 (체스터의 로버트) -->
+        <line class="stem" x1="963.06" y1="140" x2="963.06" y2="158"/>
+        <circle cx="963.06" cy="140" r="3.5" fill="#554a8a"/>
+        <text class="evt"  x="963.06" y="170" text-anchor="middle">1145 · 체스터의 로버트, al-Jabr 라틴어 번역</text>
+      </svg>
+      </div>
+    </section>
+
+    <!-- ===== 챕터 1 — 자리값과 0의 탄생 ===== -->
+    <section class="chapter" id="ch1">
+      <header class="chapter__head">
+        <span class="chapter__num">제1장</span>
+        <h2 class="chapter__title">자리값과 0의 탄생 <span class="latin">A Dot for Nothing</span></h2>
+        <p class="chapter__years">~AD 400 — 628 · 인도, 굽타에서 후기굽타까지</p>
+      </header>
+      <div class="narrative">
+        <p class="dropcap ko">셈은 인류만큼 오래되었지만, <em>없음</em>을 적는 일은 그렇지 않았다. 로마인은 그것을 적지 않았다 — 적을 필요가 없었기 때문이다. 그들의 숫자에서 207은 <em>CCVII</em>로 적혔고, 그 사이에 비어 있는 십의 자리는 그저 비어 있을 뿐 따로 기호를 받지 못했다. <em>없음</em>은 수가 아니었다.</p>
+        <p>그 생각이 처음 흔들린 자리는 인도였다. 인도의 수학자들은 위치에 따라 같은 기호가 다른 값을 갖는 <em>자리값</em>을 받아들이고 있었고, 그러자 한 가지 문제가 생겼다 — 자리가 비어 있을 때 무엇을 적을 것인가. 그들은 그 자리에 <em>점 하나</em>를 찍었다.</p>
+        <aside class="inline-scene">
+          <div class="inline-scene__pictogram"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="56" height="56" fill="#f5efe0"/>
+            <rect x="6" y="14" width="44" height="30" fill="#e8dfc8" stroke="#a09078" stroke-width="0.6"/>
+            <line x1="6" y1="20" x2="50" y2="20" stroke="#a09078" stroke-width="0.3"/>
+            <line x1="6" y1="26" x2="50" y2="26" stroke="#a09078" stroke-width="0.3"/>
+            <line x1="6" y1="32" x2="50" y2="32" stroke="#a09078" stroke-width="0.3"/>
+            <line x1="6" y1="38" x2="50" y2="38" stroke="#a09078" stroke-width="0.3"/>
+            <text x="12" y="32" font-family="serif" font-size="10" fill="#554a8a">2</text>
+            <circle cx="22" cy="29" r="1.2" fill="#554a8a"/>
+            <text x="30" y="32" font-family="serif" font-size="10" fill="#554a8a">7</text>
+            <text x="40" y="32" font-family="serif" font-size="10" fill="#554a8a">9</text>
+          </svg></div>
+          <div>
+            <div class="inline-scene__meta">
+              <time datetime="0400">~3–7세기</time>
+              <span class="place">바흐샬리 · 지금의 파키스탄</span>
+            </div>
+            <div class="inline-scene__body">
+              <strong>바흐샬리 자작나무 껍질에 찍힌 점</strong>
+              1881년 파키스탄의 한 농부가 자기 밭에서 자작나무 껍질 70여 장의 묶음을 캐낸다. 산스크리트로 쓴 산술 교본 — <em>바흐샬리 사본</em>이다. 그 안에 자리가 빈 곳에 <em>점</em>이 찍혀 있다. 그것이 우리가 아는 0의 가장 이른 표기로 추정된다. 2017년 옥스퍼드의 방사성탄소 측정은 한 페이지가 3~4세기까지 올라간다 발표했지만, 2024년 학내 재검토에서 묶음 안 페이지마다 시기가 다르다는 결론이 나와 현재는 <em>3세기에서 10세기 사이</em>로 폭이 넓다. 어느 쪽이든, 0은 이렇게 <em>점</em>으로 시작했다.
+              <span class="source">Bodleian Libraries (Oxford) 보도자료 · Wikipedia "Bakhshali manuscript"</span>
+            </div>
+          </div>
+        </aside>
+        <p>이 점은 곧 작은 원이 된다. 9세기경 인도 중부 괄리오르의 한 사원 벽에 <em>270</em>이라는 숫자가 새겨져 있는데, 그 0은 이미 우리가 쓰는 동그라미와 같은 모양이다. 점이 원이 되는 데 다시 500년이 걸린 셈이다.</p>
+        <p>그러나 <em>기호</em>로서의 0과 <em>수</em>로서의 0은 다른 문제다. 자리가 빈 것을 표시하는 점은, 아직 <em>수</em>가 아니다. 그것을 수로 만든 사람은 따로 있다.</p>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 2 — 브라마굽타의 세 줄 ===== -->
+    <section class="chapter" id="ch2">
+      <header class="chapter__head">
+        <span class="chapter__num">제2장</span>
+        <h2 class="chapter__title">브라마굽타의 세 줄 <span class="latin">Brahmagupta's Three Lines</span></h2>
+        <p class="chapter__years">628 · 인도 빈말, 우자인 천문대</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure">
+          <div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="88" height="96" fill="#f5efe0"/>
+            <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#5a3a28"/>
+            <path d="M 30 64 Q 44 78 58 64 L 56 64 Q 44 74 32 64 Z" fill="#faf6eb" stroke="#a09078" stroke-width="0.4"/>
+            <rect x="38" y="56" width="12" height="10" fill="#c69a72"/>
+            <ellipse cx="44" cy="42" rx="14" ry="17" fill="#c69a72"/>
+            <path d="M 26 36 Q 26 22 44 20 Q 62 22 62 36 L 60 32 Q 56 28 44 28 Q 32 28 28 32 Z" fill="#2a1f18"/>
+            <ellipse cx="44" cy="22" rx="6" ry="4" fill="#d4a850" opacity="0.7"/>
+            <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/>
+            <circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+            <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+            <path d="M 36 56 Q 44 60 52 56 Q 50 60 44 60 Q 38 60 36 56 Z" fill="#3a2820"/>
+          </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">브라마굽타</span>
+            <span class="inline-figure__name-en">Brahmagupta</span>
+            <span class="inline-figure__life">598 — 668</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko">바흐샬리의 점이 어떤 책의 한 줄에 자리잡았을 때, 그것은 비로소 수가 되었다. 628년, 30세의 인도 천문학자 <strong>브라마굽타</strong>가 빈말(현재 라자스탄)에서 한 권의 책을 완성했다. 제목은 <span class="work">Brāhmasphuṭasiddhānta</span> — 굳이 옮기면 <em>브라마교의 올바르게 확립된 교의</em>다. 본업은 천문학이었고, 따라서 그것은 천문서였다. 그러나 그 책의 18장은 천문학과 무관한 — 그러나 천문 계산에 필요한 — <em>수의 규칙</em>에 관한 것이었다.</p>
+        <p>그가 한 일은 간단하게 말하면 다음 세 가지였다. 첫째, 0을 수로 인정했다. 둘째, 음수(그는 <em>빚</em>이라 불렀다)도 수로 인정했다. 셋째, 그 두 종류의 새 수를 가지고 사칙연산의 규칙을 적었다.</p>
+        <blockquote class="pull">
+          A debt minus zero is a debt. A fortune minus zero is a fortune. Zero minus zero is a zero.
+          <span class="attr">— 브라마굽타, Brāhmasphuṭasiddhānta 제18장 (628) · Colebrooke 영역 (1817)</span>
+        </blockquote>
+        <p>이 문장이 인류 역사상 0이 수로 등장한 첫 자리다. 그 전에는 어디에도 적혀 있지 않았다 — 그저 자리가 비어 있다는 <em>표시</em>로만 존재했지, 더하고 빼고 곱할 수 있는 <em>대상</em>은 아니었던 것이다.</p>
+        <p>브라마굽타는 더 나아가 음수의 규칙도 적었다. 양수 곱하기 음수는 음수, 음수 곱하기 음수는 양수. 우리가 중학교에서 <em>왜 음수 곱하기 음수가 양수냐</em>고 물을 때 마주치는 그 규칙이, 7세기 인도의 한 천문서 안에 이미 있다. 단, 그는 한 가지를 잘못 적었다 — <em>0 나누기 0은 0</em>이라 했다. 그것은 12세기 인도의 또 다른 수학자 바스카라가 다시 따져 <em>정의되지 않는다</em>로 수정한다.</p>
+        <aside class="inline-scene">
+          <div class="inline-scene__pictogram"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="56" height="56" fill="#f5efe0"/>
+            <circle cx="20" cy="28" r="10" fill="none" stroke="#554a8a" stroke-width="1"/>
+            <line x1="20" y1="20" x2="20" y2="36" stroke="#554a8a" stroke-width="0.7"/>
+            <line x1="12" y1="28" x2="28" y2="28" stroke="#554a8a" stroke-width="0.7"/>
+            <text x="42" y="22" font-family="serif" font-size="10" fill="#554a8a">+</text>
+            <text x="42" y="32" font-family="serif" font-size="10" fill="#554a8a">-</text>
+            <text x="42" y="42" font-family="serif" font-size="10" fill="#554a8a">0</text>
+          </svg></div>
+          <div>
+            <div class="inline-scene__meta">
+              <time datetime="0628">628년</time>
+              <span class="place">빈말 · 인도 라자스탄</span>
+            </div>
+            <div class="inline-scene__body">
+              <strong>천문서 안에 숨은 수의 규칙</strong>
+              <span class="work">Brāhmasphuṭasiddhānta</span>는 총 24장의 천문 서적이다. 행성의 위치 계산, 일식·월식 예측, 천문 기기 사용법이 본문의 대부분이다. 그러나 18장 <em>쿠타카</em>(Kuṭṭaka, '분쇄자')는 부정방정식을 다루며, 그 도중에 0과 음수의 연산 규칙이 적힌다. 수론 자체를 위한 책이 아니라 <em>천문 계산에 필요한 도구</em>로 등장한 것. 7세기 인도에서 수학은 늘 천문학의 부록이었다.
+              <span class="source">MacTutor "Brahmagupta" · IJFMR 2024</span>
+            </div>
+          </div>
+        </aside>
+        <p>이 책은 200년 뒤 인도에서 페르시아로, 페르시아에서 바그다드로 흘러간다. 8세기 후반 압바스 왕조의 칼리프 알 만수르의 궁정에 인도 사절단이 도착했을 때, 그들이 함께 가져온 책 중 하나가 바로 이 책이었다. 바그다드의 학자들이 그것을 아랍어로 옮기면서, 점이 작은 원이 되고, 음수가 받아들여지고, 자리값이 자리잡는다. 그리고 그 자리에서 또 한 사람이 등장한다.</p>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 3 — 지혜의 집과 알 콰리즈미 ===== -->
+    <section class="chapter" id="ch3">
+      <header class="chapter__head">
+        <span class="chapter__num">제3장</span>
+        <h2 class="chapter__title">지혜의 집과 알 콰리즈미 <span class="latin">The House of Wisdom</span></h2>
+        <p class="chapter__years">~820년 · 바그다드, 바이트 알 히크마</p>
+      </header>
+      <div class="narrative">
+        <p class="dropcap ko">바그다드는 762년 압바스 왕조의 두 번째 칼리프 알 만수르가 티그리스 강변에 새로 세운 계획 도시였다. 원형 도시, 가운데 궁전, 사방으로 뻗는 도로. 칼리프 알 만수르의 손자 <em>알 마문</em>(재위 813~833)에 이르러 그곳에는 <em>바이트 알 히크마</em>(<span class="work">بيت الحكمة</span>, 지혜의 집)라 불리는 도서관 겸 번역소가 자리잡는다.</p>
+        <p>그곳에서 그리스의 유클리드와 프톨레마이오스가 아랍어로 옮겨졌고, 인도의 브라마굽타가 아랍어로 옮겨졌고, 페르시아의 사산조 문서가 아랍어로 옮겨졌다. 한 세대 동안 인류가 그때까지 적은 수학과 천문학의 거의 모든 것이 한 도시의 한 건물 안에 모인다. <em>지혜의 집의 정확한 성격은 학계 논쟁 중이지만</em>(번역소였는지, 도서관이었는지, 그저 칼리프의 개인 서고였는지), 9세기 바그다드가 그런 종류의 지적 집결지였음은 분명하다.</p>
+        <figure class="inline-figure inline-figure--left">
+          <div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="88" height="96" fill="#f5efe0"/>
+            <path d="M 6 96 Q 6 68 26 62 L 62 62 Q 82 68 82 96 Z" fill="#3a2820"/>
+            <path d="M 22 62 L 22 78 L 32 72 L 32 62 Z M 56 62 L 56 72 L 66 78 L 66 62 Z" fill="#faf6eb" stroke="#a09078" stroke-width="0.4"/>
+            <rect x="38" y="54" width="12" height="10" fill="#c89a6e"/>
+            <ellipse cx="44" cy="40" rx="14" ry="17" fill="#c89a6e"/>
+            <!-- turban -->
+            <path d="M 22 34 Q 18 22 28 16 Q 44 10 60 16 Q 70 22 66 34 Q 60 28 44 28 Q 28 28 22 34 Z" fill="#e8dfc8"/>
+            <path d="M 24 30 Q 30 26 44 26 Q 58 26 64 30" stroke="#a09078" stroke-width="0.4" fill="none"/>
+            <path d="M 26 36 L 26 40 Q 30 38 36 38 L 52 38 Q 58 38 62 40 L 62 36 Q 54 32 44 32 Q 34 32 26 36 Z" fill="#5a4030"/>
+            <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/>
+            <circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+            <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+            <path d="M 30 51 Q 36 54 44 54 Q 52 54 58 51" stroke="#3a2820" stroke-width="0.8" fill="none"/>
+            <path d="M 38 56 Q 44 60 50 56" stroke="#3a2820" stroke-width="0.8" fill="none"/>
+          </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">알 콰리즈미</span>
+            <span class="inline-figure__name-en">al-Khwārizmī</span>
+            <span class="inline-figure__life">~780 — ~850</span>
+          </figcaption>
+        </figure>
+        <p>그 지혜의 집에 한 페르시아 출신의 학자가 있었다. <strong>무함마드 이븐 무사 알 콰리즈미</strong>. 출신지가 호라즘(지금의 우즈베키스탄 일부)이라 그렇게 불렸다. 본업은 천문학자이자 지리학자였고, 알 마문 칼리프의 명으로 인도 산술과 그리스 기하를 정리하는 일을 했다.</p>
+        <p>820년대 어느 무렵, 그는 한 권의 책을 적는다. 제목이 <span class="work">Kitāb al-mukhtaṣar fī ḥisāb al-jabr wa-l-muqābala</span>(완성과 대조에 의한 계산의 요약서)다. 줄여서 <em>al-Jabr</em>. 그 책에서 그는 일차·이차방정식을 푸는 일반적인 절차를 처음으로 적었다. 단, <em>식</em>이 없었다 — 등호도, x도, 계수도, 모두 말로 적혔다. "어떤 수의 제곱과 그 수의 열 배가 39와 같으면…" 이런 식으로.</p>
+        <blockquote class="pull ko">
+          내가 본 것 가운데 가장 좋고 가장 우아한 것, 사람들이 자기 일과 자기 유산을 다루는 데 늘 필요한 것 — 그것을 모은 책을 쓰기로 결심했다.
+          <span class="attr">— 알 콰리즈미, al-Jabr 서문 · 의역</span>
+        </blockquote>
+        <p>그가 푸는 방식은 <em>기하학적</em>이었다. <em>x² + 10x = 39</em> 같은 방정식을, 그는 한 변이 x인 정사각형 옆에 가로 10·세로 x의 직사각형 두 조각을 붙인 다음 모서리를 정사각형으로 <em>완성</em>해 푸는 방식으로 적었다. 우리가 지금도 학교에서 배우는 <em>완전제곱식 만들기</em>의 원형이다. 그 행위에 그가 붙인 이름이 <em>al-jabr</em>(완성·복원)이었다. 그 책이 12세기에 라틴어로 옮겨질 때 <em>al-jabr</em>은 그대로 <em>algebra</em>가 된다.</p>
+        <aside class="inline-scene">
+          <div class="inline-scene__pictogram"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="56" height="56" fill="#f5efe0"/>
+            <rect x="10" y="18" width="22" height="22" fill="#554a8a" opacity="0.3" stroke="#554a8a" stroke-width="0.8"/>
+            <rect x="32" y="18" width="14" height="22" fill="#554a8a" opacity="0.15" stroke="#554a8a" stroke-width="0.8" stroke-dasharray="2 1"/>
+            <rect x="10" y="40" width="22" height="6" fill="#554a8a" opacity="0.15" stroke="#554a8a" stroke-width="0.8" stroke-dasharray="2 1"/>
+            <text x="21" y="32" font-family="serif" font-size="9" fill="#1f1a14" text-anchor="middle">x²</text>
+            <text x="39" y="32" font-family="serif" font-size="8" fill="#1f1a14" text-anchor="middle">5x</text>
+            <text x="21" y="45" font-family="serif" font-size="8" fill="#1f1a14" text-anchor="middle">5x</text>
+          </svg></div>
+          <div>
+            <div class="inline-scene__meta">
+              <time datetime="0820">~820년</time>
+              <span class="place">바그다드 · 지혜의 집</span>
+            </div>
+            <div class="inline-scene__body">
+              <strong>정사각형을 완성하다</strong>
+              알 콰리즈미가 <em>x² + 10x = 39</em>를 푸는 방법을 도판으로 보일 때, 그는 그저 <em>완성</em>이라는 동작을 말 그대로 그림으로 보였다. 정사각형 x² 옆에 가로 5의 직사각형 둘을 붙이고, 비어 있는 모서리 5×5의 자리에 <em>25</em>를 더해 큰 정사각형을 완성한다. 그러면 큰 정사각형은 (x+5)² = 39 + 25 = 64, 따라서 x + 5 = 8, x = 3. 이 행위가 <em>al-jabr</em>의 원래 의미였다 — <em>모자란 자리를 채워 복원하기</em>.
+              <span class="source">MacTutor "al-Khwarizmi" · Britannica</span>
+            </div>
+          </div>
+        </aside>
+        <p>알 콰리즈미는 또 한 권의 책을 적었다 — 인도의 자릿값 체계를 아랍어로 정리한 책이다. 원본은 잃어버렸지만, 12세기 라틴어 번역이 남아 있다. 그 라틴어 번역에서 그의 이름 <em>al-Khwārizmī</em>가 <em>Algoritmi</em>로 옮겨졌고, 그것을 따라 "이 사람이 가르치는 방식대로 계산하기"가 <em>algorism</em>이 되었고, 마침내 <em>algorithm</em>이 되었다. 지금 두 아이가 매일 쓰는 컴퓨터의 모든 계산 절차의 이름이, 9세기 한 페르시아 사람의 이름이다.</p>
+        <p>이 자리에서 한 가지를 직접 만져보면 좋다. 0과 자리값이 들어오기 전, 사람들은 무엇으로 곱셈을 했던가. 로마 숫자로 27 × 38을 곱하는 일이 얼마나 힘든 일이었던가. 그리고 우리가 학교에서 배운 <em>세로로 줄 맞춰 곱하기</em>가 얼마나 강력한 발명품이었던가.</p>
+
+        <aside class="inline-sim">
+          <div class="inline-sim__head">
+            <span class="num">시뮬 1</span>
+            <h4>로마 숫자 vs 아라비아 숫자 — 곱셈 대결</h4>
+            <span class="latin">Roman vs Arabic</span>
+          </div>
+          <p class="inline-sim__lead">같은 곱셈을 두 가지 표기로 풀어본다. 왼쪽은 로마 숫자(자리값 없음·0 없음)로, 오른쪽은 인도-아라비아 숫자로. 자리값과 0이 <em>왜</em> 혁명이었는지, 직접 손가락으로 느껴진다.</p>
+          <div class="sim" data-sim-id="roman-vs-arabic"></div>
+        </aside>
+
+        <p>알 콰리즈미의 두 책은 그를 살아 있는 동안에는 그저 칼리프의 학자 중 하나로 만들었다. 그러나 죽고 300년이 지난 12세기에, 두 책 모두 한 명의 영국인에 의해 라틴어로 옮겨진다 — 1145년 체스터의 로버트가 <span class="work">al-Jabr</span>을, 비슷한 시기에 다른 번역자가 <span class="work">산술</span>을. 유럽이 이 두 책을 읽기 시작했을 때, 800년 전 인도의 점과 200년 전 바그다드의 정사각형이 함께 도착한 셈이었다.</p>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 4 — 하이얌의 기하해 ===== -->
+    <section class="chapter" id="ch4">
+      <header class="chapter__head">
+        <span class="chapter__num">제4장</span>
+        <h2 class="chapter__title">하이얌의 기하해 <span class="latin">Khayyam Cuts the Cube</span></h2>
+        <p class="chapter__years">1070년경 · 페르시아 사마르칸트와 이스파한</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure">
+          <div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="88" height="96" fill="#f5efe0"/>
+            <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#2a2018"/>
+            <path d="M 20 64 L 20 78 L 30 72 L 30 64 Z M 58 64 L 58 72 L 68 78 L 68 64 Z" fill="#faf6eb" stroke="#a09078" stroke-width="0.4"/>
+            <rect x="38" y="56" width="12" height="10" fill="#c69a72"/>
+            <ellipse cx="44" cy="40" rx="14" ry="17" fill="#c69a72"/>
+            <path d="M 22 32 Q 18 18 28 12 Q 44 6 60 12 Q 70 18 66 32 Q 60 22 44 22 Q 28 22 22 32 Z" fill="#5a3a28"/>
+            <path d="M 28 28 Q 34 26 44 26 Q 54 26 60 28" stroke="#3a2418" stroke-width="0.5" fill="none"/>
+            <path d="M 26 36 L 26 42 Q 30 38 36 38 L 52 38 Q 58 38 62 42 L 62 36 Q 54 32 44 32 Q 34 32 26 36 Z" fill="#3a2418"/>
+            <line x1="38" y1="40" x2="42" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <line x1="46" y1="40" x2="50" y2="40" stroke="#1f1a14" stroke-width="0.6"/>
+            <circle cx="40" cy="43" r="0.7" fill="#1f1a14"/>
+            <circle cx="48" cy="43" r="0.7" fill="#1f1a14"/>
+            <path d="M 44 44 L 43 49 L 45 49 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+            <path d="M 30 51 Q 36 54 44 54 Q 52 54 58 51" stroke="#3a2418" stroke-width="0.7" fill="none"/>
+            <path d="M 32 54 L 30 60 L 38 58 L 36 56 Z M 56 54 L 58 60 L 50 58 L 52 56 Z" fill="#3a2418"/>
+            <path d="M 38 58 Q 44 62 50 58" stroke="#3a2418" stroke-width="0.6" fill="none"/>
+          </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">오마르 하이얌</span>
+            <span class="inline-figure__name-en">Omar Khayyām</span>
+            <span class="inline-figure__life">1048 — 1131</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko">알 콰리즈미의 책에서 이차방정식이 풀렸다. 그러나 삼차방정식은 풀리지 않은 채 200년을 갔다. 그것을 손에 잡은 사람이 페르시아 동부 호라산의 한 도시 니샤푸르에서 태어난 <strong>오마르 하이얌</strong>이다. 1048년 출생, 1131년 사망.</p>
+        <p>그는 한 인물이 아니라 <em>네 인물</em>이었다. 첫째, 천문학자였다 — 1074년 셀주크 술탄 말리크 샤의 명으로 이스파한 천문대에서 <em>잘랄리 달력</em>을 제정한다. 그것은 그레고리력보다 500년 먼저 만들어졌고, 정확도는 비슷하다. 둘째, 시인이었다 — 그의 <span class="work">루바이야트</span>(4행시 모음)는 19세기 영국의 에드워드 피츠제럴드의 영역으로 전 세계에 퍼진다. 셋째, 철학자였다. 그리고 넷째 — 우리가 여기서 다루는 — <em>수학자</em>였다.</p>
+        <p>그의 수학적 업적은 1070년경 사마르칸트에서 적은 <span class="work">대수 문제의 증명에 관한 논고</span>(<span class="work">Risāla fīʾl-barāhīn ʿalā masāʾil al-jabr wa-l-muqābala</span>) 한 권에 들어 있다. 그 책에서 그는 삼차방정식 <em>14가지</em>를 모두 분류하고, 각각에 대해 <em>원뿔곡선의 교점</em>으로 해를 찾는 방법을 적었다.</p>
+        <aside class="inline-scene">
+          <div class="inline-scene__pictogram"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="56" height="56" fill="#f5efe0"/>
+            <circle cx="28" cy="32" r="14" fill="none" stroke="#554a8a" stroke-width="0.8"/>
+            <path d="M 14 32 Q 28 8 42 32" fill="none" stroke="#554a8a" stroke-width="1.2"/>
+            <circle cx="20" cy="38" r="1.4" fill="#554a8a"/>
+            <circle cx="38" cy="36" r="1.4" fill="#554a8a"/>
+            <line x1="6" y1="32" x2="50" y2="32" stroke="#a09078" stroke-width="0.4"/>
+            <line x1="28" y1="6" x2="28" y2="50" stroke="#a09078" stroke-width="0.3" stroke-dasharray="1 2"/>
+          </svg></div>
+          <div>
+            <div class="inline-scene__meta">
+              <time datetime="1070">1070년경</time>
+              <span class="place">사마르칸트 · 카라한조</span>
+            </div>
+            <div class="inline-scene__body">
+              <strong>두 곡선이 만나는 자리</strong>
+              하이얌은 <em>x³ + bx = c</em> 같은 방정식을 풀기 위해 한 가지를 했다 — 평면에 <em>포물선</em> 하나와 <em>원</em> 하나를 그리고, 그 두 곡선이 만나는 점의 x좌표를 답으로 읽었다. 대수의 답을 기하의 그림으로 찾은 것이다. 그는 그 답을 <em>수</em>로 적을 수는 없었다 — 그 방법은 500년 뒤 카르다노·페라리·타르탈리아가 만들 것이고, 그것을 일반화한 사차방정식의 답은 또 200년 뒤 갈루아가 그 너머의 한계를 증명한다.
+              <span class="source">MacTutor "Omar Khayyam" · MAA Convergence</span>
+            </div>
+          </div>
+        </aside>
+        <p>한 가지 더 그가 한 일이 있다. 유클리드의 <em>제5공준</em>(평행선 공준)을 증명하려 한 것이다. 천 년 동안 수많은 학자가 시도하고 실패한 그 일을, 그도 시도하고 실패했다. 그러나 그 시도 안에서 그는 <em>제5공준이 부정될 경우의 기하학</em>을 적었다 — 그것이 비유클리드 기하학의 첫 정의된 흔적이라는 평가가 있다. 그것이 본격적으로 자리잡는 것은 800년 뒤 가우스·로바쳅스키·보여이에 이르러서다(§ VI).</p>
+        <p>1092년 그의 후원자 말리크 샤가 죽고, 이스파한 천문대가 폐쇄된다. 하이얌은 그 후 메카 순례를 다녀온 뒤 고향 니샤푸르로 돌아가 조용한 노년을 보냈다. 1131년 사망. 그의 무덤은 지금도 니샤푸르에 있고, 무덤 위에 그의 4행시가 새겨져 있다.</p>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 5 — 피보나치, 유럽으로 ===== -->
+    <section class="chapter" id="ch5">
+      <header class="chapter__head">
+        <span class="chapter__num">제5장</span>
+        <h2 class="chapter__title">피보나치, 유럽으로 <span class="latin">The Book Lands in Pisa</span></h2>
+        <p class="chapter__years">1202 · 이탈리아 피사, 그리고 북아프리카의 항구 베자이아</p>
+      </header>
+      <div class="narrative">
+        <figure class="inline-figure inline-figure--left">
+          <div class="inline-figure__portrait"><svg viewBox="0 0 88 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="88" height="96" fill="#f5efe0"/>
+            <path d="M 6 96 Q 6 70 26 64 L 62 64 Q 82 70 82 96 Z" fill="#3a2820"/>
+            <path d="M 30 64 L 44 80 L 58 64 L 52 64 L 44 72 L 36 64 Z" fill="#faf6eb" stroke="#a09078" stroke-width="0.4"/>
+            <rect x="38" y="56" width="12" height="10" fill="#d2b48c"/>
+            <ellipse cx="44" cy="42" rx="14" ry="17" fill="#d2b48c"/>
+            <path d="M 24 36 Q 24 22 44 20 Q 64 22 64 36 L 60 40 Q 54 32 44 32 Q 34 32 28 40 Z" fill="#2a1f18"/>
+            <ellipse cx="44" cy="22" rx="6" ry="3" fill="#5a4030"/>
+            <path d="M 28 40 L 28 46 Q 34 42 38 42 L 50 42 Q 54 42 60 46 L 60 40 Z" fill="#2a1f18"/>
+            <line x1="38" y1="42" x2="42" y2="42" stroke="#1f1a14" stroke-width="0.6"/>
+            <line x1="46" y1="42" x2="50" y2="42" stroke="#1f1a14" stroke-width="0.6"/>
+            <circle cx="40" cy="45" r="0.7" fill="#1f1a14"/>
+            <circle cx="48" cy="45" r="0.7" fill="#1f1a14"/>
+            <path d="M 44 46 L 43 51 L 45 51 Z" fill="none" stroke="#a08060" stroke-width="0.5"/>
+            <line x1="41" y1="54" x2="47" y2="54" stroke="#7a4030" stroke-width="0.6"/>
+          </svg></div>
+          <figcaption class="inline-figure__caption">
+            <span class="inline-figure__name">레오나르도 피사노 (피보나치)</span>
+            <span class="inline-figure__name-en">Leonardo of Pisa</span>
+            <span class="inline-figure__life">~1170 — ~1250</span>
+          </figcaption>
+        </figure>
+        <p class="dropcap ko">알 콰리즈미의 책이 12세기 라틴어로 옮겨졌어도, 유럽은 아직 인도-아라비아 숫자를 일상적으로 쓰지 않았다. 회계는 여전히 로마 숫자였고, 계산은 주판(<em>abacus</em>)이었다. 그것을 바꾼 책 한 권이 1202년에 출판된다.</p>
+        <p>저자는 피사의 상인 굴리엘모의 아들이었다. 굴리엘모가 12세기 후반 북아프리카 베자이아(현 알제리, 당시 부지)의 피사 상관 관세관으로 부임하면서, 청년이던 아들도 그곳에 따라간다. 거기서 그는 아랍 상인들의 회계를 보았다. 자리값과 0, 인도-아라비아 숫자, 그리고 단번에 적히는 곱셈. 그는 그것을 배웠다. 이름은 <strong>레오나르도 피사노</strong> — 후대에 그는 <em>피보나치</em>(Filius Bonacci, 보나치의 아들)라 불리게 된다.</p>
+        <p>그가 30대에 피사로 돌아와 자기가 배운 것을 정리해 적은 책이 <span class="work">Liber Abaci</span>(산반서, 1202)다. <em>abaci</em>는 주판이라는 뜻이지만 — 역설적으로 — 그 책은 <em>주판을 버리고 종이 위에서 계산하라</em>는 책이었다.</p>
+        <blockquote class="pull">
+          The nine Indian figures are: 9 8 7 6 5 4 3 2 1. With these nine figures, and with the sign 0 … any number may be written.
+          <span class="attr">— 피보나치, Liber Abaci 제1장 첫 문장 (1202) · 의역</span>
+        </blockquote>
+        <p>이 한 문장에서 인도-아라비아 숫자가 유럽에 공식적으로 도착했다. 책에는 자리값 표기, 0의 사용, 더하기·빼기·곱하기·나누기 절차, 분수, 비례, 환전 환산표, 거리 계산, 그리고 — 여러 응용 문제가 들어 있었다. 그중 한 문제가 12장에 들어 있다.</p>
+        <aside class="inline-scene">
+          <div class="inline-scene__pictogram"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="56" height="56" fill="#f5efe0"/>
+            <circle cx="14" cy="32" r="6" fill="#d8d0c0" stroke="#5a3a28" stroke-width="0.5"/>
+            <ellipse cx="11" cy="26" rx="2" ry="3" fill="#d8d0c0" stroke="#5a3a28" stroke-width="0.4"/>
+            <ellipse cx="17" cy="26" rx="2" ry="3" fill="#d8d0c0" stroke="#5a3a28" stroke-width="0.4"/>
+            <circle cx="11" cy="32" r="0.5" fill="#1f1a14"/>
+            <circle cx="17" cy="32" r="0.5" fill="#1f1a14"/>
+            <circle cx="32" cy="34" r="5" fill="#d8d0c0" stroke="#5a3a28" stroke-width="0.5"/>
+            <ellipse cx="30" cy="29" rx="1.6" ry="2.4" fill="#d8d0c0" stroke="#5a3a28" stroke-width="0.4"/>
+            <ellipse cx="34" cy="29" rx="1.6" ry="2.4" fill="#d8d0c0" stroke="#5a3a28" stroke-width="0.4"/>
+            <circle cx="44" cy="36" r="4" fill="#d8d0c0" stroke="#5a3a28" stroke-width="0.5"/>
+            <text x="6" y="50" font-family="serif" font-size="8" fill="#554a8a">1, 1, 2, 3, 5, 8 …</text>
+          </svg></div>
+          <div>
+            <div class="inline-scene__meta">
+              <time datetime="1202">1202년</time>
+              <span class="place">피사 · 이탈리아 토스카나</span>
+            </div>
+            <div class="inline-scene__body">
+              <strong>토끼 문제</strong>
+              "한 쌍의 토끼가 있다. 한 달이면 성숙해 다음 달부터 매달 한 쌍의 새끼를 낳는다. 새 쌍도 같은 방식. 1년 뒤 토끼 쌍은 몇 쌍인가?" — 답은 매달 <em>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233</em>. 각 항은 앞의 두 항을 더한 것이다. 후대에 이것이 <em>피보나치 수열</em>로 불리지만, 사실 같은 수열은 그보다 훨씬 전 인도의 시작법(詩作法)·핑갈라의 산문 연구·헴찬드라의 12세기 음운론에서 이미 다뤄지고 있었다. 피보나치는 이름을 빌려준 사람이지, 만들어낸 사람은 아니다.
+              <span class="source">Liber Abaci 12장 · MAA Convergence</span>
+            </div>
+          </div>
+        </aside>
+        <p>피보나치의 책은 곧바로 유럽 상업에 퍼지지는 않았다. 한 세기가 더 걸렸다. 14세기 이탈리아 상인들이 본격적으로 인도-아라비아 숫자를 쓰기 시작하고, 15세기에 이르러서야 그것이 유럽 전역의 회계 표준이 된다. 그 과정에서 <em>0을 쓰지 말라</em>는 도시 조례도 있었다 — 1299년 피렌체의 환전상 조합은 0을 포함한 숫자가 <em>위조하기 쉽다</em>는 이유로 회계장부에 그것을 금지했다. 1을 7로 고치는 것보다 0을 6이나 9로 고치는 것이 더 쉽다는 것이다. 새 도구는 늘 그렇게 의심받으며 들어온다.</p>
+        <p>그러나 한 번 자리를 잡은 뒤 그것은 돌이킬 수 없었다. 르네상스 회계, 종교개혁 무렵의 인쇄 자본, 대항해 시대의 환전과 보험 — 그 모든 것이 0과 자리값 위에서 굴러갔다.</p>
+      </div>
+    </section>
+
+    <span class="chapter-divider">·  ·  ·</span>
+
+    <!-- ===== 챕터 6 — 세상이 어떻게 바뀌었나 ===== -->
+    <section class="chapter" id="ch6">
+      <header class="chapter__head">
+        <span class="chapter__num">제6장</span>
+        <h2 class="chapter__title">세상이 어떻게 바뀌었나 <span class="latin">Coda · What 0 and Algebra Made Possible</span></h2>
+        <p class="chapter__years">1200 이후 · 800년의 의미</p>
+      </header>
+      <div class="narrative">
+        <p>800년의 호흡이 닫혔다. 그 호흡이 남긴 것은 무엇인가.</p>
+        <p>첫째, <em>없음</em>이 수가 되었다. 그 전에는 적을 수 없었던 텅 빈 자리가 적힐 수 있게 되었다. 그것이 사소해 보인다면, 다음을 떠올려보자 — 0이 없으면 음수도 없다. 음수가 없으면 빚도, 손실도, 적자도, 음의 온도도, 좌표의 음의 영역도, 음의 가속도도 적을 수 없다. <em>없음</em>을 수로 인정한 한 줄이 어디로 이어졌는지는 끝이 없다.</p>
+        <p>둘째, 방정식을 푸는 일반 절차가 생겼다. 이전까지 수학은 <em>이 문제</em>의 답을 찾는 일이었다 — 이 길이, 이 넓이, 이 무게. 알 콰리즈미 이후 수학은 <em>이런 종류 문제 전체</em>를 푸는 절차를 찾는 일이 되었다. 한 문제의 답이 아니라 <em>한 종류 문제의 풀이법</em>. 그 추상화가 없었다면 데카르트의 좌표도, 뉴턴의 미적분도 자리를 잡을 곳이 없었을 것이다(§ IV).</p>
+        <p>셋째, 회계가 가능해졌다. 종이 위에서의 빠른 곱셈. 베네치아·피렌체의 복식부기, 안트베르펜·암스테르담의 환어음, 런던의 보험과 주식. 자본주의의 초기 골격이 모두 이 위에서 만들어졌다. 수학은 추상이지만, 그 추상이 도구가 되어 세계를 다시 짰다.</p>
+        <p>넷째, 한 가지 더. <em>지식이 한 곳에 머물지 않는다</em>는 사실을 이 시대만큼 분명하게 보여주는 시대는 드물다. 인도에서 점이 시작되었고, 페르시아에서 그것이 책이 되었고, 바그다드에서 책이 모였고, 안달루시아의 톨레도와 시칠리아에서 라틴어로 옮겨졌고, 피사에서 회계가 되었다. 한 문명이 다른 문명에서 배우는 일을, 800년이라는 긴 호흡으로 우리는 본 셈이다.</p>
+
+        <div class="legend-vs-fact">
+          <div class="legend-vs-fact__legend">
+            <h4>전설 · 자주 듣는 이야기</h4>
+            <p><strong>"피보나치 수열과 황금비는 자연 어디에나 있다."</strong></p>
+            <p>해바라기 씨의 나선, 솔방울의 비늘, 앵무조개의 껍데기, 나뭇잎의 배열, 인간 얼굴의 비율, 파르테논 신전, 모나리자, 신용카드 가로세로비 — 모든 것이 황금비를 따른다는 주장이 인터넷과 디자인 교과서에 흔하다. 자연이 신비롭게도 한 수학적 비율을 따른다는 이야기는 매력적이다.</p>
+          </div>
+          <div class="legend-vs-fact__fact">
+            <h4>사실 · 학계가 말하는 것</h4>
+            <p><strong>피보나치 수열 자체는 사실, 황금비 자연 일반화는 과장.</strong></p>
+            <p>해바라기와 솔방울의 나선 수가 <em>실제로</em> 연속된 피보나치 수인 경우가 많은 것은 사실이다 — 식물의 잎차례(phyllotaxis)에서 새 싹이 137.5도(황금각)로 자리잡으면 빛과 공간을 가장 효율적으로 차지하기 때문이다. 그러나 그것을 <em>모든 자연이 황금비를 따른다</em>로 일반화하는 것은 19세기 이후의 미학적 과장이다. 파르테논과 모나리자의 황금비는 사후 측정으로 끼워 맞춘 것이며, 인간 얼굴의 비율은 통계적으로 황금비와 의미 있게 다르다. 식물의 효율성은 사실, 그것을 우주 보편 법칙으로 만드는 것은 신화에 가깝다.</p>
+            <p class="legend-vs-fact__source" style="font-size:11px; color:var(--ink-mute); font-style:italic; margin-top:8px;">— Mario Livio <em>The Golden Ratio</em> (2002), Keith Devlin <em>The Man of Numbers</em> (2011), Stanford EP</p>
+          </div>
+        </div>
+
+        <p>800년 사이에 인도의 한 점과 바그다드의 한 정사각형이 만나 세계를 다시 적게 만들었다. 다음 시대는 그 위에 좌표를 그리고 미적분을 더할 것이다(§ IV). 그것이 가능해진 것은, 누군가가 먼저 <em>없음</em>을 수로 적기로 결심했기 때문이다.</p>
+      </div>
+    </section>
+
+    <!-- ===== 출처 메모 ===== -->
+    <section class="math-section" id="sources">
+      <header>
+        <h2>출처 메모</h2>
+        <span class="latin">§ VII &nbsp;·&nbsp; Citations</span>
+      </header>
+      <p class="lead">이 페이지의 모든 사실은 다음 출처에서 교차 확인되었다. 인용은 가능한 한 원전 또는 정평이 있는 영역(英譯)을 따랐고, 의역이면 명시했다. 시뮬레이션은 교육 목적의 <em>단순화 모형</em>이다.</p>
+
+      <div class="sources-note">
+        주요 출처 — MacTutor History of Mathematics (St Andrews) "Brahmagupta", "al-Khwarizmi", "Omar Khayyam", "Fibonacci"; Bodleian Libraries (Oxford) 바흐샬리 사본 보도자료(2017) 및 후속 학내 재검토(2024); Stanford Encyclopedia of Philosophy "Arabic and Islamic Philosophy of Mathematics"; MAA Convergence; Encyclopædia Britannica "Liber abaci"; Mario Livio <em>The Golden Ratio</em>(2002); Keith Devlin <em>The Man of Numbers</em>(2011). 자세한 목록은
+        <a href="../../research/math.html">/research/math.html</a>에서 추적할 수 있다(연구 아카이브 페이지는 § IV 컬렉션 완성과 함께 공개된다).
+      </div>
+    </section>
+
+    <nav class="era-pagination" aria-label="시대 간 이동">
+      <span class="empty prev">
+        <span class="dir">← 이전 시대</span>
+        <span class="title">§ II 증명을 발명하다 <span class="wip-mark">작성 중</span></span>
+        <span class="latin">Proof · BC 600 — AD 400</span>
+      </span>
+      <span class="empty next">
+        <span class="dir">다음 시대 →</span>
+        <span class="title">§ IV 자연의 언어 <span class="wip-mark">작성 중</span></span>
+        <span class="latin">Nature's Language · 1500 — 1750</span>
+      </span>
+    </nav>
+
+  </div>
+</main>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../../assets/shared/nav.js" defer></script>
+<script src="../../assets/shared/footer.js" defer></script>
+<script src="../../assets/math-history/interactives/sim-roman-vs-arabic.js" defer></script>
+</body>
+</html>
