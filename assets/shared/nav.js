@@ -97,7 +97,8 @@
         { href: 'insect-history/eras/02-permian.html',       label: '페름기',   eraKey: '02-permian' },
         { href: 'insect-history/eras/03-mesozoic.html',      label: '중생대',   eraKey: '03-mesozoic' },
         { href: 'insect-history/eras/04-society.html',       label: '사회성',   eraKey: '04-society' },
-        { href: 'insect-history/eras/05-resources.html',     label: '실크·꿀',  eraKey: '05-resources' }
+        { href: 'insect-history/eras/05-resources.html',     label: '실크·꿀',  eraKey: '05-resources' },
+        { href: 'insect-history/eras/06-history.html',       label: '질병·재해', eraKey: '06-history' }
       ]
     }
   };
