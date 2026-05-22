@@ -15,9 +15,9 @@
   --accent-soft: #6a9a7c;
 }
 
-/* ----- main + 페이지 컨테이너 (좁은 책 폭) ----- */
+/* ----- main + 페이지 컨테이너 (사이트 표준 1200px) ----- */
 main.insect { padding-bottom: 80px; }
-.insect-page { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+.insect-page { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
 
 /* ----- 일반 단락 / 인라인 보조 클래스 ----- */
 .insect-page p { margin: 0 0 19px; line-height: 1.92; font-size: 18px; color: var(--ink); }
@@ -635,8 +635,8 @@ h2.chap .en {
   .insect-timeline-scroll {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin: 0 -24px;
-    padding: 0 24px;
+    margin: 0 -28px;
+    padding: 0 28px;
   }
   .insect-timeline-scroll svg { min-width: 720px; width: 720px; }
 }
