@@ -1,6 +1,6 @@
 {
   "version": "1.1",
-  "lastUpdated": "2026-05-21",
+  "lastUpdated": "2026-05-22",
   "updates": [
     {
       "id": "upd-0001",
@@ -181,6 +181,86 @@
       "description": "§ VII 수학이 기계가 되다 작성. 수학사 7편 완결",
       "by": "Father + Claude Code",
       "details": "튜링 1936 계산 가능성부터 와일즈 1995 페르마의 마지막 정리. 애플 로고가 튜링을 추모한다는 도시전설은 공식 부인을 따라 분리. 인터랙티브 3개(튜링 기계·시저+공개키 RSA·정보 = 비트 스무고개)."
+    },
+    {
+      "id": "upd-0019",
+      "date": "2026-05-22",
+      "project": "insect",
+      "page": "insect.main",
+      "type": "creation",
+      "description": "§ V 곤충의 역사 컬렉션 신설 — Stage 1 (랜딩+1부 석탄기+프롤로그)",
+      "by": "Father + Claude Code",
+      "details": "템플릿 기반 빌드, 사이트 표준 1200px/16px 적용. 액센트 이끼 녹 #3a6b4e."
+    },
+    {
+      "id": "upd-0020",
+      "date": "2026-05-22",
+      "project": "insect",
+      "page": "insect.era.02-permian",
+      "type": "creation",
+      "description": "§ V · 02 페름기 말 — The Great Dying",
+      "by": "Father + Claude Code",
+      "details": "5 호흡 · 시뮬 2 · 학설 갈래(곤충 사망률). 시베리아 트랩·8-9개 목 멸종."
+    },
+    {
+      "id": "upd-0021",
+      "date": "2026-05-22",
+      "project": "insect",
+      "page": "insect.era.03-mesozoic",
+      "type": "creation",
+      "description": "§ V · 03 중생대 — 공룡과 함께, 꽃과의 약속",
+      "by": "Father + Claude Code",
+      "details": "5 호흡 · 시뮬 3 · 다윈 별난초 예언 1862 · 미얀마 호박 ~99 Mya · Holometabola"
+    },
+    {
+      "id": "upd-0022",
+      "date": "2026-05-22",
+      "project": "insect",
+      "page": "insect.era.04-society",
+      "type": "creation",
+      "description": "§ V · 04 신생대 사회성 — 작은 문명의 탄생",
+      "by": "Father + Claude Code",
+      "details": "5 호흡 · 시뮬 3 · 파브르·폰 프리슈·윌슨 · 진사회성 학설 갈래(혈연선택 vs 다층선택)"
+    },
+    {
+      "id": "upd-0023",
+      "date": "2026-05-22",
+      "project": "insect",
+      "page": "insect.era.05-resources",
+      "type": "creation",
+      "description": "§ V · 05 인간을 만나다 — 실크·꿀·염료",
+      "by": "Father + Claude Code",
+      "details": "4 호흡 · 시뮬 2 · 누에 5,000년 · 아라냐 동굴 8,000 BP · 코치닐. 평행 박스 3개"
+    },
+    {
+      "id": "upd-0024",
+      "date": "2026-05-22",
+      "project": "insect",
+      "page": "insect.era.06-history",
+      "type": "creation",
+      "description": "§ V · 06 역사를 뒤흔든 작은 존재들 — 질병·재해",
+      "by": "Father + Claude Code",
+      "details": "5 호흡 · 시뮬 3 · 로스 1897 · 흑사병 학설 갈래(쥐벼룩 vs 사람-사람)"
+    },
+    {
+      "id": "upd-0025",
+      "date": "2026-05-22",
+      "project": "insect",
+      "page": "insect.era.07-ecosystem",
+      "type": "creation",
+      "description": "§ V · 07 보이지 않는 일꾼들 — 생태계",
+      "by": "Father + Claude Code",
+      "details": "5 호흡 · 시뮬 3 · 베이츠 1862·뮐러 1879 · Klein 2007 수분 통계 갈래"
+    },
+    {
+      "id": "upd-0026",
+      "date": "2026-05-22",
+      "project": "insect",
+      "page": "insect.era.08-epilogue",
+      "type": "creation",
+      "description": "§ V · 에필로그 사라지는 곤충, 우리의 미래 (9개 시대 완성)",
+      "by": "Father + Claude Code",
+      "details": "4 호흡 · 시뮬 1 · Hallmann 2017 · Insectageddon 학설 갈래. 마지막 한 줄: '다음 한 줄은 우리가 쓴다.'"
     }
   ]
 }

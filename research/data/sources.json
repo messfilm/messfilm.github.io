@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-21",
+  "lastUpdated": "2026-05-22",
   "sources": [
     {
       "id": "src-0001",
@@ -637,6 +637,307 @@
         }
       ],
       "notes": "피보나치 1202년 『산반서』 표준 현대 영역. 12장에 토끼 번식 문제 원전."
+    },
+    {
+      "id": "src-0401",
+      "project": "insect",
+      "type": "book",
+      "title": "Evolution of the Insects",
+      "title_en": "Evolution of the Insects",
+      "publisher": "David Grimaldi & Michael S. Engel, Cambridge University Press, 2005",
+      "url": "https://www.cambridge.org/9780521821490",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.00-prologue",
+          "section": "Rhyniognatha 학설"
+        },
+        {
+          "page": "insect.era.01-carboniferous",
+          "section": "메가네우라·고산소"
+        },
+        {
+          "page": "insect.era.02-permian",
+          "section": "P-T 멸종·곤충 영향"
+        },
+        {
+          "page": "insect.era.03-mesozoic",
+          "section": "속씨식물 공진화"
+        },
+        {
+          "page": "insect.era.04-society",
+          "section": "진사회성 진화"
+        }
+      ],
+      "notes": "곤충 진화의 표준 통사 — 본 컬렉션 1순위 출처."
+    },
+    {
+      "id": "src-0402",
+      "project": "insect",
+      "type": "journal-article",
+      "title": "Hallmann 2017 PLOS ONE — 비행 곤충 생물량 76% 감소",
+      "title_en": "More than 75 percent decline over 27 years in total flying insect biomass in protected areas",
+      "publisher": "Hallmann et al. 2017, PLOS ONE 12(10):e0185809",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0185809",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.08-epilogue",
+          "section": "사라지는 숫자"
+        }
+      ],
+      "notes": "독일 63개 자연보호구역 1989-2016. 한여름 최대 82% 감소."
+    },
+    {
+      "id": "src-0403",
+      "project": "insect",
+      "type": "journal-article",
+      "title": "Sanchez-Bayo & Wyckhuys 2019 — 곤충 멸종 메타분석",
+      "title_en": "Worldwide decline of the entomofauna: A review of its drivers",
+      "publisher": "Biological Conservation 232:8-27, 2019",
+      "url": "https://doi.org/10.1016/j.biocon.2019.01.020",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.08-epilogue",
+          "section": "학설 갈래"
+        }
+      ],
+      "notes": "73개 장기 연구 메타분석. 41% 종 감소, 매년 2.5% 생물량 감소."
+    },
+    {
+      "id": "src-0404",
+      "project": "insect",
+      "type": "journal-article",
+      "title": "Saunders et al. 2020 BioScience — 일반화 비판",
+      "title_en": "Moving On from the Insect Apocalypse Narrative",
+      "publisher": "BioScience 70(1):80-89, 2020",
+      "url": "https://academic.oup.com/bioscience/article/70/1/80/5670748",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.08-epilogue",
+          "section": "학설 갈래"
+        }
+      ],
+      "notes": "Hallmann·Sanchez-Bayo 일반화 비판. 데이터 지역 편향 지적."
+    },
+    {
+      "id": "src-0405",
+      "project": "insect",
+      "type": "book",
+      "title": "On the Various Contrivances by Which British and Foreign Orchids Are Fertilised by Insects",
+      "title_en": "On the Various Contrivances …",
+      "publisher": "Charles Darwin, John Murray, 1862",
+      "url": "https://archive.org/details/onvariouscontriv00darw",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.03-mesozoic",
+          "section": "다윈 별난초 예언"
+        }
+      ],
+      "notes": "마다가스카르 별난초 예언 원전. 1903 Xanthopan morganii praedicta 확인."
+    },
+    {
+      "id": "src-0406",
+      "project": "insect",
+      "type": "book",
+      "title": "Souvenirs entomologiques (곤충기) 10권",
+      "title_en": "Souvenirs entomologiques · 1879-1907",
+      "publisher": "Jean-Henri Fabre, 10 volumes",
+      "url": "https://en.wikipedia.org/wiki/Souvenirs_entomologiques",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "fr",
+      "usedFor": [
+        {
+          "page": "insect.era.04-society",
+          "section": "파브르 인물"
+        }
+      ],
+      "notes": "파브르의 평생 작업. 진사회성·꽃벌 행동 관찰의 시작."
+    },
+    {
+      "id": "src-0407",
+      "project": "insect",
+      "type": "journal-article",
+      "title": "Karl von Frisch — 1973 Nobel Prize Lecture",
+      "title_en": "Decoding the Language of the Bee · Nobel lecture",
+      "publisher": "Karl von Frisch, Nobel Prize 1973",
+      "url": "https://www.nobelprize.org/prizes/medicine/1973/frisch/lecture/",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.04-society",
+          "section": "꿀벌 8자 춤"
+        }
+      ],
+      "notes": "폰 프리슈 본인의 노벨 강연. 꿀벌 언어 해독 표준 출처."
+    },
+    {
+      "id": "src-0408",
+      "project": "insect",
+      "type": "journal-article",
+      "title": "The genetical evolution of social behaviour I, II",
+      "title_en": "Hamilton 1964 kin selection",
+      "publisher": "W. D. Hamilton, J. Theor. Biol. 7:1-52, 1964",
+      "url": "https://www.sciencedirect.com/science/article/pii/0022519364900384",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.04-society",
+          "section": "학설 갈래"
+        }
+      ],
+      "notes": "혈연선택 표준 원전. 단상이배체로 진사회성 설명."
+    },
+    {
+      "id": "src-0409",
+      "project": "insect",
+      "type": "journal-article",
+      "title": "The evolution of eusociality",
+      "title_en": "Nowak·Tarnita·Wilson 2010",
+      "publisher": "Nowak, Tarnita & Wilson, Nature 466:1057-1062, 2010",
+      "url": "https://www.nature.com/articles/nature09205",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.04-society",
+          "section": "학설 갈래 도전"
+        }
+      ],
+      "notes": "혈연선택 단독 부족 — 다층선택·생태 결정적 주장."
+    },
+    {
+      "id": "src-0410",
+      "project": "insect",
+      "type": "journal-article",
+      "title": "Importance of pollinators in changing landscapes for world crops",
+      "title_en": "Klein et al. 2007 Proc R Soc B",
+      "publisher": "Klein et al., Proceedings of the Royal Society B 274:303-313, 2007",
+      "url": "https://royalsocietypublishing.org/doi/10.1098/rspb.2006.3721",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.07-ecosystem",
+          "section": "수분 통계"
+        }
+      ],
+      "notes": "세계 작물 종류 75% / 생산량 35% 의존도 표준 출처."
+    },
+    {
+      "id": "src-0411",
+      "project": "insect",
+      "type": "journal-article",
+      "title": "The biomass distribution on Earth",
+      "title_en": "Bar-On, Phillips & Milo 2018 PNAS",
+      "publisher": "Bar-On et al., PNAS 115:6506-6511, 2018",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1711842115",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.07-ecosystem",
+          "section": "숫자의 제국"
+        }
+      ],
+      "notes": "지구 모든 생물 생물량 분포 — 절지 ~1 Gt C."
+    },
+    {
+      "id": "src-0412",
+      "project": "insect",
+      "type": "journal-article",
+      "title": "The abundance, biomass, and distribution of ants on Earth",
+      "title_en": "Schultheiss et al. 2022 PNAS",
+      "publisher": "Schultheiss et al., PNAS 119(40):e2201550119, 2022",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2201550119",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.04-society",
+          "section": "개미 개체수"
+        }
+      ],
+      "notes": "지구 개미 총 개체수 ~2×10¹⁶. 인간 1인당 ~250만 마리."
+    },
+    {
+      "id": "src-0413",
+      "project": "insect",
+      "type": "journal-article",
+      "title": "Henry Walter Bates 1862 — 아마존 의태 논문",
+      "title_en": "Contributions to an Insect Fauna of the Amazon Valley",
+      "publisher": "Bates, Transactions of the Linnean Society 23:495-566, 1862",
+      "url": "https://www.biodiversitylibrary.org/page/47000",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.07-ecosystem",
+          "section": "의태 발견"
+        }
+      ],
+      "notes": "Batesian 의태 원전. 헬리코니우스 나비 관찰."
+    },
+    {
+      "id": "src-0414",
+      "project": "insect",
+      "type": "journal-article",
+      "title": "WHO World Malaria Report 2022",
+      "title_en": "World Malaria Report",
+      "publisher": "World Health Organization, 2022",
+      "url": "https://www.who.int/teams/global-malaria-programme/reports/world-malaria-report-2022",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.06-history",
+          "section": "말라리아 사망 통계"
+        }
+      ],
+      "notes": "2021년 추정 247M 감염, 619K 사망. 95% 아프리카."
+    },
+    {
+      "id": "src-0415",
+      "project": "insect",
+      "type": "book",
+      "title": "E. O. Wilson · The Insect Societies (1971) / The Ants (1990)",
+      "title_en": "The Insect Societies · The Ants (with Hölldobler)",
+      "publisher": "Harvard University Press, 1971 · Belknap 1990",
+      "url": "https://www.hup.harvard.edu/catalog.php?isbn=9780674454903",
+      "accessed": "2026-05-22",
+      "reliability": "high",
+      "language": "en",
+      "usedFor": [
+        {
+          "page": "insect.era.04-society",
+          "section": "윌슨 인물"
+        }
+      ],
+      "notes": "윌슨 곤충사회학 표준. The Ants는 1991 퓰리처."
     }
   ]
 }

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>곤충의 역사 — 연구 자료 | Archive for Som & Chan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="../assets/shared/styles-base.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* insect 컬렉션 액센트 — 이끼 녹 (#3a6b4e) */
+  .shared-body.collection-insect { --accent: #3a6b4e; }
+</style>
+</head>
+<body class="shared-body collection-insect" data-page-id="research.insect">
+
+<main class="research">
+  <section class="research-hero">
+    <div class="shared-container">
+      <span class="kicker">§ V</span>
+      <h1>곤충의 역사 — 연구 자료</h1>
+      <p class="subtitle">History of Insects Research</p>
+      <p class="lead">
+        곤충의 역사 통사 작성에 참고한 출처, 변경 이력, 결정 기록.
+        9개 시대 본문과 인터랙티브의 모든 사실은 여기서 추적할 수 있다.
+      </p>
+    </div>
+  </section>
+
+  <div class="shared-container">
+    <div class="research-stats" id="in-stats">
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">출처</span></div>
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">업데이트</span></div>
+      <div class="stat"><span class="stat-num">…</span><span class="stat-label">노트</span></div>
+    </div>
+
+    <section class="research-section">
+      <header>
+        <h2>출처</h2>
+        <span class="count">신뢰도 순</span>
+      </header>
+      <div id="in-sources"></div>
+    </section>
+
+    <section class="research-section">
+      <header>
+        <h2>업데이트 이력</h2>
+        <span class="count">시간 역순</span>
+      </header>
+      <div id="in-updates"></div>
+    </section>
+
+    <section class="research-section">
+      <header>
+        <h2>연구 노트</h2>
+        <span class="count">결정 기록</span>
+      </header>
+      <div id="in-notes"></div>
+    </section>
+  </div>
+</main>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../assets/shared/nav.js" defer></script>
+<script src="../assets/shared/footer.js" defer></script>
+<script src="../assets/shared/research-loader.js" defer></script>
+<script>
+  window.addEventListener('load', function () {
+    ResearchLoader.load('insect').then(function (data) {
+      ResearchLoader.renderStats(data, '#in-stats');
+      ResearchLoader.renderSources(data.sources, '#in-sources');
+      ResearchLoader.renderUpdates(data.updates, '#in-updates');
+      ResearchLoader.renderNotes(data.notes, '#in-notes');
+    });
+  });
+</script>
+</body>
+</html>

@@ -166,6 +166,7 @@
   .card.collection-korean   { --accent: #4a7a6e; }
   .card.collection-science  { --accent: #2a5680; }
   .card.collection-math     { --accent: #554a8a; }
+  .card.collection-insect   { --accent: #3a6b4e; }
   .card.collection-research { --accent: var(--gold); }
   .card-num {
     font-family: var(--serif-en);
@@ -380,13 +381,13 @@
   <div class="shared-container">
 
     <!-- ===== Mini timeline SVG ===== -->
-    <section class="home-timeline" aria-label="세 컬렉션의 시간 범위">
+    <section class="home-timeline" aria-label="다섯 컬렉션의 시간 범위">
       <div class="timeline-head">
-        <h2>세 컬렉션의 시간 범위</h2>
+        <h2>다섯 컬렉션의 시간 범위</h2>
         <span class="meta">BC 2333 — AD 2026</span>
       </div>
 
-      <svg viewBox="0 0 1080 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="종교·한국·과학·수학사 시간 범위 비교">
+      <svg viewBox="0 0 1080 304" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="다섯 컬렉션 시간 범위 비교">
         <defs>
           <style>
             .ax       { stroke: #c8bea4; stroke-width: 1; fill: none; }
@@ -401,6 +402,7 @@
             .band-korean   { fill: #4a7a6e; opacity: 0.82; }
             .band-science  { fill: #2a5680; opacity: 0.78; }
             .band-math     { fill: #554a8a; opacity: 0.80; }
+            .band-insect   { fill: #3a6b4e; opacity: 0.78; }
           </style>
         </defs>
 
@@ -415,18 +417,18 @@
              y=2026  → 1023.86 -->
 
         <!-- Axis -->
-        <line class="ax" x1="60" y1="222" x2="1040" y2="222" />
+        <line class="ax" x1="60" y1="266" x2="1040" y2="266" />
         <g>
-          <line class="axTick" x1="147.11"  y1="220" x2="147.11"  y2="228" />
-          <line class="axTick" x1="364.89"  y1="220" x2="364.89"  y2="228" />
-          <line class="axTick" x1="582.67"  y1="220" x2="582.67"  y2="228" />
-          <line class="axTick" x1="800.44"  y1="220" x2="800.44"  y2="228" />
-          <line class="axTick" x1="1018.22" y1="220" x2="1018.22" y2="228" />
-          <text class="axLabel" x="147.11"  y="242" text-anchor="middle">BC 2000</text>
-          <text class="axLabel" x="364.89"  y="242" text-anchor="middle">BC 1000</text>
-          <text class="axLabel" x="582.67"  y="242" text-anchor="middle">0</text>
-          <text class="axLabel" x="800.44"  y="242" text-anchor="middle">AD 1000</text>
-          <text class="axLabel" x="1018.22" y="242" text-anchor="middle">AD 2000</text>
+          <line class="axTick" x1="147.11"  y1="264" x2="147.11"  y2="272" />
+          <line class="axTick" x1="364.89"  y1="264" x2="364.89"  y2="272" />
+          <line class="axTick" x1="582.67"  y1="264" x2="582.67"  y2="272" />
+          <line class="axTick" x1="800.44"  y1="264" x2="800.44"  y2="272" />
+          <line class="axTick" x1="1018.22" y1="264" x2="1018.22" y2="272" />
+          <text class="axLabel" x="147.11"  y="286" text-anchor="middle">BC 2000</text>
+          <text class="axLabel" x="364.89"  y="286" text-anchor="middle">BC 1000</text>
+          <text class="axLabel" x="582.67"  y="286" text-anchor="middle">0</text>
+          <text class="axLabel" x="800.44"  y="286" text-anchor="middle">AD 1000</text>
+          <text class="axLabel" x="1018.22" y="286" text-anchor="middle">AD 2000</text>
         </g>
 
         <!-- § I Religion — BC 2000 → AD 2026 -->
@@ -469,8 +471,18 @@
           <text class="marker"   x="1023.86" y="172" text-anchor="end">2026</text>
         </g>
 
+        <!-- § V Insect — ~4억 년 전부터 (시간 축 별도) -->
+        <g>
+          <rect class="band-insect" x="60" y="222" width="963.86" height="22" rx="2" />
+          <text class="seriesLb" x="8" y="231" text-anchor="start">§ V 곤충의 역사</text>
+          <text class="seriesEn" x="8" y="244" text-anchor="start">Insects</text>
+          <text class="marker"   x="60" y="216" text-anchor="start" fill="#3a6b4e">~4억 년 전</text>
+          <text class="markerLb" x="60" y="206" text-anchor="start" fill="#3a6b4e" style="font-style:italic;">시간 축 별도</text>
+          <text class="marker"   x="1023.86" y="216" text-anchor="end">2026</text>
+        </g>
+
         <!-- "Now" vertical guide -->
-        <line class="tick" x1="1023.86" y1="46" x2="1023.86" y2="222" stroke-dasharray="2 3" opacity="0.4" />
+        <line class="tick" x1="1023.86" y1="46" x2="1023.86" y2="266" stroke-dasharray="2 3" opacity="0.4" />
       </svg>
     </section>
 
@@ -529,6 +541,21 @@
         <div class="card-meta">
           <div><strong>구성</strong><span>7개 시대</span></div>
           <div><strong>범위</strong><span>BC 2000 — 2026</span></div>
+        </div>
+        <span class="card-cta">들어가기 →</span>
+      </a>
+
+      <a class="card collection-insect" href="insect-history/">
+        <span class="card-num">§ V</span>
+        <h2 class="card-title">작아서 이긴 자들 <span class="latin">Insects</span></h2>
+        <p class="card-desc">
+          가장 작고 하찮아 보이는 존재가 어떻게 이 행성을 가장 먼저, 가장 널리
+          정복했는지. 곤충은 새보다 먼저 하늘을 날았고, 꽃보다 먼저 세상에 있었다.
+          9개 시대 · 19개 인터랙티브.
+        </p>
+        <div class="card-meta">
+          <div><strong>구성</strong><span>9개 시대</span></div>
+          <div><strong>범위</strong><span>~4억 년 — 현재</span></div>
         </div>
         <span class="card-cta">들어가기 →</span>
       </a>

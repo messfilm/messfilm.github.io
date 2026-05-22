@@ -92,6 +92,7 @@ main.research { padding-bottom: 60px; }
 .project-card.collection-korean   { --accent: #4a7a6e; }
 .project-card.collection-science  { --accent: #2a5680; }
 .project-card.collection-math     { --accent: #554a8a; }
+.project-card.collection-insect   { --accent: #3a6b4e; }
 .project-card .num {
   font-family: var(--serif-en);
   font-style: italic;
