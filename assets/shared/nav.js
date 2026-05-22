@@ -98,7 +98,8 @@
         { href: 'insect-history/eras/03-mesozoic.html',      label: '중생대',   eraKey: '03-mesozoic' },
         { href: 'insect-history/eras/04-society.html',       label: '사회성',   eraKey: '04-society' },
         { href: 'insect-history/eras/05-resources.html',     label: '실크·꿀',  eraKey: '05-resources' },
-        { href: 'insect-history/eras/06-history.html',       label: '질병·재해', eraKey: '06-history' }
+        { href: 'insect-history/eras/06-history.html',       label: '질병·재해', eraKey: '06-history' },
+        { href: 'insect-history/eras/07-ecosystem.html',     label: '생태계',   eraKey: '07-ecosystem' }
       ]
     }
   };
