@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "lastUpdated": "2026-05-21",
   "updates": [
     {
@@ -7,270 +7,180 @@
       "date": "2026-05-19",
       "project": "korean",
       "page": "korean.main",
-      "type": "migration",
-      "description": "한국사 9개 시대 페이지를 통합 아카이브로 이식",
+      "type": "creation",
+      "description": "한국사 4,000년 — 첫 등장",
       "by": "Father + Claude Code",
-      "details": "별도 저장소 /한국사/에서 /korean-history/로 이식. 본문 변경 없음. 공통 헤더·푸터·data-page-id 추가."
+      "details": "단군 고조선 전승부터 대한민국까지, 9개 시대로 나눈 한국사 통사. 선사·삼국·남북국·고려·조선전기·조선후기·개항기·일제·대한민국."
     },
     {
       "id": "upd-0002",
       "date": "2026-05-19",
       "project": "religion",
       "page": "religion.main",
-      "type": "migration",
-      "description": "아브라함 계통 종교 대시보드를 통합 아카이브로 이식",
+      "type": "creation",
+      "description": "아브라함의 세 자녀 — 첫 등장",
       "by": "Father + Claude Code",
-      "details": "별도 저장소 /종교역사/에서 /abrahamic-religions/로 이식. 본문 변경 없음. 공통 헤더·푸터·data-page-id 추가."
+      "details": "유대교·기독교·이슬람교 4,000년사. 공통의 뿌리(아브라함), 결정적 교리 차이, 40여 개 분파, 주요 종교 전쟁과 현대 분쟁."
     },
     {
       "id": "upd-0003",
-      "date": "2026-05-19",
+      "date": "2026-05-20",
       "project": "science",
       "page": "science.main",
       "type": "creation",
-      "description": "자연과학사 placeholder 페이지 생성",
-      "by": "Claude Code",
-      "details": "6개 시대 구분과 안내문만 포함. 본문은 다음 단계에서 작성 예정."
+      "description": "자연과학사 — 시작",
+      "by": "Father + Claude Code",
+      "details": "BC 600 탈레스부터 현재까지, 6개 시대로 나눈 자연과학사 메인 페이지. 통합 연표와 시대 안내."
     },
     {
       "id": "upd-0004",
       "date": "2026-05-20",
       "project": "science",
-      "page": "science.main",
-      "type": "update",
-      "description": "자연과학사 메인을 본격 페이지로 전환",
+      "page": "science.era.03-revolution",
+      "type": "creation",
+      "description": "§ III 과학혁명 (1500 — 1700) 작성",
       "by": "Father + Claude Code",
-      "details": "Hero·통합 연표 SVG·6시대 카드·톤 안내 추가. 03만 활성, 나머지 5개는 작업중 배지."
+      "details": "5장의 챕터 내러티브 — 묻어둔 책 / 흔들리는 천상계 / 측정과 방법 / 200년이 닫히는 책 한 권 / 그래서 무엇이 남았나. 코페르니쿠스·갈릴레오·케플러·뉴턴 등 인물 8명. 인터랙티브 3개(태양 중심 모형 토글·케플러 제2법칙·뉴턴 만유인력). 인물 카메오 SVG·에피소드 장소 픽토그램·유럽 미니 지도 포함."
     },
     {
       "id": "upd-0005",
       "date": "2026-05-20",
       "project": "science",
-      "page": "science.era.03-revolution",
+      "page": "science.era.01-ancient",
       "type": "creation",
-      "description": "표본 시대 — 과학혁명 (1500~1700) 작성",
+      "description": "§ I 고대 — 자연철학의 시작 (BC 600 — AD 500) 작성",
       "by": "Father + Claude Code",
-      "details": "8명 핵심 인물, 시기 도식 SVG, 결정적 전환 4편, 인터랙티브 3개(태양 중심 모형 토글·케플러 제2법칙·뉴턴 만유인력), 동양·이슬람 박스 3개, 학설 갈래 3건."
+      "details": "탈레스부터 갈레노스까지. 인물 7명(탈레스·피타고라스·아리스토텔레스·에라토스테네스·아르키메데스·프톨레마이오스·갈레노스). 인터랙티브 3개(피타고라스 정리·에라토스테네스 지구 둘레·아르키메데스 π 근사)."
     },
     {
       "id": "upd-0006",
       "date": "2026-05-20",
       "project": "science",
-      "page": "science.foundation",
+      "page": "science.era.02-medieval",
       "type": "creation",
-      "description": "자연과학사 기획서 추가",
-      "by": "Claude Code",
-      "details": "docs/projects/science_history_dashboard_prompt.md. 시대 페이지의 표준 구조, 톤, 문화 범위, 인터랙티브 사양 정의."
+      "description": "§ II 중세 — 빛과 균형의 학문 (500 — 1500) 작성",
+      "by": "Father + Claude Code",
+      "details": "바그다드 지혜의 집·이슬람 광학과 의학의 황금기·톨레도 번역 학파. 인물 6명(알 콰리즈미·알하이삼·이븐 시나·로저 베이컨·토마스 아퀴나스·니콜 오레슴). 인터랙티브 3개(사각형 완성·알하이삼 광학·오레슴 시간-속도 그래프)."
     },
     {
       "id": "upd-0007",
       "date": "2026-05-20",
       "project": "science",
-      "page": "science.era.03-revolution",
-      "type": "addition",
-      "description": "스토리텔링 보강 — 인물 카드 확장, 결정적 전환 장면화, 에피소드 11건 신규",
+      "page": "science.era.04-classical",
+      "type": "creation",
+      "description": "§ IV 고전과학 — 법칙의 시대 (1700 — 1900) 작성",
       "by": "Father + Claude Code",
-      "details": "인물 카드 8개를 각 2~3단락으로(일화·관계·맥락). 결정적 전환 4편을 구체적 사건 묘사로 확장. § IV 에피소드 섹션 신규 추가(11개 장면, 1543 코페르니쿠스 임종부터 1687 Principia 출판까지). 섹션 번호 § IV~VIII로 재조정."
+      "details": "라부아지에 질량보존부터 맥스웰·다윈·멘델·주기율표까지. 인물 7명. 인터랙티브 3개(질량보존·전자기유도·푸넷사각형)."
     },
     {
       "id": "upd-0008",
-      "date": "2026-05-20",
-      "project": "science",
-      "page": "science.foundation",
-      "type": "update",
-      "description": "기획서에 스토리텔링 우선 원칙 추가",
-      "by": "Claude Code",
-      "details": "§4.1.1 스토리텔링 우선 — 인물 카드 2~3단락, 결정적 전환의 장면 묘사, 시대 페이지마다 에피소드 섹션 표준화. 시대 페이지 표준 구조의 섹션 순서 갱신."
-    },
-    {
-      "id": "upd-0009",
-      "date": "2026-05-20",
-      "project": "science",
-      "page": "science.era.03-revolution",
-      "type": "addition",
-      "description": "시각화 보강 — 인물 카메오 SVG 8개, 에피소드 장소 픽토그램 11개, 유럽 미니 지도",
-      "by": "Father + Claude Code",
-      "details": "각 인물 카드 좌측에 양식화된 옆얼굴 카메오 SVG(시대 의상·가발·모자로 차별화). 에피소드별 장소 픽토그램 11개(대성당·새별·사분의·망원경·목성과 위성·타원·양초·십자가·사과 나무·만남·책). 에피소드 섹션 도입부에 유럽 미니 지도(11개 도시 점·연도·라벨·나침반 포함)."
-    },
-    {
-      "id": "upd-0010",
-      "date": "2026-05-20",
-      "project": "science",
-      "page": "science.era.03-revolution",
-      "type": "restructure",
-      "description": "데이터베이스 → 챕터 내러티브로 페이지 전면 재구성",
-      "by": "Father + Claude Code",
-      "details": "기존 §II~§VII(인물 카드 8개·결정적 전환·에피소드·인터랙티브·동양박스·학설 갈래)를 별도 섹션 나열 형식에서 5장의 흐르는 내러티브로 재구성. 챕터 1 묻어둔 책(1500~1543) / 챕터 2 흔들리는 천상계(1572~1610) / 챕터 3 측정과 방법(1620~1640) / 챕터 4 200년이 닫히는 책 한 권(1660~1687) / 챕터 5 그래서 무엇이 남았나. 인물 카메오·에피소드·시뮬·평행 박스는 본문 흐름 안에 자연스럽게 삽입. 사용자 피드백 반영: '하나의 챕터에 흐름을 스토리텔링 중심으로'."
-    },
-    {
-      "id": "upd-0011",
-      "date": "2026-05-20",
-      "project": "science",
-      "page": "science.foundation",
-      "type": "update",
-      "description": "기획서 §6 시대 페이지 표준 구조 — 챕터 내러티브 형식으로 갱신",
-      "by": "Claude Code",
-      "details": "섹션 분류 나열 대신 4~5개 챕터 흐름. inline-figure / inline-scene / inline-sim / aside-parallel CSS 컴포넌트 정의. 작성 규칙 추가 — 추상 명사 나열 금지, 인물·장면을 본문 *지점*에 배치."
-    },
-    {
-      "id": "upd-0012",
-      "date": "2026-05-20",
-      "project": "science",
-      "page": "science.era.03-revolution",
-      "type": "addition",
-      "description": "head UX 표준 컴포넌트 적용 — breadcrumb, 챕터 목차, 이전/다음 시대 페이지네이션",
-      "by": "Father + Claude Code",
-      "details": "시대 페이지의 head/foot UX 표준 확정. 모든 시대 페이지에 동일 적용 예정."
-    },
-    {
-      "id": "upd-0013",
-      "date": "2026-05-20",
-      "project": "science",
-      "page": "science.era.01-ancient",
-      "type": "creation",
-      "description": "§ I 고대 — 자연철학의 시작 (BC 600 — AD 500) 페이지 작성",
-      "by": "Father + Claude Code",
-      "details": "6 챕터 내러티브: 1) 물 또는 불 또는 수 / 2) 수와 형태의 학파 / 3) 아리스토텔레스라는 백과사전 / 4) 알렉산드리아 — 측정의 도시 / 5) 권위의 시작과 도서관의 끝 / 6) Coda. 인물 카메오 7개(탈레스·피타고라스·아리스토텔레스·에라토스테네스·아르키메데스·프톨레마이오스·갈레노스), 인라인 장면 11개, 인터랙티브 3개(피타고라스 정리·에라토스테네스 지구 둘레·아르키메데스 π 근사), 평행 박스 4개. 메인의 § I 카드 활성화. 03-revolution 페이지네이션 이전 시대 링크 활성화."
-    },
-    {
-      "id": "upd-0014",
-      "date": "2026-05-20",
-      "project": "science",
-      "page": "science.era.02-medieval",
-      "type": "creation",
-      "description": "§ II 중세 — 빛과 균형의 학문 (AD 500 — 1500) 페이지 작성",
-      "by": "Father + Claude Code",
-      "details": "6 챕터 내러티브: 1) 책이 사라지는 동안 / 2) 바그다드 — 지혜의 집 / 3) 광학과 의학의 황금기 / 4) 돌아오는 책들 — 톨레도와 파리 / 5) 운동의 정량화 — 혁명의 전야 / 6) Coda. 인물 카메오 6개(알 콰리즈미·알하이삼·이븐 시나·로저 베이컨·토마스 아퀴나스·니콜 오레슴), 인라인 장면 11개, 인터랙티브 3개(알 콰리즈미 사각형 완성·알하이삼 광학·오레슴 시간-속도 그래프), 평행 박스 4개. 메인의 § II 카드 활성화. 01·03 페이지네이션 양방향 연결. 자연과학사 1~3편 완결."
-    },
-    {
-      "id": "upd-0015",
-      "date": "2026-05-20",
-      "project": "science",
-      "page": "science.era.04-classical",
-      "type": "creation",
-      "description": "§ IV 고전과학 — 법칙의 시대 (1700 — 1900) 페이지 작성",
-      "by": "Father + Claude Code",
-      "details": "6 챕터 내러티브: 1) 무게를 재는 사람들(라부아지에·단두대) / 2) 전기와 자기 — 한 가지 힘으로(볼타·외르스테드·앙페르·패러데이) / 3) 맥스웰의 식 네 개(전자기파=빛) / 4) 생명의 가지치기(다윈 비글호·갈라파고스·종의 기원, 멘델 콩 실험) / 5) 물질의 분류(멘델레예프 주기율표, 파스퇴르 미생물) / 6) Coda — 켈빈 경의 두 구름. 인물 카메오 7개(라부아지에·볼타·패러데이·맥스웰·다윈·멘델·멘델레예프), 인라인 장면 12개, 인터랙티브 3개(라부아지에 질량보존·패러데이 전자기유도·멘델 푸넷사각형). 메인 § IV 카드 활성화. 03 페이지네이션 다음 시대 연결."
-    },
-    {
-      "id": "upd-0016",
       "date": "2026-05-21",
       "project": "science",
       "page": "science.era.05-modern",
       "type": "creation",
-      "description": "§ V 현대물리 — 원자와 시공 (1900 — 1970) 페이지 작성",
+      "description": "§ V 현대물리 — 원자와 시공 (1900 — 1970) 작성",
       "by": "Father + Claude Code",
-      "details": "6 챕터 내러티브: 1) 두 구름이 떨어지다(플랑크·아인슈타인) / 2) 원자 안으로(러더포드·보어·드 브로이) / 3) 양자역학의 탄생(하이젠베르크·슈뢰딩거·코펜하겐 해석) / 4) 시공이 휘다(일반상대성·허블·우주배경복사) / 5) 생명의 분자(에이버리·프랭클린·왓슨·크릭) / 6) Coda(히로시마·양자역학 해석·프랭클린 회복). 인물 카메오 7명, 인라인 장면 13개. 인터랙티브 3개(광전효과·이중슬릿·DNA 이중나선). 메인 § V 활성, 04 페이지네이션 연결."
+      "details": "플랑크·아인슈타인의 두 구름부터 양자역학·일반상대성·DNA까지. 인물 7명. 인터랙티브 3개(광전효과·이중슬릿·DNA 이중나선)."
     },
     {
-      "id": "upd-0017",
+      "id": "upd-0009",
       "date": "2026-05-21",
       "project": "science",
       "page": "science.foundation",
       "type": "addition",
-      "description": "glossary 인물 19명 추가 (§ V 현대물리) + 팝업 마크다운 별표 → <em> 렌더링",
-      "by": "Claude Code",
-      "details": "플랑크·아인슈타인·보어·하이젠베르크·슈뢰딩거·러더포드·드 브로이·허블·왓슨·크릭·프랭클린·윌킨스·에이버리·톰슨·켈빈·마이클슨·펜지어스·윌슨·디랙. glossary.js의 popup body에서 textContent → 안전한 innerHTML로 변경 + *xxx* → <em> 변환. JSON 데이터의 *xxx*도 일괄 변환."
+      "description": "자연과학사 용어집 — 인물 19명 추가",
+      "by": "Father + Claude Code",
+      "details": "§ V 현대물리 등장 인물 — 플랑크·아인슈타인·보어·하이젠베르크·슈뢰딩거·러더포드·드 브로이·허블·왓슨·크릭·프랭클린·디랙 등 19명. 본문의 점선 단어에 마우스를 올리면 짧은 설명이 떠오른다."
     },
     {
-      "id": "upd-0018",
+      "id": "upd-0010",
       "date": "2026-05-21",
       "project": "science",
       "page": "science.era.06-contemporary",
       "type": "creation",
-      "description": "§ VI 동시대 — 정보와 생명 (1970 — 현재) 페이지 작성. 자연과학사 6편 모두 완성",
+      "description": "§ VI 동시대 — 정보와 생명 (1970 — 현재) 작성. 자연과학사 6편 완결",
       "by": "Father + Claude Code",
-      "details": "6 챕터 내러티브: 1) 표준모형과 인터넷의 씨앗 / 2) WWW와 정보 시대 / 3) 게놈을 읽다 / 4) 유전자 가위와 mRNA / 5) 새 우주·AI·살아 있는 시대 / 6) Coda — 닫지 않는 마무리. 인물 카메오 6명(버너스리·벤터·다우드나·샤르팡티에·카리코·힌턴). 인라인 장면 10개. 인터랙티브 3개(CRISPR·중력파·신경망). 마지막 챕터에서 2,600년 큰 줄기 회고. 자연과학사 1~6 모두 완결."
+      "details": "표준모형·인터넷·게놈·CRISPR·mRNA·AI. 인물 6명(버너스리·벤터·다우드나·샤르팡티에·카리코·힌턴). 인터랙티브 3개(CRISPR·중력파·신경망). 마지막 챕터에서 2,600년 큰 줄기 회고."
     },
     {
-      "id": "upd-0019",
+      "id": "upd-0011",
       "date": "2026-05-21",
       "project": "math",
       "page": "math.main",
       "type": "creation",
-      "description": "§ IV 수학사 컬렉션 신설 — Stage 1 (랜딩 + § III 시대 + 인터랙티브 1개)",
-      "by": "Father + Claude Code (Sonnet 4.5 1M)",
-      "details": "자연과학사 패턴 미러. 액센트 #554a8a 잉크 보라. 책 느낌 클래스(드롭캡·풀쿼트·에피소드·전설vs사실) 추가. 스펙 docs/projects/math_history_dashboard_prompt.md."
-    },
-    {
-      "id": "upd-0020",
-      "date": "2026-05-21",
-      "project": "math",
-      "page": "math.era.01-counting",
-      "type": "creation",
-      "description": "§ I 수를 발명하다 — 시대 페이지 + 3 인터랙티브",
+      "description": "수학사 — 시작",
       "by": "Father + Claude Code",
-      "details": "6 챕터(잉여→토큰→60진법→이집트 측량→플림프턴322/린드→Coda). 이샹고 뼈 용도 논쟁·피라미드 π/황금비 의도성 정직 표기. 3 sims: 60진법 변환, 쐐기문자 읽기, 단위분수 퍼즐."
+      "details": "BC 3000 셈의 시작부터 현재까지, 7개 시대로 나눈 수학사 메인 페이지. 통합 연표와 시대 안내."
     },
     {
-      "id": "upd-0021",
-      "date": "2026-05-21",
-      "project": "math",
-      "page": "math.era.02-proof",
-      "type": "creation",
-      "description": "§ II 증명을 발명하다 — 시대 페이지 + 4 인터랙티브",
-      "by": "Father + Claude Code",
-      "details": "6 챕터(탈레스→피타고라스/√2→유클리드→아르키메데스→알렉산드리아→Coda). 히파소스 익사·아르키메데스 거울 화공 전설 분리. 4 sims: 에라토스테네스 지구, 소수의 체, 호제법, √2 무리수 증명."
-    },
-    {
-      "id": "upd-0022",
+      "id": "upd-0012",
       "date": "2026-05-21",
       "project": "math",
       "page": "math.era.03-zero-algebra",
       "type": "creation",
-      "description": "§ III 0과 대수 — Stage 1 첫 완성 시대 페이지",
+      "description": "§ III 0과 대수 — 첫 완성된 수학사 시대 페이지",
       "by": "Father + Claude Code",
-      "details": "브라마굽타(628)·알 콰리즈미(~820)·하이얌(1070)·피보나치(1202). 황금비 자연 일반화 과장 분리. 인터랙티브 1: 로마숫자 vs 아라비아숫자 곱셈 대결."
+      "details": "브라마굽타(628 — 0의 정식 도입), 알 콰리즈미(~820 — algebra 어원), 하이얌, 피보나치(1202). 황금비가 자연 어디에나 있다는 통설은 분리해 정직하게 표기. 인터랙티브 — 로마숫자 vs 아라비아숫자 곱셈 대결."
     },
     {
-      "id": "upd-0023",
+      "id": "upd-0013",
+      "date": "2026-05-21",
+      "project": "math",
+      "page": "math.era.01-counting",
+      "type": "creation",
+      "description": "§ I 수를 발명하다 작성",
+      "by": "Father + Claude Code",
+      "details": "잉여 곡물 → 점토 토큰 → 60진법 → 이집트 측량 → 플림프턴 322·린드 파피루스. 이샹고 뼈의 용도 논쟁, 피라미드의 π·황금비 의도성을 정직하게 표기. 인터랙티브 3개(60진법 변환·쐐기문자 읽기·단위분수 퍼즐)."
+    },
+    {
+      "id": "upd-0014",
+      "date": "2026-05-21",
+      "project": "math",
+      "page": "math.era.02-proof",
+      "type": "creation",
+      "description": "§ II 증명을 발명하다 작성",
+      "by": "Father + Claude Code",
+      "details": "탈레스부터 알렉산드리아까지. 피타고라스 학파의 √2 발견과 히파소스 익사 전승, 아르키메데스 거울 화공 전설을 사실과 분리해 표기. 인터랙티브 4개(에라토스테네스 지구·소수의 체·유클리드 호제법·√2 무리수 증명)."
+    },
+    {
+      "id": "upd-0015",
       "date": "2026-05-21",
       "project": "math",
       "page": "math.era.04-natures-language",
       "type": "creation",
-      "description": "§ IV 자연의 언어가 되다 — 시대 페이지 + 3 인터랙티브",
+      "description": "§ IV 자연의 언어가 되다 작성",
       "by": "Father + Claude Code",
-      "details": "네이피어·데카르트·페르마·뉴턴/라이프니츠·오일러. 뉴턴 사과 머리 떨어짐 = Stukeley 1726 후대 각색 분리. 미적분 우선권 = 둘 다 독립 발견 인정. 3 sims: 데카르트 그래퍼, 미적분 직관, 계산자."
+      "details": "네이피어 로그 · 데카르트 좌표 · 페르마 · 뉴턴/라이프니츠 미적분 · 오일러. 뉴턴 사과 머리 떨어짐은 후대 각색임을 명시. 미적분 우선권은 두 사람의 독립 발견으로 정리. 인터랙티브 3개(데카르트 그래퍼·미적분 직관·계산자)."
     },
     {
-      "id": "upd-0024",
+      "id": "upd-0016",
       "date": "2026-05-21",
       "project": "math",
       "page": "math.era.05-uncertainty",
       "type": "creation",
-      "description": "§ V 불확실성을 길들이다 — 시대 페이지 + 3 인터랙티브",
+      "description": "§ V 불확실성을 길들이다 작성",
       "by": "Father + Claude Code",
-      "details": "파스칼-페르마 1654 서신부터 나이팅게일 1858 polar area. 나이팅게일 '등불을 든 여인' 통설 vs 진짜 통계 혁명. 카르다노 Liber de Ludo Aleae (1564 집필/1663 출판) 통설 흔듦. 3 sims: 큰 수의 법칙, 골턴 보드, 몬티 홀."
+      "details": "파스칼-페르마 1654 서신부터 나이팅게일 1858 극좌표 통계. 나이팅게일을 '등불을 든 여인'에서 통계 혁명가로 다시 보기. 인터랙티브 3개(큰 수의 법칙·골턴 보드·몬티 홀 문제)."
     },
     {
-      "id": "upd-0025",
+      "id": "upd-0017",
       "date": "2026-05-21",
       "project": "math",
       "page": "math.era.06-infinity-foundations",
       "type": "creation",
-      "description": "§ VI 무한과 기초를 묻다 — 시대 페이지 + 3 인터랙티브",
+      "description": "§ VI 무한과 기초를 묻다 작성",
       "by": "Father + Claude Code",
-      "details": "비유클리드부터 괴델 불완전성까지. 갈루아 결투 전야 신화 (Rothman 1982·Neumann 2011 학술 반박) 분리. 3 sims: 칸토어 대각선, 힐베르트 무한 호텔, 비유클리드 삼각형."
+      "details": "비유클리드 기하부터 칸토어 무한 · 힐베르트 프로그램 · 괴델 불완전성까지. 갈루아 결투 전야 신화는 학술 반박을 따라 분리해 표기. 인터랙티브 3개(칸토어 대각선·힐베르트 무한 호텔·비유클리드 삼각형)."
     },
     {
-      "id": "upd-0026",
+      "id": "upd-0018",
       "date": "2026-05-21",
       "project": "math",
       "page": "math.era.07-the-machine",
       "type": "creation",
-      "description": "§ VII 수학이 기계가 되다 — 시대 페이지 + 3 인터랙티브 (전 시대 완성)",
+      "description": "§ VII 수학이 기계가 되다 작성. 수학사 7편 완결",
       "by": "Father + Claude Code",
-      "details": "튜링 1936부터 와일즈 1995까지. 애플 로고 = 튜링 추모 도시전설 분리 (Rob Janoff 공식 부인). 3 sims: 튜링 기계, 시저+공개키 RSA, 정보=비트 스무고개. § IV 수학사 컬렉션 본문·인터랙티브 모두 완성."
-    },
-    {
-      "id": "upd-0027",
-      "date": "2026-05-21",
-      "project": "math",
-      "page": "math.main",
-      "type": "addition",
-      "description": "루트 랜딩에 § IV 수학사 카드 + 통합 연표 4번째 띠 추가",
-      "by": "Father + Claude Code",
-      "details": "messfilm.github.io 랜딩 페이지가 4개 컬렉션 + 메타 연구를 모두 반영. 통합 연표 SVG viewBox 220→260 확장. 5번째 카드(연구)는 전폭(grid-column 1/-1)으로."
+      "details": "튜링 1936 계산 가능성부터 와일즈 1995 페르마의 마지막 정리. 애플 로고가 튜링을 추모한다는 도시전설은 공식 부인을 따라 분리. 인터랙티브 3개(튜링 기계·시저+공개키 RSA·정보 = 비트 스무고개)."
     }
   ]
 }
