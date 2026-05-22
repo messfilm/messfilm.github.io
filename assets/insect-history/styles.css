@@ -19,8 +19,11 @@
 main.insect { padding-bottom: 80px; }
 .insect-page { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
 
-/* ----- 일반 단락 / 인라인 보조 클래스 ----- */
-.insect-page p { margin: 0 0 19px; line-height: 1.92; font-size: 18px; color: var(--ink); }
+/* ----- 일반 단락 ----- */
+/* 사이트 표준 본문: 16px · line 1.85 (자연과학사·수학사와 일치).
+   클래스 있는 p (.crumb 등)는 해당 클래스 정의가 .insect-page보다
+   특이도 높게 잡혀야 함 → 아래 컴포넌트 정의에서 .insect-page 한 단계 prefix. */
+.insect-page p { margin: 0 0 16px; line-height: 1.85; font-size: 16px; color: var(--ink); }
 .insect-page em { font-style: italic; }
 .sci {
   font-family: var(--serif-en);
@@ -31,19 +34,20 @@ main.insect { padding-bottom: 80px; }
 .hanja { color: var(--ink-mute); font-size: 0.92em; }
 
 /* ----- 브레드크럼 ----- */
-.crumb {
+.insect-page .crumb {
   font-family: var(--sans-ko);
   font-size: 13px;
+  line-height: 1.6;
   color: var(--ink-mute);
   margin: 24px 0 0;
 }
-.crumb a {
+.insect-page .crumb a {
   color: var(--ink-mute);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.18s;
 }
-.crumb a:hover { border-bottom-color: var(--accent); }
+.insect-page .crumb a:hover { border-bottom-color: var(--accent); }
 
 /* ----- 히어로 ----- */
 .hero {
@@ -82,9 +86,9 @@ main.insect { padding-bottom: 80px; }
   margin: 14px 0 22px;
   letter-spacing: 0.02em;
 }
-.hero .intro {
+.insect-page .hero .intro {
   font-family: var(--serif-ko);
-  font-size: 19px;
+  font-size: 16px;
   color: var(--ink-soft);
   line-height: 1.85;
 }
@@ -254,9 +258,9 @@ h2.chap .en {
   margin: 0 0 9px;
   color: var(--ink);
 }
-.event p {
+.insect-page .event p {
   margin: 0 0 10px;
-  font-size: 16.5px;
+  font-size: 15.5px;
   line-height: 1.78;
 }
 .event .src {
@@ -376,15 +380,15 @@ h2.chap .en {
   color: var(--ink-mute);
   margin-left: 6px;
 }
-.parallel p { font-size: 16px; margin: 0; line-height: 1.78; }
+.insect-page .parallel p { font-size: 15px; margin: 0; line-height: 1.78; }
 
 /* ----- 주의 박스 ----- */
-.caution {
+.insect-page .caution {
   background: var(--paper-dark);
   border-left: 3px solid var(--gold);
   padding: 16px 20px;
   margin: 24px 0;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.78;
 }
 .caution b { color: var(--gold); }
@@ -427,7 +431,7 @@ h2.chap .en {
   background: var(--paper-light);
   letter-spacing: 0.04em;
 }
-.split .rb { padding: 14px 18px; font-size: 16px; line-height: 1.78; }
+.insect-page .split .rb { padding: 14px 18px; font-size: 15px; line-height: 1.78; }
 .split .row.stance .rl { color: var(--ink); }
 @media (max-width: 560px) {
   .split .row { flex-direction: column; }
