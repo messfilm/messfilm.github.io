@@ -93,7 +93,8 @@
       sections: [
         { href: 'insect-history/index.html',                 label: '개관',     overviewFor: 'main' },
         { href: 'insect-history/eras/00-prologue.html',      label: '프롤로그', eraKey: '00-prologue' },
-        { href: 'insect-history/eras/01-carboniferous.html', label: '석탄기',   eraKey: '01-carboniferous' }
+        { href: 'insect-history/eras/01-carboniferous.html', label: '석탄기',   eraKey: '01-carboniferous' },
+        { href: 'insect-history/eras/02-permian.html',       label: '페름기',   eraKey: '02-permian' }
       ]
     }
   };
