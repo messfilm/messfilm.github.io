@@ -923,92 +923,72 @@ main.math { padding-bottom: 80px; }
   gap: 0;
   border-top: 1px solid var(--rule-soft);
 }
+/* 에피소드: label | title + body 2-column layout (사이드바 + 본문) */
 .episode {
   display: grid;
-  grid-template-columns: 140px 56px 1fr;
-  gap: 22px;
-  padding: 22px 0;
+  grid-template-columns: 140px 1fr;
+  grid-template-areas:
+    "label title"
+    "label body";
+  column-gap: 28px;
+  row-gap: 10px;
+  padding: 26px 0;
   border-bottom: 1px solid var(--rule-soft);
 }
-.episode time {
-  font-family: var(--serif-en);
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-  color: var(--accent);
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  display: block;
-}
-.episode .place {
-  display: block;
-  margin-top: 3px;
+.episode__label {
+  grid-area: label;
+  align-self: start;
+  padding-top: 6px;
   font-family: var(--sans-ko);
-  font-size: 10.5px;
+  font-size: 11px;
+  font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ink-mute);
+  color: var(--accent);
 }
-.episode__pictogram {
-  width: 56px;
-  height: 56px;
-  display: block;
-  align-self: start;
-}
-.episode__pictogram svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.episode .body h3 {
+.episode__title {
+  grid-area: title;
+  margin: 0;
   font-family: var(--serif-ko);
   font-weight: 700;
-  font-size: 16.5px;
-  margin: 0 0 6px;
+  font-size: 18px;
+  line-height: 1.45;
   letter-spacing: -0.005em;
+  color: var(--ink);
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
-.episode .body p {
-  margin: 0;
-  font-size: 14px;
+.episode__body {
+  grid-area: body;
+  font-size: 14.5px;
   line-height: 1.85;
   color: var(--ink-soft);
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
-.episode .body p em {
+.episode__body p { margin: 0 0 12px; }
+.episode__body p:last-child { margin-bottom: 0; }
+.episode__body em {
   font-family: var(--serif-en);
   font-style: italic;
   color: var(--accent);
 }
-.episode .body .work {
-  font-family: var(--serif-en);
-  font-style: italic;
-  color: var(--ink);
-}
-.episode .body .source {
-  display: inline-block;
-  margin-top: 6px;
-  font-family: var(--sans-ko);
-  font-size: 10.5px;
-  letter-spacing: 0.06em;
-  color: var(--ink-mute);
-  font-style: italic;
-}
+.episode__body strong { font-weight: 700; color: var(--ink); }
+
 @media (max-width: 760px) {
   .episode {
-    grid-template-columns: 56px 1fr;
-    gap: 12px 14px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "label"
+      "title"
+      "body";
+    column-gap: 0;
+    row-gap: 8px;
+    padding: 22px 0;
   }
-  .episode > div:first-child {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .episode__pictogram {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-  }
-  .episode .body {
-    grid-column: 2;
-    grid-row: 2;
-  }
-  .episode time { font-size: 14px; }
+  .episode__label { padding-top: 0; }
+  .episode__title { font-size: 16px; }
+  .episode__body { font-size: 14px; }
 }
 
 /* ===== Europe mini map (episodes intro) ===== */
