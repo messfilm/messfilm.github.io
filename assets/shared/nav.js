@@ -89,7 +89,6 @@
       name: '곤충의 역사',
       latin: 'Insects',
       base: 'insect-history/',
-      wip: true,
       sections: [
         { href: 'insect-history/index.html',                 label: '개관',     overviewFor: 'main' },
         { href: 'insect-history/eras/00-prologue.html',      label: '프롤로그', eraKey: '00-prologue' },
@@ -99,7 +98,8 @@
         { href: 'insect-history/eras/04-society.html',       label: '사회성',   eraKey: '04-society' },
         { href: 'insect-history/eras/05-resources.html',     label: '실크·꿀',  eraKey: '05-resources' },
         { href: 'insect-history/eras/06-history.html',       label: '질병·재해', eraKey: '06-history' },
-        { href: 'insect-history/eras/07-ecosystem.html',     label: '생태계',   eraKey: '07-ecosystem' }
+        { href: 'insect-history/eras/07-ecosystem.html',     label: '생태계',   eraKey: '07-ecosystem' },
+        { href: 'insect-history/eras/08-epilogue.html',      label: '에필로그', eraKey: '08-epilogue' }
       ]
     }
   };
