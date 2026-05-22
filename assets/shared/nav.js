@@ -83,6 +83,18 @@
         { href: 'math-history/eras/06-infinity-foundations.html', label: '무한·기초', eraKey: '06-infinity-foundations' },
         { href: 'math-history/eras/07-the-machine.html',   label: '기계',     eraKey: '07-the-machine' }
       ]
+    },
+    insect: {
+      num: '§ V',
+      name: '곤충의 역사',
+      latin: 'Insects',
+      base: 'insect-history/',
+      wip: true,
+      sections: [
+        { href: 'insect-history/index.html',                 label: '개관',     overviewFor: 'main' },
+        { href: 'insect-history/eras/00-prologue.html',      label: '프롤로그', eraKey: '00-prologue' },
+        { href: 'insect-history/eras/01-carboniferous.html', label: '석탄기',   eraKey: '01-carboniferous' }
+      ]
     }
   };
 

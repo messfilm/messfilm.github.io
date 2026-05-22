@@ -1,0 +1,642 @@
+/* ============================================================
+   Insect History — page styles (§ V)
+   - body.collection-insect 에서 --accent 이끼 녹(#3a6b4e) override
+     + 곤충 컬렉션 추가 토큰 --accent-bg / --accent-soft
+   - 페이지 컨테이너 .insect-page = 좁은 책 폭(720px) — 다른 컬렉션과 다름
+   - 컴포넌트 클래스(.crumb·.hero·.stats·.toc·.event·.sim·.parallel·
+     .caution·.split·.gl·.divider·.eranav 등)는 곤충 컬렉션 전용
+   - 토큰(--paper·--ink·--rule·--gold·폰트 등)은 styles-base.css 정의 그대로 사용
+   ============================================================ */
+
+/* ----- --accent override + 곤충 컬렉션 추가 토큰 ----- */
+.shared-body.collection-insect {
+  --accent: #3a6b4e;
+  --accent-bg: #e9eee9;
+  --accent-soft: #6a9a7c;
+}
+
+/* ----- main + 페이지 컨테이너 (좁은 책 폭) ----- */
+main.insect { padding-bottom: 80px; }
+.insect-page { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+/* ----- 일반 단락 / 인라인 보조 클래스 ----- */
+.insect-page p { margin: 0 0 19px; line-height: 1.92; font-size: 18px; color: var(--ink); }
+.insect-page em { font-style: italic; }
+.sci {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-size: 1.04em;
+  color: var(--ink);
+}
+.hanja { color: var(--ink-mute); font-size: 0.92em; }
+
+/* ----- 브레드크럼 ----- */
+.crumb {
+  font-family: var(--sans-ko);
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin: 24px 0 0;
+}
+.crumb a {
+  color: var(--ink-mute);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.18s;
+}
+.crumb a:hover { border-bottom-color: var(--accent); }
+
+/* ----- 히어로 ----- */
+.hero {
+  padding: 30px 0 26px;
+  border-bottom: 2px solid var(--ink);
+}
+.hero .tag {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.hero h1 {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: clamp(33px, 6.4vw, 52px);
+  line-height: 1.12;
+  margin: 0;
+  color: var(--ink);
+}
+.hero h1 .en {
+  display: block;
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.5em;
+  color: var(--ink-mute);
+  margin-top: 4px;
+  letter-spacing: 0.01em;
+}
+.hero .sub {
+  font-family: var(--sans-ko);
+  font-size: 15px;
+  color: var(--ink-mute);
+  margin: 14px 0 22px;
+  letter-spacing: 0.02em;
+}
+.hero .intro {
+  font-family: var(--serif-ko);
+  font-size: 19px;
+  color: var(--ink-soft);
+  line-height: 1.85;
+}
+
+/* ----- 통계 4개 ----- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--rule);
+  margin-top: 30px;
+}
+.stats .s {
+  padding: 15px 12px 6px;
+  border-right: 1px solid var(--rule);
+}
+.stats .s:last-child { border-right: none; }
+.stats .n {
+  font-family: var(--serif-en);
+  font-weight: 600;
+  font-size: 23px;
+  color: var(--accent);
+  line-height: 1.05;
+}
+.stats .l {
+  font-family: var(--sans-ko);
+  font-size: 12px;
+  color: var(--ink-mute);
+  margin-top: 7px;
+  line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stats .s:nth-child(2) { border-right: none; }
+  .stats .s { border-bottom: 1px solid var(--rule); }
+}
+
+/* ----- 호흡 목차 (.toc) ----- */
+.toc { margin: 30px 0 8px; }
+.toc .lab {
+  font-family: var(--sans-ko);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.toc ol {
+  margin: 0; padding: 0;
+  list-style: none;
+  counter-reset: t;
+}
+.toc li {
+  counter-increment: t;
+  border-bottom: 1px solid var(--rule-soft);
+  padding: 9px 0;
+}
+.toc li::before {
+  content: counter(t);
+  font-family: var(--mono);
+  color: var(--accent);
+  margin-right: 14px;
+  font-size: 14px;
+}
+.toc a {
+  color: var(--ink-soft);
+  font-size: 16px;
+  text-decoration: none;
+}
+.toc a:hover { color: var(--ink); }
+.toc a .y {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-mute);
+  float: right;
+}
+
+/* ----- 섹션 태그·제목 ----- */
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin: 54px 0 4px;
+}
+.sec-tag .en { color: var(--ink-mute); }
+h2.sec {
+  font-family: var(--serif-ko);
+  font-weight: 600;
+  font-size: 25px;
+  margin: 0 0 18px;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+/* ----- 챕터 마크 + 제목 ----- */
+.chap-mark {
+  font-family: var(--sans-ko);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin: 62px 0 2px;
+  text-align: center;
+}
+h2.chap {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: clamp(26px, 5vw, 34px);
+  text-align: center;
+  margin: 0 0 4px;
+  line-height: 1.2;
+  color: var(--ink);
+}
+h2.chap .en {
+  display: block;
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.52em;
+  color: var(--ink-mute);
+  margin-top: 6px;
+}
+.chap-where {
+  text-align: center;
+  font-family: var(--sans-ko);
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin: 0 0 30px;
+  letter-spacing: 0.02em;
+}
+
+/* ----- 인물 라인 .who ----- */
+.who {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin: 28px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.who .ko {
+  font-family: var(--serif-ko);
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ----- 이벤트 카드 (날짜형) ----- */
+.event {
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  background: var(--paper-light);
+  padding: 20px 22px;
+  margin: 26px 0;
+}
+.event .when {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+  margin-bottom: 9px;
+}
+.event .et {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 9px;
+  color: var(--ink);
+}
+.event p {
+  margin: 0 0 10px;
+  font-size: 16.5px;
+  line-height: 1.78;
+}
+.event .src {
+  font-family: var(--sans-ko);
+  font-size: 12px;
+  color: var(--ink-mute);
+  font-style: italic;
+  border-top: 1px solid var(--rule-soft);
+  padding-top: 9px;
+  margin: 0;
+}
+
+/* ----- 시뮬 박스 ----- */
+.sim {
+  border: 1px solid var(--accent-soft);
+  background: var(--paper-light);
+  margin: 30px 0;
+  padding: 0;
+  overflow: hidden;
+}
+.sim .simhead {
+  background: var(--accent-bg);
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--accent-soft);
+}
+.sim .simno {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+.sim .simhead h3 {
+  font-family: var(--serif-ko);
+  font-weight: 600;
+  font-size: 19px;
+  margin: 3px 0 0;
+  color: var(--ink);
+}
+.sim .simhead .en {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-mute);
+}
+.sim .simbody { padding: 22px 20px; }
+.sim .desc {
+  font-family: var(--sans-ko);
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin: 14px 0 0;
+}
+.sim .stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 170px;
+  background: var(--paper);
+  border: 1px solid var(--rule-soft);
+  overflow: hidden;
+}
+.ctrl {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.ctrl label {
+  font-family: var(--sans-ko);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.ctrl input[type=range] {
+  flex: 1;
+  min-width: 160px;
+  accent-color: var(--accent);
+}
+.ctrl .readout {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--accent);
+  min-width: 120px;
+}
+.btn {
+  font-family: var(--sans-ko);
+  font-size: 13px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+.btn.on { background: var(--accent); color: var(--paper-light); }
+.btn:hover:not(.on) { background: var(--accent-bg); }
+
+/* ----- 평행 박스 (한반도·메소포타미아 등) ----- */
+.parallel {
+  border: 1px dashed var(--accent-soft);
+  background: var(--paper-light);
+  padding: 20px 22px;
+  margin: 28px 0;
+}
+.parallel .ph {
+  font-family: var(--sans-ko);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.parallel .ph .en {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink-mute);
+  margin-left: 6px;
+}
+.parallel p { font-size: 16px; margin: 0; line-height: 1.78; }
+
+/* ----- 주의 박스 ----- */
+.caution {
+  background: var(--paper-dark);
+  border-left: 3px solid var(--gold);
+  padding: 16px 20px;
+  margin: 24px 0;
+  font-size: 16px;
+  line-height: 1.78;
+}
+.caution b { color: var(--gold); }
+
+/* ----- 학설 갈래 박스 ----- */
+.split { border: 1px solid var(--rule); margin: 26px 0; }
+.split h4 {
+  font-family: var(--serif-ko);
+  font-weight: 600;
+  font-size: 19px;
+  margin: 0;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-light);
+  color: var(--ink);
+}
+.split h4 .en {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--ink-mute);
+  margin-left: 8px;
+}
+.split .row {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.split .row:last-child { border-bottom: none; }
+.split .rl {
+  font-family: var(--sans-ko);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  width: 120px;
+  flex-shrink: 0;
+  padding: 14px 16px;
+  border-right: 1px solid var(--rule-soft);
+  background: var(--paper-light);
+  letter-spacing: 0.04em;
+}
+.split .rb { padding: 14px 18px; font-size: 16px; line-height: 1.78; }
+.split .row.stance .rl { color: var(--ink); }
+@media (max-width: 560px) {
+  .split .row { flex-direction: column; }
+  .split .rl {
+    width: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+}
+
+/* ----- 용어집 hover ----- */
+.gl {
+  border-bottom: 1px dotted var(--accent);
+  cursor: help;
+  position: relative;
+}
+.gl:hover::after {
+  content: attr(data-def);
+  position: absolute;
+  left: 0;
+  top: 140%;
+  z-index: 20;
+  width: 255px;
+  background: var(--paper-light);
+  border: 1px solid var(--rule);
+  padding: 10px 12px;
+  font-family: var(--sans-ko);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  font-weight: 400;
+  box-shadow: 0 4px 12px -4px rgba(31, 26, 20, 0.12);
+}
+
+/* ----- 챕터 구분자 ----- */
+.divider {
+  text-align: center;
+  color: var(--accent);
+  letter-spacing: 0.6em;
+  margin: 48px 0;
+  font-size: 16px;
+}
+
+/* ----- SVG figure ----- */
+.insect-page figure {
+  margin: 30px 0;
+  border: 1px solid var(--rule);
+  background: var(--paper-light);
+  padding: 20px;
+}
+.insect-page figure svg { width: 100%; height: auto; display: block; }
+.insect-page figcaption {
+  margin-top: 12px;
+  font-family: var(--sans-ko);
+  font-size: 13px;
+  color: var(--ink-mute);
+  line-height: 1.6;
+  border-top: 1px solid var(--rule-soft);
+  padding-top: 11px;
+}
+.insect-page figcaption .fn {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+/* ----- 출처 메모 ----- */
+.cit {
+  font-family: var(--sans-ko);
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+/* ----- 이전/다음 시대 ----- */
+.eranav {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 46px 0 8px;
+  flex-wrap: wrap;
+}
+.eranav a {
+  flex: 1;
+  min-width: 200px;
+  border: 1px solid var(--rule);
+  padding: 16px 18px;
+  color: inherit;
+  text-decoration: none;
+  background: var(--paper-light);
+  transition: border-color 0.18s, background 0.18s;
+}
+.eranav a:hover { border-color: var(--accent); background: var(--paper); }
+.eranav .d {
+  font-family: var(--sans-ko);
+  font-size: 12px;
+  color: var(--ink-mute);
+}
+.eranav .t {
+  font-family: var(--serif-ko);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--ink);
+  margin-top: 4px;
+}
+.eranav .t .en {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink-mute);
+  font-size: 0.85em;
+}
+
+/* ----- 인덱스 페이지 전용 ----- */
+.insect-index .era-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 24px 0 8px;
+}
+.insect-index .era-cards .ec {
+  display: block;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  background: var(--paper-light);
+  padding: 20px 22px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.18s, background 0.18s;
+}
+.insect-index .era-cards .ec:hover { border-color: var(--accent); background: var(--paper); }
+.insect-index .era-cards .ec.disabled {
+  opacity: 0.7;
+  cursor: default;
+  border-left-style: dashed;
+}
+.insect-index .era-cards .ec.disabled:hover {
+  border-color: var(--rule);
+  background: var(--paper-light);
+}
+.insect-index .era-cards .ec .en {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.insect-index .era-cards .ec h3 {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: 19px;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+.insect-index .era-cards .ec h3 .latin {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin-left: 6px;
+}
+.insect-index .era-cards .ec .when {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-mute);
+  margin: 4px 0 8px;
+}
+.insect-index .era-cards .ec .blurb {
+  font-family: var(--serif-ko);
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+.insect-index .era-cards .ec .key {
+  font-family: var(--sans-ko);
+  font-size: 12px;
+  color: var(--ink-mute);
+  letter-spacing: 0.01em;
+}
+.insect-index .wip-mark {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 6px;
+  font-family: var(--sans-ko);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--paper);
+  background: var(--ink-mute);
+  border-radius: 2px;
+  vertical-align: middle;
+}
+@media (max-width: 700px) {
+  .insect-index .era-cards { grid-template-columns: 1fr; }
+}
+
+/* ----- 통합 연표 SVG 래퍼 (모바일 가로 스크롤) ----- */
+.insect-timeline-scroll {
+  /* desktop: pass through */
+}
+@media (max-width: 760px) {
+  .insect-timeline-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -24px;
+    padding: 0 24px;
+  }
+  .insect-timeline-scroll svg { min-width: 720px; width: 720px; }
+}
