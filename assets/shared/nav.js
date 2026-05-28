@@ -126,7 +126,15 @@
         { href: 'insect-war/chapters/13-han-river.html',            label: '13장',    eraKey: '13-han-river' },
         { href: 'insect-war/chapters/14-un-calls.html',             label: '14장',    eraKey: '14-un-calls' },
         { href: 'insect-war/chapters/15-cloud-marches.html',        label: '15장',    eraKey: '15-cloud-marches' },
-        { href: 'insect-war/chapters/16-chan-meets-nat.html',       label: '16장',    eraKey: '16-chan-meets-nat' }
+        { href: 'insect-war/chapters/16-chan-meets-nat.html',       label: '16장',    eraKey: '16-chan-meets-nat' },
+        { href: 'insect-war/chapters/17-camilles-logic.html',       label: '17장',    eraKey: '17-camilles-logic' },
+        { href: 'insect-war/chapters/18-council-of-hives.html',     label: '18장',    eraKey: '18-council-of-hives' },
+        { href: 'insect-war/chapters/19-amiras-answer.html',        label: '19장',    eraKey: '19-amiras-answer' },
+        { href: 'insect-war/chapters/20-yellow-last-dance.html',    label: '20장',    eraKey: '20-yellow-last-dance' },
+        { href: 'insect-war/chapters/21-soms-testimony.html',       label: '21장',    eraKey: '21-soms-testimony' },
+        { href: 'insect-war/chapters/22-facing-cloud.html',         label: '22장',    eraKey: '22-facing-cloud' },
+        { href: 'insect-war/chapters/23-one-vote.html',             label: '23장',    eraKey: '23-one-vote' },
+        { href: 'insect-war/chapters/24-beijing-alone.html',        label: '24장',    eraKey: '24-beijing-alone' }
       ]
     }
   };
