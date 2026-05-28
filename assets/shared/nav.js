@@ -101,6 +101,17 @@
         { href: 'insect-history/eras/07-ecosystem.html',     label: '생태계',   eraKey: '07-ecosystem' },
         { href: 'insect-history/eras/08-epilogue.html',      label: '에필로그', eraKey: '08-epilogue' }
       ]
+    },
+    'insect-war': {
+      num: '§ VI',
+      name: '곤충 전쟁',
+      latin: 'Insect War',
+      base: 'insect-war/',
+      wip: true,
+      sections: [
+        { href: 'insect-war/index.html',                            label: '개관',     overviewFor: 'main' },
+        { href: 'insect-war/chapters/00-prologue.html',             label: '프롤로그', eraKey: '00-prologue' }
+      ]
     }
   };
 

@@ -1,0 +1,497 @@
+/* ============================================================
+   § VI 곤충 전쟁 — 사고실험 픽션 컬렉션
+   - 액센트: 어두운 보라 #4a3a6b (진지·미스터리)
+   - 베르베르 풍 본문 + [곤충 백과] 사실 박스
+   - 매 chunk SVG 삽화
+   ============================================================ */
+
+.shared-body.collection-insect-war {
+  --accent: #4a3a6b;
+  --accent-bg: #ebe6f0;
+  --accent-soft: #7a6a9a;
+  --bug-bg: #f5efe0;
+  --human-bg: var(--paper-light);
+}
+
+main.insect-war { padding-bottom: 80px; }
+.iw-page { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+/* ----- 일반 단락 (사이트 표준 16px/1.85) ----- */
+.iw-page p { margin: 0 0 16px; line-height: 1.85; font-size: 16px; color: var(--ink); }
+.iw-page em { font-style: italic; }
+.iw-page .sci { font-family: var(--serif-en); font-style: italic; font-size: 1.04em; color: var(--ink); }
+.iw-page .hanja { color: var(--ink-mute); font-size: 0.92em; }
+
+/* ----- 브레드크럼 ----- */
+.iw-page .crumb {
+  font-family: var(--sans-ko);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-mute);
+  margin: 24px 0 0;
+}
+.iw-page .crumb a {
+  color: var(--ink-mute);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.18s;
+}
+.iw-page .crumb a:hover { border-bottom-color: var(--accent); }
+
+/* ----- 챕터 hero ----- */
+.chap-hero {
+  padding: 36px 0 28px;
+  border-bottom: 2px solid var(--ink);
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  align-items: end;
+  gap: 24px;
+}
+.chap-hero .num {
+  font-family: var(--mono);
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+}
+.chap-hero .num strong {
+  display: block;
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--ink);
+  margin-top: 4px;
+}
+.chap-hero h1 {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.18;
+  margin: 0;
+  color: var(--ink);
+}
+.chap-hero h1 .en {
+  display: block;
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.5em;
+  color: var(--ink-mute);
+  margin-top: 6px;
+  letter-spacing: 0.01em;
+}
+.chap-hero .side-tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  padding: 6px 14px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+.chap-hero .side-tag.human {
+  background: rgba(74,58,107,0.10);
+  color: var(--accent);
+}
+.chap-hero .side-tag.bug {
+  background: rgba(163,126,44,0.15);
+  color: #8a5a14;
+}
+
+@media (max-width: 700px) {
+  .chap-hero { grid-template-columns: 1fr; gap: 12px; }
+  .chap-hero .side-tag { justify-self: start; }
+}
+
+/* ----- 챕터 meta (시간·장소·등장인물) ----- */
+.chap-meta {
+  margin: 22px 0 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.chap-meta .m {
+  padding: 14px 16px 12px;
+  border-right: 1px solid var(--rule);
+}
+.chap-meta .m:last-child { border-right: none; }
+.chap-meta .m-label {
+  font-family: var(--sans-ko);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 5px;
+}
+.chap-meta .m-val {
+  font-family: var(--serif-ko);
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.55;
+}
+@media (max-width: 700px) {
+  .chap-meta { grid-template-columns: 1fr; }
+  .chap-meta .m { border-right: none; border-bottom: 1px solid var(--rule); }
+  .chap-meta .m:last-child { border-bottom: none; }
+}
+
+/* ----- 본문 narrative ----- */
+.narrative {
+  max-width: var(--maxw-text);
+  margin: 0 auto;
+}
+.narrative p:first-of-type::first-letter {
+  font-family: var(--serif-en);
+  font-weight: 700;
+  font-size: 3em;
+  line-height: 0.95;
+  float: left;
+  padding: 6px 8px 0 0;
+  color: var(--accent);
+}
+.narrative p.no-drop:first-of-type::first-letter {
+  float: none;
+  padding: 0;
+  font-size: 1em;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+/* ----- SVG 삽화 ----- */
+.illustration {
+  margin: 32px auto;
+  max-width: var(--maxw-text);
+  border: 1px solid var(--rule);
+  background: var(--paper-light);
+  padding: 24px;
+}
+.illustration svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.illustration figcaption {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule-soft);
+  font-family: var(--sans-ko);
+  font-size: 13px;
+  color: var(--ink-mute);
+  line-height: 1.65;
+  text-align: center;
+}
+.illustration figcaption .fn {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  margin-right: 6px;
+}
+
+/* ----- 강조 인용 ----- */
+.quote {
+  max-width: var(--maxw-text);
+  margin: 28px auto;
+  padding: 8px 28px;
+  border-left: 3px solid var(--accent);
+  font-family: var(--serif-ko);
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.quote .who {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--sans-ko);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+
+/* ----- 곤충 백과 박스 (베르베르 트레이드마크) ----- */
+.fact-box {
+  max-width: var(--maxw-text);
+  margin: 36px auto 0;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-soft);
+  border-left: 4px solid var(--accent);
+  padding: 22px 26px;
+  font-size: 14.5px;
+  line-height: 1.75;
+}
+.fact-box .label {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.fact-box h4 {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+.fact-box h4 .en {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin-left: 6px;
+}
+.fact-box p { margin: 0 0 10px; }
+.fact-box p:last-child { margin-bottom: 0; }
+.fact-box em { font-family: var(--serif-en); font-style: italic; color: var(--accent); }
+.fact-box .source {
+  font-family: var(--sans-ko);
+  font-size: 12px;
+  color: var(--ink-mute);
+  font-style: italic;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--accent-soft);
+}
+
+/* ----- 곤충 측 챕터 배경 살짝 다르게 ----- */
+.iw-page.bug-side { background: rgba(245,239,224,0.4); }
+.iw-page.bug-side .chap-hero { border-bottom-color: #8a5a14; }
+.iw-page.bug-side .narrative p:first-of-type::first-letter {
+  color: #8a5a14;
+}
+
+/* ----- 챕터 내비 (이전·다음) ----- */
+.chap-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 48px 0 8px;
+  max-width: var(--maxw-text);
+  margin-left: auto;
+  margin-right: auto;
+}
+.chap-nav a {
+  border: 1px solid var(--rule);
+  background: var(--paper-light);
+  padding: 18px 22px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.18s, background 0.18s;
+}
+.chap-nav a:hover { border-color: var(--accent); background: var(--paper); }
+.chap-nav a.empty {
+  background: transparent;
+  border-style: dashed;
+  opacity: 0.5;
+  cursor: default;
+}
+.chap-nav .dir {
+  font-family: var(--sans-ko);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+.chap-nav .t {
+  font-family: var(--serif-ko);
+  font-weight: 600;
+  font-size: 15.5px;
+  color: var(--ink);
+  margin-top: 4px;
+}
+.chap-nav .t .en {
+  display: block;
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 12.5px;
+  color: var(--ink-mute);
+  margin-top: 2px;
+}
+.chap-nav .next { text-align: right; }
+@media (max-width: 700px) {
+  .chap-nav { grid-template-columns: 1fr; }
+  .chap-nav .next { text-align: left; }
+}
+
+/* ----- 인덱스 페이지 — 4 막 그룹 + 33 chunks ----- */
+.iw-index .hero {
+  padding: 56px 0 36px;
+  border-bottom: 2px solid var(--ink);
+}
+.iw-index .hero .kicker {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.iw-index .hero h1 {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: clamp(36px, 6vw, 56px);
+  line-height: 1.1;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.iw-index .hero h1 .en {
+  display: block;
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.48em;
+  color: var(--ink-mute);
+  margin-top: 6px;
+  letter-spacing: 0.01em;
+}
+.iw-index .hero .subtitle {
+  font-family: var(--sans-ko);
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin: 18px 0 22px;
+  letter-spacing: 0.02em;
+}
+.iw-index .hero .intro {
+  max-width: 760px;
+  font-family: var(--serif-ko);
+  font-size: 17px;
+  color: var(--ink-soft);
+  line-height: 1.85;
+}
+.iw-index .hero .intro em {
+  font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--accent);
+}
+
+.iw-index .label-notice {
+  margin: 32px 0;
+  padding: 18px 22px;
+  background: rgba(74,58,107,0.06);
+  border: 1px solid var(--accent-soft);
+  border-left: 4px solid var(--accent);
+  font-size: 14px;
+  line-height: 1.78;
+}
+.iw-index .label-notice strong { color: var(--accent); }
+
+.iw-index .act-section { margin: 48px 0 16px; }
+.iw-index .act-section h2 {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+.iw-index .act-section h2 .num {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+.iw-index .act-section h2 .en {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--ink-mute);
+  margin-left: 8px;
+}
+.iw-index .act-section p.sub {
+  font-family: var(--sans-ko);
+  font-size: 13.5px;
+  color: var(--ink-mute);
+  margin: 6px 0 16px;
+}
+
+.iw-index .chunks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.iw-index .chunks .ch {
+  display: block;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  background: var(--paper-light);
+  padding: 16px 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.18s, background 0.18s;
+}
+.iw-index .chunks .ch:hover { border-color: var(--accent); background: var(--paper); }
+.iw-index .chunks .ch.disabled {
+  opacity: 0.55;
+  cursor: default;
+  border-left-style: dashed;
+}
+.iw-index .chunks .ch.disabled:hover {
+  border-color: var(--rule);
+  background: var(--paper-light);
+}
+.iw-index .chunks .ch.bug {
+  border-left-color: #8a5a14;
+  background: rgba(245,239,224,0.6);
+}
+.iw-index .chunks .ch .num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.iw-index .chunks .ch.bug .num { color: #8a5a14; }
+.iw-index .chunks .ch h3 {
+  font-family: var(--serif-ko);
+  font-weight: 700;
+  font-size: 17px;
+  margin: 4px 0 4px;
+  color: var(--ink);
+}
+.iw-index .chunks .ch h3 .en {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin-left: 6px;
+}
+.iw-index .chunks .ch .when {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--ink-mute);
+  margin: 4px 0 8px;
+}
+.iw-index .chunks .ch .blurb {
+  font-family: var(--serif-ko);
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.iw-index .wip-tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 6px;
+  font-family: var(--sans-ko);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--paper);
+  background: var(--ink-mute);
+  border-radius: 2px;
+  vertical-align: middle;
+}
+@media (max-width: 700px) {
+  .iw-index .chunks { grid-template-columns: 1fr; }
+}
