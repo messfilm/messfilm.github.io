@@ -117,7 +117,16 @@
         { href: 'insect-war/chapters/04-arrival.html',              label: '4장',     eraKey: '04-arrival' },
         { href: 'insect-war/chapters/05-yellow-dance.html',         label: '5장',     eraKey: '05-yellow-dance' },
         { href: 'insect-war/chapters/06-cities-sync.html',          label: '6장',     eraKey: '06-cities-sync' },
-        { href: 'insect-war/chapters/07-black-cloud.html',          label: '7장',     eraKey: '07-black-cloud' }
+        { href: 'insect-war/chapters/07-black-cloud.html',          label: '7장',     eraKey: '07-black-cloud' },
+        { href: 'insect-war/chapters/08-chans-breakthrough.html',   label: '8장',     eraKey: '08-chans-breakthrough' },
+        { href: 'insect-war/chapters/09-amber-mine.html',           label: '9장',     eraKey: '09-amber-mine' },
+        { href: 'insect-war/chapters/10-nairobi-journey.html',      label: '10장',    eraKey: '10-nairobi-journey' },
+        { href: 'insect-war/chapters/11-molecules-match.html',      label: '11장',    eraKey: '11-molecules-match' },
+        { href: 'insect-war/chapters/12-queen-decides.html',        label: '12장',    eraKey: '12-queen-decides' },
+        { href: 'insect-war/chapters/13-han-river.html',            label: '13장',    eraKey: '13-han-river' },
+        { href: 'insect-war/chapters/14-un-calls.html',             label: '14장',    eraKey: '14-un-calls' },
+        { href: 'insect-war/chapters/15-cloud-marches.html',        label: '15장',    eraKey: '15-cloud-marches' },
+        { href: 'insect-war/chapters/16-chan-meets-nat.html',       label: '16장',    eraKey: '16-chan-meets-nat' }
       ]
     }
   };

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="강원도 양봉장의 한 모니터 앞에서 13살 찬이 사마귀 사냥 영상 천 건을 머신러닝으로 돌린다. 결과는 — 곤충이 세 가지 언어로 동시에 말하고 있다는 것이다.">
+<title>제 8 장 — 찬의 발견 · § VI 곤충 전쟁 | Archive for Som &amp; Chan</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap">
+<link rel="stylesheet" href="../../assets/shared/styles-base.css">
+<link rel="stylesheet" href="../../assets/insect-war/styles.css">
+</head>
+<body class="shared-body collection-insect-war" data-page-id="insect-war.chap.08">
+
+<main class="insect-war">
+  <div class="iw-page">
+    <p class="crumb"><a href="../index.html">곤충 전쟁</a> / 제 8 장 · 찬의 발견</p>
+
+    <header class="chap-hero">
+      <div class="num">CHAPTER<strong>08</strong></div>
+      <h1>찬의 발견<span class="en">Chan's Breakthrough</span></h1>
+      <div class="side-tag human">人</div>
+    </header>
+
+    <div class="chap-meta">
+      <div class="m"><div class="m-label">시간</div><div class="m-val">2027년 5월 말 · 검은 구름 진군 닷새 후</div></div>
+      <div class="m"><div class="m-label">장소</div><div class="m-val">강원도 평창 · 외할아버지 양봉장 · 찬의 방</div></div>
+      <div class="m"><div class="m-label">등장</div><div class="m-val">조은찬 (13) · 조솜 (10) · 정연우 (50)</div></div>
+    </div>
+
+    <article class="narrative">
+      <p>찬의 방에는 침대 하나, 책상 하나, 그리고 침대 옆에 *유리 사육장 세 개*가 있었다. 사육장의 표면에는 그가 직접 *매직펜으로 쓴 라벨*이 붙어 있었다. <em>Mantis religiosa #1</em>, <em>Mantis religiosa #2</em>, <em>Tettigonia viridissima · 음향 채널</em>. 첫 두 사육장에는 사마귀 두 마리. 세 번째 사육장에는 여치 한 마리. 사마귀들은 각자의 사육장에서 *움직이지 않고* 한 점을 응시했다. 여치는 — 사람이 그 방에 없을 때만 — 가끔씩 *짧은 노래*를 흘렸다.</p>
+
+      <p>책상 위에는 노트북 한 대가 열려 있었다. 외할아버지가 찬이 열 살 때 사 준 노트북. *5년차 노트북*이었고, 화면 한쪽에 가는 균열이 한 줄 가 있었다. 그러나 그 노트북에서 — 그 봄 — *상당히 의미 있는 계산*이 돌아가고 있었다.</p>
+
+      <p>그날 저녁, 찬의 방문은 닫혀 있었다. 솜은 노트북 화면이 잘 보이는 쪽에 *작은 의자*를 끌어다 앉아 있었다. 두 사람은 이미 약 *세 시간 반* 동안 같은 화면을 보고 있었다. 솜은 색연필을 한 손에 들고 있었지만, 그날따라 그림은 그리지 않았다. 그녀는 — *오빠가 무엇을 발견했는지*가 그림보다 먼저 궁금했다.</p>
+
+      <p>찬은 한 손으로 안경을 한 번 올리고, 화면을 가리키며 말했다.</p>
+
+      <blockquote class="quote">"솜이, 봐. 이거 천 건이야."<span class="who">— 찬, 자기 방, 2027년 5월 말</span></blockquote>
+
+      <p>천 건. 그것은 — 찬이 지난 *두 달 반* 동안 인터넷의 공개 영상 데이터셋에서 *수집*한 *사마귀 사냥 영상*의 수였다. 출처는 다양했다. YouTube에 시민 과학자들이 올린 사마귀 관찰 영상. iNaturalist에 등록된 짧은 사냥 클립. 일본 *NHK*가 1990년대에 촬영한 곤충 다큐 일부. 한국 *EBS*의 사마귀 특집. 그리고 — *Cornell University* 곤충학 학부의 공개 영상 아카이브.</p>
+
+      <p>천 건의 영상을 그는 — 한 *오픈소스 머신러닝 라이브러리*에 통과시켰다. 라이브러리는 *YOLOv8*이라는 이름의 객체 인식 모델이었다. 그가 직접 코드를 쓴 것은 아니었다. 그는 GitHub에서 *insect-pose-estimation*이라는 공개 저장소를 발견했고, 거기 사용된 사전 학습 모델에 자기가 모은 영상을 *입력*했다. 모델은 — 사마귀의 *몸 자세*, *더듬이 각도*, *앞다리 위치*, *겹눈의 응시 방향*, *복부의 진동 주파수* — 다섯 채널을 동시에 추적했다.</p>
+
+      <p>천 건의 영상을 모두 통과시키는 데 — 그의 5년차 노트북으로는 — *일주일 반*이 걸렸다. 노트북은 그 동안 *방 안에서 가장 따뜻한 물건*이었다. 외할아버지의 양봉장 한구석에서 — 노트북의 작은 팬이 하루 종일 *작게 윙윙거리는 소리*가 났다. 그 소리는, 솜이 옆 방에서 그림을 그릴 때 — *배경 소리*가 되어 있었다.</p>
+
+      <p>일주일 반의 계산이 끝난 그날 — 화면에 한 개의 *결과 페이지*가 떠 있었다. 페이지의 상단에는 한 줄이 있었다.</p>
+
+      <p>*Pheromone signature: not detected. Visual signature: detected. Vibrational signature: detected.*</p>
+
+      <p>그 한 줄을 — 찬은 닷새 전에 이미 본 적이 있었다. 그러나 그날 저녁에야 그는 *그 의미를 정확히 이해*했다.</p>
+
+      <figure class="illustration">
+        <svg viewBox="0 0 720 440" role="img" aria-label="찬의 노트북 화면 — 사마귀 사냥 패턴 분석. 세 채널 비교 도식.">
+          <rect x="0" y="0" width="720" height="440" fill="#f8f5ee"/>
+
+          <!-- 노트북 외곽 -->
+          <rect x="40" y="40" width="640" height="380" rx="6" fill="#2a2438" stroke="#1a1428" stroke-width="2"/>
+          <rect x="56" y="56" width="608" height="348" fill="#0e0a18"/>
+
+          <!-- 화면 균열 한 줄 -->
+          <line x1="240" y1="56" x2="280" y2="404" stroke="#3a3050" stroke-width="0.4" opacity="0.5"/>
+
+          <!-- 화면 상단 타이틀 -->
+          <text x="360" y="84" font-family="JetBrains Mono, monospace" font-size="11" fill="#c8b8d8" text-anchor="middle">insect-pose-estimation · run #14 · 1,000 videos</text>
+          <line x1="80" y1="94" x2="640" y2="94" stroke="#3a3050" stroke-width="0.6"/>
+
+          <!-- 사마귀 실루엣 (좌측 패널) -->
+          <g transform="translate(140,210)">
+            <!-- 사마귀 몸 -->
+            <ellipse cx="0" cy="0" rx="24" ry="8" fill="#9aaf6a" opacity="0.9"/>
+            <!-- 가슴 -->
+            <ellipse cx="-24" cy="-4" rx="14" ry="5" fill="#7a8f4a"/>
+            <!-- 머리 -->
+            <ellipse cx="-38" cy="-8" rx="6" ry="5" fill="#7a8f4a"/>
+            <!-- 겹눈 -->
+            <circle cx="-42" cy="-10" r="2.5" fill="#1a2a0a"/>
+            <circle cx="-42" cy="-6" r="2.5" fill="#1a2a0a"/>
+            <!-- 더듬이 -->
+            <path d="M -42 -10 Q -52 -22 -58 -28" stroke="#7a8f4a" stroke-width="1" fill="none"/>
+            <path d="M -42 -6 Q -54 -16 -60 -20" stroke="#7a8f4a" stroke-width="1" fill="none"/>
+            <!-- 낫 모양 앞다리 -->
+            <path d="M -32 -2 L -28 -16 L -16 -22 L -12 -16" stroke="#7a8f4a" stroke-width="1.8" fill="none"/>
+            <path d="M -28 -2 L -24 -12 L -14 -16 L -10 -10" stroke="#7a8f4a" stroke-width="1.8" fill="none"/>
+            <!-- 뒷다리 -->
+            <path d="M 12 6 L 18 18 L 14 28" stroke="#7a8f4a" stroke-width="1.4" fill="none"/>
+            <path d="M 16 6 L 22 18 L 18 28" stroke="#7a8f4a" stroke-width="1.4" fill="none"/>
+            <!-- 추적 점 (모델이 찍은 keypoint) -->
+            <g fill="#ff6a44">
+              <circle cx="-42" cy="-10" r="1.8"/>
+              <circle cx="-42" cy="-6" r="1.8"/>
+              <circle cx="-24" cy="-4" r="1.8"/>
+              <circle cx="0" cy="0" r="1.8"/>
+              <circle cx="-28" cy="-16" r="1.8"/>
+              <circle cx="-12" cy="-16" r="1.8"/>
+              <circle cx="14" cy="14" r="1.8"/>
+            </g>
+            <text x="0" y="50" font-family="JetBrains Mono, monospace" font-size="9" fill="#c8b8d8" text-anchor="middle">7 keypoints · 1.000 frames</text>
+          </g>
+
+          <!-- 우측 패널: 세 채널 비교 -->
+          <g transform="translate(380,130)">
+            <text x="0" y="0" font-family="Noto Sans KR, sans-serif" font-size="11" font-weight="700" fill="#c8b8d8">SIGNAL CHANNELS</text>
+
+            <!-- 채널 1: 페로몬 -->
+            <g transform="translate(0,24)">
+              <rect x="0" y="0" width="240" height="46" fill="#1a1428" stroke="#3a3050" stroke-width="0.6"/>
+              <text x="8" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#8a7aa8">CH1 · pheromone</text>
+              <text x="232" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#ff6a44" text-anchor="end">NOT FOUND</text>
+              <line x1="8" y1="32" x2="232" y2="32" stroke="#3a3050" stroke-width="0.4"/>
+              <line x1="8" y1="32" x2="232" y2="32" stroke="#5a4a78" stroke-width="0.6" stroke-dasharray="2 4"/>
+            </g>
+
+            <!-- 채널 2: 시각 -->
+            <g transform="translate(0,80)">
+              <rect x="0" y="0" width="240" height="46" fill="#1a1428" stroke="#7aac6a" stroke-width="1"/>
+              <text x="8" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#c8b8d8">CH2 · visual</text>
+              <text x="232" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#7aac6a" text-anchor="end">DETECTED</text>
+              <!-- 시각 신호 패턴 (계단형) -->
+              <polyline points="8 38, 24 28, 40 28, 56 36, 72 30, 88 22, 104 22, 120 32, 136 28, 152 26, 168 34, 184 24, 200 26, 216 32, 232 28" fill="none" stroke="#7aac6a" stroke-width="1.3"/>
+            </g>
+
+            <!-- 채널 3: 진동 -->
+            <g transform="translate(0,136)">
+              <rect x="0" y="0" width="240" height="46" fill="#1a1428" stroke="#daa648" stroke-width="1"/>
+              <text x="8" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#c8b8d8">CH3 · vibration</text>
+              <text x="232" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#daa648" text-anchor="end">DETECTED</text>
+              <!-- 진동 신호 (사인파) -->
+              <path d="M 8 32 Q 16 22 24 32 Q 32 42 40 32 Q 48 22 56 32 Q 64 42 72 32 Q 80 22 88 32 Q 96 42 104 32 Q 112 22 120 32 Q 128 42 136 32 Q 144 22 152 32 Q 160 42 168 32 Q 176 22 184 32 Q 192 42 200 32 Q 208 22 216 32 Q 224 42 232 32" fill="none" stroke="#daa648" stroke-width="1.3"/>
+            </g>
+
+            <!-- 채널 4: 음향 (여치) -->
+            <g transform="translate(0,192)">
+              <rect x="0" y="0" width="240" height="46" fill="#1a1428" stroke="#aa8acc" stroke-width="1"/>
+              <text x="8" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#c8b8d8">CH4 · acoustic (Tettigonia)</text>
+              <text x="232" y="14" font-family="JetBrains Mono, monospace" font-size="9" fill="#aa8acc" text-anchor="end">DETECTED</text>
+              <!-- 음향 신호 (스파이크) -->
+              <g stroke="#aa8acc" stroke-width="1.2">
+                <line x1="14" y1="40" x2="14" y2="22"/>
+                <line x1="22" y1="40" x2="22" y2="20"/>
+                <line x1="30" y1="40" x2="30" y2="26"/>
+                <line x1="44" y1="40" x2="44" y2="18"/>
+                <line x1="52" y1="40" x2="52" y2="22"/>
+                <line x1="68" y1="40" x2="68" y2="20"/>
+                <line x1="80" y1="40" x2="80" y2="24"/>
+                <line x1="98" y1="40" x2="98" y2="18"/>
+                <line x1="112" y1="40" x2="112" y2="22"/>
+                <line x1="126" y1="40" x2="126" y2="20"/>
+                <line x1="140" y1="40" x2="140" y2="26"/>
+                <line x1="158" y1="40" x2="158" y2="18"/>
+                <line x1="172" y1="40" x2="172" y2="22"/>
+                <line x1="188" y1="40" x2="188" y2="20"/>
+                <line x1="202" y1="40" x2="202" y2="24"/>
+                <line x1="218" y1="40" x2="218" y2="18"/>
+                <line x1="226" y1="40" x2="226" y2="22"/>
+              </g>
+            </g>
+          </g>
+
+          <!-- 하단 결론 -->
+          <text x="360" y="386" font-family="Cormorant Garamond, serif" font-style="italic" font-size="13" fill="#c8b8d8" text-anchor="middle">"Three channels, not one. Three languages."</text>
+
+          <!-- 노트북 받침 -->
+          <path d="M 30 420 L 690 420 L 660 432 L 60 432 Z" fill="#1a1428"/>
+        </svg>
+        <figcaption><span class="fn">그림 1</span> 찬의 노트북 화면 · 천 건의 사마귀 사냥 영상을 모델이 통과시킨 결과 — 페로몬 채널은 비어 있고, 시각·진동·음향 세 채널에서 신호가 검출되었다.</figcaption>
+      </figure>
+
+      <p>찬은 손가락으로 화면의 *세 줄*을 차례로 짚었다.</p>
+
+      <p>"솜이. 첫 줄을 봐. *페로몬*. 페로몬 신호는 — *없어*. 사마귀 사냥에 페로몬은 안 쓰여. 천 건 영상 전부에서 *0*이야."</p>
+
+      <p>솜은 색연필을 입에 한 번 물었다. 그리고 고개를 한 번 끄덕였다. 그녀는 페로몬을 보는 사람이었기 때문에 — 사마귀 영상을 봐도 *색이 보이지 않았다*는 것을, 그녀는 그 동안 *말 없이* 알고 있었다. 그 침묵을 — 그날 화면이 *과학적으로 확인*해 주었다.</p>
+
+      <p>"두 번째 줄. *시각*. 사마귀가 *겹눈*으로 사냥감을 추적하는 패턴. 사냥 시작 0.4초 전부터, 사마귀의 머리 각도와 더듬이 각도가 *동시에* 변해. 천 건 영상 전부에서 — *그 패턴이 똑같아*. 통계적으로 — 우연이 아니야."</p>
+
+      <p>그는 한 번 숨을 고르고, 세 번째 줄로 손가락을 옮겼다.</p>
+
+      <p>"세 번째 줄. *진동*. 이게 — *내가 몰랐던 거*야. 사마귀가 사냥 직전에 — *복부를 미세하게 흔들어*. 1초에 약 40 헤르츠. 사람이 *보기에는 안 보이는* 진동인데 — 영상 *프레임 분석*으로 잡혀. 그 진동이 — 같은 종 사마귀끼리 *받아*. 한 마리의 사마귀가 사냥할 때, *10미터 떨어진 다른 사마귀가 같이 자세를 잡아*. 천 건 영상 중 — *780건*에서 그 패턴이 나와."</p>
+
+      <p>솜은 화면을 한참 봤다. 그녀는 색연필을 노트의 한 면에 *천천히* 그었다 — 노랑 한 줄, 초록 한 줄, 그리고 보라 한 줄. 세 줄을 그녀는 *나란히* 그어 두었다. 그녀의 손이 한 줄을 그을 때마다, 찬은 그녀가 *각 채널에 무슨 색을 매기는지*를 옆에서 메모했다.</p>
+
+      <p>"그리고 — 마지막 채널은 사마귀가 아니라 *여치*야. 같은 분석을 — 우리 사육장 여치 녹음에 했어. 5장에서 — *우리 한 달 전 사육장에서* — 녹음한 그 단편 노래. 그 한 곡을 *주파수 영역*으로 분해해서, 라이브러리에 넣었어."</p>
+
+      <p>그는 잠시 멈췄다. 그 멈춤은 — 그가 *발견의 무게*를 처음으로 *말로 옮기는 순간*이었다.</p>
+
+      <blockquote class="quote">"솜이. 곤충은 세 가지 언어로 *동시에* 말하고 있어. 페로몬 한 가지가 아니라. 시각·진동·음향 — 세 채널. *어른들이 한 채널만 보고 있던 거*야."<span class="who">— 찬, 자기 방, 2027년 5월 말</span></blockquote>
+
+      <p>솜은 그 말을 듣고, 색연필을 *옆으로* 내려 놓았다. 그리고 노트의 한 면을 *한참* 들여다보았다. 그녀의 노트에는 — 일주일 전부터 — *세 개의 색이 동시에 발산하는 곤충*의 그림이 — 이미 그려져 있었다. 노란 꿀벌이 *보라 페로몬*과 *초록 진동*과 *주황 음향*을 동시에 발산하는 그림. 그녀는 그것을 *직관*으로 알고 있었다. 그러나 직관은 — 어른들에게 *증거가 되지 못했다*. 그날 오빠의 노트북 화면이 — 그녀의 직관을 *증거로 옮긴 것*이었다.</p>
+
+      <p>그 순간 — 양봉장 마당 쪽에서 *발소리*가 들렸다. 그 발소리는 — 두 사람이 익히 아는 발소리였다. 외투 자락이 마룻바닥을 *살짝 끄는 소리*. 정연우 박사. 그녀는 그날 저녁 *늦은 시각*에 양봉장에 도착했다. 그녀는 솜과 찬에게 *오기 전에 미리 연락*하지 않았다 — 그것은 그녀의 새 습관이었다. 외할아버지 사망 후, 그녀는 두 아이가 *준비할 시간을 따로 안 가지도록* 그냥 *불쑥 들렀다*.</p>
+
+      <p>그녀가 방문을 열고 한 발 들이는 데까지 — 약 십 초가 걸렸다. 그 십 초 동안 찬은 자리에서 일어났고, 솜은 노트를 들고 두 손으로 잡았다. 두 사람은 자기들이 발견한 것이 — *어른 한 명에게 처음 보여 주기에 충분한 무게*임을 — 그 순간 *동시에* 느꼈다.</p>
+
+      <p>정연우는 방문에서 한 번 멈췄다. 그녀의 눈은 — 노트북 화면에서 *세 줄*의 결과를 *세 초 만에* 읽었다. 그녀는 폰 프리슈 학파였고, 평생을 *페로몬*에 집중한 사람이었다. 화면의 첫 줄 — *Pheromone: not detected* — 은 그녀의 직업의 *부정*에 해당했다. 그러나 그녀는 그 줄에서 멈추지 않았다. 그녀는 두 번째 줄과 세 번째 줄로 시선을 옮겼다. 그리고 — 네 번째 줄까지.</p>
+
+      <p>그녀의 손이 떨렸다. 그 떨림은 — *분노*가 아니라 *충격*이었다.</p>
+
+      <p>그녀는 책상 옆 의자를 끌어다 — *천천히* 앉았다. 그녀는 한참 화면을 봤다. 그녀는 — 50세였고, 30년의 곤충학 경력을 가지고 있었으며, 한국·독일·미국 세 학회에 그녀의 이름이 등록되어 있었다. 그날 저녁 — 그 30년의 경력이 — 13살 짜리 한 명이 *오픈소스 모델 하나로* 발견한 것을 — *처음으로 직시*하는 순간이었다.</p>
+
+      <p>그녀는 한 번 더 숨을 고르고, 찬에게 물었다.</p>
+
+      <p>"찬아 — 이 결과를 — 또 누가 봤니."</p>
+
+      <p>찬은 잠시 머뭇거리고는 답했다 — "솜이만요. 박사님이 두 번째예요."</p>
+
+      <p>그녀는 고개를 한 번 끄덕였다. 그리고 *결정*을 내렸다. 그녀는 두 손으로 노트북을 *자기 쪽으로* 살짝 돌려놓고, 한 번 더 화면을 본 다음 — 자기 가방에서 *위성 화상 전화기*를 꺼냈다. UC Berkeley의 *라이언 카터*에게 — 그녀는 그날 저녁, *그 자리에서* 영상 통화를 걸 셈이었다.</p>
+
+      <p>"라이언은 — 회의주의자야," 그녀가 솜과 찬에게 말했다. "그러나 회의주의자에게 *세 줄을 동시에 보여 주면* — 그도 멈춰. 그것이 — 우리 학회의 *유일한 합의 방식*이야."</p>
+
+      <p>전화는 — 미국 시각으로 *아침 일곱 시*에 — 라이언의 사무실에서 받았다. 화면 너머의 라이언은 셔츠 단추를 *위 두 개를 푼 채*였고, 손에는 아직 *커피잔*을 들고 있었다. 그러나 그는 — 정연우가 자기 노트북을 옆으로 돌려 모니터를 비추자 — *커피잔을 책상에 내려놓았다*. 그것은 라이언의 회의주의가 *처음으로 흔들리는 신호*였다.</p>
+
+      <p>"Yeonu —" 그는 한 번 헛기침을 했다. "이건 — *Mantis religiosa* 한 종으로 — 천 건? 어디서 — *Cornell Open Data*인가."</p>
+
+      <p>"그래." 정연우가 답했다.</p>
+
+      <p>"그리고 — 네 번째 채널은 *Tettigonia*. *Tettigonia viridissima*. 좋은데 — *Tettigonia*의 음향 분석은 어떻게 — 이 모델은 *시각 모델*인데 — 음향을 어떻게 통과시켰지."</p>
+
+      <p>찬이 옆에서 한 번 조용히 답했다 — "스펙트로그램으로 바꿔서요. 그래서 *시각*처럼 통과시켰어요."</p>
+
+      <p>라이언은 한 번 숨을 멈췄다. 그는 — 13살 짜리의 한 줄 답을 듣고 — 자기 머릿속에서 그 *방법론의 단순함*과 *통계적 견고함*을 *동시에* 평가했다. 약 *5초*의 침묵이 흘렀다. 그 침묵 끝에 그는 — 자기 안경을 *한 번 벗어서 셔츠로 닦*은 다음 — 다시 끼고 말했다.</p>
+
+      <p>"Yeonu — 내가 — 지난 두 학회에서 너한테 *반박한 적이 있다*. 폰 프리슈 학파의 *과잉 일반화*라고. *페로몬 한 채널*만으로는 곤충이 *언어*를 가졌다고 말할 수 없다고. 내가 — *그 말은 옳았다*. 그러나 — 페로몬 *말고* 시각·진동·음향까지 합치면 — *언어라고 부를 수 있다*. 내가 — *그 부분을 못 봤다*."</p>
+
+      <p>그는 한 번 더 숨을 고르고 — *한국말*로 한 줄을 보탰다. 그의 한국어는 어머니에게서 배운 — *조금 어색하지만 정확한 한국어*였다.</p>
+
+      <blockquote class="quote">"정 박사 — 내가 — 비행기를 — 잡을게."<span class="who">— 라이언 카터, UC Berkeley, 같은 날 아침</span></blockquote>
+
+      <p>그 한 줄로 — *학회 라이벌 두 사람이 동맹으로 전환*되는 순간이 — 양봉장 한 방의 한 노트북 화면에서 — 13살 짜리 한 명과 10살 짜리 한 명이 *옆에서 지켜보는 가운데* — 일어났다.</p>
+
+      <p>통화가 끝나고 — 정연우는 노트북을 다시 찬 쪽으로 돌려 놓았다. 그녀는 한참 솜의 노트를 봤다. 솜의 노트의 가장 위 페이지에는 — 일주일 전부터 그려진 — *세 색의 곤충 그림*이 있었다. 정연우는 그 그림을 *처음으로 자세히 봤다*. 그녀는 그 그림에서 — *증거의 또 다른 한 줄*을 찾아낸 것 같았다.</p>
+
+      <p>"솜아 —" 그녀가 물었다. "이 그림 — *언제부터* 그렸니."</p>
+
+      <p>솜이 답했다 — "다섯 살 때부터요."</p>
+
+      <p>그 답에 — 정연우의 손이 한 번 더 떨렸다. 그것은 — 솜의 4색각이 *기록상 한국에서 두 번째 사례*임을 — 그녀가 *그 자리에서* 결정한 순간이었다. 첫 번째는 — 2018년 *부산 의대 학회*에 보고된 한 여성의 사례. 그러나 그 사례의 여성은 — *페로몬을 보지 못했다*. 솜은 — 그 보고에 *없는 변이* — 즉 *곤충 시각 단백질의 부분적 발현* — 을 가지고 있을 가능성이 — 정연우의 머릿속에 *그 순간 처음 떠올랐다*. 그것은 추정이었다. 그러나 추정 치고는 — 그 양봉장 한 방의 그날 저녁 — *너무 많은 증거*가 동시에 그녀 앞에 놓여 있었다.</p>
+
+      <p>그날 밤, 양봉장 마당에서 — 정연우는 자기 노트에 한 줄을 적었다. 노트는 두꺼웠고, 표지는 검은색이었다. 그 한 줄은 — 그녀의 노트의 *제 207페이지*에 적혔다. 207페이지의 한 줄은 그날까지 비어 있던 한 줄이었다. 그녀는 그것을 다음과 같이 채웠다.</p>
+
+      <p>*2027년 5월 27일. 강원도 양봉장. 조 명진의 아들 조 은찬, 13세. 발견 — 곤충은 세 채널로 말한다. 시각 · 진동 · 음향. 페로몬은 *하나의 채널일 뿐*. 다음 단계 — 미얀마 호박. 명진이 마지막으로 본 그 호박.*</p>
+
+      <p>그녀는 노트를 닫고, 양봉장 마당의 *어둠*을 한참 봤다. 마당 한쪽에는 외할아버지 김 상호의 *벌통 12개*가 그대로 놓여 있었다. 그 중 한 벌통의 입구에서 — 한 마리의 꿀벌이 *늦은 시각에 한 번 더 들고 나는 비행*을 하고 있었다. 그 한 마리의 비행을 — 그녀는 *알아챘다*. 그것은 — *노란* — 솜이 한 달 전 5장에서 처음 8자 춤을 본 그 꿀벌이었다.</p>
+
+      <p>정연우는 노란을 한참 봤다. 그리고 — 그날 밤 — *결심*했다. 그녀는 다음 주에 두 아이를 데리고 — *미얀마*로 갈 것이었다. 명진과 미연이 8년 전 마지막 비행을 떠난 그 호박 광산. 그곳에 — 그녀가 *피해 왔던 한 가지 답*이 — 여전히 묻혀 있을 것이었다.</p>
+    </article>
+
+    <aside class="fact-box">
+      <div class="label">곤충 백과 #9</div>
+      <h4>곤충의 다중 신호 채널 <span class="en">Multimodal Communication in Insects</span></h4>
+      <p>곤충의 통신은 *한 채널*이 아니다. 그동안 인간 곤충학은 — 1923년 *Karl von Frisch*의 *8자 춤* 발견 이래로 — 한동안 *시각 신호*에 집중했고, 1959년 *Adolf Butenandt*의 *Bombykol* 분리 이후로는 *페로몬 (화학 신호)*가 곤충 통신의 핵심으로 정립되었다. 그러나 — 1980년대 이후의 *비교 통신생물학*은 곤충이 동시에 *적어도 다섯 채널*을 사용한다는 사실을 밝혀냈다.</p>
+      <p>다섯 채널은 — *(1) 화학 신호 (페로몬)*, *(2) 시각 신호 (색·자세·움직임)*, *(3) 진동 신호 (substrate-borne vibration)*, *(4) 음향 신호 (airborne sound, ultrasound 포함)*, *(5) 전기적 신호 (electrostatic field)* — 이다. 종에 따라 어떤 채널을 더 많이 사용하는지가 다르다. 사마귀 (*Mantidae*)는 *시각과 진동*에 강하고 *페로몬 사용은 약하다*. 여치 (*Tettigoniidae*)는 *음향 채널*의 야간 노래로 유명하다. 꿀벌은 *페로몬·시각·진동·전기*의 *네 채널을 동시에* 사용한다.</p>
+      <p>인간이 이 다중성을 *왜 늦게 발견했는가* — 는 단순한 이유였다. *측정 도구*. 페로몬은 *기체 크로마토그래피*로 1950년대에 측정 가능해졌고, 시각 신호는 *고속 카메라*로 1970년대에, 진동은 *레이저 도플러 진동계*로 1990년대에, 전기적 신호는 *전기장 감지 안테나*로 2010년대에 — *각각 다른 시기*에 측정이 가능해졌다. 그 동안 인간 곤충학은 — 측정 가능한 채널만 *언어*라고 인정해 왔다.</p>
+      <p>본 책의 사고실험: *13살 짜리 한 명이 오픈소스 머신러닝으로 세 채널을 동시에 추적*한다는 설정은, 사실 위에 한 발 더 디딘 상상이다. 머신러닝 기반의 다중 채널 동시 추적은 — 2024년 현재 — 학계 일부 연구실에서 시작되고 있는 단계이며, 본 책의 묘사처럼 *오픈소스 모델 하나로 천 건 영상을 통과시키는* 시나리오는 가까운 미래에 가능하다.</p>
+      <p class="source">출처 — Greenfield, M. D. (2002) *Signalers and Receivers: Mechanisms and Evolution of Arthropod Communication* Oxford UP · Cocroft, R. B. &amp; Rodríguez, R. L. (2005) *BioScience* 55: 323-334 · von Frisch, K. (1967) *The Dance Language and Orientation of Bees* Harvard UP · Butenandt, A. et al. (1959) *Zeitschrift für Naturforschung* 14b: 283-284</p>
+    </aside>
+
+    <nav class="chap-nav">
+      <a class="prev" href="07-black-cloud.html"><div class="dir">‹ 이전</div><div class="t">제 7 장 · 검은 구름의 등장<span class="en">The Black Cloud Rises</span></div></a>
+      <a class="next" href="09-amber-mine.html"><div class="dir">다음 ›</div><div class="t">제 9 장 · 미얀마 호박 광산<span class="en">The Amber Mine</span></div></a>
+    </nav>
+
+  </div>
+</main>
+
+<script>window.SITE_ROOT = '/';</script>
+<script src="../../assets/shared/nav.js" defer></script>
+<script src="../../assets/shared/footer.js" defer></script>
+
+</body>
+</html>
