@@ -107,7 +107,6 @@
       name: '곤충 전쟁',
       latin: 'Insect War',
       base: 'insect-war/',
-      wip: true,
       sections: [
         { href: 'insect-war/index.html',                            label: '개관',     overviewFor: 'main' },
         { href: 'insect-war/chapters/00-prologue.html',             label: '프롤로그', eraKey: '00-prologue' },
@@ -134,7 +133,16 @@
         { href: 'insect-war/chapters/21-soms-testimony.html',       label: '21장',    eraKey: '21-soms-testimony' },
         { href: 'insect-war/chapters/22-facing-cloud.html',         label: '22장',    eraKey: '22-facing-cloud' },
         { href: 'insect-war/chapters/23-one-vote.html',             label: '23장',    eraKey: '23-one-vote' },
-        { href: 'insect-war/chapters/24-beijing-alone.html',        label: '24장',    eraKey: '24-beijing-alone' }
+        { href: 'insect-war/chapters/24-beijing-alone.html',        label: '24장',    eraKey: '24-beijing-alone' },
+        { href: 'insect-war/chapters/25-beijing-week-one.html',     label: '25장',    eraKey: '25-beijing-week-one' },
+        { href: 'insect-war/chapters/26-nat-decides.html',          label: '26장',    eraKey: '26-nat-decides' },
+        { href: 'insect-war/chapters/27-last-signal.html',          label: '27장',    eraKey: '27-last-signal' },
+        { href: 'insect-war/chapters/28-beijing-month-one.html',    label: '28장',    eraKey: '28-beijing-month-one' },
+        { href: 'insect-war/chapters/29-camille-arrives.html',      label: '29장',    eraKey: '29-camille-arrives' },
+        { href: 'insect-war/chapters/30-new-promise.html',          label: '30장',    eraKey: '30-new-promise' },
+        { href: 'insect-war/chapters/31-spring-after.html',         label: '31장',    eraKey: '31-spring-after' },
+        { href: 'insect-war/chapters/32-epilogue-som-chan.html',    label: 'E1',      eraKey: '32-epilogue-som-chan' },
+        { href: 'insect-war/chapters/33-epilogue-hive.html',        label: 'E2',      eraKey: '33-epilogue-hive' }
       ]
     }
   };
