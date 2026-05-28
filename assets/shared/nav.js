@@ -110,7 +110,14 @@
       wip: true,
       sections: [
         { href: 'insect-war/index.html',                            label: '개관',     overviewFor: 'main' },
-        { href: 'insect-war/chapters/00-prologue.html',             label: '프롤로그', eraKey: '00-prologue' }
+        { href: 'insect-war/chapters/00-prologue.html',             label: '프롤로그', eraKey: '00-prologue' },
+        { href: 'insect-war/chapters/01-7432.html',                 label: '1장',     eraKey: '01-7432' },
+        { href: 'insect-war/chapters/02-pesticide.html',            label: '2장',     eraKey: '02-pesticide' },
+        { href: 'insect-war/chapters/03-first-report.html',         label: '3장',     eraKey: '03-first-report' },
+        { href: 'insect-war/chapters/04-arrival.html',              label: '4장',     eraKey: '04-arrival' },
+        { href: 'insect-war/chapters/05-yellow-dance.html',         label: '5장',     eraKey: '05-yellow-dance' },
+        { href: 'insect-war/chapters/06-cities-sync.html',          label: '6장',     eraKey: '06-cities-sync' },
+        { href: 'insect-war/chapters/07-black-cloud.html',          label: '7장',     eraKey: '07-black-cloud' }
       ]
     }
   };
