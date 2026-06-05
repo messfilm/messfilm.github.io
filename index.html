@@ -167,6 +167,7 @@
   .card.collection-science  { --accent: #2a5680; }
   .card.collection-math     { --accent: #554a8a; }
   .card.collection-insect   { --accent: #3a6b4e; }
+  .card.collection-insect-war { --accent: #4a3a6b; }
   .card.collection-research { --accent: var(--gold); }
   .card-num {
     font-family: var(--serif-en);
@@ -381,13 +382,13 @@
   <div class="shared-container">
 
     <!-- ===== Mini timeline SVG ===== -->
-    <section class="home-timeline" aria-label="다섯 컬렉션의 시간 범위">
+    <section class="home-timeline" aria-label="여섯 컬렉션의 시간 범위">
       <div class="timeline-head">
-        <h2>다섯 컬렉션의 시간 범위</h2>
-        <span class="meta">BC 2333 — AD 2026</span>
+        <h2>여섯 컬렉션의 시간 범위</h2>
+        <span class="meta">BC 2333 — AD 2027 (§ VI 사고실험 포함)</span>
       </div>
 
-      <svg viewBox="0 0 1080 304" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="다섯 컬렉션 시간 범위 비교">
+      <svg viewBox="0 0 1080 304" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="여섯 컬렉션 시간 범위 비교">
         <defs>
           <style>
             .ax       { stroke: #c8bea4; stroke-width: 1; fill: none; }
@@ -403,6 +404,10 @@
             .band-science  { fill: #2a5680; opacity: 0.78; }
             .band-math     { fill: #554a8a; opacity: 0.80; }
             .band-insect   { fill: #3a6b4e; opacity: 0.78; }
+            .band-fiction  { fill: none; stroke: #4a3a6b; stroke-width: 1.5; stroke-dasharray: 3 2; }
+            .fiction-dot   { fill: #4a3a6b; }
+            .fiction-lb    { font-family: 'Noto Serif KR', serif; font-weight: 700; font-size: 12px; fill: #4a3a6b; }
+            .fiction-en    { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 10.5px; fill: #6a5a8a; }
           </style>
         </defs>
 
@@ -483,6 +488,14 @@
 
         <!-- "Now" vertical guide -->
         <line class="tick" x1="1023.86" y1="46" x2="1023.86" y2="266" stroke-dasharray="2 3" opacity="0.4" />
+
+        <!-- § VI Insect War — 2027 (사고실험, "Now" 너머의 가까운 미래) -->
+        <g>
+          <text class="fiction-en" x="1040" y="38" text-anchor="end">사고실험 · Fiction</text>
+          <text class="fiction-lb" x="1040" y="22" text-anchor="end">§ VI 곤충 전쟁 · 2027</text>
+          <line class="band-fiction" x1="1025" y1="44" x2="1040" y2="44" />
+          <circle class="fiction-dot" cx="1040" cy="44" r="3.5" />
+        </g>
       </svg>
     </section>
 
@@ -558,6 +571,22 @@
           <div><strong>범위</strong><span>~4억 년 — 현재</span></div>
         </div>
         <span class="card-cta">들어가기 →</span>
+      </a>
+
+      <a class="card collection-insect-war" href="insect-war/">
+        <span class="card-num">§ VI</span>
+        <h2 class="card-title">곤충 전쟁 <span class="latin">Insect War — If the Hive Spoke Back</span></h2>
+        <p class="card-desc">
+          이 컬렉션은 <em>사고실험 픽션</em>이다. 10살 솜이 본 보라색 한 점이
+          1억 년 전의 호박, 양봉장의 노란이, UN 한 표 차이의 결의안으로 이어진다.
+          베르베르의 『개미』를 한국 외할아버지의 양봉장에서 다시 쓰면 어떨까,
+          하는 물음에서 시작했다. 33장 · 4막 · 약 36만 자.
+        </p>
+        <div class="card-meta">
+          <div><strong>구성</strong><span>33장 (4막)</span></div>
+          <div><strong>시점</strong><span>2027 · 사고실험</span></div>
+        </div>
+        <span class="card-cta">읽기 →</span>
       </a>
 
       <a class="card collection-research" href="research/">
